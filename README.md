@@ -4,7 +4,7 @@
 
 <h1>前言</h1>
 
-<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/Images/A.png"></image>
+<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A.png"></image>
 
 
 
@@ -144,8 +144,8 @@ MinHeight="268" MinWidth="360"   //窗体最大以及最小属性
 </pre>
 
 <h1>更多效果图</1>
-<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/Images/A (1).gif"></image>
-<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/Images/A (2).jpg"></image>
-<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/Images/B.png"></image>
-<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/Images/A (3).jpg"></image>
-<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/Images/A (4).jpg"></image>
+<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (1).gif"></image>
+<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (2).jpg"></image>
+<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/B.png"></image>
+<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (3).jpg"></image>
+<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (4).jpg"></image>
