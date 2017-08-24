@@ -1,0 +1,82 @@
+﻿联系QQ 944095635
+
+更新记录
+2017-3-6
+1.新增DMTitleHoverColor 系统按钮鼠标悬浮的背景色(圆角窗体设为透明效果更好)
+2.新增圆角DEMO
+
+2017-2-15
+1.新增窗体模式：扁平化+阴影 2种风格窗体
+
+
+使用说明:
+
+1.引用DMSkin.WPF.DLL
+2.MainWindow : DMSkinWindow
+3.xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF"
+4.<DMSkin:DMSkinWindow x:Class="DMSkin.WPF.Test.MainWindow"*-*-
+
+属性:
+
+//    Shadow        Metro
+//           
+
+		Foreground="White"             
+        Background="White"         
+        DMWindow="Shadow"
+        DMShowMin="True"
+        DMShowMax="True"
+        DMShadowSize="10"
+        DMTitleSize="50"
+        DMTitleColor="#FF666666"
+        DMTitleHoverColor="#33000000"
+        DMShadowColor="#FFC8C8C8"
+        DMBorderColor="#FFC8C8C8" 
+        DMDropShadowEffect="0"
+        DMBorderSize="1"
+        ResizeMode="CanResizeWithGrip"
+        Height="700" Width="1000" 
+        WindowStyle="None" 
+		WindowStartupLocation="CenterScreen"
+        MinHeight="268" MinWidth="360"
+
+
+<Application.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMSkin.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMColor.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMScrollViewer.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMTabControl.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMRadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMTreeView.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMDataGrid.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMListBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMSlider.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMCheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMContextMenu.xaml" />
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+</Application.Resources>
+
+
+
+//圆角窗体
+<Border Background="White" CornerRadius="5"  BorderThickness="1">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="12" ShadowDepth="0" Color="#88000000"/>
+        </Border.Effect>
+        <Grid Margin="0,0,0,0">
+            <Grid Background="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Name="DMTitle">
+                </Grid>
+            </Grid>
+            <ResizeGrip VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
+        </Grid>
+</Border>

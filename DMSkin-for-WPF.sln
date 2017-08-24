@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSKIN.WPF.DEMO1", "Demos\DMSKIN.WPF.DEMO1\DMSKIN.WPF.DEMO1.csproj", "{7132E7CC-DEFB-4F98-A40E-83FDD9D51D5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSKIN.WPF.DEMO2", "Demos\DMSKIN.WPF.DEMO2\DMSKIN.WPF.DEMO2.csproj", "{E4B9517B-7C5E-496C-9DE6-14FF0B3A4700}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkin.WPF", "DMSkin.WPF\DMSkin.WPF.csproj", "{235482B6-F6AE-4825-BD22-492B7B2672A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "说明", "说明", "{571A8BFC-4548-4103-970F-E11BE04FDAF8}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\DM\Desktop\说明\使用说明.txt = C:\Users\DM\Desktop\说明\使用说明.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "图片", "图片", "{5DB3D780-A16C-49C5-B4B6-253586ABDC63}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\DM\Desktop\Images\A (1).gif = C:\Users\DM\Desktop\Images\A (1).gif
+		C:\Users\DM\Desktop\Images\A (1).jpg = C:\Users\DM\Desktop\Images\A (1).jpg
+		C:\Users\DM\Desktop\Images\A (1).png = C:\Users\DM\Desktop\Images\A (1).png
+		C:\Users\DM\Desktop\Images\A (2).jpg = C:\Users\DM\Desktop\Images\A (2).jpg
+		C:\Users\DM\Desktop\Images\A (3).jpg = C:\Users\DM\Desktop\Images\A (3).jpg
+		C:\Users\DM\Desktop\Images\A (4).jpg = C:\Users\DM\Desktop\Images\A (4).jpg
+		C:\Users\DM\Desktop\Images\A.png = C:\Users\DM\Desktop\Images\A.png
+		C:\Users\DM\Desktop\Images\B.png = C:\Users\DM\Desktop\Images\B.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7132E7CC-DEFB-4F98-A40E-83FDD9D51D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7132E7CC-DEFB-4F98-A40E-83FDD9D51D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7132E7CC-DEFB-4F98-A40E-83FDD9D51D5C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7132E7CC-DEFB-4F98-A40E-83FDD9D51D5C}.Debug|x86.Build.0 = Debug|Any CPU
+		{7132E7CC-DEFB-4F98-A40E-83FDD9D51D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7132E7CC-DEFB-4F98-A40E-83FDD9D51D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7132E7CC-DEFB-4F98-A40E-83FDD9D51D5C}.Release|x86.ActiveCfg = Release|Any CPU
+		{7132E7CC-DEFB-4F98-A40E-83FDD9D51D5C}.Release|x86.Build.0 = Release|Any CPU
+		{E4B9517B-7C5E-496C-9DE6-14FF0B3A4700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B9517B-7C5E-496C-9DE6-14FF0B3A4700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B9517B-7C5E-496C-9DE6-14FF0B3A4700}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E4B9517B-7C5E-496C-9DE6-14FF0B3A4700}.Debug|x86.Build.0 = Debug|Any CPU
+		{E4B9517B-7C5E-496C-9DE6-14FF0B3A4700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4B9517B-7C5E-496C-9DE6-14FF0B3A4700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4B9517B-7C5E-496C-9DE6-14FF0B3A4700}.Release|x86.ActiveCfg = Release|Any CPU
+		{E4B9517B-7C5E-496C-9DE6-14FF0B3A4700}.Release|x86.Build.0 = Release|Any CPU
+		{235482B6-F6AE-4825-BD22-492B7B2672A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{235482B6-F6AE-4825-BD22-492B7B2672A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{235482B6-F6AE-4825-BD22-492B7B2672A8}.Debug|x86.ActiveCfg = Debug|x86
+		{235482B6-F6AE-4825-BD22-492B7B2672A8}.Debug|x86.Build.0 = Debug|x86
+		{235482B6-F6AE-4825-BD22-492B7B2672A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{235482B6-F6AE-4825-BD22-492B7B2672A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{235482B6-F6AE-4825-BD22-492B7B2672A8}.Release|x86.ActiveCfg = Release|x86
+		{235482B6-F6AE-4825-BD22-492B7B2672A8}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

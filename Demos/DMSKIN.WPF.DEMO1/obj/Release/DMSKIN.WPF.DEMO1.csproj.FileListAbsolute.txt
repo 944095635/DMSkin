@@ -1,0 +1,17 @@
+F:\DMSkin\DMSKIN.WPF.DEMO1\bin\Release\DMSKIN.WPF.DEMO1.exe
+F:\DMSkin\DMSKIN.WPF.DEMO1\bin\Release\DMSKIN.WPF.DEMO1.pdb
+F:\DMSkin\DMSKIN.WPF.DEMO1\bin\Release\DMSkin.WPF.dll
+F:\DMSkin\DMSKIN.WPF.DEMO1\bin\Release\DMSkin.WPF.pdb
+F:\DMSkin\DMSKIN.WPF.DEMO1\obj\Release\DMSKIN.WPF.DEMO1.csprojResolveAssemblyReference.cache
+F:\DMSkin\DMSKIN.WPF.DEMO1\obj\Release\MainWindow.g.cs
+F:\DMSkin\DMSKIN.WPF.DEMO1\obj\Release\App.g.cs
+F:\DMSkin\DMSKIN.WPF.DEMO1\obj\Release\DMSKIN.WPF.DEMO1_MarkupCompile.cache
+F:\DMSkin\DMSKIN.WPF.DEMO1\obj\Release\DMSKIN.WPF.DEMO1_MarkupCompile.lref
+F:\DMSkin\DMSKIN.WPF.DEMO1\obj\Release\App.baml
+F:\DMSkin\DMSKIN.WPF.DEMO1\obj\Release\Dictionary1.baml
+F:\DMSkin\DMSKIN.WPF.DEMO1\obj\Release\MainWindow.baml
+F:\DMSkin\DMSKIN.WPF.DEMO1\obj\Release\DMSKIN.WPF.DEMO1.g.resources
+F:\DMSkin\DMSKIN.WPF.DEMO1\obj\Release\DMSKIN.WPF.DEMO1.Properties.Resources.resources
+F:\DMSkin\DMSKIN.WPF.DEMO1\obj\Release\DMSKIN.WPF.DEMO1.csproj.GenerateResource.Cache
+F:\DMSkin\DMSKIN.WPF.DEMO1\obj\Release\DMSKIN.WPF.DEMO1.exe
+F:\DMSkin\DMSKIN.WPF.DEMO1\obj\Release\DMSKIN.WPF.DEMO1.pdb

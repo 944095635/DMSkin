@@ -1,0 +1,77 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:DMSKIN.WPF.DEMO1">
+
+    <FontFamily x:Key="myfont">微软雅黑</FontFamily>
+    <FontFamily x:Key="myfont1">微软雅黑</FontFamily>
+    <FontFamily x:Key="myfont2">/DMSKIN.WPF.DEMO2;component/Resources/#AR DESTINE</FontFamily>
+    
+    <Style x:Key="DMRTIm" TargetType="RadioButton" >
+        <Setter Property="FontSize" Value="15"></Setter>
+        <Setter Property="Foreground" Value="#FF888888"></Setter>
+        <Setter Property="Template" >
+            <Setter.Value>
+                <ControlTemplate  TargetType="{x:Type RadioButton}">
+                    <Grid  Background="Transparent" Name="x">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"></ColumnDefinition>
+                            <ColumnDefinition Width="50"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="55"></ColumnDefinition>
+                            <ColumnDefinition Width="50"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock FontSize="20" x:Name="n" Foreground="White" Grid.Column="0" Text="{Binding Id}" FontFamily="{StaticResource myfont}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        </TextBlock>
+                        <TextBlock  Foreground="White" Grid.Column="1" Text="&#xe60a;" FontFamily="/DMSKIN.WPF.DEMO1;component/Resources/#iconfont" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        </TextBlock>
+                        <TextBlock FontSize="20" Foreground="White" Grid.Column="2" Text="{Binding Name}" FontFamily="{StaticResource myfont}" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        </TextBlock>
+                        <TextBlock FontSize="20" Foreground="White" Grid.Column="3" Text="{Binding Time}" FontFamily="{StaticResource myfont}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        </TextBlock>
+                        <TextBlock  Foreground="White" Grid.Column="4" Text="&#xe609;" FontFamily="/DMSKIN.WPF.DEMO1;component/Resources/#iconfont" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        </TextBlock>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true" >
+                            <Setter Property="Background" TargetName="x" Value="#59FFFFFF"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter Property="Background" TargetName="x" Value="#FF626A6C"></Setter>
+                            <Setter Property="Text" TargetName="n" Value="&#xe778;"></Setter>
+                            <Setter Property="FontFamily" TargetName="n" Value="/DMSKIN.WPF.DEMO1;component/Resources/#iconfont"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="mybtn" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="back">
+                        <Grid>
+                            <TextBlock Text="&#xe648;"
+                            FontSize="25" Margin="10" 
+                            FontFamily="/DMSKIN.WPF.DEMO1;component/Resources/#iconfont"
+                            Foreground="White"
+                            VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                            </TextBlock>
+                            <!--&#xe609;<ContentControl Name="content" FontSize="23"  Foreground="#FF333333" Content="{TemplateBinding Content}"  VerticalAlignment="Center" HorizontalAlignment="Center"/>-->
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="back" Property="Background" Value="#4CFFFFFF"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <!--<Setter TargetName="content" Property="FontWeight" Value="Bold"/>-->
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>

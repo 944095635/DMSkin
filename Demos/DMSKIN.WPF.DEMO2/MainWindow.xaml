@@ -1,0 +1,50 @@
+﻿<DMSkin:DMSkinWindow x:Class="DMSKIN.WPF.DEMO2.MainWindow"
+     xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        FontFamily="{StaticResource myfont1}"
+        Background="Transparent"         
+      		Foreground="White"             
+        DMWindow="Shadow"
+        DMShowMin="True"
+        DMShowMax="True"
+        DMShadowSize="10"
+        DMTitleSize="50"
+        DMTitleColor="#FF666666"
+        DMTitleHoverColor="#33000000"
+        DMShadowColor="#FFC8C8C8"
+        DMBorderColor="#FFC8C8C8" 
+        DMDropShadowEffect="0"
+        DMBorderSize="1"
+        ResizeMode="CanResizeWithGrip"
+        Height="700" Width="1000" 
+        WindowStyle="None" 
+		WindowStartupLocation="CenterScreen"
+        MinHeight="268" MinWidth="360"
+        Title="MainWindow" 
+       >
+    <Grid>
+        <Grid Background="White">
+            <Border Grid.Column="0" BorderThickness="0,0,0,2" BorderBrush="{StaticResource LineColor}" VerticalAlignment="Top">
+                <Grid>
+                    <TextBlock Foreground="{StaticResource MainColor}" Text="DMSkin"  FontSize="20"
+                           HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    <Button  Name="ButtonSkin"
+                                ToolTip="主题"
+                                Focusable="False"
+                                Style="{DynamicResource CaptionButtonStyle}"
+                                Padding="0" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,0,150,0" Width="50" Height="50" 
+                                >
+                        <Label Foreground="#FF555555" 
+                                       Content="X" FontSize="22" 
+                                       HorizontalContentAlignment="Center" FontWeight="Bold"  ></Label>
+                    </Button>
+                </Grid>
+            </Border>
+        </Grid>
+        <ResizeGrip Visibility="{Binding DMVisibility}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalAlignment="Bottom" HorizontalAlignment="Right"></ResizeGrip>
+    </Grid>
+</DMSkin:DMSkinWindow>

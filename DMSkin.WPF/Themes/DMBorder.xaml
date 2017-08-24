@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:DMSkin.WPF.Themes">
+
+    <Style x:Key="TextPanel" TargetType="{x:Type Border}">
+        <Setter Property="BorderBrush" Value="#FFDDDDDD"/>
+        <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+
+    <!--主窗体背景色 -->
+    <Style x:Key="TitlePanel" TargetType="{x:Type Border}">
+        <Setter Property="CornerRadius" Value="0,0,0,0"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Background" Value="{StaticResource BaseColor}"/>
+    </Style>
+    
+    
+</ResourceDictionary>
