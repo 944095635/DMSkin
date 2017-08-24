@@ -27,16 +27,27 @@ QQ群： 76566523
 官网： http://www.dmskin.com
 
 
+<h1>更新情况</h1>
+<blockquote>
+<p>0.6 (2017-3-6)</p>
+<p>1.新增DMTitleHoverColor 系统按钮鼠标悬浮的背景色(圆角窗体设为透明效果更好)</p>
+<p>2.新增圆角DEMO/span>
+<p>3.新增窗体模式：扁平化+阴影 2种风格窗体</p>
+</blockquote>
 
 <h1>使用说明</h1>
-<pre><code>
+<pre>
+<code>
 1.引用DMSkin.WPF.DLL
 2.Window继承修改为:MainWindow : DMSkinWindow
 3.添加引用:xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF"
 4.XAML继承修改为: DMSkin:DMSkinWindow x:Class="DMSkin.WPF.Test.MainWindow"
-</code></pre>
+</code>
+</pre>
+
 <h1>窗体属性</h1>
-<pre><code>
+<pre>
+<code>
 Foreground="White"  //前景色        
 Background="White"  //背景色   
 DMWindow="Shadow"   //Shadow-阴影模式  Metro-线条扁平化模式
@@ -54,7 +65,8 @@ ResizeMode="CanResizeWithGrip" //边框拉伸方案
 Height="700" Width="1000"  //窗体大小
 WindowStartupLocation="CenterScreen"  //窗体初始位置
 MinHeight="268" MinWidth="360"   //窗体最大以及最小属性
-</code></pre>
+</code>
+</pre>
 
 
 <h1>资源引用</h1>
