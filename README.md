@@ -55,3 +55,83 @@ Height="700" Width="1000"  //窗体大小
 WindowStartupLocation="CenterScreen"  //窗体初始位置
 MinHeight="268" MinWidth="360"   //窗体最大以及最小属性
 </code></pre>
+
+
+<h1>资源引用</h1>
+<pre>
+<code>
+&lt;Application.Resources&gt;
+            &lt;ResourceDictionary&gt;
+                &lt;ResourceDictionary.MergedDictionaries&gt;
+                &lt;ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMSkin.xaml" /&gt;
+                &lt;ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMColor.xaml" /&gt;
+                &lt;ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMScrollViewer.xaml" /&gt;
+                &lt;ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMButton.xaml" /&gt;
+                &lt;ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMTabControl.xaml" /&gt;
+                &lt;ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMRadioButton.xaml" /&gt;
+                &lt;ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMTreeView.xaml" /&gt;
+                &lt;ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMDataGrid.xaml" /&gt;
+                &lt;ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMListBox.xaml" /&gt;
+                &lt;ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMSlider.xaml" /&gt;
+                &lt;ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMCheckBox.xaml" /&gt;
+                &lt;ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMContextMenu.xaml" /&gt;
+                &lt;/ResourceDictionary.MergedDictionaries&gt;
+            &lt;/ResourceDictionary&gt;
+&lt;/Application.Resources&gt;
+</code>
+</pre>
+
+<h1>通用模板</h1>
+<pre>
+<code>
+&lt;Grid&gt;
+        &lt;Grid Background="White"&gt;
+            &lt;Border Grid.Column="0" BorderThickness="0,0,0,2" BorderBrush="{StaticResource LineColor}" VerticalAlignment="Top"&gt;
+                &lt;Grid&gt;
+                    &lt;TextBlock Foreground="{StaticResource MainColor}" Text="DMSkin"  FontSize="20"
+                           HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/&gt;
+                    &lt;Button  Name="ButtonSkin"
+                                ToolTip="主题"
+                                Focusable="False"
+                                Style="{DynamicResource CaptionButtonStyle}"
+                                Padding="0" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,0,150,0" Width="50" Height="50" 
+                                &gt;
+                        &lt;Label Foreground="#FF555555" 
+                                       Content="X" FontSize="22" 
+                                       HorizontalContentAlignment="Center" FontWeight="Bold"  &gt;&lt;/Label&gt;
+                    &lt;/Button&gt;
+                &lt;/Grid&gt;
+            &lt;/Border&gt;
+        &lt;/Grid&gt;
+        &lt;ResizeGrip  HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalAlignment="Bottom" HorizontalAlignment="Right"&gt;&lt;/ResizeGrip&gt;
+&lt;/Grid&gt;
+</code>
+</pre>
+
+<h1>圆角窗体</h1>
+<pre>
+<code>
+&lt;Border Background="White" CornerRadius="5"  BorderThickness="1"&gt;
+        &lt;Border.Effect&gt;
+            &lt;DropShadowEffect BlurRadius="12" ShadowDepth="0" Color="#88000000"/&gt;
+        &lt;/Border.Effect&gt;
+        &lt;Grid Margin="0,0,0,0"&gt;
+            &lt;Grid Background="Transparent"&gt;
+                &lt;Grid.RowDefinitions&gt;
+                    &lt;RowDefinition Height="30"&gt;&lt;/RowDefinition&gt;
+                    &lt;RowDefinition Height="*"&gt;&lt;/RowDefinition&gt;
+                    &lt;RowDefinition Height="30"&gt;&lt;/RowDefinition&gt;
+                &lt;/Grid.RowDefinitions&gt;
+                &lt;Grid Grid.Row="0" Name="DMTitle"&gt;
+                &lt;/Grid&gt;
+            &lt;/Grid&gt;
+            &lt;ResizeGrip VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom"&gt;&lt;/ResizeGrip&gt;
+        &lt;/Grid&gt;
+&lt;/Border&gt;
+</code>
+</pre>
+
+<h1>更多效果图</1>
+<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/Images/A (1).gif"></image>
+<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/Images/A.png"></image>
+<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/Images/A.png"></image>
