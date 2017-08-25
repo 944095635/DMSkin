@@ -24,7 +24,7 @@ ResizeMode="CanResizeWithGrip"
 Height="700" Width="1000"  
 WindowStartupLocation="CenterScreen"  
 MinHeight="268" MinWidth="360"  
-        Title="MainWindow" 
+        Title="模板窗体" 
        >
     <Grid>
         <Grid Background="White">
