@@ -29,7 +29,7 @@ QQ群： 76566523
 <h1>帮助改进</h1>
 非常欢迎参与DFW的改进。有钱出钱有力出力，如果你觉得DFW很棒，请支持我
 <img  src="https://github.com/944095635/DMSkin-for-WPF/blob/master/%E5%9B%BE%E7%89%87/WX.png" />
-<img  src="https://github.com/944095635/DMSkin-for-WPF/blob/master/%E5%9B%BE%E7%89%87/ZFB.png" />
+<img  src="https://github.com/944095635/DMSkin-for-WPF/blob/master/%E5%9B%BE%E7%89%87/ZFB.jpg" />
 
 
 
