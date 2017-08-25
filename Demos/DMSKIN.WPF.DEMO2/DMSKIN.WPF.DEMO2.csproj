@@ -111,6 +111,12 @@
   <ItemGroup>
     <Resource Include="Resources\TEST.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DMSkin.WPF\DMSkin.WPF.csproj">
+      <Project>{235482b6-f6ae-4825-bd22-492b7b2672a8}</Project>
+      <Name>DMSkin.WPF</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

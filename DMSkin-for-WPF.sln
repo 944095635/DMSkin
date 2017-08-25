@@ -9,23 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSKIN.WPF.DEMO2", "Demos\D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkin.WPF", "DMSkin.WPF\DMSkin.WPF.csproj", "{235482B6-F6AE-4825-BD22-492B7B2672A8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "说明", "说明", "{571A8BFC-4548-4103-970F-E11BE04FDAF8}"
-	ProjectSection(SolutionItems) = preProject
-		C:\Users\DM\Desktop\说明\使用说明.txt = C:\Users\DM\Desktop\说明\使用说明.txt
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "图片", "图片", "{5DB3D780-A16C-49C5-B4B6-253586ABDC63}"
-	ProjectSection(SolutionItems) = preProject
-		C:\Users\DM\Desktop\Images\A (1).gif = C:\Users\DM\Desktop\Images\A (1).gif
-		C:\Users\DM\Desktop\Images\A (1).jpg = C:\Users\DM\Desktop\Images\A (1).jpg
-		C:\Users\DM\Desktop\Images\A (1).png = C:\Users\DM\Desktop\Images\A (1).png
-		C:\Users\DM\Desktop\Images\A (2).jpg = C:\Users\DM\Desktop\Images\A (2).jpg
-		C:\Users\DM\Desktop\Images\A (3).jpg = C:\Users\DM\Desktop\Images\A (3).jpg
-		C:\Users\DM\Desktop\Images\A (4).jpg = C:\Users\DM\Desktop\Images\A (4).jpg
-		C:\Users\DM\Desktop\Images\A.png = C:\Users\DM\Desktop\Images\A.png
-		C:\Users\DM\Desktop\Images\B.png = C:\Users\DM\Desktop\Images\B.png
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
