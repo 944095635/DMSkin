@@ -2,14 +2,19 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
+using static DMSkin.WPF.DMSkinWindow;
 
 namespace DMSkin.WPF
 {
@@ -61,19 +66,46 @@ namespace DMSkin.WPF
             Button btnMin = (Button)Template.FindName("PART_Min", this);
             btnMin.Click += delegate
             {
-                WindowState = WindowState.Minimized;
+                //启动最小化动画
+                StoryboardSlowHide.Begin(this);
+                Task.Factory.StartNew(() =>
+                {
+                    Thread.Sleep(400);
+                    Dispatcher.Invoke(new Action(() =>
+                    {
+                        WindowState = WindowState.Minimized;
+                    }));
+                });
             };
         }
 
+    
         Style MainWindowShadow;
         Style MainWindowMetro;
+        /// <summary>
+        /// 慢慢显示的动画
+        /// </summary>
+        Storyboard StoryboardSlowShow;
+        /// <summary>
+        /// 慢慢隐藏的动画
+        /// </summary>
+        Storyboard StoryboardSlowHide;
+
         private void InitializeStyle()
         {
             string packUri = @"/DMSkin.WPF;component/Themes/DMSkin.xaml";
             ResourceDictionary dic = new ResourceDictionary { Source = new Uri(packUri, UriKind.Relative) };
             this.Resources.MergedDictionaries.Add(dic);
+
+            string packUriAnimation = @"/DMSkin.WPF;component/Themes/Animation.xaml";
+            ResourceDictionary dicAnimation = new ResourceDictionary { Source = new Uri(packUriAnimation, UriKind.Relative) };
+            this.Resources.MergedDictionaries.Add(dicAnimation);
+
             MainWindowShadow = this.Style = (Style)dic["MainWindow"];
             MainWindowMetro = (Style)dic["MainWindowMetro"];
+
+            StoryboardSlowShow = (Storyboard)this.FindResource("SlowShow");
+            StoryboardSlowHide = (Storyboard)this.FindResource("SlowHide");
         }
         #endregion
 
@@ -108,10 +140,16 @@ namespace DMSkin.WPF
                     WmGetMinMaxInfo(hwnd, lParam);
                     handled = true;
                     break;
-                //case Win32.WM_NCCALCSIZE:
-                //        if (window->is_borderless) return 0;
-                //        else return DefWindowProc(hwnd, msg, wparam, lparam);
-                //    break;
+                case Win32.WM_SYSCOMMAND:
+                    if (wParam.ToInt32() == Win32.SC_MINIMIZE)//最小化消息
+                    {
+                        StoryboardSlowHide.Begin(this);
+                    }
+                    if (wParam.ToInt32() == Win32.SC_RESTORE)//恢复消息
+                    {
+                        StoryboardSlowShow.Begin(this);
+                    }
+                    break;
             }
             return IntPtr.Zero;
         }
@@ -163,8 +201,8 @@ namespace DMSkin.WPF
             if (DMFullScreen)
             {
                 Point dpiSize = matrix.Transform(new Point(
-              System.Windows.SystemParameters.PrimaryScreenWidth,
-              System.Windows.SystemParameters.PrimaryScreenHeight
+              SystemParameters.PrimaryScreenWidth,
+              SystemParameters.PrimaryScreenHeight
               ));
 
                 mmi.ptMaxSize.x = (int)dpiSize.X;
@@ -234,10 +272,24 @@ namespace DMSkin.WPF
 
         public class Win32
         {
-            // Sent to a window when the size or position of the window is about to change  
+            // Sent to a window when the size or position of the window is about to change
+            //发送到一个窗口时，窗口的大小和位置变化有关
             public const int WM_GETMINMAXINFO = 0x0024;
+            /// <summary>
+            /// 系统操作
+            /// </summary>
+            public const int WM_SYSCOMMAND = 0x112;
+            /// <summary>
+            /// 最小化
+            /// </summary>
+            public const int SC_MINIMIZE = 0xF020;
+            /// <summary>
+            /// 恢复
+            /// </summary>
+            public const int SC_RESTORE = 0xF120;
 
             // Retrieves a handle to the display monitor that is nearest to the window  
+            //检索到靠近窗口的显示监视器的处理
             public const int MONITOR_DEFAULTTONEAREST = 2;
 
             // Retrieves a handle to the display monitor  

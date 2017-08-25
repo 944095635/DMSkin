@@ -8,7 +8,7 @@ namespace DMSkin.WPF.Activation
 {
     public static class Activate
     {
-        public static void activation()
+        public static void Activation()
         {
             Process.Start("http://www.dmskin.com");
         }

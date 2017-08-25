@@ -6,7 +6,6 @@
     <SolidColorBrush x:Key="LineColor">#FFF0F0F0</SolidColorBrush>
     <!--#endregion-->
 
-
     <SolidColorBrush x:Key="TransparentWhiteBrush" Color="Transparent" />
     <SolidColorBrush x:Key="ButtonPressedOuterBackgroundBrush" Color="AliceBlue" Opacity="0.3" />
     <SolidColorBrush x:Key="ButtonHoverOuterBackgroundBrush" Color="Red" Opacity="0.12" />
