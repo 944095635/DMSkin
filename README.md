@@ -35,11 +35,14 @@ QQ群： 76566523
 <img style="width:200px;" src="https://github.com/944095635/DMSkin-for-WPF/blob/master/%E5%9B%BE%E7%89%87/JZ.jpg" />
 
 
+<h1>项目DEMO</h1>
+<blockquote>
+<p>Demo1</p>
+<p>周杰伦音乐播放器</p>
+<p>Demo2</p>
+<p>默认模板页</p>
+</blockquote>
 
-
-
-
-<h1>更新情况</h1>
 <blockquote>
 <p>0.6 (2017-3-6)</p>
 <p>1.新增DMTitleHoverColor 系统按钮鼠标悬浮的背景色(圆角窗体设为透明效果更好)</p>
