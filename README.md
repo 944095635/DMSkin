@@ -4,7 +4,7 @@
 
 <h1>前言</h1>
 
-<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A.png"></image>
+<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A.png" />
 
 
 
@@ -25,6 +25,15 @@ QQ群： 76566523
 我的QQ： 944095635
 
 官网： http://www.dmskin.com
+
+<h1>帮助改进</h1>
+非常欢迎参与DFW的改进。有钱出钱有力出力，如果你觉得DFW很棒，请支持我
+<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/WX.PNG" />
+<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/ZFB.PNG" />
+
+
+
+
 
 
 <h1>更新情况</h1>
@@ -144,8 +153,8 @@ MinHeight="268" MinWidth="360"   //窗体最大以及最小属性
 </pre>
 
 <h1>更多效果图</1>
-<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (1).gif"></image>
-<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (2).jpg"></image>
-<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/B.png"></image>
-<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (3).jpg"></image>
-<image src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (4).jpg"></image>
+<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (1).gif" />
+<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (2).jpg" />
+<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/B.png" />
+<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (3).jpg" />
+<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (4).jpg" />
