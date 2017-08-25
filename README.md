@@ -16,22 +16,6 @@ DFW实现了比较完美的无边框窗体方案，并且拖拽全部采用WIN32
 另外,由于我对MVVM不擅长，所以DEMO并不是采用MVVM框架。
 
 
-<h1>相关</h1>
-
-加入讨论
-
-QQ群： 76566523
-
-我的QQ： 944095635
-
-官网： http://www.dmskin.com
-
-<h1>帮助改进</h1>
-非常欢迎参与DFW的改进。有钱出钱有力出力，如果你觉得DFW很棒，请支持我。
-如果你需要相关的资源或者学习资料也请联系我。
-<img style="width:200px;" src="https://github.com/944095635/DMSkin-for-WPF/blob/master/%E5%9B%BE%E7%89%87/JZ.jpg" />
-
-
 <h1>注意事项</h1>
 本源码采用VS2017 个人版 开发,部分C# 6.0+语法 vs2015 vs2013 vs2012 请自行修改源码中不支持的部分。
 
@@ -49,6 +33,25 @@ QQ群： 76566523
 <p>1.新增DMSystemButtonHoverColor 系统按钮鼠标悬浮的背景色(圆角窗体请设为透明,效果更好)</p>
 <p>2.新增窗体模式：扁平化Metro+阴影Shadow 2种风格窗体</p>
 </blockquote>
+
+
+
+<h1>相关</h1>
+
+加入讨论
+
+QQ群： 76566523
+
+我的QQ： 944095635
+
+官网： http://www.dmskin.com
+
+<h1>帮助改进</h1>
+非常欢迎参与DFW的改进。有钱出钱有力出力，如果你觉得DFW很棒，请支持我。
+如果你需要相关的资源或者学习资料也请联系我。
+<img style="width:200px;" src="https://github.com/944095635/DMSkin-for-WPF/blob/master/%E5%9B%BE%E7%89%87/JZ.jpg" />
+
+
 
 
 <h1>使用说明</h1>
