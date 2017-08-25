@@ -14,7 +14,7 @@ using System.Windows.Media;
 namespace DMSkin.WPF
 {
     /// <summary>
-    /// 阴影窗体
+    /// 主窗体基类
     /// </summary>
     public partial class DMSkinWindow:Window,INotifyPropertyChanged
     {
@@ -160,7 +160,7 @@ namespace DMSkin.WPF
                this.MinHeight
                ));
 
-            if (DMFull)
+            if (DMFullScreen)
             {
                 Point dpiSize = matrix.Transform(new Point(
               System.Windows.SystemParameters.PrimaryScreenWidth,
@@ -203,7 +203,7 @@ namespace DMSkin.WPF
                     BtnMaxVisibility = Visibility.Visible;
                     BtnRestoreVisibility = Visibility.Collapsed;
                 }
-                WindowBorder.Margin = new Thickness(DMShadowSize);
+                WindowBorder.Margin = new Thickness(DMWindowShadowSize);
             }
         }
 
@@ -443,114 +443,25 @@ namespace DMSkin.WPF
         }
         #endregion
 
-        #region 窗体控制按钮
+        #region 窗体属性
 
 
-        private bool _DMFull = false;
+        private bool _DMFullscreen = false;
         [Description("全屏是否保留任务栏显示"), Category("DMSkin")]
-        public bool DMFull
+        public bool DMFullScreen
         {
             get
             {
-                return _DMFull;
+                return _DMFullscreen;
             }
 
             set
             {
-                _DMFull = value;
+                _DMFullscreen = value;
                 OnPropertyChanged("DMFull");
             }
         }
 
-
-        private int titleHeight = 30;
-
-        [Description("窗体标题高度(关系到系统按钮)"), Category("DMSkin")]
-        public int DMTitleSize
-        {
-            get
-            {
-                return titleHeight;
-            }
-
-            set
-            {
-                titleHeight = value;
-                OnPropertyChanged("DMTitleSize");
-            }
-        }
-
-
-        private int borderSize = 1;
-
-        [Description("Metro窗体边框宽度"), Category("DMSkin")]
-        public int DMBorderSize
-        {
-            get
-            {
-                return borderSize;
-            }
-
-            set
-            {
-                borderSize = value;
-                OnPropertyChanged("DMBorderSize");
-            }
-        }
-
-
-        private Brush borderColor = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));
-
-        [Description("Metro窗体边框颜色"), Category("DMSkin")]
-        public Brush DMBorderColor
-        {
-            get
-            {
-                return borderColor;
-            }
-
-            set
-            {
-                borderColor = value;
-                OnPropertyChanged("DMBorderColor");
-            }
-        }
-
-        
-
-        private Brush titleHoverColor = new SolidColorBrush(Color.FromArgb(0,255,255,255));
-
-        [Description("窗体系统按钮鼠标悬浮背景颜色"), Category("DMSkin")]
-        public Brush DMTitleHoverColor
-        {
-            get
-            {
-                return titleHoverColor;
-            }
-
-            set
-            {
-                titleHoverColor = value;
-                OnPropertyChanged("DMTitleHoverColor");
-            }
-        }
-
-        private Brush titleColor = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
-
-        [Description("窗体系统按钮颜色"), Category("DMSkin")]
-        public Brush DMTitleColor
-        {
-            get
-            {
-                return titleColor;
-            }
-
-            set
-            {
-                titleColor = value;
-                OnPropertyChanged("DMTitleColor");
-            }
-        }
 
         private DMWindow dmDMWindow = DMWindow.Shadow;
         [Description("窗体类型"), Category("DMSkin")]
@@ -575,6 +486,110 @@ namespace DMSkin.WPF
                 OnPropertyChanged("DMWindow");
             }
         }
+
+        private int _DMWindowShadowSize = 10;
+        [Description("窗体阴影大小"), Category("DMSkin")]
+        public int DMWindowShadowSize
+        {
+            get
+            {
+                return _DMWindowShadowSize;
+            }
+
+            set
+            {
+                _DMWindowShadowSize = value;
+                OnPropertyChanged("DMWindowShadowSize");
+            }
+        }
+
+        private Color _DMWindowShadowColor = Color.FromArgb(255, 151, 151, 151);
+
+        [Description("窗体阴影颜色"), Category("DMSkin")]
+        public Color DMWindowShadowColor
+        {
+            get
+            {
+                return _DMWindowShadowColor;
+            }
+
+            set
+            {
+                _DMWindowShadowColor = value;
+                OnPropertyChanged("DMWindowShadowColor");
+            }
+        }
+
+
+        #region 系统按钮
+        private int _DMSystemButtonSize = 30;
+
+        [Description("窗体标题高度(关系到系统按钮)"), Category("DMSkin")]
+        public int DMSystemButtonSize
+        {
+            get
+            {
+                return _DMSystemButtonSize;
+            }
+
+            set
+            {
+                _DMSystemButtonSize = value;
+                OnPropertyChanged("DMSystemButtonSize");
+            }
+        }
+
+        private Brush _DMSystemButtonHoverColor = new SolidColorBrush(Color.FromArgb(0, 255, 255, 255));
+
+        [Description("窗体系统按钮鼠标悬浮背景颜色"), Category("DMSkin")]
+        public Brush DMSystemButtonHoverColor
+        {
+            get
+            {
+                return _DMSystemButtonHoverColor;
+            }
+
+            set
+            {
+                _DMSystemButtonHoverColor = value;
+                OnPropertyChanged("DMSystemButtonHoverColor");
+            }
+        }
+
+        private double _DMSystemButtonShadowEffect = 1;
+        [Description("窗体控制按钮阴影大小"), Category("DMSkin")]
+        public double DMSystemButtonShadowEffect
+        {
+            get
+            {
+                return _DMSystemButtonShadowEffect;
+            }
+
+            set
+            {
+                _DMSystemButtonShadowEffect = value;
+                OnPropertyChanged("DMSystemButtonShadowEffect");
+            }
+        }
+
+        private Brush _DMSystemButtonForeground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+
+        [Description("窗体系统按钮颜色"), Category("DMSkin")]
+        public Brush DMSystemButtonForeground
+        {
+            get
+            {
+                return _DMSystemButtonForeground;
+            }
+
+            set
+            {
+                _DMSystemButtonForeground = value;
+                OnPropertyChanged("DMSystemButtonForeground");
+            }
+        }
+
+
 
         private bool dmShowMax = true;
         [Description("显示最大化按钮"), Category("DMSkin")]
@@ -655,55 +670,46 @@ namespace DMSkin.WPF
                 OnPropertyChanged("DMShowClose");
             }
         }
+        #endregion
 
-        private int dmShadowSize = 10;
-        [Description("窗体阴影大小"), Category("DMSkin")]
-        public int DMShadowSize
+        #region Metro 属性
+        private int _DMMetroBorderSize = 1;
+
+        [Description("Metro窗体边框宽度"), Category("DMSkin")]
+        public int DMMetroBorderSize
         {
             get
             {
-                return dmShadowSize;
+                return _DMMetroBorderSize;
             }
 
             set
             {
-                dmShadowSize = value;
-                OnPropertyChanged("DMShadowSize");
+                _DMMetroBorderSize = value;
+                OnPropertyChanged("DMMetroBorderSize");
             }
         }
 
-        private double dmDropShadowEffect = 1;
-        [Description("窗体控制按钮阴影大小"),Category("DMSkin")]
-        public double DMDropShadowEffect
+
+        private Brush _DMMetroBorderColor = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));
+
+        [Description("Metro窗体边框颜色"), Category("DMSkin")]
+        public Brush DMMetroBorderColor
         {
             get
             {
-                return dmDropShadowEffect;
+                return _DMMetroBorderColor;
             }
 
             set
             {
-                dmDropShadowEffect = value;
-                OnPropertyChanged("DMDropShadowEffect");
+                _DMMetroBorderColor = value;
+                OnPropertyChanged("DMMetroBorderColor");
             }
         }
+        #endregion
 
-        private Color dmShadowColor = Color.FromArgb(255, 151, 151, 151);
-
-        [Description("窗体阴影颜色"), Category("DMSkin")]
-        public Color DMShadowColor
-        {
-            get
-            {
-                return dmShadowColor;
-            }
-
-            set
-            {
-                dmShadowColor = value;
-                OnPropertyChanged("DMShadowColor");
-            }
-        }
+   
 
         private Visibility btnMinVisibility = Visibility.Visible;
         //最小化按钮显示

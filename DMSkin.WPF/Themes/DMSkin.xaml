@@ -18,19 +18,19 @@
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Padding" Value="1" />
-        <Setter Property="Width" Value="{Binding DMTitleSize}" />
-        <Setter Property="Height" Value="{Binding DMTitleSize}" />
+        <Setter Property="Width" Value="{Binding DMSystemButtonSize}" />
+        <Setter Property="Height" Value="{Binding DMSystemButtonSize}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Grid x:Name="grid" Height="{Binding DMTitleSize}" Width="{Binding DMTitleSize}" Background="#00FFFFFF" >
+                    <Grid x:Name="grid" Height="{Binding DMSystemButtonSize}" Width="{Binding DMSystemButtonSize}" Background="#00FFFFFF" >
                         <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True"  />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <!--<Setter Property="Foreground" Value="White" />-->
                             <!--<Setter TargetName="contentPresenter" Property="Opacity" Value="1" />-->
-                            <Setter TargetName="grid" Property="Background" Value="{Binding DMTitleHoverColor}" />
+                            <Setter TargetName="grid" Property="Background" Value="{Binding DMSystemButtonHoverColor}" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="False">
                             <!--<Setter TargetName="contentPresenter" Property="Opacity" Value=".5" />-->
@@ -51,10 +51,10 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Window}">
-                    <Grid Name="WindowBorder" Margin="{Binding DMShadowSize}" >
+                    <Grid Name="WindowBorder" Margin="{Binding DMWindowShadowSize}" >
                         <Rectangle  Fill="{TemplateBinding Background}">
                             <Rectangle.Effect>
-                                <DropShadowEffect BlurRadius="{Binding DMShadowSize}" ShadowDepth="0" Color="{Binding DMShadowColor}"/>
+                                <DropShadowEffect BlurRadius="{Binding DMWindowShadowSize}" ShadowDepth="0" Color="{Binding DMWindowShadowColor}"/>
                             </Rectangle.Effect>
                         </Rectangle>
                         <Border 
@@ -66,7 +66,7 @@
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
                             <ContentPresenter />
                         </Border>
-                        <StackPanel Height="{Binding DMTitleSize}" Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right">
+                        <StackPanel Height="{Binding DMSystemButtonSize}" Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right">
                             <Button x:Name="PART_Min"
                                 Focusable="False"
                                 Visibility="{Binding BtnMinVisibility}"    
@@ -75,9 +75,9 @@
                                 >
                                 <Path Data="F1M0,6L0,9 9,9 9,6 0,6z"
                                   SnapsToDevicePixels="True"
-                                  Fill="{Binding DMTitleColor}" >
+                                  Fill="{Binding DMSystemButtonForeground}" >
                                     <Path.Effect>
-                                        <DropShadowEffect Opacity="{Binding DMDropShadowEffect}" BlurRadius="5" ShadowDepth="0"/>
+                                        <DropShadowEffect Opacity="{Binding DMSystemButtonShadowEffect}" BlurRadius="5" ShadowDepth="0"/>
                                     </Path.Effect>
                                 </Path>
                             </Button>
@@ -91,9 +91,9 @@
                                 >
                                     <Path SnapsToDevicePixels="True"
                                   Data="F1M0,0L0,9 9,9 9,0 0,0 0,3 8,3 8,8 1,8 1,3z"
-                                  Fill="{Binding DMTitleColor}" >
+                                  Fill="{Binding DMSystemButtonForeground}" >
                                         <Path.Effect>
-                                            <DropShadowEffect Opacity="{Binding DMDropShadowEffect}" BlurRadius="5" ShadowDepth="0"/>
+                                            <DropShadowEffect Opacity="{Binding DMSystemButtonShadowEffect}" BlurRadius="5" ShadowDepth="0"/>
                                         </Path.Effect>
                                     </Path>
                                 </Button>
@@ -106,9 +106,9 @@
                                 >
                                     <Path SnapsToDevicePixels="True"
                                   Data="F1M0,10L0,3 3,3 3,0 10,0 10,2 4,2 4,3 7,3 7,6 6,6 6,5 1,5 1,10z M1,10L7,10 7,7 10,7 10,2 9,2 9,6 6,6 6,9 1,9z"
-                                  Fill="{Binding DMTitleColor}" >
+                                  Fill="{Binding DMSystemButtonForeground}" >
                                         <Path.Effect>
-                                            <DropShadowEffect Opacity="{Binding DMDropShadowEffect}" BlurRadius="5" ShadowDepth="0"/>
+                                            <DropShadowEffect Opacity="{Binding DMSystemButtonShadowEffect}" BlurRadius="5" ShadowDepth="0"/>
                                         </Path.Effect>
                                     </Path>
                                 </Button>
@@ -121,9 +121,9 @@
                                 >
                                 <Path Data="F1M0,0L2,0 5,3 8,0 10,0 6,4 10,8 8,8 5,5 2,8 0,8 4,4 0,0z"
                                   SnapsToDevicePixels="True"
-                                  Fill="{Binding DMTitleColor}" >
+                                  Fill="{Binding DMSystemButtonForeground}" >
                                     <Path.Effect>
-                                        <DropShadowEffect Opacity="{Binding DMDropShadowEffect}" BlurRadius="5" ShadowDepth="0"/>
+                                        <DropShadowEffect Opacity="{Binding DMSystemButtonShadowEffect}" BlurRadius="5" ShadowDepth="0"/>
                                     </Path.Effect>
                                 </Path>
                             </Button>
@@ -191,12 +191,12 @@
                             Background="{TemplateBinding Background}"
                             Panel.ZIndex="0"
                             Name="MyBorder"
-                            BorderBrush="{Binding DMBorderColor}" 
-                            BorderThickness="{Binding DMBorderSize}"
+                            BorderBrush="{Binding DMMetroBorderColor}" 
+                            BorderThickness="{Binding DMMetroBorderSize}"
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
                             <ContentPresenter/>
                         </Border>
-                        <StackPanel Height="{Binding DMTitleSize}" Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right">
+                        <StackPanel Height="{Binding DMSystemButtonSize}" Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right">
                             <Button x:Name="PART_Min"
                                 Focusable="False"
                                 Visibility="{Binding BtnMinVisibility}"    
@@ -205,7 +205,7 @@
                                 >
                                 <Path Data="F1M0,6L0,9 9,9 9,6 0,6z"
                                   SnapsToDevicePixels="True"
-                                  Fill="{Binding DMTitleColor}" />
+                                  Fill="{Binding DMSystemButtonForeground}" />
                             </Button>
 
                             <Grid>
@@ -217,7 +217,7 @@
                                 >
                                     <Path SnapsToDevicePixels="True"
                                   Data="F1M0,0L0,9 9,9 9,0 0,0 0,3 8,3 8,8 1,8 1,3z"
-                                  Fill="{Binding DMTitleColor}" />
+                                  Fill="{Binding DMSystemButtonForeground}" />
                                 </Button>
 
                                 <Button x:Name="PART_Restore"
@@ -228,7 +228,7 @@
                                 >
                                     <Path SnapsToDevicePixels="True"
                                   Data="F1M0,10L0,3 3,3 3,0 10,0 10,2 4,2 4,3 7,3 7,6 6,6 6,5 1,5 1,10z M1,10L7,10 7,7 10,7 10,2 9,2 9,6 6,6 6,9 1,9z"
-                                  Fill="{Binding DMTitleColor}" />
+                                  Fill="{Binding DMSystemButtonForeground}" />
                                 </Button>
 
                             </Grid>
@@ -243,7 +243,7 @@
                                 >
                                 <Path Data="F1M0,0L2,0 5,3 8,0 10,0 6,4 10,8 8,8 5,5 2,8 0,8 4,4 0,0z"
                                   SnapsToDevicePixels="True"
-                                  Fill="{Binding DMTitleColor}" />
+                                  Fill="{Binding DMSystemButtonForeground}" />
                             </Button>
                         </StackPanel>
                         <!--<StackPanel Orientation="Horizontal"

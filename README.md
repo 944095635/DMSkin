@@ -59,24 +59,25 @@ QQ群： 76566523
 
 <h1>窗体属性</h1>
 <pre>
-<code>
-Foreground="White"  //前景色        
-Background="White"  //背景色   
-DMWindow="Shadow"   //Shadow-阴影模式  Metro-线条扁平化模式
-DMShowMin="True"//显示系统按钮-最小化
-DMShowMax="True"//显示系统按钮-最大化
-DMShadowSize="10"//窗体阴影大小
-DMTitleSize="50"//系统按钮大小
-DMTitleColor="#FF666666"//系统按钮颜色
-DMTitleHoverColor="#33000000"//系统按钮的鼠标悬浮色
-DMDropShadowEffect="0" //系统按钮的阴影大小
-DMShadowColor="#FFC8C8C8" //窗体边框阴影颜色-仅Shadow有效
-DMBorderColor="#FFC8C8C8" //窗体边框颜色-仅Metro有效
-DMBorderSize="1" //边框大小-仅Metro有效
+<code>      
+Foreground="White"      //前景色 
+Background="White"      //背景色   
+DMWindow="Shadow"       //Shadow-阴影模式  Metro-线条扁平化模式
+DMShowMin="True"        //显示系统按钮-最小化
+DMShowMax="True"        //显示系统按钮-最大化
+DMShowClose="True"      //显示系统按钮-Close
+DMWindowShadowSize="10" //窗体边框阴影颜色-仅Shadow有效
+DMWindowShadowColor="#FFC8C8C8" 
+DMSystemButtonSize="50" //系统按钮大小
+DMSystemButtonForeground="#FF666666" //系统按钮颜色
+DMSystemButtonHoverColor="#33000000" //系统按钮的鼠标悬浮色
+DMSystemButtonShadowEffect="0"  //系统按钮的阴影大小
+DMMetroBorderColor="#FFC8C8C8"  //窗体边框颜色-仅Metro有效
+DMMetroBorderSize="1"  //边框大小-仅Metro有效
 ResizeMode="CanResizeWithGrip" //边框拉伸方案
-Height="700" Width="1000"  //窗体大小
-WindowStartupLocation="CenterScreen"  //窗体初始位置
-MinHeight="268" MinWidth="360"   //窗体最大以及最小属性
+Height="700" Width="1000"   //窗体大小
+MinHeight="268" MinWidth="360"  //窗体最大以及最小属性
+WindowStartupLocation="CenterScreen"   //窗体初始位置
 </code>
 </pre>
 

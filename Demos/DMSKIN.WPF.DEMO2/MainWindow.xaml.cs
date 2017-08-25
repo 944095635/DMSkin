@@ -24,5 +24,11 @@ namespace DMSKIN.WPF.DEMO2
         {
             InitializeComponent();
         }
+
+        private void ButtonSkin_Click(object sender, RoutedEventArgs e)
+        {
+            DMFullScreen = true;
+            WindowState = WindowState.Maximized;
+        }
     }
 }
