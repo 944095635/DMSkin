@@ -7,7 +7,6 @@
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A.png" />
 
 
-
 DMSkin-for-WPF是一个基于WPF的.Net WPF开源界面库,实现了无边框的WPF开发方案,内置部分控件模板.
 你可以参照模板自行修改完善。（以下简称DFW）。
 
@@ -18,6 +17,20 @@ DFW实现了比较完美的无边框窗体方案，并且拖拽全部采用WIN32
 
 <h1>注意事项</h1>
 本源码采用VS2017 个人版 开发,部分C# 6.0+语法 vs2015 vs2013 vs2012 请自行修改源码中不支持的部分。
+
+
+<h1>版本更新</h1>
+<blockquote>
+            
+<p>0.7 (2017-8-25)</p>     
+<p>1.代码托管到GITHUB</p>
+<p>2.新增Demo:周杰伦音乐播放器</p>
+<p>3.新增Demo:默认模板窗体</p>
+
+<p>0.6 (2017-3-6)</p>
+<p>1.新增DMSystemButtonHoverColor 系统按钮鼠标悬浮的背景色(圆角窗体请设为透明,效果更好)</p>
+<p>2.新增窗体模式：扁平化Metro+阴影Shadow 2种风格窗体</p>
+</blockquote>
 
 <h1>相关</h1>
 
@@ -34,24 +47,6 @@ QQ群： 76566523
 如果你需要相关的资源或者学习资料也请联系我。
 <img style="width:200px;" src="https://github.com/944095635/DMSkin-for-WPF/blob/master/%E5%9B%BE%E7%89%87/JZ.jpg" />
 
-
-<h1>项目DEMO</h1>
-<blockquote>
-
-</blockquote>
-
-<h1>版本更新</h1>
-<blockquote>
-            
-<p>0.7 (2017-8-25)</p>          
-<p>Demo1:周杰伦音乐播放器</p>
-<p>Demo2:默认模板窗体</p>
-
-<p>0.6 (2017-3-6)</p>
-<p>1.新增DMTitleHoverColor 系统按钮鼠标悬浮的背景色(圆角窗体设为透明效果更好)</p>
-<p>2.新增圆角DEMO</p>
-<p>3.新增窗体模式：扁平化+阴影 2种风格窗体</p>
-</blockquote>
 
 <h1>使用说明</h1>
 <pre>
