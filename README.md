@@ -37,16 +37,19 @@ QQ群： 76566523
 
 <h1>项目DEMO</h1>
 <blockquote>
-<p>Demo1</p>
-<p>周杰伦音乐播放器</p>
-<p>Demo2</p>
-<p>默认模板页</p>
+
 </blockquote>
 
+<h1>版本更新</h1>
 <blockquote>
+            
+<p>0.7 (2017-8-25)</p>          
+<p>Demo1:周杰伦音乐播放器</p>
+<p>Demo2:默认模板窗体</p>
+
 <p>0.6 (2017-3-6)</p>
 <p>1.新增DMTitleHoverColor 系统按钮鼠标悬浮的背景色(圆角窗体设为透明效果更好)</p>
-<p>2.新增圆角DEMO/span>
+<p>2.新增圆角DEMO</p>
 <p>3.新增窗体模式：扁平化+阴影 2种风格窗体</p>
 </blockquote>
 
