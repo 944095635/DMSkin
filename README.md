@@ -8,7 +8,7 @@
 
 
 
-DMSkin-for-WPF是一个基于WPF开源项目的.Net WPF界面库,实现了无边框的WPF开发方案,内置部分控件模板.
+DMSkin-for-WPF是一个基于WPF的.Net WPF开源界面库,实现了无边框的WPF开发方案,内置部分控件模板.
 你可以参照模板自行修改完善。（以下简称DFW）。
 
 <h1>核心</h1>
