@@ -19,19 +19,6 @@ DFW实现了比较完美的无边框窗体方案，并且拖拽全部采用WIN32
 本源码采用VS2017 个人版 开发,部分C# 6.0+语法 vs2015 vs2013 vs2012 请自行修改源码中不支持的部分。
 
 
-<h1>版本更新</h1>
-<blockquote>
-            
-<p>0.7 (2017-8-25)</p>     
-<p>1.代码托管到GITHUB</p>
-<p>2.新增Demo:周杰伦音乐播放器</p>
-<p>3.新增Demo:默认模板窗体</p>
-
-<p>0.6 (2017-3-6)</p>
-<p>1.新增DMSystemButtonHoverColor 系统按钮鼠标悬浮的背景色(圆角窗体请设为透明,效果更好)</p>
-<p>2.新增窗体模式：扁平化Metro+阴影Shadow 2种风格窗体</p>
-</blockquote>
-
 <h1>相关</h1>
 
 加入讨论
@@ -46,6 +33,21 @@ QQ群： 76566523
 非常欢迎参与DFW的改进。有钱出钱有力出力，如果你觉得DFW很棒，请支持我。
 如果你需要相关的资源或者学习资料也请联系我。
 <img style="width:200px;" src="https://github.com/944095635/DMSkin-for-WPF/blob/master/%E5%9B%BE%E7%89%87/JZ.jpg" />
+
+
+
+<h1>版本更新</h1>
+<blockquote>
+            
+<p>0.7 (2017-8-25)</p>     
+<p>1.代码托管到GITHUB</p>
+<p>2.新增Demo:周杰伦音乐播放器</p>
+<p>3.新增Demo:默认模板窗体</p>
+
+<p>0.6 (2017-3-6)</p>
+<p>1.新增DMSystemButtonHoverColor 系统按钮鼠标悬浮的背景色(圆角窗体请设为透明,效果更好)</p>
+<p>2.新增窗体模式：扁平化Metro+阴影Shadow 2种风格窗体</p>
+</blockquote>
 
 
 <h1>使用说明</h1>
