@@ -66,16 +66,7 @@ namespace DMSkin.WPF
             Button btnMin = (Button)Template.FindName("PART_Min", this);
             btnMin.Click += delegate
             {
-                //启动最小化动画
-                StoryboardSlowHide.Begin(this);
-                Task.Factory.StartNew(() =>
-                {
-                    Thread.Sleep(300);
-                    Dispatcher.Invoke(new Action(() =>
-                    {
-                        WindowState = WindowState.Minimized;
-                    }));
-                });
+                WindowMini();
             };
         }
 
@@ -143,7 +134,8 @@ namespace DMSkin.WPF
                 case Win32.WM_SYSCOMMAND:
                     if (wParam.ToInt32() == Win32.SC_MINIMIZE)//最小化消息
                     {
-                        StoryboardSlowHide.Begin(this);
+                        WindowMini();
+                        handled = true;
                     }
                     if (wParam.ToInt32() == Win32.SC_RESTORE)//恢复消息
                     {
@@ -152,6 +144,21 @@ namespace DMSkin.WPF
                     break;
             }
             return IntPtr.Zero;
+        }
+
+
+        private void WindowMini()
+        {
+            //启动最小化动画
+            StoryboardSlowHide.Begin(this);
+            Task.Factory.StartNew(() =>
+            {
+                Thread.Sleep(300);
+                Dispatcher.Invoke(new Action(() =>
+                {
+                    WindowState = WindowState.Minimized;
+                }));
+            });
         }
 
         //最大最小化信息
