@@ -134,19 +134,21 @@ namespace DMSkin.WPF
                 case Win32.WM_SYSCOMMAND:
                     if (wParam.ToInt32() == Win32.SC_MINIMIZE)//最小化消息
                     {
-                        WindowMini();
+                        WindowMini();//执行最小化动画
                         handled = true;
                     }
                     if (wParam.ToInt32() == Win32.SC_RESTORE)//恢复消息
                     {
-                        StoryboardSlowShow.Begin(this);
+                        WindowRestore();//执行恢复动画
                     }
                     break;
             }
             return IntPtr.Zero;
         }
 
-
+        /// <summary>
+        /// 执行最小化窗体
+        /// </summary>
         private void WindowMini()
         {
             //启动最小化动画
@@ -160,6 +162,16 @@ namespace DMSkin.WPF
                 }));
             });
         }
+        /// <summary>
+        /// 恢复窗体
+        /// </summary>
+        private void WindowRestore()
+        {
+            //启动最小化动画
+            StoryboardSlowShow.Begin(this);
+        }
+
+
 
         //最大最小化信息
         void WmGetMinMaxInfo(IntPtr hwnd, IntPtr lParam)
