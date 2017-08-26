@@ -70,7 +70,7 @@ namespace DMSkin.WPF
                 StoryboardSlowHide.Begin(this);
                 Task.Factory.StartNew(() =>
                 {
-                    Thread.Sleep(400);
+                    Thread.Sleep(300);
                     Dispatcher.Invoke(new Action(() =>
                     {
                         WindowState = WindowState.Minimized;

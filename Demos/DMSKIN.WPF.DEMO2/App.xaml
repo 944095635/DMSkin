@@ -17,9 +17,7 @@
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMListBox.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMSlider.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMCheckBox.xaml" />
-
-
-                <ResourceDictionary Source="pack://application:,,,/DMSKIN.WPF.DEMO2;component/Dictionary1.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSKIN.WPF.DEMO2;Component/Themes/DEMO2DMSkin.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

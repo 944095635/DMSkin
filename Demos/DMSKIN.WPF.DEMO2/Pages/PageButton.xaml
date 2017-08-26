@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="DMSKIN.WPF.DEMO2.Pages.PageButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DMSKIN.WPF.DEMO2.Pages"
+             xmlns:lo="clr-namespace:DMSkin.WPF.Controls;assembly=DMSkin.WPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <WrapPanel>
+            <Button Width="100" Height="30" Content="你好" Style="{StaticResource BaiDuTranslateButton}"></Button>
+            <lo:DMButtonFlat Width="100" Height="30" Content="下划线按钮" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Foreground="White"></lo:DMButtonFlat>
+        </WrapPanel>
+    </Grid>
+</UserControl>

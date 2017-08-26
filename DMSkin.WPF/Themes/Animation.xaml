@@ -3,8 +3,8 @@
                     >
     <!--慢慢隐藏-->
     <Storyboard x:Key="SlowHide" >
-        <DoubleAnimation From="1" To="0" Duration="0:0:0.4" Storyboard.TargetProperty="Opacity"/>
-        <ThicknessAnimation From="0,0,0,0" To="1000,1000,0,0" Duration="0:0:0.4"  Storyboard.TargetProperty="Margin"/>
+        <DoubleAnimation From="1" To="0" Duration="0:0:0.3" Storyboard.TargetProperty="Opacity"/>
+        <ThicknessAnimation From="0,0,0,0" To="1000,1000,0,0" Duration="0:0:0.3"  Storyboard.TargetProperty="Margin"/>
     </Storyboard>
     <!--慢慢显示-->
     <Storyboard x:Key="SlowShow" >
