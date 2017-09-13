@@ -1,5 +1,5 @@
-# DMSkin-for-WPF
-基于WPF的UI框架
+# DMSkin-for-WPF 2.0
+基于WPF的UI框架,全中国第一款WPF无边框完美方案,不是采用WindowStyle.None实现
 
 
 <h1>前言</h1>
