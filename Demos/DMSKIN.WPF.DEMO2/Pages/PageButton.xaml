@@ -8,9 +8,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <WrapPanel>
             <Button Width="100" Height="30" Content="你好" Style="{StaticResource BaiDuTranslateButton}"></Button>
-            <lo:DMButtonFlat Width="100" Height="30" Content="下划线按钮" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Foreground="White"></lo:DMButtonFlat>
-        </WrapPanel>
     </Grid>
 </UserControl>

@@ -9,7 +9,6 @@
         FontFamily="{StaticResource myfont1}"
        Foreground="White"   
 Background="Transparent" 
-DMWindow="Shadow"  
 DMShowMin="False"
 DMShowMax="False"
                      DMShowClose="False"
@@ -19,8 +18,6 @@ DMSystemButtonForeground="#FFFFFFFF"
 DMSystemButtonHoverColor="#33000000"
 DMSystemButtonShadowEffect="0" 
 DMWindowShadowColor="#FFC8C8C8" 
-DMMetroBorderColor="#FFC8C8C8"
-DMMetroBorderSize="1" 
 ResizeMode="CanResizeWithGrip" 
 Height="768" Width="1366"  
 WindowStartupLocation="CenterScreen"  
@@ -28,7 +25,7 @@ MinHeight="268" MinWidth="360"
         Title="周杰伦音乐播放器" 
                      Loaded="DMSkinWindow_Loaded"
        >
-    <Border CornerRadius="15"  BorderThickness="1">
+    <Border  BorderThickness="1">
         <Border.Effect>
             <DropShadowEffect BlurRadius="12" ShadowDepth="0" Color="#88000000"/>
         </Border.Effect>
@@ -119,7 +116,7 @@ MinHeight="268" MinWidth="360"
                     </Grid>
                 </Grid>
             </Grid>
-            <Border CornerRadius="0,0,15,15" Background="#4CFFFFFF" Height="70" VerticalAlignment="Bottom">
+            <Border Background="#4CFFFFFF" Height="70" VerticalAlignment="Bottom">
                 <TextBlock Margin="0,0,10,0" FontSize="20" FontFamily="/DMSKIN.WPF.DEMO1;component/Resources/#AR DESTINE" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White">Powered By Dream.Machine</TextBlock>
             </Border>
         </Grid>
