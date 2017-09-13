@@ -2,7 +2,7 @@
 <p>基于WPF的UI框架,全中国第一款WPF无边框完美方案,2.0采用WindowStyle.None实现</p>
 <p>2.0 双层窗体+Win32</p>
 <p>1.0 WindowStyle.None + 透明</p>
-
+<p>2.0版本可以完美移植winform无边框方案</p>
 
 <h1>前言</h1>
 
