@@ -47,9 +47,9 @@ namespace DMSkin.WPF
 
 
             //绑定窗体操作函数
-            this.SourceInitialized += MainWindow_SourceInitialized;
-            this.StateChanged += MainWindow_StateChanged;
-            this.MouseLeftButtonDown += MainWindow_MouseLeftButtonDown;
+            SourceInitialized += MainWindow_SourceInitialized;
+            StateChanged += MainWindow_StateChanged;
+            MouseLeftButtonDown += MainWindow_MouseLeftButtonDown;
             LocationChanged += MainWindow_LocationChanged;
             SizeChanged += MainWindow_SizeChanged;
             Closing += MainWindow_Closing;
@@ -155,6 +155,8 @@ namespace DMSkin.WPF
                 case Win32.WM_NCACTIVATE:
                     handled = true;
                     break;
+
+                
             }
             return IntPtr.Zero;
         }
@@ -237,6 +239,7 @@ namespace DMSkin.WPF
                     BtnMaxVisibility = Visibility.Collapsed;
                     BtnRestoreVisibility = Visibility.Visible;
                 }
+                shadowWindow.Hide();
             }
             if (WindowState == WindowState.Normal)
             {
