@@ -36,7 +36,6 @@ namespace DMSkin.WPF
             InitializeStyle();
             DataContext = this;
 
-            WindowStyle = WindowStyle.SingleBorderWindow;
             shadowWindow.Width = 0;
             shadowWindow.Height = 0;
             shadowWindow.WindowStyle = WindowStyle.None;
