@@ -1,6 +1,9 @@
-# DMSkin-for-WPF
-基于WPF的UI框架
-
+# DMSkin-for-WPF 2.0
+<h3>全中国第一款WPF无边框完美方案</h3>
+<p>基于WPF的UI框架,2.0采用WindowStyle.None实现</p>
+<p>2.0 双层窗体+Win32</p>
+<p>1.0 WindowStyle.None + 透明</p>
+<p>2.0版本可以完美移植winform无边框方案</p>
 
 <h1>前言</h1>
 
@@ -74,8 +77,8 @@ DFW实现了比较完美的无边框窗体方案，并且拖拽全部采用WIN32
 <code>      
 Foreground="White"      //前景色 
 Background="White"      //背景色   
-DMWindow="Shadow"       //Shadow-阴影模式  Metro-线条扁平化模式
-DMShowMin="True"        //显示系统按钮-最小化
+----DMWindow="Shadow"     //Shadow-阴影模式  Metro-线条扁平化模式   --2.0中移除
+DMShowMin="True"        //显示系统按钮-最小化
 DMShowMax="True"        //显示系统按钮-最大化
 DMShowClose="True"      //显示系统按钮-Close
 DMWindowShadowSize="10" //窗体边框阴影颜色-仅Shadow有效
@@ -84,8 +87,8 @@ DMSystemButtonSize="50" //系统按钮大小
 DMSystemButtonForeground="#FF666666" //系统按钮颜色
 DMSystemButtonHoverColor="#33000000" //系统按钮的鼠标悬浮色
 DMSystemButtonShadowEffect="0"  //系统按钮的阴影大小
-DMMetroBorderColor="#FFC8C8C8"  //窗体边框颜色-仅Metro有效
-DMMetroBorderSize="1"  //边框大小-仅Metro有效
+----DMMetroBorderColor="#FFC8C8C8"  //窗体边框颜色-仅Metro有效   --2.0中移除
+----DMMetroBorderSize="1"  //边框大小-仅Metro有效   --2.0中移除
 ResizeMode="CanResizeWithGrip" //边框拉伸方案
 Height="700" Width="1000"   //窗体大小
 MinHeight="268" MinWidth="360"  //窗体最大以及最小属性
