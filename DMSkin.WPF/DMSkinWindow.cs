@@ -248,6 +248,7 @@ namespace DMSkin.WPF
                     BtnMaxVisibility = Visibility.Visible;
                     BtnRestoreVisibility = Visibility.Collapsed;
                 }
+                shadowWindow.Show();
             }
             if (WindowState == WindowState.Minimized)
             {
