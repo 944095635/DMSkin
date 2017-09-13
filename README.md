@@ -1,6 +1,6 @@
 # DMSkin-for-WPF 2.0
 <h3>全中国第一款WPF无边框完美方案</h3>
-<p>基于WPF的UI框架,2.0采用WindowStyle.None实现</p>
+<p>基于WPF的UI框架</p>
 
 <p>2.0版本 双层窗体+Win32 不支持窗体透明,不支持窗体圆角,特点：完美的最小化动画</p>
 <p>2.0版本可以完美移植winform无边框方案</p>
