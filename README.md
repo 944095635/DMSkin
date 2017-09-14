@@ -5,7 +5,7 @@
 <p>【2.0版本】 双层窗体+Win32 不支持窗体透明,不支持窗体圆角,特点：完美的最小化动画(完美移植winform无边框方案)</p>
 <p>如果采用虚线边框,则可以去除双层窗体。</p>
 <br/>
-<p>【1.0版本】 WindowStyle.None + 透明 最小化动画采用xaml实现,特点：支持窗体透明,支持窗体圆角</p>
+<p>【<a href='https://github.com/944095635/DMSkin-for-WPF-1.0' taget="_blank">1.0版本</a>】 WindowStyle.None + 透明 最小化动画采用xaml实现,特点：支持窗体透明,支持窗体圆角</p>
 
 
 
