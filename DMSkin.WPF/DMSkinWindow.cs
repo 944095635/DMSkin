@@ -150,23 +150,14 @@ namespace DMSkin.WPF
                     WmGetMinMaxInfo(hwnd, lParam);
                     handled = true;
                     break;
-                case Win32.WM_SYSCOMMAND:
-                    if (wParam.ToInt32() == Win32.SC_MINIMIZE)//最小化消息
-                    {
-                        shadowWindow.Hide();//执行最小化动画
-                    }
-                    if (wParam.ToInt32() == Win32.SC_RESTORE)//恢复消息
-                    {
-                        Task.Factory.StartNew(() =>
-                        {
-                            Thread.Sleep(400);
-                            Dispatcher.Invoke(new Action(() =>
-                            {
-                                shadowWindow.Show();//执行恢复动画
-                            }));
-                        });
-                    }
-                    break;
+                //case Win32.WM_SYSCOMMAND:
+                //    if (wParam.ToInt32() == Win32.SC_MINIMIZE)//最小化消息
+                //    {
+                //    }
+                //    if (wParam.ToInt32() == Win32.SC_RESTORE)//恢复消息
+                //    {
+                //    }
+                //    break;
                 case Win32.WM_NCPAINT:
                     handled = true;
                     break;
