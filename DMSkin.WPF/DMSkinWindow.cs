@@ -90,36 +90,53 @@ namespace DMSkin.WPF
             shadowWindow.Height = Height + 60;
         }
 
-        //重设主窗口裁剪区域
-        public void ReWindow()
-        {
-            //让窗体不被裁剪
-            POINTAPI[] poin;
-            poin = new POINTAPI[4];
-            poin[0].x = 0;
-            poin[0].y = 0;
-            poin[3].x = (int)ActualWidth;
-            poin[3].y = 0;
-            poin[1].x = 0;
-            poin[1].y = (int)ActualHeight;
-            poin[2].x = (int)ActualWidth;
-            poin[2].y = (int)ActualHeight;
-            Boolean flag = true;
-            IntPtr hRgn = CreatePolygonRgn(ref poin[0], 4, 0);
-            SetWindowRgn(new WindowInteropHelper(this).Handle, hRgn, flag);
-        }
 
-
+        /// <summary>
+        /// 窗体移动
+        /// </summary>
         private void MainWindow_LocationChanged(object sender, EventArgs e)
         {
             ReShadowWindow();
+            ReWindow();//窗体移动
         }
+
+        //四个坐标
+        POINTAPI[] poin = new POINTAPI[4];
+        //是否正在绘制边角
+        bool ReWindowState = false;
+        //重设主窗口裁剪区域
+        public void ReWindow()
+        {
+            if (ReWindowState)//已经在绘制过程
+            {
+                return;
+            }
+            Task.Factory.StartNew(()=> {
+                //300毫秒延迟,并且800毫秒内不会重复触发多次
+                Thread.Sleep(300);
+                Dispatcher.Invoke(new Action(()=> {
+                    //让窗体不被裁剪
+                    poin[3].x = (int)ActualWidth;
+                    poin[1].y = (int)ActualHeight;
+                    poin[2].x = (int)ActualWidth;
+                    poin[2].y = (int)ActualHeight;
+                    IntPtr hRgn = CreatePolygonRgn(ref poin[0], 4, 0);
+                    SetWindowRgn(Handle,hRgn,true);
+                }));
+                ReWindowState = false;
+            });
+        }
+
+
+       
         #endregion
 
         #region 系统函数
+        IntPtr Handle = IntPtr.Zero;
         void MainWindow_SourceInitialized(object sender, EventArgs e)
         {
-            HwndSource source = HwndSource.FromHwnd(new WindowInteropHelper(this).Handle);
+            Handle = new WindowInteropHelper(this).Handle;
+            HwndSource source = HwndSource.FromHwnd(Handle);
             if (source == null)
             { throw new Exception("Cannot get HwndSource instance."); }
             source.AddHook(new HwndSourceHook(this.WndProc));
@@ -142,7 +159,7 @@ namespace DMSkin.WPF
                     {
                         Task.Factory.StartNew(() =>
                         {
-                            Thread.Sleep(300);
+                            Thread.Sleep(400);
                             Dispatcher.Invoke(new Action(() =>
                             {
                                 shadowWindow.Show();//执行恢复动画
@@ -151,7 +168,6 @@ namespace DMSkin.WPF
                     }
                     break;
                 case Win32.WM_NCPAINT:
-                    ReWindow();
                     handled = true;
                     break;
                 case Win32.WM_NCCALCSIZE:
@@ -257,7 +273,7 @@ namespace DMSkin.WPF
             {
                 shadowWindow.Hide();
             }
-            ReWindow();
+            ReWindow();//窗体状态发生变化
         }
 
         //窗体移动
@@ -309,14 +325,7 @@ namespace DMSkin.WPF
             };
 
             //设置窗口裁剪区域
-            Task.Factory.StartNew(() =>
-            {
-                Thread.Sleep(350);
-                Dispatcher.Invoke(new Action(() =>
-                {
-                    ReWindow();
-                }));
-            });
+            ReWindow();//程序启动时
         }
         #endregion
 
