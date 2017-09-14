@@ -26,26 +26,16 @@ namespace DMSkin.WPF
         }
         #endregion
 
+        #region 初始化
 
 
-
-        //创建阴影窗体
-        ShadowWindow shadowWindow = new ShadowWindow();
         public DMSkinWindow()
         {
             InitializeStyle();
             DataContext = this;
-
-            shadowWindow.Width = 0;
-            shadowWindow.Height = 0;
-            shadowWindow.WindowStyle = WindowStyle.None;
-            shadowWindow.AllowsTransparency = true;
-            shadowWindow.ShowInTaskbar = false;
             shadowWindow.Show();
             //绑定阴影窗体
             Owner = shadowWindow;
-
-
             //绑定窗体操作函数
             SourceInitialized += MainWindow_SourceInitialized;
             StateChanged += MainWindow_StateChanged;
@@ -53,68 +43,80 @@ namespace DMSkin.WPF
             LocationChanged += MainWindow_LocationChanged;
             SizeChanged += MainWindow_SizeChanged;
             Closing += MainWindow_Closing;
-
-            Loaded += new RoutedEventHandler(Load);
-
-
+            Loaded += Load;
         }
 
+        /// <summary>
+        /// 初始化样式
+        /// </summary>
+        private void InitializeStyle()
+        {
+            string packUri = @"/DMSkin.WPF;component/Themes/DMSkin.xaml";
+            ResourceDictionary dic = new ResourceDictionary { Source = new Uri(packUri, UriKind.Relative) };
+            Resources.MergedDictionaries.Add(dic);
+            Style = (Style)dic["MainWindow"];
+        }
+
+        #endregion
+
+        #region 阴影窗体
+        //创建阴影窗体
+        ShadowWindow shadowWindow = new ShadowWindow();
+        /// <summary>
+        /// 窗体关闭时 关闭阴影窗口
+        /// </summary>
         private void MainWindow_Closing(object sender, CancelEventArgs e)
         {
             shadowWindow.Close();
         }
-
+        /// <summary>
+        /// 主窗体修改尺寸时 更新阴影窗口
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             ReShadowWindow();
         }
 
-        Style MainWindowShadow;
-        private void InitializeStyle()
-        {
-            string packUri = @"/DMSkin.WPF;component/Themes/DMSkin.xaml";
-            ResourceDictionary dic = new ResourceDictionary { Source = new Uri(packUri, UriKind.Relative) };
-            this.Resources.MergedDictionaries.Add(dic);
-
-            string packUriAnimation = @"/DMSkin.WPF;component/Themes/Animation.xaml";
-            ResourceDictionary dicAnimation = new ResourceDictionary { Source = new Uri(packUriAnimation, UriKind.Relative) };
-            this.Resources.MergedDictionaries.Add(dicAnimation);
-
-            MainWindowShadow = this.Style = (Style)dic["MainWindow"];
-        }
-
-
+        /// <summary>
+        /// 重设阴影窗口位置
+        /// </summary>
         public void ReShadowWindow()
         {
             shadowWindow.Left = Left - 30;
             shadowWindow.Top = Top - 30;
             shadowWindow.Width = Width + 60;
             shadowWindow.Height = Height + 60;
-
-            if (WindowState != WindowState.Maximized)
-            {
-                //让窗体不被裁剪
-                POINTAPI[] poin;
-                poin = new POINTAPI[4];
-                poin[0].x = 0;
-                poin[0].y = 0;
-                poin[3].x = (int)Width;
-                poin[3].y = 0;
-                poin[1].x = 0;
-                poin[1].y = (int)Height;
-                poin[2].x = (int)Width;
-                poin[2].y = (int)Height;
-                Boolean flag = true;
-                IntPtr hRgn = CreatePolygonRgn(ref poin[0], 4, 0);
-                SetWindowRgn(new WindowInteropHelper(this).Handle, hRgn, flag);
-            }
         }
+
+        //重设主窗口裁剪区域
+        public void ReWindow()
+        {
+            //让窗体不被裁剪
+            POINTAPI[] poin;
+            poin = new POINTAPI[4];
+            poin[0].x = 0;
+            poin[0].y = 0;
+            poin[3].x = (int)ActualWidth;
+            poin[3].y = 0;
+            poin[1].x = 0;
+            poin[1].y = (int)ActualHeight;
+            poin[2].x = (int)ActualWidth;
+            poin[2].y = (int)ActualHeight;
+            Boolean flag = true;
+            IntPtr hRgn = CreatePolygonRgn(ref poin[0], 4, 0);
+            SetWindowRgn(new WindowInteropHelper(this).Handle, hRgn, flag);
+        }
+
 
         private void MainWindow_LocationChanged(object sender, EventArgs e)
         {
             ReShadowWindow();
         }
+        #endregion
 
+        #region 系统函数
         void MainWindow_SourceInitialized(object sender, EventArgs e)
         {
             HwndSource source = HwndSource.FromHwnd(new WindowInteropHelper(this).Handle);
@@ -134,19 +136,22 @@ namespace DMSkin.WPF
                 case Win32.WM_SYSCOMMAND:
                     if (wParam.ToInt32() == Win32.SC_MINIMIZE)//最小化消息
                     {
-                         shadowWindow.Hide();//执行最小化动画
+                        shadowWindow.Hide();//执行最小化动画
                     }
                     if (wParam.ToInt32() == Win32.SC_RESTORE)//恢复消息
                     {
-                        Task.Factory.StartNew(() => {
-                            Thread.Sleep(100);
-                            Dispatcher.Invoke(new Action(() => {
+                        Task.Factory.StartNew(() =>
+                        {
+                            Thread.Sleep(300);
+                            Dispatcher.Invoke(new Action(() =>
+                            {
                                 shadowWindow.Show();//执行恢复动画
                             }));
                         });
                     }
                     break;
                 case Win32.WM_NCPAINT:
+                    ReWindow();
                     handled = true;
                     break;
                 case Win32.WM_NCCALCSIZE:
@@ -155,8 +160,6 @@ namespace DMSkin.WPF
                 case Win32.WM_NCACTIVATE:
                     handled = true;
                     break;
-
-                
             }
             return IntPtr.Zero;
         }
@@ -254,7 +257,7 @@ namespace DMSkin.WPF
             {
                 shadowWindow.Hide();
             }
-            ReShadowWindow();
+            ReWindow();
         }
 
         //窗体移动
@@ -305,14 +308,17 @@ namespace DMSkin.WPF
                 WindowState = WindowState.Minimized;
             };
 
-
-            Task.Factory.StartNew(() => {
-                Thread.Sleep(800);
-                Dispatcher.Invoke(new Action(()=> {
-                    ReShadowWindow();
+            //设置窗口裁剪区域
+            Task.Factory.StartNew(() =>
+            {
+                Thread.Sleep(350);
+                Dispatcher.Invoke(new Action(() =>
+                {
+                    ReWindow();
                 }));
             });
         }
+        #endregion
 
         #region 窗体属性
 
