@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -11,7 +8,6 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
-using static DMSkin.WPF.Win32;
 
 namespace DMSkin.WPF
 {
@@ -101,7 +97,7 @@ namespace DMSkin.WPF
         }
 
         //四个坐标
-        POINTAPI[] poin = new POINTAPI[4];
+        Win32.POINTAPI[] poin = new Win32.POINTAPI[4];
         //是否正在绘制边角
         bool ReWindowState = false;
         //重设主窗口裁剪区域
@@ -111,24 +107,24 @@ namespace DMSkin.WPF
             {
                 return;
             }
-            Task.Factory.StartNew(()=> {
-                //300毫秒延迟,并且800毫秒内不会重复触发多次
-                Thread.Sleep(300);
-                Dispatcher.Invoke(new Action(()=> {
-                    //让窗体不被裁剪
-                    poin[3].x = (int)ActualWidth;
-                    poin[1].y = (int)ActualHeight;
-                    poin[2].x = (int)ActualWidth;
-                    poin[2].y = (int)ActualHeight;
-                    IntPtr hRgn = CreatePolygonRgn(ref poin[0], 4, 0);
-                    SetWindowRgn(Handle,hRgn,true);
-                }));
+            ReWindowState = true;
+            Task.Factory.StartNew(() =>
+            {
+                //1000毫秒延迟,并且1000毫秒内不会重复触发多次
+                Thread.Sleep(1000);
+                //让窗体不被裁剪
+                poin[3].x = (int)ActualWidth;
+                poin[1].y = (int)ActualHeight;
+                poin[2].x = (int)ActualWidth;
+                poin[2].y = (int)ActualHeight;
+                IntPtr hRgn = Win32.CreatePolygonRgn(ref poin[0], 4, 0);
+                Win32.SetWindowRgn(Handle, hRgn, true);
                 ReWindowState = false;
+                //Debug.WriteLine("触发时间:" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
             });
         }
 
 
-       
         #endregion
 
         #region 系统函数
