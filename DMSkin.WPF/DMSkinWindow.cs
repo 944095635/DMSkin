@@ -73,7 +73,6 @@ namespace DMSkin.WPF
         private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             ReShadowWindow();
-            ReWindow();//窗体大小改变
         }
 
         /// <summary>
@@ -96,33 +95,33 @@ namespace DMSkin.WPF
             ReShadowWindow();
         }
 
-        //四个坐标
-        Win32.POINTAPI[] poin = new Win32.POINTAPI[4];
-        //是否正在绘制边角
-        bool ReWindowState = false;
-        //重设主窗口裁剪区域
-        public void ReWindow()
-        {
-            if (ReWindowState)//已经在绘制过程
-            {
-                return;
-            }
-            ReWindowState = true;
-            Task.Factory.StartNew(() =>
-            {
-                //150毫秒延迟,并且150毫秒内不会重复触发多次
-                Thread.Sleep(150);
-                //让窗体不被裁剪
-                poin[3].x = (int)ActualWidth;
-                poin[1].y = (int)ActualHeight;
-                poin[2].x = (int)ActualWidth;
-                poin[2].y = (int)ActualHeight;
-                IntPtr hRgn = Win32.CreatePolygonRgn(ref poin[0], 4, 0);
-                Win32.SetWindowRgn(Handle, hRgn, true);
-                ReWindowState = false;
-                //Debug.WriteLine("触发时间:" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
-            });
-        }
+        ////四个坐标
+        //Win32.POINTAPI[] poin = new Win32.POINTAPI[4];
+        ////是否正在绘制边角
+        //bool ReWindowState = false;
+        ////重设主窗口裁剪区域
+        //public void ReWindow()
+        //{
+        //    if (ReWindowState)//已经在绘制过程
+        //    {
+        //        return;
+        //    }
+        //    ReWindowState = true;
+        //    Task.Factory.StartNew(() =>
+        //    {
+        //        //150毫秒延迟,并且150毫秒内不会重复触发多次
+        //        Thread.Sleep(150);
+        //        //让窗体不被裁剪
+        //        poin[3].x = (int)ActualWidth;
+        //        poin[1].y = (int)ActualHeight;
+        //        poin[2].x = (int)ActualWidth;
+        //        poin[2].y = (int)ActualHeight;
+        //        IntPtr hRgn = Win32.CreatePolygonRgn(ref poin[0], 4, 0);
+        //        Win32.SetWindowRgn(Handle, hRgn, true);
+        //        ReWindowState = false;
+        //        //Debug.WriteLine("触发时间:" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+        //    });
+        //}
 
 
         #endregion
@@ -155,13 +154,13 @@ namespace DMSkin.WPF
                 //    }
                 //    break;
                 case Win32.WM_NCPAINT:
-                    handled = true;
+                    //handled = true;
                     break;
                 case Win32.WM_NCCALCSIZE:
                     handled = true;
                     break;
                 case Win32.WM_NCACTIVATE:
-                    handled = true;
+                    //handled = true;
                     break;
             }
             return IntPtr.Zero;
@@ -260,7 +259,6 @@ namespace DMSkin.WPF
             {
                 shadowWindow.Hide();
             }
-            ReWindow();//窗体状态发生变化
         }
 
         //窗体移动
@@ -310,9 +308,6 @@ namespace DMSkin.WPF
             {
                 WindowState = WindowState.Minimized;
             };
-
-            //设置窗口裁剪区域
-            ReWindow();//程序启动时
         }
         #endregion
 

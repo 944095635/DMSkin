@@ -14,9 +14,9 @@ DMShowClose="True"
 DMWindowShadowSize="10" 
 DMWindowShadowColor="#FFC8C8C8" 
 DMSystemButtonSize="50" 
-DMSystemButtonForeground="#FF666666" 
+DMSystemButtonForeground="#FFffffff" 
 DMSystemButtonHoverColor="#33000000" 
-DMSystemButtonShadowEffect="0"  
+DMSystemButtonShadowEffect="1"  
 ResizeMode="CanResizeWithGrip" 
 Height="600" Width="1000"  
 MinHeight="268" MinWidth="360" 
@@ -24,7 +24,7 @@ WindowStartupLocation="CenterScreen"
                      
                      >
     <DMSkin:DMSkinWindow.Background>
-        <ImageBrush ImageSource="gamersky_24origin_47_20138311229698.jpg" Stretch="Fill"/>
+        <ImageBrush ImageSource="Image/XXX.jpg" Stretch="Fill"/>
     </DMSkin:DMSkinWindow.Background>
     <Grid>
         <ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
