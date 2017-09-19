@@ -234,7 +234,7 @@ namespace DMSkin.WPF
                 shadowWindowState = true;
                 Task.Factory.StartNew(() =>
                 {
-                    Thread.Sleep(200);
+                    Thread.Sleep(280);
                     Dispatcher.Invoke(new Action(() => {
                         shadowWindow.Show();
                         shadowWindowState = false;
