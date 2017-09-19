@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -41,6 +42,7 @@ namespace DMSkin.WPF
             Closing += MainWindow_Closing;
             Loaded += Load;
         }
+
 
         /// <summary>
         /// 初始化样式
@@ -94,36 +96,6 @@ namespace DMSkin.WPF
         {
             ReShadowWindow();
         }
-
-        ////四个坐标
-        //Win32.POINTAPI[] poin = new Win32.POINTAPI[4];
-        ////是否正在绘制边角
-        //bool ReWindowState = false;
-        ////重设主窗口裁剪区域
-        //public void ReWindow()
-        //{
-        //    if (ReWindowState)//已经在绘制过程
-        //    {
-        //        return;
-        //    }
-        //    ReWindowState = true;
-        //    Task.Factory.StartNew(() =>
-        //    {
-        //        //150毫秒延迟,并且150毫秒内不会重复触发多次
-        //        Thread.Sleep(150);
-        //        //让窗体不被裁剪
-        //        poin[3].x = (int)ActualWidth;
-        //        poin[1].y = (int)ActualHeight;
-        //        poin[2].x = (int)ActualWidth;
-        //        poin[2].y = (int)ActualHeight;
-        //        IntPtr hRgn = Win32.CreatePolygonRgn(ref poin[0], 4, 0);
-        //        Win32.SetWindowRgn(Handle, hRgn, true);
-        //        ReWindowState = false;
-        //        //Debug.WriteLine("触发时间:" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
-        //    });
-        //}
-
-
         #endregion
 
         #region 系统函数
@@ -233,6 +205,8 @@ namespace DMSkin.WPF
             Marshal.StructureToPtr(mmi, lParam, true);
         }
 
+        //阴影加载状态
+        bool shadowWindowState = false;
         //窗体最大化 隐藏阴影
         void MainWindow_StateChanged(object sender, EventArgs e)
         {
@@ -253,7 +227,20 @@ namespace DMSkin.WPF
                     BtnMaxVisibility = Visibility.Visible;
                     BtnRestoreVisibility = Visibility.Collapsed;
                 }
-                shadowWindow.Show();
+                if (shadowWindowState)
+                {
+                    return;
+                }
+                shadowWindowState = true;
+                Task.Factory.StartNew(() =>
+                {
+                    Thread.Sleep(200);
+                    Dispatcher.Invoke(new Action(() => {
+                        shadowWindow.Show();
+                        shadowWindowState = false;
+                        //Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+                    }));
+                });
             }
             if (WindowState == WindowState.Minimized)
             {

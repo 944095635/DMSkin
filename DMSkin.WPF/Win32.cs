@@ -8,16 +8,46 @@ namespace DMSkin.WPF
 {
     public class Win32
     {
-        public struct POINTAPI
-        {
-            internal int x;
-            internal int y;
-        }
-        [DllImport("gdi32.dll")]
-        public static extern IntPtr CreatePolygonRgn(ref POINTAPI lpPoint, int nCount, int nPolyFillMode);
 
-        [DllImport("User32.dll", CharSet = CharSet.Auto)]
-        public static extern bool SetWindowRgn(IntPtr hWnd, IntPtr hRgn, bool redraw);
+        ////四个坐标
+        //Win32.POINTAPI[] poin = new Win32.POINTAPI[4];
+        ////是否正在绘制边角
+        //bool ReWindowState = false;
+        ////重设主窗口裁剪区域
+        //public void ReWindow()
+        //{
+        //    if (ReWindowState)//已经在绘制过程
+        //    {
+        //        return;
+        //    }
+        //    ReWindowState = true;
+        //    Task.Factory.StartNew(() =>
+        //    {
+        //        //150毫秒延迟,并且150毫秒内不会重复触发多次
+        //        Thread.Sleep(150);
+        //        //让窗体不被裁剪
+        //        poin[3].x = (int)ActualWidth;
+        //        poin[1].y = (int)ActualHeight;
+        //        poin[2].x = (int)ActualWidth;
+        //        poin[2].y = (int)ActualHeight;
+        //        IntPtr hRgn = Win32.CreatePolygonRgn(ref poin[0], 4, 0);
+        //        Win32.SetWindowRgn(Handle, hRgn, true);
+        //        ReWindowState = false;
+        //        //Debug.WriteLine("触发时间:" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+        //    });
+        //}
+
+
+        //public struct POINTAPI
+        //{
+        //    internal int x;
+        //    internal int y;
+        //}
+        //[DllImport("gdi32.dll")]
+        //public static extern IntPtr CreatePolygonRgn(ref POINTAPI lpPoint, int nCount, int nPolyFillMode);
+
+        //[DllImport("User32.dll", CharSet = CharSet.Auto)]
+        //public static extern bool SetWindowRgn(IntPtr hWnd, IntPtr hRgn, bool redraw);
 
         public const int WM_NCCALCSIZE = 0x0083;
         public const int WM_NCPAINT = 0x0085;
