@@ -238,7 +238,7 @@ namespace DMSkin.WPF
                     Dispatcher.Invoke(new Action(() => {
                         shadowWindow.Show();
                         shadowWindowState = false;
-                        //Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+                        //Debug.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
                     }));
                 });
             }
