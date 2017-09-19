@@ -2,6 +2,23 @@
 <h3>全中国第一款WPF无边框完美方案</h3>
 <p>基于WPF的UI框架</p>
 
+<h1>前言</h1>
+
+<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A.png" />
+
+
+DMSkin-for-WPF是一个基于WPF的.Net WPF开源界面库,实现了无边框的WPF开发方案,内置部分控件模板.
+你可以参照模板自行修改完善。（以下简称DFW）。
+
+<h1>核心</h1>
+DFW实现了比较完美的无边框窗体方案，并且拖拽全部采用WIN32消息实现。拖拽依靠桌面边缘完美,高DPI支持,窗体不会变形或异常
+
+另外,由于我对MVVM不擅长，所以DEMO并不是采用MVVM框架。
+
+
+<h1>注意事项</h1>
+本源码采用VS2017 个人版 开发,部分C# 6.0+语法 vs2015 vs2013 vs2012 请自行修改源码中不支持的部分。
+
 <h1>版本更新 - 2.0版本</h1>
 <blockquote>
    
@@ -24,22 +41,6 @@
 <p>2.新增窗体模式：扁平化Metro+阴影Shadow 2种风格窗体</p>
 </blockquote>
 
-<h1>前言</h1>
-
-<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A.png" />
-
-
-DMSkin-for-WPF是一个基于WPF的.Net WPF开源界面库,实现了无边框的WPF开发方案,内置部分控件模板.
-你可以参照模板自行修改完善。（以下简称DFW）。
-
-<h1>核心</h1>
-DFW实现了比较完美的无边框窗体方案，并且拖拽全部采用WIN32消息实现。拖拽依靠桌面边缘完美,高DPI支持,窗体不会变形或异常
-
-另外,由于我对MVVM不擅长，所以DEMO并不是采用MVVM框架。
-
-
-<h1>注意事项</h1>
-本源码采用VS2017 个人版 开发,部分C# 6.0+语法 vs2015 vs2013 vs2012 请自行修改源码中不支持的部分。
 
 <h1>相关</h1>
 
