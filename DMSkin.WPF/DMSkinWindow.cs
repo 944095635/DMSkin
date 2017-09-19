@@ -44,6 +44,8 @@ namespace DMSkin.WPF
         }
 
 
+
+
         /// <summary>
         /// 初始化样式
         /// </summary>
@@ -77,6 +79,7 @@ namespace DMSkin.WPF
             ReShadowWindow();
         }
 
+
         /// <summary>
         /// 重设阴影窗口位置
         /// </summary>
@@ -101,7 +104,6 @@ namespace DMSkin.WPF
         #region 系统函数
 
         IntPtr Handle = IntPtr.Zero;
-
         void MainWindow_SourceInitialized(object sender, EventArgs e)
         {
             Handle = new WindowInteropHelper(this).Handle;
@@ -237,7 +239,8 @@ namespace DMSkin.WPF
                 Task.Factory.StartNew(() =>
                 {
                     Thread.Sleep(280);
-                    Dispatcher.Invoke(new Action(() => {
+                    Dispatcher.Invoke(new Action(() =>
+                    {
                         shadowWindow.Show();
                         shadowWindowState = false;
                         //Debug.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
@@ -249,7 +252,6 @@ namespace DMSkin.WPF
                 shadowWindow.Hide();
             }
         }
-
         //窗体移动
         void MainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -269,8 +271,9 @@ namespace DMSkin.WPF
             }
             if (e.OriginalSource is Grid || e.OriginalSource is Window || e.OriginalSource is Border)
             {
-                WindowInteropHelper wih = new WindowInteropHelper(this);
-                Win32.SendMessage(wih.Handle, Win32.WM_NCLBUTTONDOWN, (int)Win32.HitTest.HTCAPTION, 0);
+                shadowWindow.Hide();
+                Win32.SendMessage(Handle, Win32.WM_NCLBUTTONDOWN, (int)Win32.HitTest.HTCAPTION, 0);
+                shadowWindow.Show();
                 return;
             }
         }
