@@ -99,7 +99,9 @@ namespace DMSkin.WPF
         #endregion
 
         #region 系统函数
+
         IntPtr Handle = IntPtr.Zero;
+
         void MainWindow_SourceInitialized(object sender, EventArgs e)
         {
             Handle = new WindowInteropHelper(this).Handle;
@@ -132,7 +134,7 @@ namespace DMSkin.WPF
                     handled = true;
                     break;
                 case Win32.WM_NCACTIVATE:
-                    //handled = true;
+                    handled = true;
                     break;
             }
             return IntPtr.Zero;
