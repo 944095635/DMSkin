@@ -7,9 +7,7 @@
         xmlns:local="clr-namespace:DMSkin_for_WPF_Demo"
         mc:Ignorable="d"  
         Title="MainWindow" 
-                     
-Foreground="White"      
-Background="White"    
+Foreground="White"    
 DMShowMin="True"       
 DMShowMax="True"       
 DMShowClose="True"     
@@ -20,13 +18,15 @@ DMSystemButtonForeground="#FF666666"
 DMSystemButtonHoverColor="#33000000" 
 DMSystemButtonShadowEffect="0"  
 ResizeMode="CanResizeWithGrip" 
-Height="700" Width="1000"  
+Height="600" Width="1000"  
 MinHeight="268" MinWidth="360" 
 WindowStartupLocation="CenterScreen"  
                      
                      >
+    <DMSkin:DMSkinWindow.Background>
+        <ImageBrush ImageSource="gamersky_24origin_47_20138311229698.jpg" Stretch="Fill"/>
+    </DMSkin:DMSkinWindow.Background>
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="228,140,0,0" VerticalAlignment="Top" Width="75"/>
         <ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
     </Grid>
 </DMSkin:DMSkinWindow>

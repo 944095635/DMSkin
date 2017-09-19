@@ -94,5 +94,8 @@
       <Name>DMSkin.WPF</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="gamersky_24origin_47_20138311229698.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

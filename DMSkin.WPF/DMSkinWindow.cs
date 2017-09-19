@@ -73,6 +73,7 @@ namespace DMSkin.WPF
         private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             ReShadowWindow();
+            ReWindow();//窗体大小改变
         }
 
         /// <summary>
@@ -93,7 +94,6 @@ namespace DMSkin.WPF
         private void MainWindow_LocationChanged(object sender, EventArgs e)
         {
             ReShadowWindow();
-            ReWindow();//窗体移动
         }
 
         //四个坐标
@@ -110,8 +110,8 @@ namespace DMSkin.WPF
             ReWindowState = true;
             Task.Factory.StartNew(() =>
             {
-                //1000毫秒延迟,并且1000毫秒内不会重复触发多次
-                Thread.Sleep(1000);
+                //150毫秒延迟,并且150毫秒内不会重复触发多次
+                Thread.Sleep(150);
                 //让窗体不被裁剪
                 poin[3].x = (int)ActualWidth;
                 poin[1].y = (int)ActualHeight;
