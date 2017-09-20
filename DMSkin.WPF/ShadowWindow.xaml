@@ -7,7 +7,7 @@
         WindowStyle="None"   IsTabStop="False" Focusable="False" 
         IsHitTestVisible="False" IsEnabled="False"
         Background="Transparent" ShowInTaskbar="False" 
-        Title="" Height="100" Width="100">
+        Title="" Height="0" Width="0">
     <Grid Margin="30" Background="White">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="{Binding DMWindowShadowSize}" ShadowDepth="0" Color="{Binding DMWindowShadowColor}"></DropShadowEffect>

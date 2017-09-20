@@ -62,7 +62,7 @@ namespace DMSkin.WPF
         }
 
 
-        private Brush _DMWindowShadowBackColor = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));
+        private Brush _DMWindowShadowBackColor = new SolidColorBrush(Color.FromArgb(255,255,255,255));
         [Description("窗体阴影背景颜色"), Category("DMSkin")]
         public Brush DMWindowShadowBackColor
         {
