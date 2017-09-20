@@ -87,6 +87,7 @@ DMShowClose="True"      //显示系统按钮-Close
 DMWindowShadowSize="10" //窗体边框阴影颜色-仅Shadow有效
 DMWindowShadowColor="#FFC8C8C8" 
 DMWindowShadowDragVisibility="False"//窗体拖动时是否隐藏阴影层
+DMWindowShadowBackColor="#FF323CAD" //阴影窗体的背景色,选择跟主窗体相近的颜色 拉伸跟拖动 用户体验更好|#FF323CAD 为蓝色
 DMSystemButtonSize="50" //系统按钮大小
 DMSystemButtonForeground="#FF666666" //系统按钮颜色
 DMSystemButtonHoverColor="#33000000" //系统按钮的鼠标悬浮色
@@ -95,7 +96,7 @@ ResizeMode="CanResizeWithGrip" //边框拉伸方案
 Height="700" Width="1000"   //窗体大小
 MinHeight="268" MinWidth="360"  //窗体最大以及最小属性
 WindowStartupLocation="CenterScreen"   //窗体初始位置
-
+<br/>
 <del>DMMetroBorderColor="#FFC8C8C8"  //窗体边框颜色-仅Metro有效   --2.0中移除</del>
 <del>DMMetroBorderSize="1"  //边框大小-仅Metro有效   --2.0中移除</del>
 <del>DMWindow="Shadow"     //Shadow-阴影模式  Metro-线条扁平化模式   --2.0中移除</del>
