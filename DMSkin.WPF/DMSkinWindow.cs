@@ -112,7 +112,7 @@ namespace DMSkin.WPF
             { throw new Exception("Cannot get HwndSource instance."); }
             source.AddHook(new HwndSourceHook(this.WndProc));
         }
-
+        bool active = false;
         IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
             switch (msg)
@@ -135,9 +135,19 @@ namespace DMSkin.WPF
                 case Win32.WM_NCCALCSIZE:
                     handled = true;
                     break;
-                case Win32.WM_NCACTIVATE:
-                    handled = true;
-                    break;
+                //case Win32.WM_NCACTIVATE:
+                //    if (wParam.ToInt32() == 0)
+                //    {
+                //        handled = true;
+                //        Debug.WriteLine(Name+"激活");
+                        
+                //    }
+                //    else
+                //    {
+                //        handled = false;
+                //        Debug.WriteLine(Name + "未激活");
+                //    }
+                //    break;
             }
             return IntPtr.Zero;
         }
