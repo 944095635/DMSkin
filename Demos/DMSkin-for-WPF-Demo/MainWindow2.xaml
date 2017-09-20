@@ -16,6 +16,7 @@ DMWindowShadowColor="#FF3C3C3C"
 DMSystemButtonSize="50" 
 DMSystemButtonForeground="#FFffffff" 
 DMSystemButtonHoverColor="#33000000" 
+DMWindowShadowDragVisibility="False"
 DMSystemButtonShadowEffect="1"  
 ResizeMode="CanResizeWithGrip" 
 Height="600" Width="1000"  
@@ -23,7 +24,7 @@ MinHeight="268" MinWidth="360"
 WindowStartupLocation="CenterScreen"  
                      
                      >
-    <Grid>
+    <Border BorderBrush="Gray" BorderThickness="1">
         <ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
-    </Grid>
+    </Border>
 </DMSkin:DMSkinWindow>

@@ -112,7 +112,6 @@ namespace DMSkin.WPF
             { throw new Exception("Cannot get HwndSource instance."); }
             source.AddHook(new HwndSourceHook(this.WndProc));
         }
-        bool active = false;
         IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
             switch (msg)
@@ -252,6 +251,7 @@ namespace DMSkin.WPF
                     {
                         shadowWindow.Show();
                         shadowWindowState = false;
+                        Activate();//激活当前窗口
                         //Debug.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
                     }));
                 });
@@ -264,23 +264,13 @@ namespace DMSkin.WPF
         //窗体移动
         void MainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            if (e.OriginalSource is Grid g)
-            {
-                if (g.Tag is string s && s == "NoMove")
-                {
-                    return;
-                }
-            }
-            if (e.OriginalSource is Border b)
-            {
-                if (b.Tag is string s && s == "NoMove")
-                {
-                    return;
-                }
-            }
             if (e.OriginalSource is Grid || e.OriginalSource is Window || e.OriginalSource is Border)
             {
-                shadowWindow.Hide();
+                //是否隐藏阴影
+                if (!DMWindowShadowDragVisibility)
+                {
+                    shadowWindow.Hide();
+                }
                 Win32.SendMessage(Handle, Win32.WM_NCLBUTTONDOWN, (int)Win32.HitTest.HTCAPTION, 0);
                 shadowWindow.Show();
                 return;
@@ -550,7 +540,20 @@ namespace DMSkin.WPF
             }
         }
 
+        private bool dMWindowShadowDragVisibility = true;
+        [Description("窗体拖动是否显示阴影"), Category("DMSkin")]
+        public bool DMWindowShadowDragVisibility
+        {
+            get
+            {
+                return dMWindowShadowDragVisibility;
+            }
 
+            set
+            {
+                dMWindowShadowDragVisibility = value;
+            }
+        }
 
         [Description("窗体阴影大小"), Category("DMSkin")]
         public int DMWindowShadowSize

@@ -189,9 +189,7 @@ namespace DMSkin.WPF
                 retString = myStreamReader.ReadToEnd();
                 //后开先关
                 myStreamReader.Close();
-                myStreamReader.Dispose();
                 myResponseStream.Close();
-                myResponseStream.Dispose();
             }
             return retString;
         }
@@ -287,7 +285,6 @@ namespace DMSkin.WPF
                     //string fileNameTime = DateTime.Now.ToString("yyyyMMddhhmmss");
                     string name = Directory.GetCurrentDirectory() + "\\images\\" + fileNameTime + ".jpg";
                     wb.DownloadFile(imageUrl, name);
-                    wb.Dispose();
                     //初始化图片地址
                     action(name);
                 }
