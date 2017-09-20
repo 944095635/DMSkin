@@ -48,7 +48,8 @@ namespace DMSkin.WPF
 
         //[DllImport("User32.dll", CharSet = CharSet.Auto)]
         //public static extern bool SetWindowRgn(IntPtr hWnd, IntPtr hRgn, bool redraw);
-
+        public const int WM_TRUE = 0x1;
+        public const int WM_FALSE = 0x0;
         public const int WM_NCCALCSIZE = 0x0083;
         public const int WM_NCPAINT = 0x0085;
         public const int WM_NCACTIVATE = 0x0086;

@@ -124,30 +124,24 @@ namespace DMSkin.WPF
                 //case Win32.WM_SYSCOMMAND:
                 //    if (wParam.ToInt32() == Win32.SC_MINIMIZE)//最小化消息
                 //    {
+                //        Debug.WriteLine("最小化消息");
                 //    }
                 //    if (wParam.ToInt32() == Win32.SC_RESTORE)//恢复消息
                 //    {
+                //        Debug.WriteLine("恢复消息");
                 //    }
                 //    break;
                 case Win32.WM_NCPAINT:
-                    //handled = true;
                     break;
                 case Win32.WM_NCCALCSIZE:
                     handled = true;
                     break;
-                //case Win32.WM_NCACTIVATE:
-                //    if (wParam.ToInt32() == 0)
-                //    {
-                //        handled = true;
-                //        Debug.WriteLine(Name+"激活");
-                        
-                //    }
-                //    else
-                //    {
-                //        handled = false;
-                //        Debug.WriteLine(Name + "未激活");
-                //    }
-                //    break;
+                case Win32.WM_NCACTIVATE:
+                    if (wParam == (IntPtr)Win32.WM_FALSE)
+                    {
+                        handled = true;
+                    }
+                    break;
             }
             return IntPtr.Zero;
         }
