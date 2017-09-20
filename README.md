@@ -21,8 +21,12 @@ DFW实现了比较完美的无边框窗体方案，并且拖拽全部采用WIN32
 
 <h1>版本更新 - 2.1版本</h1>
 <blockquote>
+ <h3>2.2 (2017-9-20)</h3>
+<p>1.修复多个窗口无法激活聚焦的BUG。</p>
+<p>2.拖动窗口支持显示阴影层</p>
+<p>3.阴影层延迟显示的BUG修复</p> 
    
-<h3>2.1 (2017-9-20)</h3>
+<h3>2.1 (2017-9-19)</h3>
 <p>1.优化最小化恢复阴影顺序,不会像网易云音乐一样出现双层了。</p>
 <p>2.去除窗口裁剪代码(之前的裁剪操作多此一举)</p>
 <p>3.拖动窗口位置时隐藏阴影提高效率</p>
@@ -76,8 +80,7 @@ DFW实现了比较完美的无边框窗体方案，并且拖拽全部采用WIN32
 <pre>
 <code>      
 Foreground="White"      //前景色 
-Background="White"      //背景色   
-----DMWindow="Shadow"     //Shadow-阴影模式  Metro-线条扁平化模式   --2.0中移除
+Background="White"      //背景色 
 DMShowMin="True"        //显示系统按钮-最小化
 DMShowMax="True"        //显示系统按钮-最大化
 DMShowClose="True"      //显示系统按钮-Close
@@ -88,12 +91,14 @@ DMSystemButtonSize="50" //系统按钮大小
 DMSystemButtonForeground="#FF666666" //系统按钮颜色
 DMSystemButtonHoverColor="#33000000" //系统按钮的鼠标悬浮色
 DMSystemButtonShadowEffect="0"  //系统按钮的阴影大小
-<del>DMMetroBorderColor="#FFC8C8C8"  //窗体边框颜色-仅Metro有效   --2.0中移除</del>
-<del>DMMetroBorderSize="1"  //边框大小-仅Metro有效   --2.0中移除</del>
 ResizeMode="CanResizeWithGrip" //边框拉伸方案
 Height="700" Width="1000"   //窗体大小
 MinHeight="268" MinWidth="360"  //窗体最大以及最小属性
 WindowStartupLocation="CenterScreen"   //窗体初始位置
+
+<del>DMMetroBorderColor="#FFC8C8C8"  //窗体边框颜色-仅Metro有效   --2.0中移除</del>
+<del>DMMetroBorderSize="1"  //边框大小-仅Metro有效   --2.0中移除</del>
+<del>DMWindow="Shadow"     //Shadow-阴影模式  Metro-线条扁平化模式   --2.0中移除</del>
 </code>
 </pre>
 
