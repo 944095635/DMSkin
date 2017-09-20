@@ -1,0 +1,29 @@
+﻿<DMSkin:DMSkinWindow x:Class="DMSkin_for_WPF_Demo.MainWindow2"
+        xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DMSkin_for_WPF_Demo"
+        mc:Ignorable="d"  
+        Title="MainWindow" 
+Foreground="White"    
+DMShowMin="True"       
+DMShowMax="True"       
+DMShowClose="True"     
+DMWindowShadowSize="10" 
+DMWindowShadowColor="#FF3C3C3C" 
+DMSystemButtonSize="50" 
+DMSystemButtonForeground="#FFffffff" 
+DMSystemButtonHoverColor="#33000000" 
+DMSystemButtonShadowEffect="1"  
+ResizeMode="CanResizeWithGrip" 
+Height="600" Width="1000"  
+MinHeight="268" MinWidth="360" 
+WindowStartupLocation="CenterScreen"  
+                     
+                     >
+    <Grid>
+        <ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
+    </Grid>
+</DMSkin:DMSkinWindow>
