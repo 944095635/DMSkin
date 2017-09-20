@@ -30,5 +30,21 @@ namespace DMSkin_for_WPF_Demo
             MainWindow2 l = new MainWindow2();
             l.Show();
         }
+
+        private void CheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            DMWindowShadowDragVisibility = (bool)cb1.IsChecked;
+        }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            DMWindowShadowSize = (int)va.Value;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow2 w = new MainWindow2();
+            w.Show();
+        }
     }
 }

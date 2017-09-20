@@ -8,6 +8,51 @@ namespace DMSkin.WPF
 {
     public class Win32
     {
+        [DllImport("user32.dll")]
+        public static extern IntPtr GetWindowLong(IntPtr hWnd, int nIndex);
+        [DllImport("user32.dll", EntryPoint = "SetWindowLongPtr", SetLastError = true)]
+        private static extern IntPtr IntSetWindowLongPtr(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
+
+        [DllImport("user32.dll", EntryPoint = "SetWindowLong", SetLastError = true)]
+        private static extern Int32 IntSetWindowLong(IntPtr hWnd, int nIndex, Int32 dwNewLong);
+
+        [DllImport("kernel32.dll", EntryPoint = "SetLastError")]
+        public static extern void SetLastError(int dwErrorCode);
+
+        private static int IntPtrToInt32(IntPtr intPtr)
+        {
+            return unchecked((int)intPtr.ToInt64());
+        }
+
+        public static IntPtr SetWindowLong(IntPtr hWnd, int nIndex, IntPtr dwNewLong)
+        {
+            int error = 0;
+            IntPtr result = IntPtr.Zero;
+            // Win32 SetWindowLong doesn't clear error on success  
+            SetLastError(0);
+
+            if (IntPtr.Size == 4)
+            {
+                // use SetWindowLong  
+                Int32 tempResult = IntSetWindowLong(hWnd, nIndex, IntPtrToInt32(dwNewLong));
+                error = Marshal.GetLastWin32Error();
+                result = new IntPtr(tempResult);
+            }
+            else
+            {
+                // use SetWindowLongPtr  
+                result = IntSetWindowLongPtr(hWnd, nIndex, dwNewLong);
+                error = Marshal.GetLastWin32Error();
+            }
+
+            if ((result == IntPtr.Zero) && (error != 0))
+            {
+                throw new System.ComponentModel.Win32Exception(error);
+            }
+
+            return result;
+        }
+
 
         ////四个坐标
         //Win32.POINTAPI[] poin = new Win32.POINTAPI[4];
@@ -56,6 +101,9 @@ namespace DMSkin.WPF
 
         public const int WM_NCUAHDRAWCAPTION = 0xAE;
         public const int WM_NCUAHDRAWFRAME = 0xAF;
+
+        //不在ALT+TAB中
+        public const int WS_EX_TOOLWINDOW = 0x00000080;
 
         // Sent to a window when the size or position of the window is about to change
         //发送到一个窗口时，窗口的大小和位置变化有关

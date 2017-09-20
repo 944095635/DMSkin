@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -45,7 +46,6 @@ namespace DMSkin.WPF
         }
 
         private Color _DMWindowShadowColor = Color.FromArgb(255, 200, 200, 200);
-
         [Description("窗体阴影颜色"), Category("DMSkin")]
         public Color DMWindowShadowColor
         {
@@ -62,10 +62,35 @@ namespace DMSkin.WPF
         }
 
 
+        private Brush _DMWindowShadowBackColor = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));
+        [Description("窗体阴影背景颜色"), Category("DMSkin")]
+        public Brush DMWindowShadowBackColor
+        {
+            get
+            {
+                return _DMWindowShadowBackColor;
+            }
+
+            set
+            {
+                _DMWindowShadowBackColor = value;
+                OnPropertyChanged("DMWindowShadowBackColor");
+            }
+        }
+
         public ShadowWindow()
         {
             InitializeComponent();
             DataContext = this;
+            SourceInitialized += MainWindow_SourceInitialized;
+        }
+
+        private void MainWindow_SourceInitialized(object sender, EventArgs e)
+        {
+            IntPtr Handle = new WindowInteropHelper(this).Handle;
+            int exStyle = (int)Win32.GetWindowLong(Handle, -20);
+            exStyle |= Win32.WS_EX_TOOLWINDOW;
+            Win32.SetWindowLong(Handle, -20, (IntPtr)exStyle);
         }
     }
 }

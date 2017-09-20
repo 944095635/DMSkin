@@ -11,21 +11,30 @@ Foreground="White"
 DMShowMin="True"       
 DMShowMax="True"       
 DMShowClose="True"     
-DMWindowShadowSize="10" 
+DMWindowShadowSize="20" 
 DMWindowShadowColor="#FF3C3C3C" 
-DMWindowShadowDragVisibility="False"
+DMWindowShadowDragVisibility="True"
+DMWindowShadowBackColor="#FF323CAD"
 DMSystemButtonSize="50" 
 DMSystemButtonForeground="#FFffffff" 
-DMSystemButtonHoverColor="#33000000" 
-DMSystemButtonShadowEffect="1"  
+DMSystemButtonHoverColor="#77333333" 
+DMSystemButtonShadowEffect="0"  
 ResizeMode="CanResizeWithGrip" 
 Height="600" Width="1000"  
 MinHeight="268" MinWidth="360" 
-WindowStartupLocation="CenterScreen"  
-                     
-                     >
-    <Grid>
-        <ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
-        <Button Click="Button_Click" Content="Button" HorizontalAlignment="Left" Margin="323,381,0,0" VerticalAlignment="Top" Width="335" Height="137"/>
-    </Grid>
+WindowStartupLocation="CenterScreen">
+    <Border BorderThickness="0">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="Image/BG.jpg" Stretch="UniformToFill"/>
+            </Grid.Background>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <CheckBox Foreground="White" Name="cb1" Content="拖拽窗体隐藏阴影" Click="CheckBox_Click"></CheckBox>
+                <CheckBox Foreground="White"  Name="cb2" Content="拉伸窗体隐藏阴影"></CheckBox>
+                <Slider  Name="va" ValueChanged="Slider_ValueChanged" Minimum="0" Maximum="100"></Slider>
+                <Button Content="XXX" Style="{StaticResource BaiDuTranslateButton}" Click="Button_Click_1"></Button>
+            </StackPanel>
+            <ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
+        </Grid>
+    </Border>
 </DMSkin:DMSkinWindow>

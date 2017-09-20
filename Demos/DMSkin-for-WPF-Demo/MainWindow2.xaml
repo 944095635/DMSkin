@@ -13,10 +13,11 @@ DMShowMax="True"
 DMShowClose="True"     
 DMWindowShadowSize="10" 
 DMWindowShadowColor="#FF3C3C3C" 
+DMWindowShadowBackColor="Red"
 DMSystemButtonSize="50" 
 DMSystemButtonForeground="#FFffffff" 
 DMSystemButtonHoverColor="#33000000" 
-DMWindowShadowDragVisibility="False"
+DMWindowShadowDragVisibility="True"
 DMSystemButtonShadowEffect="1"  
 ResizeMode="CanResizeWithGrip" 
 Height="600" Width="1000"  
@@ -25,6 +26,9 @@ WindowStartupLocation="CenterScreen"
                      
                      >
     <Border BorderBrush="Gray" BorderThickness="1">
-        <ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
+        <Grid>
+            <Button Content="测试按钮" Style="{StaticResource BaiDuTranslateButton}"></Button>
+            <ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
+        </Grid>
     </Border>
 </DMSkin:DMSkinWindow>

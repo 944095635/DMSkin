@@ -30,9 +30,9 @@ namespace DMSkin.WPF
         {
             InitializeStyle();
             DataContext = this;
-            shadowWindow.Show();
+            ShadowWindowVisibility(true);
             //绑定阴影窗体
-            Owner = shadowWindow;
+            Owner = _shadowWindow;
             //绑定窗体操作函数
             SourceInitialized += MainWindow_SourceInitialized;
             StateChanged += MainWindow_StateChanged;
@@ -43,6 +43,31 @@ namespace DMSkin.WPF
             Loaded += Load;
         }
 
+
+
+        private void Load(object sender, RoutedEventArgs e)
+        {
+            Button btnClose = (Button)Template.FindName("PART_Close", this);
+            btnClose.Click += delegate
+            {
+                Close();
+            };
+            Button btnMax = (Button)Template.FindName("PART_Max", this);
+            btnMax.Click += delegate
+            {
+                WindowState = WindowState.Maximized;
+            };
+            Button btnRestore = (Button)Template.FindName("PART_Restore", this);
+            btnRestore.Click += delegate
+            {
+                WindowState = WindowState.Normal;
+            };
+            Button btnMin = (Button)Template.FindName("PART_Min", this);
+            btnMin.Click += delegate
+            {
+                WindowState = WindowState.Minimized;
+            };
+        }
 
 
 
@@ -60,14 +85,32 @@ namespace DMSkin.WPF
         #endregion
 
         #region 阴影窗体
+
+        private void ShadowWindowVisibility(bool show)
+        {
+            if (_shadowWindow==null)
+            {
+                return;
+            }
+            if (show)
+            {
+                _shadowWindow.Show();
+            }
+            else
+            {
+                _shadowWindow.Hide();
+            }
+        }
+
+
         //创建阴影窗体
-        ShadowWindow shadowWindow = new ShadowWindow();
+        ShadowWindow _shadowWindow = new ShadowWindow();
         /// <summary>
         /// 窗体关闭时 关闭阴影窗口
         /// </summary>
         private void MainWindow_Closing(object sender, CancelEventArgs e)
         {
-            shadowWindow.Close();
+            _shadowWindow.Close();
         }
         /// <summary>
         /// 主窗体修改尺寸时 更新阴影窗口
@@ -85,10 +128,10 @@ namespace DMSkin.WPF
         /// </summary>
         public void ReShadowWindow()
         {
-            shadowWindow.Left = Left - 30;
-            shadowWindow.Top = Top - 30;
-            shadowWindow.Width = Width + 60;
-            shadowWindow.Height = Height + 60;
+            _shadowWindow.Left = Left - 30;
+            _shadowWindow.Top = Top - 30;
+            _shadowWindow.Width = Width + 60;
+            _shadowWindow.Height = Height + 60;
         }
 
 
@@ -230,7 +273,7 @@ namespace DMSkin.WPF
                     BtnMaxVisibility = Visibility.Collapsed;
                     BtnRestoreVisibility = Visibility.Visible;
                 }
-                shadowWindow.Hide();
+                ShadowWindowVisibility(false);
             }
             if (WindowState == WindowState.Normal)
             {
@@ -249,7 +292,7 @@ namespace DMSkin.WPF
                     Thread.Sleep(280);
                     Dispatcher.Invoke(new Action(() =>
                     {
-                        shadowWindow.Show();
+                        ShadowWindowVisibility(true);
                         shadowWindowState = false;
                         Activate();//激活当前窗口
                         //Debug.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
@@ -258,7 +301,7 @@ namespace DMSkin.WPF
             }
             if (WindowState == WindowState.Minimized)
             {
-                shadowWindow.Hide();
+                ShadowWindowVisibility(false);
             }
         }
         //窗体移动
@@ -269,37 +312,17 @@ namespace DMSkin.WPF
                 //是否隐藏阴影
                 if (!DMWindowShadowDragVisibility)
                 {
-                    shadowWindow.Hide();
+                    ShadowWindowVisibility(false);
                 }
                 Win32.SendMessage(Handle, Win32.WM_NCLBUTTONDOWN, (int)Win32.HitTest.HTCAPTION, 0);
-                shadowWindow.Show();
+                if (!DMWindowShadowDragVisibility)
+                {
+                    ShadowWindowVisibility(true);
+                }
                 return;
             }
         }
 
-        private void Load(object sender, RoutedEventArgs e)
-        {
-            Button btnClose = (Button)Template.FindName("PART_Close", this);
-            btnClose.Click += delegate
-            {
-                Close();
-            };
-            Button btnMax = (Button)Template.FindName("PART_Max", this);
-            btnMax.Click += delegate
-            {
-                WindowState = WindowState.Maximized;
-            };
-            Button btnRestore = (Button)Template.FindName("PART_Restore", this);
-            btnRestore.Click += delegate
-            {
-                WindowState = WindowState.Normal;
-            };
-            Button btnMin = (Button)Template.FindName("PART_Min", this);
-            btnMin.Click += delegate
-            {
-                WindowState = WindowState.Minimized;
-            };
-        }
         #endregion
 
         #region 窗体属性
@@ -320,9 +343,6 @@ namespace DMSkin.WPF
                 OnPropertyChanged("DMFull");
             }
         }
-
-
-
 
 
         #region 系统按钮
@@ -560,12 +580,12 @@ namespace DMSkin.WPF
         {
             get
             {
-                return shadowWindow.DMWindowShadowSize;
+                return _shadowWindow.DMWindowShadowSize;
             }
 
             set
             {
-                shadowWindow.DMWindowShadowSize = value;
+                _shadowWindow.DMWindowShadowSize = value;
             }
         }
 
@@ -574,12 +594,27 @@ namespace DMSkin.WPF
         {
             get
             {
-                return shadowWindow.DMWindowShadowColor;
+                return _shadowWindow.DMWindowShadowColor;
             }
 
             set
             {
-                shadowWindow.DMWindowShadowColor = value;
+                _shadowWindow.DMWindowShadowColor = value;
+            }
+        }
+
+
+        [Description("窗体阴影背景颜色"), Category("DMSkin")]
+        public Brush DMWindowShadowBackColor
+        {
+            get
+            {
+                return _shadowWindow.DMWindowShadowBackColor;
+            }
+
+            set
+            {
+                _shadowWindow.DMWindowShadowBackColor = value;
             }
         }
         #endregion
