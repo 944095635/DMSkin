@@ -27,7 +27,7 @@ namespace DMSkin_for_WPF_Demo
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Login l = new Login();
+            MainWindow2 l = new MainWindow2();
             l.Show();
         }
     }

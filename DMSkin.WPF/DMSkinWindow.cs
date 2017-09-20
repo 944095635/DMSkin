@@ -136,12 +136,17 @@ namespace DMSkin.WPF
                 case Win32.WM_NCCALCSIZE:
                     handled = true;
                     break;
-                case Win32.WM_NCACTIVATE:
-                    if (wParam == (IntPtr)Win32.WM_FALSE)
-                    {
-                        handled = true;
-                    }
+                case Win32.WM_NCUAHDRAWCAPTION:
+                case Win32.WM_NCUAHDRAWFRAME:
+                    handled = true;
                     break;
+                //case Win32.WM_NCACTIVATE:
+                //    if (wParam == (IntPtr)Win32.WM_FALSE)
+                //    {
+                //        handled = true;
+                //    }
+                //    //handled = true;
+                //    break;
             }
             return IntPtr.Zero;
         }

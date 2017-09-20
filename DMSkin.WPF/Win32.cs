@@ -54,6 +54,8 @@ namespace DMSkin.WPF
         public const int WM_NCPAINT = 0x0085;
         public const int WM_NCACTIVATE = 0x0086;
 
+        public const int WM_NCUAHDRAWCAPTION = 0xAE;
+        public const int WM_NCUAHDRAWFRAME = 0xAF;
 
         // Sent to a window when the size or position of the window is about to change
         //发送到一个窗口时，窗口的大小和位置变化有关

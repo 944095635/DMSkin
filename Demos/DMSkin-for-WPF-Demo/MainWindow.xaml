@@ -23,9 +23,6 @@ MinHeight="268" MinWidth="360"
 WindowStartupLocation="CenterScreen"  
                      
                      >
-    <DMSkin:DMSkinWindow.Background>
-        <ImageBrush ImageSource="Image/背景.jpg" Stretch="Fill"/>
-    </DMSkin:DMSkinWindow.Background>
     <Grid>
         <ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
         <Button Click="Button_Click" Content="Button" HorizontalAlignment="Left" Margin="323,381,0,0" VerticalAlignment="Top" Width="335" Height="137"/>
