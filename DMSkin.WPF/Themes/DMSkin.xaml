@@ -46,7 +46,7 @@
         </Setter>
     </Style>
     <!--关闭按钮-->
-    <Style x:Key="CaptionCloseButton" BasedOn="{StaticResource CapButton}" TargetType="{x:Type Button}">
+    <Style x:Key="CaptionCloseButton"  TargetType="{x:Type Button}">
         <Setter Property="Background" Value="{DynamicResource TransparentWhiteBrush}" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
