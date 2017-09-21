@@ -437,7 +437,7 @@ namespace DMSkin.WPF
         #region 系统按钮
         private int _DMSystemButtonSize = 30;
 
-        [Description("窗体标题高度(关系到系统按钮)"), Category("DMSkin")]
+        [Description("窗体系统按钮大小"), Category("DMSkin")]
         public int DMSystemButtonSize
         {
             get
@@ -520,6 +520,22 @@ namespace DMSkin.WPF
             }
         }
 
+        private Brush _DMSystemButtonHoverForeground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+
+        [Description("窗体系统按钮鼠标悬按钮颜色"), Category("DMSkin")]
+        public Brush DMSystemButtonHoverForeground
+        {
+            get
+            {
+                return _DMSystemButtonHoverForeground;
+            }
+
+            set
+            {
+                _DMSystemButtonHoverForeground = value;
+                OnPropertyChanged("DMSystemButtonHoverForeground");
+            }
+        }
 
 
         private bool dmShowMax = true;
