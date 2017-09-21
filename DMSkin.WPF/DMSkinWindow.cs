@@ -88,7 +88,7 @@ namespace DMSkin.WPF
 
         private void ShadowWindowVisibility(bool show)
         {
-            if (_shadowWindow==null)
+            if (_shadowWindow == null)
             {
                 return;
             }
@@ -112,35 +112,46 @@ namespace DMSkin.WPF
         {
             _shadowWindow.Close();
         }
+
         /// <summary>
         /// 主窗体修改尺寸时 更新阴影窗口
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            ReShadowWindow();
-        }
-
-
-        /// <summary>
-        /// 重设阴影窗口位置
-        /// </summary>
-        public void ReShadowWindow()
-        {
-            _shadowWindow.Left = Left - 30;
-            _shadowWindow.Top = Top - 30;
             _shadowWindow.Width = Width + 60;
             _shadowWindow.Height = Height + 60;
         }
 
+        //bool ReShadowWindowState = false;
+        private void ReShadowWindowSize()
+        {
+            ShadowWindowVisibility(false);
+
+            //if (ReShadowWindowState)
+            //{
+            //    return;
+            //}
+            //ReShadowWindowState = true;
+            //Task.Factory.StartNew(() =>
+            //{
+            //    Thread.Sleep(500);
+            //    Dispatcher.Invoke(new Action(() =>
+            //    {
+                    
+            //        ShadowWindowVisibility(true);
+            //        ReShadowWindowState = false;
+            //        //Debug.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+            //    }));
+            //});
+        }
 
         /// <summary>
         /// 窗体移动
         /// </summary>
         private void MainWindow_LocationChanged(object sender, EventArgs e)
         {
-            ReShadowWindow();
+            _shadowWindow.Left = Left - 30;
+            _shadowWindow.Top = Top - 30;
         }
         #endregion
 
@@ -163,6 +174,8 @@ namespace DMSkin.WPF
                     WmGetMinMaxInfo(hwnd, lParam);
                     handled = true;
                     break;
+                case Win32.WM_NCHITTEST:
+                    return WmNCHitTest(lParam, ref handled);
                 //case Win32.WM_SYSCOMMAND:
                 //    if (wParam.ToInt32() == Win32.SC_MINIMIZE)//最小化消息
                 //    {
@@ -182,14 +195,71 @@ namespace DMSkin.WPF
                 case Win32.WM_NCUAHDRAWFRAME:
                     handled = true;
                     break;
-                //case Win32.WM_NCACTIVATE:
-                //    if (wParam == (IntPtr)Win32.WM_FALSE)
-                //    {
-                //        handled = true;
-                //    }
-                //    //handled = true;
-                //    break;
+                    //case Win32.WM_NCACTIVATE:
+                    //    if (wParam == (IntPtr)Win32.WM_FALSE)
+                    //    {
+                    //        handled = true;
+                    //    }
+                    //    //handled = true;
+                    //    break;
             }
+            return IntPtr.Zero;
+        }
+
+        /// <summary>  
+        /// Corner width used in HitTest  
+        /// </summary>  
+        private readonly int cornerWidth = 8;
+
+        /// <summary>  
+        /// Mouse point used by HitTest  
+        /// </summary>  
+        private Point mousePoint = new Point();
+        private IntPtr WmNCHitTest(IntPtr lParam, ref bool handled)
+        {
+            this.mousePoint.X = (int)(short)(lParam.ToInt32() & 0xFFFF);
+            this.mousePoint.Y = (int)(short)(lParam.ToInt32() >> 16);
+            if (ResizeMode == ResizeMode.CanResize||ResizeMode==ResizeMode.CanResizeWithGrip)
+            {
+                handled = true;
+                //if (Math.Abs(this.mousePoint.Y - this.Top) <= this.cornerWidth
+                //    && Math.Abs(this.mousePoint.X - this.Left) <= this.cornerWidth)
+                //{ // 左上 
+                //    return new IntPtr((int)Win32.HitTest.HTTOPLEFT);
+                //}
+                //else if (Math.Abs(this.ActualHeight + this.Top - this.mousePoint.Y) <= this.cornerWidth
+                //    && Math.Abs(this.mousePoint.X - this.Left) <= this.cornerWidth)
+                //{ // 左下  
+                //    return new IntPtr((int)Win32.HitTest.HTBOTTOMLEFT);
+                //}
+                //else if (Math.Abs(this.mousePoint.Y - this.Top) <= this.cornerWidth
+                //    && Math.Abs(this.ActualWidth + this.Left - this.mousePoint.X) <= this.cornerWidth)
+                //{ //右上
+                //    return new IntPtr((int)Win32.HitTest.HTTOPRIGHT);
+                //}
+                //else if (Math.Abs(this.mousePoint.X - this.Left) <= 30)
+                //{ // 左侧边框
+                //    return new IntPtr((int)Win32.HitTest.HTLEFT);
+                //}
+                //else if (Math.Abs(this.mousePoint.Y - this.Top) <= 30)
+                //{ // 顶部  
+                //    return new IntPtr((int)Win32.HitTest.HTTOP);
+                //}
+                if (Math.Abs(this.ActualWidth + this.Left - this.mousePoint.X) <= this.cornerWidth
+                    && Math.Abs(this.ActualHeight + this.Top - this.mousePoint.Y) <= this.cornerWidth)
+                { // 右下 
+                    return new IntPtr((int)Win32.HitTest.HTBOTTOMRIGHT);
+                }
+                else if (Math.Abs(this.ActualWidth + this.Left - this.mousePoint.X) <= 2 && Math.Abs(this.mousePoint.Y - this.Top)>DMSystemButtonSize)
+                { // 右  
+                    return new IntPtr((int)Win32.HitTest.HTRIGHT);
+                }
+                else if (Math.Abs(this.ActualHeight + this.Top - this.mousePoint.Y) <= 2)
+                { // 底部  
+                    return new IntPtr((int)Win32.HitTest.HTBOTTOM);
+                }
+            }
+            handled = false;
             return IntPtr.Zero;
         }
 
@@ -289,7 +359,7 @@ namespace DMSkin.WPF
                 shadowWindowState = true;
                 Task.Factory.StartNew(() =>
                 {
-                    Thread.Sleep(280);
+                    Thread.Sleep(200);
                     Dispatcher.Invoke(new Action(() =>
                     {
                         ShadowWindowVisibility(true);

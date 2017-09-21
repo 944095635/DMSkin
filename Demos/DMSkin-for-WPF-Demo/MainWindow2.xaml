@@ -19,7 +19,7 @@ DMSystemButtonForeground="#FF000000"
 DMSystemButtonHoverColor="#33000000" 
 DMWindowShadowDragVisibility="True"
 DMSystemButtonShadowEffect="0"  
-ResizeMode="CanResizeWithGrip" 
+ResizeMode="NoResize" 
 Height="600" Width="1000"  
 MinHeight="268" MinWidth="360" 
 WindowStartupLocation="CenterScreen"  
@@ -28,6 +28,6 @@ WindowStartupLocation="CenterScreen"
         <Grid>
             <TextBlock Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Top">此窗口的阴影背景色 为红色,拉伸窗口大小 可以看到。</TextBlock>
             <Button Content="测试按钮" Style="{StaticResource BaiDuTranslateButton}"></Button>
-            <ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
+            <!--<ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>-->
         </Grid>
 </DMSkin:DMSkinWindow>
