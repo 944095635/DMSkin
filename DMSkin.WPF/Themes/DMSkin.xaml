@@ -12,7 +12,7 @@
     <SolidColorBrush x:Key="TabItemFontBrush" Color="White" />
 
     
-    <Style x:Key="CaptionButtonStyle" TargetType="{x:Type Button}">
+    <Style x:Key="CaptionButton" TargetType="{x:Type Button}">
         <Setter Property="Background" Value="{DynamicResource TransparentWhiteBrush}" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
@@ -56,7 +56,7 @@
                             <Button x:Name="PART_Min"
                                 Focusable="False"
                                 Visibility="{Binding BtnMinVisibility}"    
-                                Style="{DynamicResource CaptionButtonStyle}"
+                                Style="{DynamicResource CaptionButton}"
                                 Padding="0"
                                 >
                                 <Path Data="F1M0,6L0,9 9,9 9,6 0,6z"
@@ -72,7 +72,7 @@
                                 <Button x:Name="PART_Max"
                             Visibility="{Binding BtnMaxVisibility}"
                                 Focusable="False"
-                                Style="{StaticResource CaptionButtonStyle}"
+                                Style="{StaticResource CaptionButton}"
                                 Padding="0"
                                 >
                                     <Path SnapsToDevicePixels="True"
@@ -87,7 +87,7 @@
                                 <Button x:Name="PART_Restore"
                                 Focusable="False"
                             Visibility="{Binding BtnRestoreVisibility}"
-                                Style="{StaticResource CaptionButtonStyle}"
+                                Style="{StaticResource CaptionButton}"
                                 Padding="0"
                                 >
                                     <Path SnapsToDevicePixels="True"
@@ -102,7 +102,7 @@
                             <Button x:Name="PART_Close"
                                 Focusable="False"
                                     Visibility="{Binding BtnCloseVisibility}"
-                                Style="{StaticResource CaptionButtonStyle}"
+                                Style="{StaticResource CaptionButton}"
                                 Padding="0"
                                 >
                                 <Path Data="F1M0,0L2,0 5,3 8,0 10,0 6,4 10,8 8,8 5,5 2,8 0,8 4,4 0,0z"
@@ -114,55 +114,6 @@
                                 </Path>
                             </Button>
                         </StackPanel>
-                        <!--<StackPanel Orientation="Horizontal"
-                                VerticalAlignment="Top">
-                            <Button x:Name="PART_Min"
-                                Focusable="False"
-                                Style="{DynamicResource CaptionButtonStyle}"
-                                Padding="0"
-                                Foreground="{TemplateBinding Foreground}"
-                                >
-                                <Path Data="F1M0,6L0,9 9,9 9,6 0,6z"
-                                  SnapsToDevicePixels="True"
-                                  Fill="{DynamicResource TabItemFontBrush}" />
-                            </Button>
-
-                            <Button x:Name="PART_Max"
-                                Focusable="False"
-                                Style="{DynamicResource CaptionButtonStyle}"
-                                Padding="0"
-                                Foreground="{TemplateBinding Foreground}">
-                                <Path SnapsToDevicePixels="True"
-                                  Data="F1M0,0L0,9 9,9 9,0 0,0 0,3 8,3 8,8 1,8 1,3z"
-                                  Fill="{DynamicResource TabItemFontBrush}" />
-                            </Button>
-
-                            <Button x:Name="PART_Restore"
-                                Focusable="False"
-                                Style="{DynamicResource CaptionButtonStyle}"
-                                Padding="0"
-                                Foreground="{TemplateBinding Foreground}"
-                                >
-                                <Path SnapsToDevicePixels="True"
-                                  Data="F1M0,10L0,3 3,3 3,0 10,0 10,2 4,2 4,3 7,3 7,6 6,6 6,5 1,5 1,10z M1,10L7,10 7,7 10,7 10,2 9,2 9,6 6,6 6,9 1,9z"
-                                  Fill="{DynamicResource TabItemFontBrush}" />
-                            </Button>
-
-                            <Button x:Name="PART_Close"
-                                Focusable="False"
-                                Style="{DynamicResource CaptionButtonStyle}"
-                                Padding="0"
-                                Foreground="{TemplateBinding Foreground}"
-                                >
-                                <Path Data="F1M0,0L2,0 5,3 8,0 10,0 6,4 10,8 8,8 5,5 2,8 0,8 4,4 0,0z"
-                                  SnapsToDevicePixels="True"
-                                  Fill="{DynamicResource TabItemFontBrush}" />
-                            </Button>
-                        </StackPanel>-->
-                        <!--<ResizeGrip x:Name="WindowResizeGrip"
-                        HorizontalAlignment="Right"
-                        IsTabStop="false"
-                        VerticalAlignment="Bottom" />-->
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

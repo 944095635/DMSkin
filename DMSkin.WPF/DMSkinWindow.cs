@@ -32,7 +32,10 @@ namespace DMSkin.WPF
             DataContext = this;
             ShadowWindowVisibility(true);
             //绑定阴影窗体
-            Owner = _shadowWindow;
+            if (DMWindowShadowVisibility)
+            {
+                Owner = _shadowWindow;
+            }
             //绑定窗体操作函数
             SourceInitialized += MainWindow_SourceInitialized;
             StateChanged += MainWindow_StateChanged;
@@ -92,6 +95,13 @@ namespace DMSkin.WPF
             {
                 return;
             }
+            if (!DMWindowShadowVisibility)
+            {
+                Owner = null;
+                _shadowWindow.Close();
+                _shadowWindow = null;
+                return;
+            }
             if (show)
             {
                 _shadowWindow.Show();
@@ -110,7 +120,10 @@ namespace DMSkin.WPF
         /// </summary>
         private void MainWindow_Closing(object sender, CancelEventArgs e)
         {
-            _shadowWindow.Close();
+            if (_shadowWindow!=null)
+            {
+                _shadowWindow.Close();
+            }
         }
 
         /// <summary>
@@ -118,8 +131,11 @@ namespace DMSkin.WPF
         /// </summary>
         private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            _shadowWindow.Width = Width + 60;
-            _shadowWindow.Height = Height + 60;
+            if (DMWindowShadowVisibility)
+            {
+                _shadowWindow.Width = Width + 60;
+                _shadowWindow.Height = Height + 60;
+            }
         }
 
         //bool ReShadowWindowState = false;
@@ -150,8 +166,11 @@ namespace DMSkin.WPF
         /// </summary>
         private void MainWindow_LocationChanged(object sender, EventArgs e)
         {
-            _shadowWindow.Left = Left - 30;
-            _shadowWindow.Top = Top - 30;
+            if (DMWindowShadowVisibility)
+            {
+                _shadowWindow.Left = Left - 30;
+                _shadowWindow.Top = Top - 30;
+            }
         }
         #endregion
 
@@ -685,6 +704,22 @@ namespace DMSkin.WPF
             set
             {
                 _shadowWindow.DMWindowShadowBackColor = value;
+            }
+        }
+
+        private bool _DMWindowShadowVisibility = true;
+        [Description("窗体是否有阴影"), Category("DMSkin")]
+        public bool DMWindowShadowVisibility
+        {
+            get
+            {
+                return _DMWindowShadowVisibility;
+            }
+
+            set
+            {
+                _DMWindowShadowVisibility = value;
+                OnPropertyChanged("DMWindowShadowVisibility");
             }
         }
         #endregion
