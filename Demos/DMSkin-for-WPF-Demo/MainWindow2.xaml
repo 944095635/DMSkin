@@ -16,21 +16,23 @@ DMWindowShadowColor="#FF3C3C3C"
 DMWindowShadowBackColor="Red"
 DMWindowShadowVisibility="False"
 DMSystemButtonSize="40" 
-DMSystemButtonForeground="#FF000000" 
-DMSystemButtonHoverColor="#33000000" 
+DMSystemButtonForeground="#FFFFFFFF" 
+DMSystemButtonHoverColor="#88c8c8c8" 
+DMSystemButtonCloseHoverColor="red" 
 DMWindowShadowDragVisibility="True"
 DMSystemButtonShadowEffect="0"  
 ResizeMode="CanResize" 
 Height="600" Width="1000"  
 MinHeight="268" MinWidth="360" 
-WindowStartupLocation="CenterScreen"  
-                     
-                     >
-    
+WindowStartupLocation="CenterScreen">
         <Grid>
-        <Border BorderBrush="Gray" BorderThickness="1"></Border>
+        <Border BorderBrush="Gray" BorderThickness="1">
+            <Border.Background>
+                <ImageBrush ImageSource="Image/BG.jpg"/>
+            </Border.Background>
+        </Border>
             <TextBlock Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Top">此窗口的阴影背景色 为红色,拉伸窗口大小 可以看到。</TextBlock>
             <Button Content="测试按钮" Style="{StaticResource BaiDuTranslateButton}"></Button>
-            <!--<ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>-->
+            <ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
         </Grid>
 </DMSkin:DMSkinWindow>

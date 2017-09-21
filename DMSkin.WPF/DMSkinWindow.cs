@@ -469,6 +469,24 @@ namespace DMSkin.WPF
             }
         }
 
+        private Brush _DMSystemButtonCloseHoverColor = new SolidColorBrush(Color.FromArgb(255,255,0,0));
+
+        [Description("窗体系统关闭按钮鼠标悬浮背景颜色"), Category("DMSkin")]
+        public Brush DMSystemButtonCloseHoverColor
+        {
+            get
+            {
+                return _DMSystemButtonCloseHoverColor;
+            }
+
+            set
+            {
+                _DMSystemButtonCloseHoverColor = value;
+                OnPropertyChanged("DMSystemButtonCloseHoverColor");
+            }
+        }
+        
+
         private double _DMSystemButtonShadowEffect = 1;
         [Description("窗体控制按钮阴影大小"), Category("DMSkin")]
         public double DMSystemButtonShadowEffect

@@ -45,6 +45,34 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--关闭按钮-->
+    <Style x:Key="CaptionCloseButton" BasedOn="{StaticResource CapButton}" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{DynamicResource TransparentWhiteBrush}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="1" />
+        <Setter Property="Width" Value="{Binding DMSystemButtonSize}" />
+        <Setter Property="Height" Value="{Binding DMSystemButtonSize}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid x:Name="grid" Height="{Binding DMSystemButtonSize}" Width="{Binding DMSystemButtonSize}" Background="#00FFFFFF" >
+                        <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True"  />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="grid" Property="Background" Value="{Binding DMSystemButtonCloseHoverColor}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="#ADADAD" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
     <!--主窗体样式-->
     <Style x:Key="MainWindow" TargetType="{x:Type Window}">
         <Setter Property="Template">
@@ -102,7 +130,7 @@
                             <Button x:Name="PART_Close"
                                 Focusable="False"
                                     Visibility="{Binding BtnCloseVisibility}"
-                                Style="{StaticResource CaptionButton}"
+                                Style="{StaticResource CaptionCloseButton}"
                                 Padding="0"
                                 >
                                 <Path Data="F1M0,0L2,0 5,3 8,0 10,0 6,4 10,8 8,8 5,5 2,8 0,8 4,4 0,0z"
