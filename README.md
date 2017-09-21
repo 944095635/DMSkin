@@ -99,9 +99,10 @@ DMWindowShadowDragVisibility="False"//窗体拖动时是否显示阴影层
 DMWindowShadowVisibility="False"  //窗体是否有阴影层
 DMWindowShadowBackColor="#FF323CAD" //阴影背景色,选择跟主窗体相近的颜色 拉伸跟拖动 用户体验更好|#FF323CAD 为蓝色
 DMSystemButtonSize="50" //系统按钮大小
-DMSystemButtonForeground="#FF666666" //系统按钮颜色
-DMSystemButtonHoverColor="#33000000" //系统按钮的鼠标悬浮色
-DMSystemButtonCloseHoverColor="Red" //系统关闭按钮的鼠标悬浮色
+DMSystemButtonForeground="#FF666666"  //系统按钮文字颜色
+DMSystemButtonHoverColor="#33000000"  //系统按钮的鼠标悬浮色
+DMSystemButtonHoverForeground="White" //系统按钮的鼠标悬浮文字颜色
+DMSystemButtonCloseHoverColor="Red"   //系统【关闭】按钮的鼠标悬浮色
 DMSystemButtonShadowEffect="0"  //系统按钮的阴影大小
 ResizeMode="CanResizeWithGrip" //边框拉伸方案
 Height="700" Width="1000"   //窗体大小
