@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSKIN.WPF.DEMO2", "Demos\DMSKIN.WPF.DEMO2\DMSKIN.WPF.DEMO2.csproj", "{E4B9517B-7C5E-496C-9DE6-14FF0B3A4700}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkin.WPF.DEMO", "Demos\DMSKIN.WPF.DEMO2\DMSkin.WPF.DEMO.csproj", "{E4B9517B-7C5E-496C-9DE6-14FF0B3A4700}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkin.WPF", "DMSkin.WPF\DMSkin.WPF.csproj", "{168352B1-6A0C-4C9C-8A32-68B512DA3CFC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkin-for-WPF-Demo", "Demos\DMSkin-for-WPF-Demo\DMSkin-for-WPF-Demo.csproj", "{69175E06-5855-400E-A4A6-4CB3C47BF45E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,14 +31,6 @@ Global
 		{168352B1-6A0C-4C9C-8A32-68B512DA3CFC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{168352B1-6A0C-4C9C-8A32-68B512DA3CFC}.Release|x86.ActiveCfg = Release|Any CPU
 		{168352B1-6A0C-4C9C-8A32-68B512DA3CFC}.Release|x86.Build.0 = Release|Any CPU
-		{69175E06-5855-400E-A4A6-4CB3C47BF45E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69175E06-5855-400E-A4A6-4CB3C47BF45E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69175E06-5855-400E-A4A6-4CB3C47BF45E}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{69175E06-5855-400E-A4A6-4CB3C47BF45E}.Debug|x86.Build.0 = Debug|Any CPU
-		{69175E06-5855-400E-A4A6-4CB3C47BF45E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69175E06-5855-400E-A4A6-4CB3C47BF45E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{69175E06-5855-400E-A4A6-4CB3C47BF45E}.Release|x86.ActiveCfg = Release|Any CPU
-		{69175E06-5855-400E-A4A6-4CB3C47BF45E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

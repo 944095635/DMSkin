@@ -30,12 +30,6 @@ namespace DMSkin.WPF
         {
             InitializeStyle();
             DataContext = this;
-            ShadowWindowVisibility(true);
-            //绑定阴影窗体
-            if (DMWindowShadowVisibility)
-            {
-                Owner = _shadowWindow;
-            }
             //绑定窗体操作函数
             SourceInitialized += MainWindow_SourceInitialized;
             StateChanged += MainWindow_StateChanged;
@@ -44,6 +38,8 @@ namespace DMSkin.WPF
             SizeChanged += MainWindow_SizeChanged;
             Closing += MainWindow_Closing;
             Loaded += Load;
+
+            ShadowWindowVisibility(true);
         }
 
 
@@ -70,6 +66,14 @@ namespace DMSkin.WPF
             {
                 WindowState = WindowState.Minimized;
             };
+
+            //绑定阴影窗体
+            if (DMWindowShadowVisibility)
+            {
+                Owner = _shadowWindow;
+            }
+
+            //Debug.WriteLine("DMSkinLoad");
         }
 
 
@@ -463,7 +467,7 @@ namespace DMSkin.WPF
         }
         
 
-        private double _DMSystemButtonShadowEffect = 1;
+        private double _DMSystemButtonShadowEffect = 1.0;
         [Description("窗体控制按钮阴影大小"), Category("DMSkin")]
         public double DMSystemButtonShadowEffect
         {
