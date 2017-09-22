@@ -9,17 +9,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DMSkin.WPF.DEMO.Pages
+namespace DMSkin.WPF.DEMO.Window
 {
     /// <summary>
-    /// PageButton.xaml 的交互逻辑
+    /// ImageWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class PageButton : UserControl
+    public partial class ImageWindow : DMSkin.WPF.DMSkinWindow
     {
-        public PageButton()
+        public ImageWindow()
         {
             InitializeComponent();
         }

@@ -3,7 +3,7 @@
                     xmlns:local="clr-namespace:DM_Video.Themes">
 
 
-    <FontFamily x:Key="IconFont">/DMSKIN.WPF.DEMO2;component/Fonts/#iconfont</FontFamily>
+    <FontFamily x:Key="IconFont">/DMSkin.WPF.DEMO;component/Fonts/#iconfont</FontFamily>
 
     <Style x:Key="Text" TargetType="{x:Type TextBlock}">
         <Setter Property="FontSize" Value="16" />

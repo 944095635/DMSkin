@@ -1,7 +1,8 @@
-﻿<Application x:Class="DMSKIN.WPF.DEMO2.App"
+﻿<Application x:Class="DMSkin.WPF.DEMO.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:DMSKIN.WPF.DEMO2"
+             ShutdownMode="OnMainWindowClose"
+             xmlns:local="clr-namespace:DMSkin.WPF.DEMO"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
@@ -17,7 +18,7 @@
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMListBox.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMSlider.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.Wpf;component/Themes/DMCheckBox.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSKIN.WPF.DEMO2;Component/Themes/DEMO2DMSkin.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF.DEMO;Component/Themes/DEMO2DMSkin.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

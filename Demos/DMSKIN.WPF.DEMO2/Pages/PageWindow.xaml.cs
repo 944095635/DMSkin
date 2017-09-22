@@ -1,4 +1,4 @@
-﻿using DMSkin.WPF;
+﻿using DMSkin.WPF.DEMO.Window;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,27 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DMSkin.WPF.DEMO
+namespace DMSkin.WPF.DEMO.Pages
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// PageWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : DMSkinWindow
+    public partial class PageWindow : UserControl
     {
-        public MainWindow()
+        public PageWindow()
         {
             InitializeComponent();
         }
 
-        private void ButtonSkin_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DMFullScreen = true;
-            WindowState = WindowState.Maximized;
-        }
-
-        private void DMSkinWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            web.Navigate("http://www.dmskin.com");
+            ImageWindow w = new ImageWindow();
+            w.Show();
         }
     }
 }
