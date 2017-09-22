@@ -138,29 +138,6 @@ namespace DMSkin.WPF
             }
         }
 
-        //bool ReShadowWindowState = false;
-        private void ReShadowWindowSize()
-        {
-            ShadowWindowVisibility(false);
-
-            //if (ReShadowWindowState)
-            //{
-            //    return;
-            //}
-            //ReShadowWindowState = true;
-            //Task.Factory.StartNew(() =>
-            //{
-            //    Thread.Sleep(500);
-            //    Dispatcher.Invoke(new Action(() =>
-            //    {
-                    
-            //        ShadowWindowVisibility(true);
-            //        ReShadowWindowState = false;
-            //        //Debug.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
-            //    }));
-            //});
-        }
-
         /// <summary>
         /// 窗体移动
         /// </summary>
@@ -226,12 +203,12 @@ namespace DMSkin.WPF
         }
 
         /// <summary>  
-        /// Corner width used in HitTest  
+        /// 圆角拖动大小 
         /// </summary>  
         private readonly int cornerWidth = 8;
 
         /// <summary>  
-        /// Mouse point used by HitTest  
+        /// 拉伸鼠标坐标 
         /// </summary>  
         private Point mousePoint = new Point();
         private IntPtr WmNCHitTest(IntPtr lParam, ref bool handled)
@@ -289,8 +266,7 @@ namespace DMSkin.WPF
             Win32.MINMAXINFO mmi = (Win32.MINMAXINFO)Marshal.PtrToStructure(lParam, typeof(Win32.MINMAXINFO));
 
             // Get handle for nearest monitor to this window  
-            WindowInteropHelper wih = new WindowInteropHelper(this);
-            IntPtr hMonitor = Win32.MonitorFromWindow(wih.Handle, Win32.MONITOR_DEFAULTTONEAREST);
+            IntPtr hMonitor = Win32.MonitorFromWindow(Handle, Win32.MONITOR_DEFAULTTONEAREST);
 
             // Get monitor info   显示屏
             Win32.MONITORINFOEX monitorInfo = new Win32.MONITORINFOEX();
@@ -311,7 +287,7 @@ namespace DMSkin.WPF
             mmi.ptMaxPosition.y = workingArea.Top;
 
             // Get HwndSource  
-            HwndSource source = HwndSource.FromHwnd(wih.Handle);
+            HwndSource source = HwndSource.FromHwnd(Handle);
             if (source == null)
                 // Should never be null  
                 throw new Exception("Cannot get HwndSource instance.");
