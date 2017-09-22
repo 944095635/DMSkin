@@ -18,7 +18,7 @@ DMSystemButtonHoverColor="#33000000"
 DMSystemButtonHoverForeground="White"
 DMSystemButtonCloseHoverColor="Red"
    
-                     
+ Loaded="DMSkinWindow_Loaded"                    
 DMSystemButtonShadowEffect="0" 
 DMWindowShadowColor="#FFC8C8C8" 
 ResizeMode="CanResizeWithGrip" 
@@ -64,12 +64,14 @@ MinHeight="268" MinWidth="360"
                 </Grid>
             </Border>
             <TabControl Grid.Row="1" TabStripPlacement="Left" Style="{StaticResource DMTabControlLeft}">
-                <TabItem IsSelected="True" Style="{StaticResource DMTopTabItemLeft}" Header="按钮组" Tag="&#xe63f;">
+                <TabItem IsSelected="True"  Style="{StaticResource DMTopTabItemLeft}"  Header="个人中心" Tag="&#xe605;">
+                    <WebBrowser Name="web" Margin="1"></WebBrowser>
+                </TabItem>
+                <TabItem Style="{StaticResource DMTopTabItemLeft}" Header="按钮组" Tag="&#xe63f;">
                     <pages:PageButton></pages:PageButton>
                 </TabItem>
                 <TabItem Style="{StaticResource DMTopTabItemLeft}"  Tag="&#xe64a;" Header="壁纸控">
                 </TabItem>
-                <TabItem Style="{StaticResource DMTopTabItemLeft}"  Header="个人中心" Tag="&#xe605;"></TabItem>
                 <TabItem Style="{StaticResource DMTopTabItemLeft}"  Tag="&#xe623;" Header="媒体中心"></TabItem>
                 <TabItem Style="{StaticResource DMTopTabItemLeft}"  Tag="&#xe615;" Header="百度翻译">
                 </TabItem>

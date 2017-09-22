@@ -30,5 +30,10 @@ namespace DMSKIN.WPF.DEMO2
             DMFullScreen = true;
             WindowState = WindowState.Maximized;
         }
+
+        private void DMSkinWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            web.Navigate("http://www.dmskin.com");
+        }
     }
 }
