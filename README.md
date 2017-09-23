@@ -92,30 +92,30 @@ DFW实现了比较完美的无边框窗体方案，并且拖拽全部采用WIN32
 
 <h1>窗体特性</h1>
 <pre>
-WindowMode.Config
+<p>WindowMode.Config</p>
 
-系统检测-Auto  
-强制单窗口-OneWindow 
-强制双窗口-TwoWindow
+<p>系统检测-Auto  </p>
+<p>强制单窗口-OneWindow </p>
+<p>强制双窗口-TwoWindow</p>
 
-【Auto模式】:
-软件启动会检测Windows版本,
-Win7自动会开启OneWindow模式
-Win10自动会开启TwoWindow模式
-推荐/默认开启此模式
-WPF嵌入GDI+组件需求很少
-此模式GDI+组件在WIN7系统下面不会显示
+<p>【Auto模式】:</p>
+<p>软件启动会检测Windows版本,</p>
+<p>Win7自动会开启OneWindow模式</p>
+<p>Win10自动会开启TwoWindow模式</p>
+<p>推荐/默认开启此模式</p>
+<p>WPF嵌入GDI+组件需求很少</p>
+<p>此模式GDI+组件在WIN7系统下面不会显示</p>
 -------------------------------------------------------------
-【强制OneWindow模式】
-1.WindowsFormsHost(也就是不能直接嵌入GDI+组件)
-2.最小化动画不完美(采用XAML动画)
-此模式兼容Win7 Win10
-GDI+采用此模式
+<p>【强制OneWindow模式】</p>
+<p>1.WindowsFormsHost(也就是不能直接嵌入GDI+组件)</p>
+<p>2.最小化动画不完美(采用XAML动画)</p>
+<p>此模式兼容Win7 Win10</p>
+<p>GDI+采用此模式</p>
 -------------------------------------------------------------
-【强制TwoWindow模式】
-1.WindowsFormsHost(也就是不能直接嵌入GDI+组件)
-2.最小化动画(采用XAML动画)
-不考虑Win7系统采用此模式
+<p>【强制TwoWindow模式】</p>
+<p>1.WindowsFormsHost(也就是不能直接嵌入GDI+组件)</p>
+<p>2.最小化动画(采用XAML动画)</p>
+<p>不考虑Win7系统采用此模式</p>
 -------------------------------------------------------------
 </pre>
 
