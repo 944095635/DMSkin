@@ -1,5 +1,7 @@
 ﻿# DMSkin-for-WPF 3.0
 <h3>全中国第一款WPF无边框完美方案</h3>
+<h4>.NET Framework 3.5 - 4.7</h4>
+
 <p>基于WPF的UI框架</p>
 
 <h1>前言</h1>
