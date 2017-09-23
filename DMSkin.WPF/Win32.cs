@@ -8,6 +8,8 @@ namespace DMSkin.WPF
 {
     public class Win32
     {
+
+
         [DllImport("user32.dll")]
         public static extern IntPtr GetWindowLong(IntPtr hWnd, int nIndex);
         [DllImport("user32.dll", EntryPoint = "SetWindowLongPtr", SetLastError = true)]

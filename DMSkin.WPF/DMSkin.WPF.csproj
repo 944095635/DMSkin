@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Activation\Activate.cs" />
     <Compile Include="API\HTTP.cs" />
+    <Compile Include="API\WindowMode.cs" />
     <Compile Include="Controls\ElasticWrapPanel.cs" />
     <Compile Include="Converters\ImageSourceConverter.cs" />
     <Compile Include="Converters\SizeConverter.cs" />
@@ -106,6 +107,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\DMScrollViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\DMSkinOne.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

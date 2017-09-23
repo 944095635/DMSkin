@@ -6,6 +6,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                      xmlns:pages="clr-namespace:DMSkin.WPF.DEMO.Pages"
                      mc:Ignorable="d"
+                     
+                     
 Foreground="White"   
 Background="White" 
 DMShowMin="True"
@@ -17,10 +19,11 @@ DMSystemButtonForeground="#FF666666"
 DMSystemButtonHoverColor="#33000000"
 DMSystemButtonHoverForeground="White"
 DMSystemButtonCloseHoverColor="Red"
-   
  Loaded="DMSkinWindow_Loaded"                    
 DMSystemButtonShadowEffect="0" 
-DMWindowShadowColor="#FFC8C8C8" 
+                     
+                     
+DMWindowShadowColor="#FF000000" 
 ResizeMode="CanResizeWithGrip" 
 Height="700" Width="1000"  
 WindowStartupLocation="CenterScreen"  

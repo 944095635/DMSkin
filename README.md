@@ -1,4 +1,4 @@
-# DMSkin-for-WPF 2.4
+﻿# DMSkin-for-WPF 2.4
 <h3>全中国第一款WPF无边框完美方案</h3>
 <p>基于WPF的UI框架</p>
 
@@ -84,6 +84,37 @@ DFW实现了比较完美的无边框窗体方案，并且拖拽全部采用WIN32
 4.XAML继承修改为: DMSkin:DMSkinWindow x:Class="DMSkin.WPF.Test.MainWindow"
 </code>
 </pre>
+
+
+<h1>窗体特性</h1>
+WindowMode
+//系统检测Auto  //单窗口OneWindow  //双窗口TwoWindow
+
+【Auto模式】:
+软件启动会检测Windows版本,
+Win7自动会开启OneWindow模式
+Win10自动会开启TwoWindow模式
+
+推荐/默认开启此模式
+WPF嵌入GDI+组件需求很少
+此模式GDI+组件在WIN7系统下面不会显示
+
+
+
+【强制OneWindow模式】
+1.WindowsFormsHost(也就是不能直接嵌入GDI+组件)
+2.最小化动画不完美(采用XAML动画)
+
+此模式兼容Win7 Win10
+GDI+采用此模式
+
+
+【强制TwoWindow模式】
+1.WindowsFormsHost(也就是不能直接嵌入GDI+组件)
+2.最小化动画(采用XAML动画)
+
+不考虑Win7系统采用此模式
+
 
 <h1>窗体属性</h1>
 <pre>
