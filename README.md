@@ -3,16 +3,9 @@
 <h4>基于WPF的UI框架</h4>
 <h4>支持：.NET Framework 3.5 - 4.7</h4>
 <h4>支持：Windows XP - Windows 10</h4>
-
 <hr/>
-
-<h4>仅支持:Windows 10 .NET Framework 4.5 <a href='https://github.com/944095635/DMSkin-for-WPF-1.0' target="_blank">DMSkin-for-WIN10-WPF</a></h4>
-
 <h1>前言</h1>
-
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A.png" />
-
-
 DMSkin-for-WPF是一个基于WPF的.Net WPF开源界面库,实现了无边框的WPF开发方案,内置部分控件模板.
 你可以参照模板自行修改完善。（以下简称DFW）。
 
