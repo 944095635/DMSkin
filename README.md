@@ -92,18 +92,12 @@ DFW实现了比较完美的无边框窗体方案，并且拖拽全部采用WIN32
 
 <h1>窗体特性</h1>
 <pre>
+WindowMode.Config
 
-WindowMode
-//系统检测
-Auto  
+系统检测-Auto  
+强制单窗口-OneWindow 
+强制双窗口-TwoWindow
 
-//单窗口
-OneWindow 
-
-//双窗口
-TwoWindow
-
--------------------------------------------------------------
 【Auto模式】:
 软件启动会检测Windows版本,
 Win7自动会开启OneWindow模式
