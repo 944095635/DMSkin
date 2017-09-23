@@ -68,7 +68,6 @@ MinHeight="268" MinWidth="360"
             </Border>
             <TabControl Grid.Row="1" TabStripPlacement="Left" Style="{StaticResource DMTabControlLeft}">
                 <TabItem IsSelected="True"  Style="{StaticResource DMTopTabItemLeft}"  Header="DMSkin官网" Tag="&#xe605;">
-                    <WebBrowser Name="web" Margin="1"></WebBrowser>
                 </TabItem>
                 <TabItem Style="{StaticResource DMTopTabItemLeft}" Header="窗口Demo" Tag="&#xe610;">
                     <pages:PageWindow></pages:PageWindow>

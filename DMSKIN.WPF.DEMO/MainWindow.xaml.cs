@@ -33,7 +33,6 @@ namespace DMSkin.WPF.DEMO
 
         private void DMSkinWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            web.Navigate("http://www.dmskin.com");
         }
     }
 }
