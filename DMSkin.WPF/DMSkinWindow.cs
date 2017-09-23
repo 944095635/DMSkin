@@ -326,8 +326,8 @@ namespace DMSkin.WPF
                     //单层窗口 启用
                     if (DMWindowMode == WindowMode.OneWindow)
                     {
-                        //WmGetMinMaxInfo(hwnd, lParam);
-                        //handled = true;
+                        WmGetMinMaxInfo(hwnd, lParam);
+                        handled = true;
                     }
                     break;
                 case Win32.WM_NCHITTEST:
