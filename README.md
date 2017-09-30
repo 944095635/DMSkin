@@ -3,6 +3,10 @@
 <h4>基于WPF的UI框架</h4>
 <h4>支持：.NET Framework 3.5 - 4.7</h4>
 <h4>支持：Windows XP - Windows 10</h4>
+
+<h4>Windows 10 以上自动切换到双层</h4>
+<h4>Windows 7 及以下自动切换到单层</h4>
+
 <hr/>
 <h1>前言</h1>
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A.png" />
