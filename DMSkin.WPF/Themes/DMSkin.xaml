@@ -1,20 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <!--#region 主题色#FF4191EF-->
-    <SolidColorBrush x:Key="MainColor">#FF4191EF</SolidColorBrush>
-    <SolidColorBrush x:Key="LineColor">#FFF0F0F0</SolidColorBrush>
-    <!--#endregion-->
-
-    <SolidColorBrush x:Key="TransparentWhiteBrush" Color="Transparent" />
-    <SolidColorBrush x:Key="ButtonPressedOuterBackgroundBrush" Color="AliceBlue" Opacity="0.3" />
-    <SolidColorBrush x:Key="ButtonHoverOuterBackgroundBrush" Color="Red" Opacity="0.12" />
-    <SolidColorBrush x:Key="TabItemFontBrush" Color="White" />
-
-    
-    <Style x:Key="CaptionButton" TargetType="{x:Type Button}">
+    <Style x:Key="SystemButton" TargetType="{x:Type Button}">
         <Setter Property="Foreground" Value="{Binding DMSystemButtonForeground}" />
-        <Setter Property="Background" Value="{DynamicResource TransparentWhiteBrush}" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Padding" Value="1" />
@@ -51,7 +39,7 @@
         </Setter>
     </Style>
     <!--关闭按钮-->
-    <Style x:Key="CaptionCloseButton"  TargetType="{x:Type Button}">
+    <Style x:Key="SystemCloseButton"  TargetType="{x:Type Button}">
         <Setter Property="Foreground" Value="{Binding DMSystemButtonForeground}" />
         <Setter Property="Background" Value="{DynamicResource TransparentWhiteBrush}" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -81,7 +69,7 @@
         </Setter>
     </Style>
 
-
+    
     <!--主窗体样式-->
     <Style x:Key="MainWindow" TargetType="{x:Type Window}">
         <Setter Property="Template">
@@ -93,7 +81,7 @@
                             <Button x:Name="PART_Min"
                                 Focusable="False"
                                 Visibility="{Binding BtnMinVisibility}"    
-                                Style="{DynamicResource CaptionButton}"
+                                Style="{DynamicResource SystemButton}"
                                 Padding="0">
                                 <Path Data="F1M0,6L0,9 9,9 9,6 0,6z" Margin="0,5,0,0"  Stretch="Fill" Width="10" Height="3"
                                   SnapsToDevicePixels="True" 
@@ -108,7 +96,7 @@
                                 <Button x:Name="PART_Max"
                             Visibility="{Binding BtnMaxVisibility}"
                                 Focusable="False"
-                                Style="{StaticResource CaptionButton}"
+                                Style="{StaticResource SystemButton}"
                                 Padding="0"
                                 >
                                     <Path SnapsToDevicePixels="True" 
@@ -123,7 +111,7 @@
                                 <Button x:Name="PART_Restore"
                                 Focusable="False"
                             Visibility="{Binding BtnRestoreVisibility}"
-                                Style="{StaticResource CaptionButton}"
+                                Style="{StaticResource SystemButton}"
                                 Padding="0">
                                     <Path SnapsToDevicePixels="True"
                                           Stretch="Fill" Width="12" Height="12"
@@ -138,7 +126,7 @@
                             <Button x:Name="PART_Close"
                                 Focusable="False"
                                 Visibility="{Binding BtnCloseVisibility}"
-                                Style="{StaticResource CaptionCloseButton}"
+                                Style="{StaticResource SystemCloseButton}"
                                 Padding="0">
                                 <Path Data="m12.65194,6.64088l-2.65193,2.65194l-2.65195,-2.65194c-0.19527,-0.19528 -0.51189,-0.19528 -0.70718,0c-0.19529,0.19528 -0.19528,0.5119 0,0.70718l2.65194,2.65195l-2.65194,2.65193c-0.19528,0.19528 -0.19528,0.51191 0,0.70719c0.19528,0.19528 0.5119,0.19528 0.70718,0l2.65195,-2.65194l2.65193,2.65194c0.19528,0.19528 0.5119,0.19528 0.70719,0c0.19528,-0.19528 0.19528,-0.51191 0,-0.70719l-2.65194,-2.65193l2.65194,-2.65195c0.19528,-0.19527 0.19528,-0.51189 0,-0.70718c-0.19528,-0.19528 -0.5119,-0.19528 -0.70719,0z"
                                   SnapsToDevicePixels="True" Stretch="Fill" Width="12" Height="12"
