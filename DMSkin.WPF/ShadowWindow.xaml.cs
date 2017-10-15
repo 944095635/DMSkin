@@ -87,10 +87,12 @@ namespace DMSkin.WPF
 
         private void MainWindow_SourceInitialized(object sender, EventArgs e)
         {
+            //WindowStyle = System.Windows.WindowStyle.ToolWindow;
+
             IntPtr Handle = new WindowInteropHelper(this).Handle;
-            int exStyle = (int)Win32.GetWindowLong(Handle, -20);
-            exStyle |= Win32.WS_EX_TOOLWINDOW;
-            Win32.SetWindowLong(Handle, -20, (IntPtr)exStyle);
+            int exStyle = (int)NativeMethods.GetWindowLong(Handle, -20);
+            exStyle |= NativeConstants.WS_EX_TOOLWINDOW;
+            NativeMethods.SetWindowLong(Handle, -20, (IntPtr)exStyle);
         }
     }
 }
