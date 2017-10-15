@@ -1,5 +1,5 @@
-﻿# DMSkin-for-WPF 3.0
-<h3>全中国第一款WPF无边框完美方案</h3>
+﻿# DMSkin-for-WPF 2.0.0.0
+<h3>第一款WPF无边框完美方案</h3>
 <h4>基于WPF的UI框架</h4>
 
 <hr/>
@@ -7,6 +7,8 @@
 <h4>方案思路:Win32 重绘非客户区+阴影层窗口(双层)</h4>
 <h4>支持：.NET Framework 3.5 - 4.7</h4>
 <h4>支持：Windows XP - Windows 10</h4>
+
+<h4>遗留BUG:WIN7 系统上非客户区系统按钮阻挡操作</h4>
 
 <h4>Windows 10 以上自动切换到双层</h4>
 <h4>Windows 7 及以下自动切换到单层</h4>
