@@ -5,11 +5,11 @@
 <h4>基于WPF的UI框架</h4>
 <h4>方案思路:Win32 重绘非客户区+阴影层窗口</h4>
 <h4>支持：.NET Framework 3.5 - 4.7</h4>
-<h4>支持：Windows XP - Windows 10</h4>
+<h4>支持：Windows XP - Windows 7 - Windows 10</h4>
 
 <h1>注意事项</h1>
 <h3>本源码采用VS2017 个人版 开发,部分C# 6.0+语法 vs2015 vs2013 vs2012 请自行修改源码中不支持的部分。</h3>
-<h3>遗留BUG:WIN7 系统上非客户区系统按钮阻挡操作(目前WIN7有点小瑕疵)</h3>
+<h3>---遗留BUG:WIN7 系统上非客户区系统按钮阻挡操作(目前WIN7有点小瑕疵)---</h3>
 
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A.png" />
 DMSkin-for-WPF是一个基于WPF的.Net WPF开源界面库,实现了无边框的WPF开发方案,内置部分控件模板.
