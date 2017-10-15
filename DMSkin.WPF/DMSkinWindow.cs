@@ -241,7 +241,7 @@ namespace DMSkin.WPF
             {
                 //WM_NCCALCSIZE
                 case (int)WindowMessages.WM_NCCALCSIZE:
-                    WmNCCalcSize(lParam);
+                    //WmNCCalcSize(lParam);
                     ReWindow();
                     handled = true;
                     break;
@@ -283,12 +283,12 @@ namespace DMSkin.WPF
                     break;
                 //获取窗口的最大化最小化信息
                 //case (int)WindowMessages.WM_GETMINMAXINFO:
-                //    //单层窗口 启用
-                //        WmGetMinMaxInfo(hwnd, lParam);
-                //        handled = true;
+                //    WmGetMinMaxInfo(hwnd, lParam);
+                //    handled = true;
                 //    break;
-                case (int)WindowMessages.WM_NCHITTEST:
-                    return WmNCHitTest(lParam, ref handled);
+                //窗口拉伸 还有DPI BUG 
+                //case (int)WindowMessages.WM_NCHITTEST:
+                //    return WmNCHitTest(lParam, ref handled);
             }
             return IntPtr.Zero;
         }
