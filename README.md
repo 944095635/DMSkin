@@ -1,6 +1,8 @@
 ﻿# DMSkin-for-WPF 3.0
 <h3>全中国第一款WPF无边框完美方案</h3>
 <h4>基于WPF的UI框架</h4>
+<h4>说明</h4>
+<h4>方案思路:Win32 重绘非客户区+阴影层窗口(双层)</h4>
 <h4>支持：.NET Framework 3.5 - 4.7</h4>
 <h4>支持：Windows XP - Windows 10</h4>
 
