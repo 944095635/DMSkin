@@ -17,7 +17,7 @@ namespace DM_Studio
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : DMSkin.WPF.Small.DMSkinWindow
+    public partial class MainWindow : DMSkin.WPF.DMSkinWindow
     {
         public MainWindow()
         {

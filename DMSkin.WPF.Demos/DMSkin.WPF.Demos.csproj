@@ -194,9 +194,9 @@
     <Resource Include="Images\BG.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DMSkin.WPF.Small\DMSkin.WPF.Small.csproj">
+    <ProjectReference Include="..\DMSkin.WPF\DMSkin.WPF.csproj">
       <Project>{168352b1-6a0c-4c9c-8a32-68b512da3cfc}</Project>
-      <Name>DMSkin.WPF.Small</Name>
+      <Name>DMSkin.WPF</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

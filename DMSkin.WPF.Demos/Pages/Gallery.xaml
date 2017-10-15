@@ -4,7 +4,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DM_Studio.Pages"
-             xmlns:control="clr-namespace:DMSkin.WPF.Small.Controls;assembly=DMSkin.WPF.Small"
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="850">
     <UserControl.Resources>
@@ -82,7 +81,7 @@
             <Setter Property="ItemsPanel" >
                 <Setter.Value>
                     <ItemsPanelTemplate>
-                        <control:ElasticWrapPanel DesiredColumnWidth="800"></control:ElasticWrapPanel>
+                        <!--<control:ElasticWrapPanel DesiredColumnWidth="800"></control:ElasticWrapPanel>-->
                     </ItemsPanelTemplate>
                 </Setter.Value>
             </Setter>

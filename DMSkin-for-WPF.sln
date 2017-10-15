@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkin.WPF", "DMSkin.WPF\DMSkin.WPF.csproj", "{168352B1-6A0C-4C9C-8A32-68B512DA3CFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkin.WPF.Demos", "..\DMSkin-for-WPF-Small\DMSkin.WPF.Demos\DMSkin.WPF.Demos.csproj", "{C758EC5E-4A44-4921-8C8A-2F0127BB9406}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkin.WPF.Demos", "DMSkin.WPF.Demos\DMSkin.WPF.Demos.csproj", "{C758EC5E-4A44-4921-8C8A-2F0127BB9406}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

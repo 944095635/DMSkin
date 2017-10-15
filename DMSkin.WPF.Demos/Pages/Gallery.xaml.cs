@@ -1,5 +1,5 @@
 ﻿using DM_Studio.Models;
-using DMSkin.WPF.Small;
+using DMSkin.WPF;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
