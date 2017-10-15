@@ -525,26 +525,26 @@ namespace DMSkin
 
 
         [DllImport("gdi32.dll")]
-        public static extern IntPtr CreatePolygonRgn(ref POINTAPI lpPoint, int nCount, int nPolyFillMode);
+        internal static extern IntPtr CreatePolygonRgn(ref POINTAPI lpPoint, int nCount, int nPolyFillMode);
 
         [DllImport("user32.dll")]
         public static extern IntPtr MonitorFromWindow(IntPtr hwnd, int dwFlags);
 
         [DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
+        internal static extern bool ReleaseCapture();
 
         [DllImport("user32.dll")]
-        public static extern IntPtr SetCapture(IntPtr hWnd);
+        internal static extern IntPtr SetCapture(IntPtr hWnd);
 
         [DllImport("user32.dll")]
         public static extern IntPtr GetCapture();
 
         [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
-        public static extern bool SetForegroundWindow(IntPtr hWnd);
+        internal static extern bool SetForegroundWindow(IntPtr hWnd);
 
         [DllImport("user32.dll", SetLastError = true)]
-        public static extern IntPtr SetActiveWindow(IntPtr hWnd);
+        internal static extern IntPtr SetActiveWindow(IntPtr hWnd);
 
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hwnd, int msg, int wparam, int lparam);
@@ -593,14 +593,14 @@ namespace DMSkin
         [DllImport("user32.dll")]
         public static extern int GetSystemMetrics(int smIndex);
 
-        [DllImport("user32.dll", SetLastError = true)]
+        [DllImport("user32.dll", SetLastError = true,CharSet =CharSet.Unicode)]
         public static extern IntPtr FindWindowEx(IntPtr parentHandle, IntPtr childAfter, string className, string windowTitle);
 
         [DllImport("shell32.dll")]
-        public static extern int SHAppBarMessage(uint dwMessage, [In] ref APPBARDATA pData);
+        internal static extern int SHAppBarMessage(uint dwMessage, [In] ref APPBARDATA pData);
 
         [DllImport("user32.dll")]
-        public static extern bool GetMonitorInfo(HandleRef hmonitor, [In, Out] MONITORINFOEX monitorInfo);
+        internal static extern bool GetMonitorInfo(HandleRef hmonitor, [In, Out] MONITORINFOEX monitorInfo);
 
     }
 

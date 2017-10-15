@@ -36,7 +36,7 @@
                     <Button  Name="ButtonSkin"
                                 ToolTip="主题"
                                 Focusable="False"
-                                Style="{DynamicResource SystemButton}"
+                                Style="{StaticResource SystemButton}"
                                 Padding="0" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,0,150,0" Width="50" Height="50" 
                                 >
                         <Label Foreground="#FF555555" 

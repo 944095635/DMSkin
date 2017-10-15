@@ -187,9 +187,6 @@ namespace DMSkin.WPF
                 Stream myResponseStream = response.GetResponseStream();
                 StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.GetEncoding("UTF-8"));
                 retString = myStreamReader.ReadToEnd();
-                //后开先关
-                myStreamReader.Close();
-                myResponseStream.Close();
             }
             return retString;
         }
