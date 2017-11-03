@@ -55,7 +55,7 @@ namespace DMSkin.WPF
 
             Dispatcher.BeginInvoke(new Action<UIElement>(x => 
             {
-                Thread.Sleep(100);
+                Thread.Sleep(70);
                 ShadowWindowVisibility(true);//初始化
                 Owner = _shadowWindow;//绑定阴影窗体
                 Activate();
