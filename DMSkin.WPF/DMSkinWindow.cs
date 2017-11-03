@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System.Windows.Threading;
 
 namespace DMSkin.WPF
 {
@@ -51,8 +52,15 @@ namespace DMSkin.WPF
         private void InitializeWindowStyle()
         {
             _shadowWindow = new ShadowWindow();
-            ShadowWindowVisibility(true);//初始化
-            Owner = _shadowWindow;//绑定阴影窗体
+
+            Dispatcher.BeginInvoke(new Action<UIElement>(x => 
+            {
+                Thread.Sleep(100);
+                ShadowWindowVisibility(true);//初始化
+                Owner = _shadowWindow;//绑定阴影窗体
+                Activate();
+            }),DispatcherPriority.ApplicationIdle,this);
+            
 
             ResourceDictionary dic = new ResourceDictionary { Source = new Uri(packUri, UriKind.Relative) };
             Resources.MergedDictionaries.Add(dic);
