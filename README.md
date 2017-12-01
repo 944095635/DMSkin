@@ -201,11 +201,13 @@ WindowStartupLocation="CenterScreen"  //窗体初始位置
 </code>
 </pre>
 
-<h1>更多效果图</1>
+<h1>更多效果图:</1>
 <br/>
-<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/JSQ.jpg" />
+
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (1).gif" />
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (2).jpg" />
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/B.png" />
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (3).jpg" />
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (4).jpg" />
+
+<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/JSQ.jpg" />
