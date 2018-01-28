@@ -29,7 +29,7 @@
         <Grid Background="White">
             <TabControl Grid.Row="1" TabStripPlacement="Left" Style="{StaticResource TabControlStyle1}" >
                 <control:MyTabItem Style="{StaticResource TabItem1}" IsSelected="True" Header="我的信息" Tag="&#xe63f;" ThemeColor="#FF7372">
-                    <pages:DashBoard></pages:DashBoard>
+                    <pages:DashBoard Margin="25"></pages:DashBoard>
                 </control:MyTabItem>
                 <control:MyTabItem Style="{StaticResource TabItem1}"  Tag="&#xe64a;" Header="我的照片" ThemeColor="#FF4bae">
                     <Image Source="Images/BG.jpg" Stretch="UniformToFill"/>
