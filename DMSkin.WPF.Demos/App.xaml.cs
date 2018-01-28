@@ -15,13 +15,9 @@ namespace DM_Studio
         protected override void OnStartup(StartupEventArgs e)
         {
             ShutdownMode = ShutdownMode.OnMainWindowClose;
-
             DM_Studio.MainWindow m = new DM_Studio.MainWindow();
             DM_Studio.MainWindow2 m2 = new DM_Studio.MainWindow2();
-
             MainWindow = m2;
-            
-
             m.Show();
             m2.Show();
         }
