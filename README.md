@@ -12,7 +12,7 @@
 <h3>---遗留BUG:WIN7 系统上非客户区系统按钮阻挡操作(目前WIN7有点小瑕疵)---</h3>
 
 
-<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/%E5%9B%BE%E7%89%87/IMG.png" />
+<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/NEW.png" />
 
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/双层.gif" />
 
