@@ -224,7 +224,7 @@
                                            VerticalAlignment="Center" 
                                            Foreground="{TemplateBinding ThemeColor}"></TextBlock>
                             <TextBlock x:Name="Content" Text="{TemplateBinding Header}" 
-                            HorizontalAlignment="Left"   Foreground="#FFA7B6BD"
+                            HorizontalAlignment="Left"   Foreground="#6E828D"
                             VerticalAlignment="Center" Margin="80,0,0,0" ></TextBlock>
                         </Grid>
                     </Grid>

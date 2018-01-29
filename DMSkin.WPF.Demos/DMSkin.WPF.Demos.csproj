@@ -122,6 +122,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Index.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\DashBoard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -155,6 +159,9 @@
     <Compile Include="Models\LanguageModel.cs" />
     <Compile Include="Models\TranslateModel.cs" />
     <Compile Include="Models\GalleryModel.cs" />
+    <Compile Include="Pages\Index.xaml.cs">
+      <DependentUpon>Index.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\DashBoard.xaml.cs">
       <DependentUpon>DashBoard.xaml</DependentUpon>
     </Compile>
@@ -210,6 +217,14 @@
       <Project>{168352b1-6a0c-4c9c-8a32-68b512da3cfc}</Project>
       <Name>DMSkin.WPF</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Moive\择天记手游CG.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

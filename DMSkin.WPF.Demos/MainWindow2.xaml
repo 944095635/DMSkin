@@ -19,7 +19,7 @@
         DMSystemButtonSize="50"
         DMSystemButtonForeground="#FF666666"
         DMSystemButtonHoverColor="#33000000"
-        DMWindowShadowColor="#FF383838" 
+        DMWindowShadowColor="#C8C8C8" 
         DMSystemButtonShadowEffect="0"
         ResizeMode="CanResizeWithGrip"
         Title="DM-VIDEO" Height="1024" Width="1600" 
@@ -29,16 +29,18 @@
         <Grid Background="White">
             <TabControl Grid.Row="1" TabStripPlacement="Left" Style="{StaticResource TabControlStyle1}" >
                 <control:MyTabItem Style="{StaticResource TabItem1}" IsSelected="True" Header="我的信息" Tag="&#xe63f;" ThemeColor="#FF7372">
-                    <pages:DashBoard Margin="25"></pages:DashBoard>
+                    <pages:Index></pages:Index>
                 </control:MyTabItem>
                 <control:MyTabItem Style="{StaticResource TabItem1}"  Tag="&#xe64a;" Header="我的照片" ThemeColor="#FF4bae">
                     <Image Source="Images/BG.jpg" Stretch="UniformToFill"/>
                 </control:MyTabItem>
-                <control:MyTabItem Style="{StaticResource TabItem1}"  Tag="&#xe65f;" Header="我的媒体" ThemeColor="#FFC073FF">
+                <control:MyTabItem Style="{StaticResource TabItem1}"  Tag="&#xe65f;" Header="我的媒体" ThemeColor="#C073FF">
                     <pages:FormatTool></pages:FormatTool>
                 </control:MyTabItem>
-                <control:MyTabItem Style="{StaticResource TabItem1}"  Header="我的文件" Tag="&#xe681;" ThemeColor="#FF7A73FF"></control:MyTabItem>
-                <control:MyTabItem Style="{StaticResource TabItem1}"  Tag="&#xe615;" Header="备 忘 录" ThemeColor="#FF729EFF">
+                <control:MyTabItem Style="{StaticResource TabItem1}"  Header="我的文件" Tag="&#xe681;" ThemeColor="#FF7A73FF">
+                    <pages:DashBoard Margin="25"></pages:DashBoard>
+                </control:MyTabItem>
+                <control:MyTabItem Style="{StaticResource TabItem1}"  Tag="&#xe615;" Header="备 忘 录" ThemeColor="#729EFF">
                     <!--<pages:Translate></pages:Translate>-->
                 </control:MyTabItem>
                 <control:MyTabItem Style="{StaticResource TabItem1}"  Header="我的简介" Tag="&#xe605;" ThemeColor="#FF73C9FC"></control:MyTabItem>
