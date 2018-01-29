@@ -7,6 +7,9 @@
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
               FontSize="12" 
+             
+             Loaded="UserControl_Loaded"
+             
              Foreground="#FF5B5B5B"  
              d:DesignHeight="993" d:DesignWidth="1270">
     <Grid Background="#FFF0F4F7">
@@ -22,7 +25,7 @@
                 </StackPanel>
                 <UniformGrid Columns="3" Margin="0,30,0,0">
                     <Grid Margin="0,0,15,0">
-                        <Border  CornerRadius="5"  Height="400" Background="White">
+                        <Border  CornerRadius="5"  Height="350" Background="White">
                             <Border.Effect>
                                 <DropShadowEffect BlurRadius="10" ShadowDepth="0" Color="#FFECECEC"/>
                             </Border.Effect>
@@ -43,8 +46,8 @@
                                         <TextBlock FontWeight="Bold"   Foreground="#6E828D"   Text="四川-成都" Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="20"></TextBlock>
                                     </StackPanel>
                                 </StackPanel>
-                                <UniformGrid Columns="2" Rows="2" Margin="0,130,0,0">
-                                    <Grid Margin="15">
+                                <UniformGrid Columns="2" Rows="2" Margin="0,120,0,0">
+                                    <Grid Margin="15,10,15,10">
                                         <Border Background="White">
                                             <Border.Effect>
                                                 <DropShadowEffect BlurRadius="30" ShadowDepth="0" Opacity="0.8"  Color="#FFFCFCFC"/>
@@ -57,7 +60,7 @@
                                             </StackPanel>
                                         </Border>
                                     </Grid>
-                                    <Grid  Margin="15">
+                                    <Grid  Margin="15,10,15,10">
                                         <Border Background="White">
                                             <Border.Effect>
                                                 <DropShadowEffect BlurRadius="25" ShadowDepth="0"   Opacity="0.8"  Color="#FFFCFCFC"/>
@@ -70,7 +73,7 @@
                                             </StackPanel>
                                         </Border>
                                     </Grid>
-                                    <Grid  Margin="15">
+                                    <Grid  Margin="15,10,15,10">
                                         <Border Background="White">
                                             <Border.Effect>
                                                 <DropShadowEffect BlurRadius="25" ShadowDepth="0"  Opacity="0.8"   Color="#FFFCFCFC"/>
@@ -84,7 +87,7 @@
                                             </StackPanel>
                                         </Border>
                                     </Grid>
-                                    <Grid  Margin="15">
+                                    <Grid  Margin="15,10,15,10">
                                         <Border Background="White">
                                             <Border.Effect>
                                                 <DropShadowEffect BlurRadius="25" ShadowDepth="0"  Opacity="0.8"   Color="#FFFCFCFC"/>
@@ -102,7 +105,7 @@
                         </Border>
                     </Grid>
                     <Grid Margin="0,0,15,0">
-                        <Border  CornerRadius="5"  Height="400" Background="White">
+                        <Border  CornerRadius="5"  Height="350" Background="White">
                             <Border.Effect>
                                 <DropShadowEffect BlurRadius="10" ShadowDepth="0" Color="#FFECECEC"/>
                             </Border.Effect>
@@ -123,8 +126,8 @@
                                         <TextBlock FontWeight="Bold"   Foreground="#6E828D"   Text="四川-成都" Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="20"></TextBlock>
                                     </StackPanel>
                                 </StackPanel>
-                                <UniformGrid Columns="2" Rows="2" Margin="0,130,0,0">
-                                    <Grid  Margin="15">
+                                <UniformGrid Columns="2" Rows="2" Margin="0,120,0,0">
+                                    <Grid  Margin="15,10,15,10">
                                         <Border Background="White">
                                             <Border.Effect>
                                                 <DropShadowEffect BlurRadius="25" ShadowDepth="0"   Opacity="0.8"  Color="#FFFCFCFC"/>
@@ -137,7 +140,7 @@
                                             </StackPanel>
                                         </Border>
                                     </Grid>
-                                    <Grid  Margin="15">
+                                    <Grid  Margin="15,10,15,10">
                                         <Border Background="White">
                                             <Border.Effect>
                                                 <DropShadowEffect BlurRadius="25" ShadowDepth="0"   Opacity="0.8"  Color="#FFFCFCFC"/>
@@ -150,7 +153,7 @@
                                             </StackPanel>
                                         </Border>
                                     </Grid>
-                                    <Grid  Margin="15">
+                                    <Grid  Margin="15,10,15,10">
                                         <Border Background="White">
                                             <Border.Effect>
                                                 <DropShadowEffect BlurRadius="25" ShadowDepth="0"  Opacity="0.8"   Color="#FFFCFCFC"/>
@@ -164,7 +167,7 @@
                                             </StackPanel>
                                         </Border>
                                     </Grid>
-                                    <Grid  Margin="15">
+                                    <Grid  Margin="15,10,15,10">
                                         <Border Background="White">
                                             <Border.Effect>
                                                 <DropShadowEffect BlurRadius="25" ShadowDepth="0"  Opacity="0.8"   Color="#FFFCFCFC"/>
@@ -182,7 +185,7 @@
                         </Border>
                     </Grid>
                     <Grid Margin="0,0,15,0">
-                        <Border  CornerRadius="5"  Height="400" Background="White">
+                        <Border  CornerRadius="5"  Height="350" Background="White">
                             <Border.Effect>
                                 <DropShadowEffect BlurRadius="10" ShadowDepth="0" Color="#FFECECEC"/>
                             </Border.Effect>
@@ -203,8 +206,8 @@
                                         <TextBlock FontWeight="Bold"   Foreground="#6E828D"   Text="超梦重现丶风云再起" Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="20"></TextBlock>
                                     </StackPanel>
                                 </StackPanel>
-                                <UniformGrid Columns="2" Rows="2" Margin="0,130,0,0">
-                                    <Grid  Margin="15">
+                                <UniformGrid Columns="2" Rows="2" Margin="0,120,0,0">
+                                    <Grid  Margin="15,10,15,10">
                                         <Border Background="White">
                                             <Border.Effect>
                                                 <DropShadowEffect BlurRadius="25" ShadowDepth="0"  Opacity="0.8"   Color="#FFFCFCFC"/>
@@ -217,7 +220,7 @@
                                             </StackPanel>
                                         </Border>
                                     </Grid>
-                                    <Grid  Margin="15">
+                                    <Grid  Margin="15,10,15,10">
                                         <Border Background="White">
                                             <Border.Effect>
                                                 <DropShadowEffect BlurRadius="25" ShadowDepth="0"  Opacity="0.8"   Color="#FFFCFCFC"/>
@@ -230,7 +233,7 @@
                                             </StackPanel>
                                         </Border>
                                     </Grid>
-                                    <Grid  Margin="15">
+                                    <Grid  Margin="15,10,15,10">
                                         <Border Background="White">
                                             <Border.Effect>
                                                 <DropShadowEffect BlurRadius="25" ShadowDepth="0"   Opacity="0.8"  Color="#FFFCFCFC"/>
@@ -244,7 +247,7 @@
                                             </StackPanel>
                                         </Border>
                                     </Grid>
-                                    <Grid  Margin="15">
+                                    <Grid  Margin="15,10,15,10">
                                         <Border Background="White">
                                             <Border.Effect>
                                                 <DropShadowEffect BlurRadius="25" ShadowDepth="0"   Opacity="0.8"  Color="#FFFCFCFC"/>
@@ -262,9 +265,8 @@
                         </Border>
                     </Grid>
                 </UniformGrid>
-                <Grid>
-                    <MediaElement Margin="0,20,15,20" Source="../Moive/择天记手游CG.mp4" ></MediaElement>
-                </Grid>
+                <TextBlock Margin="0,20,0,0" Text="择天记CG" FontSize="30" HorizontalAlignment="Left"></TextBlock>
+                <MediaElement Source="http://www.dmskin.com/a.mp4" Margin="0,10,15,20" x:Name="Media" Height="auto" MinHeight="300" Stretch="Fill"></MediaElement>
             </StackPanel>
         </ScrollViewer>
     </Grid>

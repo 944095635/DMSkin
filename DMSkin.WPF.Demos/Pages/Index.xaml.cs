@@ -56,5 +56,12 @@ namespace DM_Studio.Pages
 
         public ChartValues<double> Values { get; set; }
 
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            //https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/DMSkin.WPF.Demos/Moive/%E6%8B%A9%E5%A4%A9%E8%AE%B0%E6%89%8B%E6%B8%B8CG.mp4
+
+
+            //Media.Source = new Uri("http://www.dmskin.com/a.mp4", UriKind.Absolute);
+        }
     }
 }
