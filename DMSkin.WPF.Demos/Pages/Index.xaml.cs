@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
@@ -62,6 +64,25 @@ namespace DM_Studio.Pages
 
 
             //Media.Source = new Uri("http://www.dmskin.com/a.mp4", UriKind.Absolute);
+
+            if (File.Exists("a.mp4"))
+            {
+                Media.Source = new Uri("a.mp4", UriKind.Relative);
+            }
+            else
+            {
+               
+                Task.Factory.StartNew(new Action(()=> {
+                    using (WebClient wb = new WebClient())
+                    {
+                        wb.DownloadFile("http://www.dmskin.com/a.mp4", "a.mp4");
+                    }
+                    Dispatcher.Invoke(new Action(()=> 
+                    {
+                        Media.Source = new Uri("a.mp4", UriKind.Relative);
+                    }));
+                }));
+            }
         }
     }
 }
