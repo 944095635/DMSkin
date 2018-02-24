@@ -7,6 +7,18 @@
 <h4>支持：.NET Framework 3.5 - 4.7</h4>
 <h4>支持：Windows XP - Windows 7 - Windows 10</h4>
 
+
+WPF borderless scheme (double form)
+
+UI framework based on WPF
+
+Plan idea: Win32 redraws non customer zone + shadow layer window
+
+Support:.NET Framework 3.5 - 4.7
+
+Support: Windows XP - Windows 7 - Windows 10
+
+
 <h1>注意事项</h1>
 <h3>本源码采用VS2017 个人版 开发,.NET FrameWork4.0,部分C# 6.0+语法 vs2015 vs2013 vs2012 请自行修改源码中不支持的部分。</h3>
 <h3>---遗留BUG:WIN7 系统上非客户区系统按钮阻挡操作(目前WIN7有点小瑕疵)---</h3>
