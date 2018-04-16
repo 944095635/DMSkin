@@ -267,7 +267,7 @@
                 </UniformGrid>
                 <TextBlock Margin="0,20,0,0" Text="择天记CG" FontSize="30" HorizontalAlignment="Left"></TextBlock>
                 <Border  Margin="0,10,15,20" Height="auto" MinHeight="300"  Background="Black">
-                    <MediaElement Source="http://www.dmskin.com/a.mp4" x:Name="Media" Stretch="Fill"></MediaElement>
+                    <!--<MediaElement Source="http://www.dmskin.com/a.mp4" x:Name="Media" Stretch="Fill"></MediaElement>-->
                 </Border>
             </StackPanel>
         </ScrollViewer>

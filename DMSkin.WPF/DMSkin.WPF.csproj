@@ -44,8 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activation\Activate.cs" />
+    <Compile Include="API\DelegateCommand.cs" />
     <Compile Include="API\HTTP.cs" />
     <Compile Include="API\Native.cs" />
+    <Compile Include="API\ViewModelBase.cs" />
+    <Compile Include="Controls\DMSystemMaxButton.cs" />
+    <Compile Include="Controls\DMSystemCloseButton.cs" />
+    <Compile Include="Controls\DMSystemMinButton.cs" />
     <Compile Include="Controls\ElasticWrapPanel.cs" />
     <Compile Include="DMSkinWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +68,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\DMBorder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\DMSystemButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -103,10 +112,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\DMScrollViewer.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\DMSkin.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

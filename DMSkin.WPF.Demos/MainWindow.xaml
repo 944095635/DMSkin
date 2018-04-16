@@ -7,26 +7,30 @@
         xmlns:local="clr-namespace:DM_Studio"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
         xmlns:pages="clr-namespace:DM_Studio.Pages"
-        mc:Ignorable="d"  
+        xmlns:controls="clr-namespace:DMSkin.WPF.Controls;assembly=DMSkin.WPF"
+                     xmlns:viewmodels="clr-namespace:DM_Studio.ViewModels"
+                     mc:Ignorable="d"  
         Loaded="DMSkinWindow_Loaded"
+                     
         Foreground="White"             
         Background="White"         
-        DMShowMin="True"
-        DMShowMax="True"
         DMWindowShadowSize="10"  
-        DMSystemButtonSize="50"
-        DMSystemButtonForeground="#FF666666"
-        DMSystemButtonHoverColor="#33000000"
-        DMWindowShadowColor="#FFC8C8C8" 
-        DMSystemButtonShadowEffect="0"
+        DMWindowShadowColor="#888888" 
+                     
         ResizeMode="CanResizeWithGrip"
         Title="DM-VIDEO" Height="700" Width="1000" 
 		WindowStartupLocation="CenterScreen"
         MinHeight="268" MinWidth="360">
+    <Window.DataContext>
+        <viewmodels:MainWindowViewModel></viewmodels:MainWindowViewModel>
+    </Window.DataContext>
+    <Window.InputBindings>
+        <KeyBinding Gesture="F1" Command="{Binding F1Command}"></KeyBinding>
+    </Window.InputBindings>
     <Grid>
         <Grid Background="White">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="51"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <Border Grid.Column="0" BorderThickness="0,0,0,2" BorderBrush="{StaticResource LineColor}">
@@ -34,9 +38,8 @@
                     <TextBlock Foreground="{StaticResource MainColor}" Text="DMSkin.WPF 双层窗口" FontFamily="/DM-Studio;component/Fonts/#AR DESTINE" FontSize="20"
                            HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
                     <Button  Name="ButtonSkin"
-                                ToolTip="主题"
+                                ToolTip="主题" BorderThickness="0"
                                 Focusable="False"
-                                Style="{StaticResource SystemButton}"
                                 Padding="0" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,0,150,0" Width="50" Height="50" 
                                 >
                         <Label Foreground="#FF555555" 
@@ -65,6 +68,9 @@
                 <TabItem Style="{StaticResource DMTopTabItemLeft}"  Header="设置中心" Tag="&#xe643;"></TabItem>
             </TabControl>
         </Grid>
+        
+   
+
         <Border Background="White"  BorderThickness="0,1,0,0" BorderBrush="{StaticResource LineColor}" VerticalAlignment="Bottom" Width="140" Height="200" HorizontalAlignment="Left">
             <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
                 <Ellipse  Width="80" Height="80">
@@ -79,6 +85,14 @@
                 <TextBlock FontWeight="Bold"   Foreground="#FF5B5B5B"   Text="94..@qq.com" Margin="0,2,0,0" HorizontalAlignment="Center"></TextBlock>
             </WrapPanel>
         </Border>
+
+
+        <WrapPanel Height="{Binding DMSystemButtonSize}" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <controls:DMSystemMinButton DMSystemButtonSize="50" DMSystemButtonHoverForeground="#383838" DMSystemButtonForeground="#383838"></controls:DMSystemMinButton>
+            <controls:DMSystemMaxButton DMSystemButtonSize="50" DMSystemButtonHoverForeground="#FFFFFF" DMSystemButtonForeground="#383838"></controls:DMSystemMaxButton>
+            <controls:DMSystemCloseButton DMSystemButtonSize="50" DMSystemButtonHoverForeground="#FFFFFF" DMSystemButtonForeground="#383838"></controls:DMSystemCloseButton>
+        </WrapPanel>
+        
         <ResizeGrip Visibility="{Binding DMVisibility}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalAlignment="Bottom" HorizontalAlignment="Right"></ResizeGrip>
     </Grid>
 </DMSkin:DMSkinWindow>

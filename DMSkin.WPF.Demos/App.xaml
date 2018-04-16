@@ -6,7 +6,6 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
 
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMSkin.xaml" />
 
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMColor.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMScrollViewer.xaml" />
@@ -22,7 +21,6 @@
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMButton.xaml" />
                 
 
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMSkin.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMColor.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMScrollViewer.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMButton.xaml" />

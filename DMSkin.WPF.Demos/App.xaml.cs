@@ -16,10 +16,10 @@ namespace DM_Studio
         {
             ShutdownMode = ShutdownMode.OnMainWindowClose;
             DM_Studio.MainWindow m = new DM_Studio.MainWindow();
-            DM_Studio.MainWindow2 m2 = new DM_Studio.MainWindow2();
-            MainWindow = m2;
+            //DM_Studio.MainWindow2 m2 = new DM_Studio.MainWindow2();
+            MainWindow = m;
             m.Show();
-            m2.Show();
+            //m2.Show();
         }
     }
 }

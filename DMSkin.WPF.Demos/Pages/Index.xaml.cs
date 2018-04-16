@@ -67,7 +67,7 @@ namespace DM_Studio.Pages
 
             if (File.Exists("a.mp4"))
             {
-                Media.Source = new Uri("a.mp4", UriKind.Relative);
+                //Media.Source = new Uri("a.mp4", UriKind.Relative);
             }
             else
             {
@@ -79,7 +79,7 @@ namespace DM_Studio.Pages
                     }
                     Dispatcher.Invoke(new Action(()=> 
                     {
-                        Media.Source = new Uri("a.mp4", UriKind.Relative);
+                        //Media.Source = new Uri("a.mp4", UriKind.Relative);
                     }));
                 }));
             }

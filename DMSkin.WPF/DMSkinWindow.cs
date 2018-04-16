@@ -15,21 +15,12 @@ using System.Windows.Threading;
 
 namespace DMSkin.WPF
 {
-    public partial class DMSkinWindow : Window, INotifyPropertyChanged
+    public partial class DMSkinWindow : Window
     {
-        #region UI更新接口
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName = null)
-        {
-            if (PropertyChanged != null)
-                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        #endregion
 
         #region 初始化
         public DMSkinWindow()
         {
-            DataContext = this;
             InitializeWindowStyle();
             //绑定窗体操作函数
             SourceInitialized += MainWindow_SourceInitialized;
@@ -42,9 +33,7 @@ namespace DMSkin.WPF
         #endregion
 
         #region 切换单双窗口模式
-        /// 样式
-        /// </summary>
-        string packUri = @"/DMSkin.WPF;component/Themes/DMSkin.xaml";
+        string packButtonUri = @"/DMSkin.WPF;component/Themes/DMSystemButton.xaml";
 
         /// <summary>
         /// 加载双层窗口的样式
@@ -52,68 +41,20 @@ namespace DMSkin.WPF
         private void InitializeWindowStyle()
         {
             _shadowWindow = new ShadowWindow();
-
             Dispatcher.BeginInvoke(new Action<UIElement>(x => 
             {
                 Thread.Sleep(70);
+                _shadowWindow.Left = this.Left-30;
+                _shadowWindow.Top = this.Top-30;
                 ShadowWindowVisibility(true);//初始化
                 Owner = _shadowWindow;//绑定阴影窗体
                 Activate();
             }),DispatcherPriority.ApplicationIdle,this);
             
-
-            ResourceDictionary dic = new ResourceDictionary { Source = new Uri(packUri, UriKind.Relative) };
+            ResourceDictionary dic = new ResourceDictionary { Source = new Uri(packButtonUri, UriKind.Relative) };
             Resources.MergedDictionaries.Add(dic);
+
             Style = (Style)dic["MainWindow"];
-
-            //绑定按钮
-            BindingButton();
-        }
-        #endregion
-
-        #region 绑定系统按钮事件
-        Button btnClose;
-        Button btnMax;
-        Button btnRestore;
-        Button btnMin;
-        /// <summary>
-        /// 系统边框
-        /// </summary>
-        Grid WindowBorder;
-        public void BindingButton()
-        {
-            Task.Factory.StartNew(() =>
-            {
-                while (true)
-                {
-                    Thread.Sleep(300);
-                    btnClose = (Button)Template.FindName("PART_Close", this);
-                    btnMax = (Button)Template.FindName("PART_Max", this);
-                    btnRestore = (Button)Template.FindName("PART_Restore", this);
-                    btnMin = (Button)Template.FindName("PART_Min", this);
-                    WindowBorder = (Grid)Template.FindName("WindowBorder", this);
-                    if (btnClose != null && btnMax != null && btnRestore != null && btnMin != null)
-                    {
-                        btnClose.Click += delegate
-                        {
-                            Close();
-                        };
-                        btnMax.Click += delegate
-                        {
-                            WindowState = WindowState.Maximized;
-                        };
-                        btnRestore.Click += delegate
-                        {
-                            WindowState = WindowState.Normal;
-                        };
-                        btnMin.Click += delegate
-                        {
-                            WindowState = WindowState.Minimized;
-                        };
-                        break;
-                    }
-                }
-            });
         }
         #endregion
 
@@ -345,7 +286,7 @@ namespace DMSkin.WPF
                 { // 右下 
                     return new IntPtr((int)HitTest.HTBOTTOMRIGHT);
                 }
-                else if (Math.Abs(this.ActualWidth + this.Left - this.mousePoint.X) <= 4 && Math.Abs(this.mousePoint.Y - this.Top) > DMSystemButtonSize)
+                else if (Math.Abs(this.ActualWidth + this.Left - this.mousePoint.X) <= 4 && Math.Abs(this.mousePoint.Y - this.Top) > 50)
                 { // 右  
                     return new IntPtr((int)HitTest.HTRIGHT);
                 }
@@ -401,21 +342,21 @@ namespace DMSkin.WPF
                this.MinHeight
                ));
 
-            if (DMFullScreen)
-            {
-                Point dpiSize = matrix.Transform(new Point(
-              SystemParameters.PrimaryScreenWidth,
-              SystemParameters.PrimaryScreenHeight
-              ));
+            //if (DMFullScreen)
+            //{
+            //    Point dpiSize = matrix.Transform(new Point(
+            //  SystemParameters.PrimaryScreenWidth,
+            //  SystemParameters.PrimaryScreenHeight
+            //  ));
 
-                mmi.ptMaxSize.x = (int)dpiSize.X;
-                mmi.ptMaxSize.y = (int)dpiSize.Y;
-            }
-            else
-            {
-                mmi.ptMaxSize.x = workingArea.right;
-                mmi.ptMaxSize.y = workingArea.bottom;
-            }
+            //    mmi.ptMaxSize.x = (int)dpiSize.X;
+            //    mmi.ptMaxSize.y = (int)dpiSize.Y;
+            //}
+            //else
+            //{
+            //    mmi.ptMaxSize.x = workingArea.right;
+            //    mmi.ptMaxSize.y = workingArea.bottom;
+            //}
 
             // Set the minimum tracking size ptMinTrackSize： 设置窗口最小宽度、高度 
             mmi.ptMinTrackSize.x = (int)dpiIndenpendentTrackingSize.X;
@@ -433,21 +374,11 @@ namespace DMSkin.WPF
             //最大化
             if (WindowState == WindowState.Maximized)
             {
-                if (DMShowMax)
-                {
-                    BtnMaxVisibility = Visibility.Collapsed;
-                    BtnRestoreVisibility = Visibility.Visible;
-                }
                 ShadowWindowVisibility(false);
             }
             //默认大小
             if (WindowState == WindowState.Normal)
             {
-                if (DMShowMax)
-                {
-                    BtnMaxVisibility = Visibility.Visible;
-                    BtnRestoreVisibility = Visibility.Collapsed;
-                }
                 if (shadowWindowState)
                 {
                     return;
@@ -486,273 +417,6 @@ namespace DMSkin.WPF
         #endregion
 
         #region 窗体属性
-
-
-        private bool _DMFullscreen = false;
-        [Description("全屏是否保留任务栏显示"), Category("DMSkin")]
-        public bool DMFullScreen
-        {
-            get
-            {
-                return _DMFullscreen;
-            }
-
-            set
-            {
-                _DMFullscreen = value;
-                OnPropertyChanged("DMFull");
-            }
-        }
-
-
-        #region 系统按钮
-        private int _DMSystemButtonSize = 30;
-
-        [Description("窗体系统按钮大小"), Category("DMSkin")]
-        public int DMSystemButtonSize
-        {
-            get
-            {
-                return _DMSystemButtonSize;
-            }
-
-            set
-            {
-                _DMSystemButtonSize = value;
-                OnPropertyChanged("DMSystemButtonSize");
-            }
-        }
-
-        private Brush _DMSystemButtonHoverColor = new SolidColorBrush(Color.FromArgb(0, 255, 255, 255));
-
-        [Description("窗体系统按钮鼠标悬浮背景颜色"), Category("DMSkin")]
-        public Brush DMSystemButtonHoverColor
-        {
-            get
-            {
-                return _DMSystemButtonHoverColor;
-            }
-
-            set
-            {
-                _DMSystemButtonHoverColor = value;
-                OnPropertyChanged("DMSystemButtonHoverColor");
-            }
-        }
-
-        private Brush _DMSystemButtonCloseHoverColor = new SolidColorBrush(Color.FromArgb(255, 255, 0, 0));
-
-        [Description("窗体系统关闭按钮鼠标悬浮背景颜色"), Category("DMSkin")]
-        public Brush DMSystemButtonCloseHoverColor
-        {
-            get
-            {
-                return _DMSystemButtonCloseHoverColor;
-            }
-
-            set
-            {
-                _DMSystemButtonCloseHoverColor = value;
-                OnPropertyChanged("DMSystemButtonCloseHoverColor");
-            }
-        }
-
-
-        private double _DMSystemButtonShadowEffect = 1.0;
-        [Description("窗体控制按钮阴影大小"), Category("DMSkin")]
-        public double DMSystemButtonShadowEffect
-        {
-            get
-            {
-                return _DMSystemButtonShadowEffect;
-            }
-
-            set
-            {
-                _DMSystemButtonShadowEffect = value;
-                OnPropertyChanged("DMSystemButtonShadowEffect");
-            }
-        }
-
-        private Brush _DMSystemButtonForeground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
-
-        [Description("窗体系统按钮颜色"), Category("DMSkin")]
-        public Brush DMSystemButtonForeground
-        {
-            get
-            {
-                return _DMSystemButtonForeground;
-            }
-
-            set
-            {
-                _DMSystemButtonForeground = value;
-                OnPropertyChanged("DMSystemButtonForeground");
-            }
-        }
-
-        private Brush _DMSystemButtonHoverForeground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
-
-        [Description("窗体系统按钮鼠标悬按钮颜色"), Category("DMSkin")]
-        public Brush DMSystemButtonHoverForeground
-        {
-            get
-            {
-                return _DMSystemButtonHoverForeground;
-            }
-
-            set
-            {
-                _DMSystemButtonHoverForeground = value;
-                OnPropertyChanged("DMSystemButtonHoverForeground");
-            }
-        }
-
-
-        private bool dmShowMax = true;
-        [Description("显示最大化按钮"), Category("DMSkin")]
-        public bool DMShowMax
-        {
-            get
-            {
-                return dmShowMax;
-            }
-
-            set
-            {
-                dmShowMax = value;
-                if (dmShowMax)
-                {
-                    ResizeMode = ResizeMode.CanResize;
-                    BtnMaxVisibility = Visibility.Visible;
-                    BtnRestoreVisibility = Visibility.Collapsed;
-                }
-                else
-                {
-                    ResizeMode = ResizeMode.CanMinimize;
-                    BtnMaxVisibility = Visibility.Collapsed;
-                    BtnRestoreVisibility = Visibility.Collapsed;
-                }
-
-                OnPropertyChanged("DMShowMax");
-            }
-        }
-
-        private bool dmShowMin = true;
-        [Description("显示最小化按钮"), Category("DMSkin")]
-        public bool DMShowMin
-        {
-            get
-            {
-                return dmShowMin;
-            }
-
-            set
-            {
-                dmShowMin = value;
-                if (dmShowMin)
-                {
-                    ResizeMode = ResizeMode.CanResize;
-                    BtnMinVisibility = Visibility.Visible;
-                }
-                else
-                {
-                    ResizeMode = ResizeMode.CanMinimize;
-                    BtnMinVisibility = Visibility.Collapsed;
-                }
-                OnPropertyChanged("DMShowMin");
-            }
-        }
-
-
-        private bool dmShowClose = true;
-        [Description("显示关闭按钮"), Category("DMSkin")]
-        public bool DMShowClose
-        {
-            get
-            {
-                return dmShowClose;
-            }
-
-            set
-            {
-                dmShowClose = value;
-                if (dmShowClose)
-                {
-                    BtnCloseVisibility = Visibility.Visible;
-                }
-                else
-                {
-                    BtnCloseVisibility = Visibility.Collapsed;
-                }
-                OnPropertyChanged("DMShowClose");
-            }
-        }
-        #endregion
-
-        private Visibility btnMinVisibility = Visibility.Visible;
-        //最小化按钮显示
-        public Visibility BtnMinVisibility
-        {
-            get
-            {
-                return btnMinVisibility;
-            }
-
-            set
-            {
-                btnMinVisibility = value;
-                OnPropertyChanged("BtnMinVisibility");
-            }
-        }
-
-        private Visibility btnCloseVisibility = Visibility.Visible;
-        //关闭按钮显示
-        public Visibility BtnCloseVisibility
-        {
-            get
-            {
-                return btnCloseVisibility;
-            }
-
-            set
-            {
-                btnCloseVisibility = value;
-                OnPropertyChanged("BtnCloseVisibility");
-            }
-        }
-
-        private Visibility btnMaxVisibility = Visibility.Visible;
-        //最大化按钮显示
-        public Visibility BtnMaxVisibility
-        {
-            get
-            {
-                return btnMaxVisibility;
-            }
-
-            set
-            {
-                btnMaxVisibility = value;
-                OnPropertyChanged("BtnMaxVisibility");
-            }
-        }
-
-        private Visibility btnRestoreVisibility = Visibility.Collapsed;
-        //最大化按钮显示
-        public Visibility BtnRestoreVisibility
-        {
-            get
-            {
-                return btnRestoreVisibility;
-            }
-
-            set
-            {
-                btnRestoreVisibility = value;
-                OnPropertyChanged("BtnRestoreVisibility");
-            }
-        }
 
         private int _DMWindowShadowSize = 10;
         [Description("窗体阴影大小"), Category("DMSkin")]
