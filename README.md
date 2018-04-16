@@ -152,11 +152,11 @@ WindowStartupLocation="CenterScreen"  //窗体初始位置
 <pre>
 <code>     
 
-<WrapPanel Height="{Binding DMSystemButtonSize}" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
-            <controls:DMSystemMinButton DMSystemButtonSize="50" DMSystemButtonHoverForeground="#383838" DMSystemButtonForeground="#383838"></controls:DMSystemMinButton>
-            <controls:DMSystemMaxButton DMSystemButtonSize="50" DMSystemButtonHoverForeground="#FFFFFF" DMSystemButtonForeground="#383838"></controls:DMSystemMaxButton>
-            <controls:DMSystemCloseButton DMSystemButtonSize="50" DMSystemButtonHoverForeground="#FFFFFF" DMSystemButtonForeground="#383838"></controls:DMSystemCloseButton>
-        </WrapPanel>
+&lt;WrapPanel Height=&quot;{Binding DMSystemButtonSize}&quot; Orientation=&quot;Horizontal&quot; VerticalAlignment=&quot;Top&quot; HorizontalAlignment=&quot;Right&quot;&gt;
+            &lt;controls:DMSystemMinButton DMSystemButtonSize=&quot;50&quot; DMSystemButtonHoverForeground=&quot;#383838&quot; DMSystemButtonForeground=&quot;#383838&quot;&gt;&lt;/controls:DMSystemMinButton&gt;
+            &lt;controls:DMSystemMaxButton DMSystemButtonSize=&quot;50&quot; DMSystemButtonHoverForeground=&quot;#FFFFFF&quot; DMSystemButtonForeground=&quot;#383838&quot;&gt;&lt;/controls:DMSystemMaxButton&gt;
+            &lt;controls:DMSystemCloseButton DMSystemButtonSize=&quot;50&quot; DMSystemButtonHoverForeground=&quot;#FFFFFF&quot; DMSystemButtonForeground=&quot;#383838&quot;&gt;&lt;/controls:DMSystemCloseButton&gt;
+        &lt;/WrapPanel&gt;
 
 
 DMSystemButtonSize="50"               //系统按钮大小
