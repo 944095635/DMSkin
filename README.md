@@ -17,7 +17,7 @@
 <h1>本方案以及其他方案对比</h1>
 <h3>WPF .NET Framework 4.5+ 推出了原生组件<a href='https://github.com/944095635/WindowChrome-Demo'>WindowChrome无边框方案</a></h4>
 <h3>WPF .NET Framework 3.5+ 可以调用 System.Windows.Shell  实现无边框方案</h4>
-<h3>以上2种方案缺点:阴影效果不好.</h4>
+<h3>以上2种方案缺点:阴影效果不好.跨系统版本兼容性差</h4>
 
 <h1>注意事项</h1>
 <h3>本源码采用VS2017 个人版 开发,.NET FrameWork4.0,部分C# 6.0+语法 vs2015 vs2013 vs2012 请自行修改源码中不支持的部分。</h3>
