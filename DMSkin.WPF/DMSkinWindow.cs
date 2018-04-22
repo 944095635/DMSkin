@@ -26,10 +26,12 @@ namespace DMSkin.WPF
             SourceInitialized += MainWindow_SourceInitialized;
             StateChanged += MainWindow_StateChanged;
             MouseLeftButtonDown += MainWindow_MouseLeftButtonDown;
-            Closing += MainWindow_Closing;
+            Closed += MainWindow_Closed;
             SizeChanged += MainWindow_SizeChanged;
             LocationChanged += MainWindow_LocationChanged;
         }
+
+
         #endregion
 
         #region 切换单双窗口模式
@@ -41,16 +43,16 @@ namespace DMSkin.WPF
         private void InitializeWindowStyle()
         {
             _shadowWindow = new ShadowWindow();
-            Dispatcher.BeginInvoke(new Action<UIElement>(x => 
+            Dispatcher.BeginInvoke(new Action<UIElement>(x =>
             {
                 Thread.Sleep(70);
-                _shadowWindow.Left = this.Left-30;
-                _shadowWindow.Top = this.Top-30;
+                _shadowWindow.Left = this.Left - 30;
+                _shadowWindow.Top = this.Top - 30;
                 ShadowWindowVisibility(true);//初始化
                 Owner = _shadowWindow;//绑定阴影窗体
                 Activate();
-            }),DispatcherPriority.ApplicationIdle,this);
-            
+            }), DispatcherPriority.ApplicationIdle, this);
+
             ResourceDictionary dic = new ResourceDictionary { Source = new Uri(packButtonUri, UriKind.Relative) };
             Resources.MergedDictionaries.Add(dic);
 
@@ -81,7 +83,7 @@ namespace DMSkin.WPF
         /// <summary>
         /// 窗体关闭时 关闭阴影窗口
         /// </summary>
-        private void MainWindow_Closing(object sender, CancelEventArgs e)
+        private void MainWindow_Closed(object sender, EventArgs e)
         {
             if (_shadowWindow != null)
             {
@@ -210,11 +212,11 @@ namespace DMSkin.WPF
                         return NativeConstants.TRUE;
                     }
                     break;
-                    //------------------
-                    //if (wParam == (IntPtr)Win32.WM_TRUE)
-                    //{
-                    //    handled = true;
-                    //}
+                //------------------
+                //if (wParam == (IntPtr)Win32.WM_TRUE)
+                //{
+                //    handled = true;
+                //}
 
                 case (int)WindowMessages.WM_NCLBUTTONDOWN:
                     if (wParam.ToInt32() == (int)HitTest.HTCLOSE ||
@@ -230,14 +232,14 @@ namespace DMSkin.WPF
                 case (int)WindowMessages.WM_NCUAHDRAWFRAME:
                     handled = true;
                     break;
-                //获取窗口的最大化最小化信息
-                //case (int)WindowMessages.WM_GETMINMAXINFO:
-                //    WmGetMinMaxInfo(hwnd, lParam);
-                //    handled = true;
-                //    break;
-                //窗口拉伸 还有DPI BUG 
-                //case (int)WindowMessages.WM_NCHITTEST:
-                //    return WmNCHitTest(lParam, ref handled);
+                    //获取窗口的最大化最小化信息
+                    //case (int)WindowMessages.WM_GETMINMAXINFO:
+                    //    WmGetMinMaxInfo(hwnd, lParam);
+                    //    handled = true;
+                    //    break;
+                    //窗口拉伸 还有DPI BUG 
+                    //case (int)WindowMessages.WM_NCHITTEST:
+                    //    return WmNCHitTest(lParam, ref handled);
             }
             return IntPtr.Zero;
         }
@@ -306,7 +308,7 @@ namespace DMSkin.WPF
             MINMAXINFO mmi = (MINMAXINFO)Marshal.PtrToStructure(lParam, typeof(MINMAXINFO));
 
             // Get handle for nearest monitor to this window  
-            IntPtr hMonitor = NativeMethods.MonitorFromWindow(Handle,NativeConstants.MONITOR_DEFAULTTONEAREST);
+            IntPtr hMonitor = NativeMethods.MonitorFromWindow(Handle, NativeConstants.MONITOR_DEFAULTTONEAREST);
 
             // Get monitor info   显示屏
             MONITORINFOEX monitorInfo = new MONITORINFOEX();
@@ -389,13 +391,13 @@ namespace DMSkin.WPF
                     Thread.Sleep(200);
                     Dispatcher.Invoke(new Action(() =>
                     {
-                            //恢复-显示阴影
-                            ShadowWindowVisibility(true);
-                            shadowWindowState = false;
-                            //激活当前窗口
-                            Activate();
-                            //Debug.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
-                        }));
+                        //恢复-显示阴影
+                        ShadowWindowVisibility(true);
+                        shadowWindowState = false;
+                        //激活当前窗口
+                        Activate();
+                        //Debug.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+                    }));
                 });
             }
             //最小化-隐藏阴影
