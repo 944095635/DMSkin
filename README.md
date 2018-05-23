@@ -45,7 +45,7 @@ Support: Windows XP - Windows 7 - Windows 10</h4>
 
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/双层.gif" />
 
-<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/GI (1).gif" />
+<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/GIF3.gif" />
 
 DMSkin-for-WPF是一个基于WPF的.Net WPF开源界面库,实现了无边框的WPF开发方案,内置部分控件模板.
 你可以参照模板自行修改完善。（以下简称DFW）。
@@ -256,7 +256,6 @@ DMSystemButtonCloseHoverColor="Red"   //系统【关闭】按钮的鼠标悬浮
 
 <h1>更多效果图:</1>
 <br/>
-<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/GI (1).png" />
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/GI (2).png" />
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (1).gif" />
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (2).jpg" />
