@@ -41,6 +41,10 @@ DFW实现了比较完美的无边框窗体方案，并且拖拽全部采用WIN32
 
 <h1>版本更新</h1>
 <blockquote>
+ <h3>2.5.0.0 (2018-06-07)</h3>
+<p>1.将2个项目合二为一。</p>
+<p>2.添加一些WPF 常用的class 如ViewModelBase,UI调度器,转换器。</p>
+<p>3.加入了水印输入框等,代码重构,准备发布到Nuget,以后可以通过Nuget安装 和 更新。</p>
  
  <h3>2.1.0.0 (2018-04-17)</h3>
 <p>1.修改逻辑,目前窗口支持MVVM。</p>
@@ -115,9 +119,11 @@ DFW实现了比较完美的无边框窗体方案，并且拖拽全部采用WIN32
 <pre>
 <code>
 1.引用DMSkin.WPF.DLL
-2.Window继承修改为:MainWindow : DMSkinWindow
+2.Window继承修改为:MainWindow:DMSkinSimpleWindow
+   单层方案思路:继承DMSkinSimpleWindow
+   双层方案思路:继承DMSkinComplexWindow
 3.添加引用:xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF"
-4.XAML继承修改为: DMSkin:DMSkinWindow x:Class="DMSkin.WPF.Test.MainWindow"
+4.XAML继承修改为: DMSkin:DMSkinWindow x:Class="MainWindow"
 </code>
 </pre>
 
