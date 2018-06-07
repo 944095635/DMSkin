@@ -1,4 +1,5 @@
-﻿using DM_Studio.Models;
+﻿
+using DMSkin.WPF.Demos.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DM_Studio.Pages
+namespace DMSkin.WPF.Demos.Pages
 {
     /// <summary>
     /// Translate.xaml 的交互逻辑

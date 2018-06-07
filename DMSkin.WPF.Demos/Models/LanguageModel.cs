@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
-namespace DM_Studio.Models
+namespace DMSkin.WPF.Demos.Models
 {
     public class LanguageModel : INotifyPropertyChanged
     {

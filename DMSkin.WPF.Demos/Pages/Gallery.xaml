@@ -1,17 +1,21 @@
-﻿<UserControl x:Class="DM_Studio.Pages.Gallery"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DM_Studio.Pages"
-             mc:Ignorable="d" 
-             d:DesignHeight="640" d:DesignWidth="850">
+﻿<UserControl
+    x:Class="DMSkin.WPF.Demos.Pages.Gallery"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="640"
+    d:DesignWidth="850"
+    mc:Ignorable="d">
     <UserControl.Resources>
         <Style x:Key="DMGirlItemsControl" TargetType="ItemsControl">
-            <Setter Property="ItemTemplate" >
+            <Setter Property="ItemTemplate">
                 <Setter.Value>
                     <DataTemplate>
-                        <Grid  Margin="12" Width="800" Height="600">
+                        <Grid
+                            Width="800"
+                            Height="600"
+                            Margin="12">
                             <Grid.Resources>
                                 <Style TargetType="Image">
                                     <Setter Property="LayoutTransform">
@@ -27,8 +31,14 @@
                                             <EventTrigger.Actions>
                                                 <BeginStoryboard>
                                                     <Storyboard>
-                                                        <DoubleAnimation Storyboard.TargetProperty="LayoutTransform.ScaleX" To="1.1" Duration="0:0:0.25"></DoubleAnimation>
-                                                        <DoubleAnimation Storyboard.TargetProperty="LayoutTransform.ScaleY" To="1.1" Duration="0:0:0.25"></DoubleAnimation>
+                                                        <DoubleAnimation
+                                                            Storyboard.TargetProperty="LayoutTransform.ScaleX"
+                                                            To="1.1"
+                                                            Duration="0:0:0.25" />
+                                                        <DoubleAnimation
+                                                            Storyboard.TargetProperty="LayoutTransform.ScaleY"
+                                                            To="1.1"
+                                                            Duration="0:0:0.25" />
                                                     </Storyboard>
                                                 </BeginStoryboard>
                                             </EventTrigger.Actions>
@@ -37,8 +47,14 @@
                                             <EventTrigger.Actions>
                                                 <BeginStoryboard>
                                                     <Storyboard>
-                                                        <DoubleAnimation Storyboard.TargetProperty="LayoutTransform.ScaleX" To="1" Duration="0:0:0.25"></DoubleAnimation>
-                                                        <DoubleAnimation Storyboard.TargetProperty="LayoutTransform.ScaleY" To="1" Duration="0:0:0.25"></DoubleAnimation>
+                                                        <DoubleAnimation
+                                                            Storyboard.TargetProperty="LayoutTransform.ScaleX"
+                                                            To="1"
+                                                            Duration="0:0:0.25" />
+                                                        <DoubleAnimation
+                                                            Storyboard.TargetProperty="LayoutTransform.ScaleY"
+                                                            To="1"
+                                                            Duration="0:0:0.25" />
                                                     </Storyboard>
                                                 </BeginStoryboard>
                                             </EventTrigger.Actions>
@@ -48,26 +64,48 @@
                             </Grid.Resources>
                             <Border Background="White">
                                 <Border.Effect>
-                                    <DropShadowEffect ShadowDepth="0" Color="#FFC8C8C8" Opacity="0.8" BlurRadius="15"/>
+                                    <DropShadowEffect
+                                        BlurRadius="15"
+                                        Opacity="0.8"
+                                        ShadowDepth="0"
+                                        Color="#FFC8C8C8" />
                                 </Border.Effect>
                             </Border>
-                            <Border Cursor="Hand" Background="White" CornerRadius="5" MouseDown="Border_MouseDown" Tag="{Binding }">
+                            <Border
+                                Background="White"
+                                CornerRadius="5"
+                                Cursor="Hand"
+                                MouseDown="Border_MouseDown"
+                                Tag="{Binding}">
                                 <Grid>
-                                     <Image Name="Image" Width="800" 
-                                           Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                                     <Border Height="65" VerticalAlignment="Bottom">
+                                    <Image
+                                        Name="Image"
+                                        Width="800"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Top"
+                                        Stretch="UniformToFill" />
+                                    <Border Height="65" VerticalAlignment="Bottom">
                                         <WrapPanel Orientation="Vertical">
-                                            <TextBlock Foreground="#FFEEEEEE"  Text="{Binding Name}"
-                                                       HorizontalAlignment="Left" VerticalAlignment="Top" 
-                                                       FontWeight="Bold" Margin="15,10,15,0">
+                                            <TextBlock
+                                                Margin="15,10,15,0"
+                                                HorizontalAlignment="Left"
+                                                VerticalAlignment="Top"
+                                                FontWeight="Bold"
+                                                Foreground="#FFEEEEEE"
+                                                Text="{Binding Name}">
                                                 <TextBlock.Effect>
-                                                    <DropShadowEffect  BlurRadius="5" ShadowDepth="0"></DropShadowEffect>
+                                                    <DropShadowEffect BlurRadius="5" ShadowDepth="0" />
                                                 </TextBlock.Effect>
                                             </TextBlock>
-                                            <TextBlock Foreground="#eeEEEEEE"   Text="{Binding Size}" HorizontalAlignment="Left"
-                                                       VerticalAlignment="Top" FontWeight="Bold" Margin="15,10,15,0">
+                                            <TextBlock
+                                                Margin="15,10,15,0"
+                                                HorizontalAlignment="Left"
+                                                VerticalAlignment="Top"
+                                                FontWeight="Bold"
+                                                Foreground="#eeEEEEEE"
+                                                Text="{Binding Size}">
                                                 <TextBlock.Effect>
-                                                    <DropShadowEffect  BlurRadius="5" ShadowDepth="0"></DropShadowEffect>
+                                                    <DropShadowEffect BlurRadius="5" ShadowDepth="0" />
                                                 </TextBlock.Effect>
                                             </TextBlock>
                                         </WrapPanel>
@@ -78,18 +116,21 @@
                     </DataTemplate>
                 </Setter.Value>
             </Setter>
-            <Setter Property="ItemsPanel" >
+            <Setter Property="ItemsPanel">
                 <Setter.Value>
                     <ItemsPanelTemplate>
                         <!--<control:ElasticWrapPanel DesiredColumnWidth="800"></control:ElasticWrapPanel>-->
                     </ItemsPanelTemplate>
                 </Setter.Value>
             </Setter>
-            <Setter Property="Template" >
+            <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate>
-                        <ScrollViewer  Style="{StaticResource for_scrollviewer}" HorizontalScrollBarVisibility="Disabled"  VerticalScrollBarVisibility="Auto">
-                            <ItemsPresenter Margin="10,0,10,0"/>
+                        <ScrollViewer
+                            HorizontalScrollBarVisibility="Disabled"
+                            Style="{StaticResource for_scrollviewer}"
+                            VerticalScrollBarVisibility="Auto">
+                            <ItemsPresenter Margin="10,0,10,0" />
                         </ScrollViewer>
                     </ControlTemplate>
                 </Setter.Value>
@@ -97,6 +138,6 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <ItemsControl Name="GalleryItemsControl" Style="{StaticResource DMGirlItemsControl}"></ItemsControl>
+        <ItemsControl Name="GalleryItemsControl" Style="{StaticResource DMGirlItemsControl}" />
     </Grid>
 </UserControl>

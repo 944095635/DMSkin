@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DM_Studio.Pages
+namespace DMSkin.WPF.Demos.Pages
 {
     /// <summary>
     /// Tieba.xaml 的交互逻辑

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C758EC5E-4A44-4921-8C8A-2F0127BB9406}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>DM_Studio</RootNamespace>
-    <AssemblyName>DM-Studio</AssemblyName>
+    <RootNamespace>DMSkin.WPF.Demos</RootNamespace>
+    <AssemblyName>DMSkin.WPF.Demos</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -70,6 +70,9 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DMSkin.WPF.Demos.App</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.0.9.7\lib\net40\LiveCharts.dll</HintPath>
@@ -99,12 +102,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="StartWindow.xaml.cs">
+      <DependentUpon>StartWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleWindow.xaml.cs">
+      <DependentUpon>SimpleWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Page Include="MainWindow2.xaml">
+    <Compile Include="ViewModels\StartWindowViewModel.cs" />
+    <Page Include="StartWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="SimpleWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ComplexWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -116,11 +134,11 @@
     <Compile Include="Control\MyTabItem.cs" />
     <Compile Include="Control\WaterMaskTextBox.cs" />
     <Compile Include="Converters\LocationConverters.cs" />
-    <Compile Include="MainWindow2.xaml.cs">
-      <DependentUpon>MainWindow2.xaml</DependentUpon>
+    <Compile Include="DemoWindow.xaml.cs">
+      <DependentUpon>DemoWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="ComplexWindow.xaml.cs">
+      <DependentUpon>ComplexWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\Index.xaml">
@@ -147,11 +165,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Themes\Dictionary1.xaml">
+    <Page Include="Styles\Dictionary1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Themes\DMSkin.xaml">
+    <Page Include="Styles\DMSkin.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

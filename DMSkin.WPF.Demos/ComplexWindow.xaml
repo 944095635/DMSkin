@@ -1,0 +1,181 @@
+﻿<DMSkin:DMSkinComplexWindow
+    x:Class="DMSkin.WPF.Demos.ComplexWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF"
+    xmlns:controls="clr-namespace:DMSkin.WPF.Controls;assembly=DMSkin.WPF"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:DMSkin.WPF.Demos.Pages"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:viewmodels="clr-namespace:DM_Studio.ViewModels"
+    Title="双层窗口"
+    Width="1000"
+    Height="700"
+    MinWidth="360"
+    MinHeight="268"
+    Background="White"
+    DMWindowShadowColor="#888888"
+    DMWindowShadowSize="10"
+    Foreground="White"
+    ResizeMode="CanResizeWithGrip"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <viewmodels:MainWindowViewModel />
+    </Window.DataContext>
+    <Window.InputBindings>
+        <KeyBinding Command="{Binding F1Command}" Gesture="F1" />
+    </Window.InputBindings>
+    <Grid>
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="51" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Border
+                Grid.Column="0"
+                BorderBrush="{StaticResource LineColor}"
+                BorderThickness="0,0,0,2">
+                <Grid>
+                    <TextBlock
+                        Margin="10,0,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        FontFamily="/DMSkin.WPF.Demos;component/Fonts/#AR DESTINE"
+                        FontSize="20"
+                        Foreground="{StaticResource MainColor}"
+                        Text="DMSkin.WPF 双层窗口" />
+                    <Button
+                        Name="ButtonSkin"
+                        Width="50"
+                        Height="50"
+                        Margin="0,0,150,0"
+                        Padding="0"
+                        HorizontalAlignment="Right"
+                        HorizontalContentAlignment="Center"
+                        BorderThickness="0"
+                        Focusable="False"
+                        ToolTip="主题">
+                        <Label
+                            HorizontalContentAlignment="Center"
+                            Content="&#xe691;"
+                            FontFamily="{StaticResource IconFont}"
+                            FontSize="22"
+                            FontWeight="Bold"
+                            Foreground="#FF555555" />
+                    </Button>
+                </Grid>
+            </Border>
+            <TabControl
+                Grid.Row="1"
+                Style="{StaticResource DMTabControlLeft}"
+                TabStripPlacement="Left">
+                <TabItem
+                    Header="仪表盘"
+                    IsSelected="True"
+                    Style="{StaticResource DMTopTabItemLeft}"
+                    Tag="&#xe63f;">
+                    <pages:DashBoard />
+                </TabItem>
+                <TabItem
+                    Header="壁纸控"
+                    Style="{StaticResource DMTopTabItemLeft}"
+                    Tag="&#xe64a;">
+                    <Image Source="Images/BG.jpg" Stretch="UniformToFill" />
+                </TabItem>
+                <TabItem
+                    Header="格式化"
+                    Style="{StaticResource DMTopTabItemLeft}"
+                    Tag="&#xe65f;">
+                    <pages:FormatTool />
+                </TabItem>
+                <TabItem
+                    Header="备忘录"
+                    Style="{StaticResource DMTopTabItemLeft}"
+                    Tag="&#xe681;" />
+                <TabItem
+                    Header="百度翻译"
+                    Style="{StaticResource DMTopTabItemLeft}"
+                    Tag="&#xe615;">
+                    <!--<pages:Translate></pages:Translate>-->
+                </TabItem>
+                <TabItem
+                    Header="个人中心"
+                    Style="{StaticResource DMTopTabItemLeft}"
+                    Tag="&#xe605;" />
+                <TabItem
+                    Header="媒体中心"
+                    Style="{StaticResource DMTopTabItemLeft}"
+                    Tag="&#xe623;" />
+                <TabItem
+                    Header="设置中心"
+                    Style="{StaticResource DMTopTabItemLeft}"
+                    Tag="&#xe643;" />
+            </TabControl>
+        </Grid>
+
+
+
+        <Border
+            Width="140"
+            Height="200"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Background="White"
+            BorderBrush="{StaticResource LineColor}"
+            BorderThickness="0,1,0,0">
+            <WrapPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Vertical">
+                <Ellipse Width="80" Height="80">
+                    <Ellipse.ToolTip>
+                        <ToolTip Content="944095635@qq.com" VerticalOffset="-60" />
+                    </Ellipse.ToolTip>
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="Images/user.jpg" />
+                    </Ellipse.Fill>
+                </Ellipse>
+                <TextBlock
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Center"
+                    Foreground="#FF722F66"
+                    Text="管理员" />
+                <TextBlock
+                    Margin="0,2,0,0"
+                    HorizontalAlignment="Center"
+                    FontWeight="Bold"
+                    Foreground="#FF5B5B5B"
+                    Text="94..@qq.com" />
+            </WrapPanel>
+        </Border>
+
+
+        <WrapPanel
+            Height="{Binding DMSystemButtonSize}"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Orientation="Horizontal">
+            <controls:DMSystemMinButton
+                DMSystemButtonForeground="#383838"
+                DMSystemButtonHoverForeground="#383838"
+                DMSystemButtonSize="50" />
+            <controls:DMSystemMaxButton
+                DMSystemButtonForeground="#383838"
+                DMSystemButtonHoverForeground="#FFFFFF"
+                DMSystemButtonSize="50" />
+            <controls:DMSystemCloseButton
+                DMSystemButtonForeground="#383838"
+                DMSystemButtonHoverForeground="#FFFFFF"
+                DMSystemButtonSize="50" />
+        </WrapPanel>
+
+        <ResizeGrip
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch"
+            Visibility="{Binding DMVisibility}" />
+    </Grid>
+</DMSkin:DMSkinComplexWindow>

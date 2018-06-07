@@ -1,5 +1,5 @@
-﻿using DM_Studio.Models;
-using DMSkin.WPF;
+﻿using DMSkin.WPF;
+using DMSkin.WPF.Demos.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 
-namespace DM_Studio
+namespace DMSkin.WPF.Demos
 {
     public class API
     {

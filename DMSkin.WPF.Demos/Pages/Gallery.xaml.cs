@@ -1,4 +1,4 @@
-﻿using DM_Studio.Models;
+﻿using DMSkin.WPF.Demos.Models;
 using DMSkin.WPF;
 using System;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DM_Studio.Pages
+namespace DMSkin.WPF.Demos.Pages
 {
     /// <summary>
     /// Gallery.xaml 的交互逻辑
