@@ -177,6 +177,8 @@ DMSystemButtonCloseHoverColor="Red"   //系统【关闭】按钮的鼠标悬浮
 <h1>资源引用</h1>
 <pre>
 <code>
+    App.xaml
+
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
