@@ -5,12 +5,10 @@
 
 <h2>安装</h2>
 Nuget安装 <code>PM> Install-Package DMSkin.WPF -Version 2.5.0.1</code>
-<br/>
+<br/><br/>
 HTTP下载 https://codeload.github.com/944095635/DMSkin-for-WPF/zip/master
-<br/>
+<br/><br/>
 Git获取 https://github.com/944095635/DMSkin-for-WPF.git
-<br/>
-
  
 <hr/>
 <h1>前言</h1>
