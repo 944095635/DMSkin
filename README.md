@@ -177,11 +177,11 @@ DMSystemButtonCloseHoverColor="Red"   //系统【关闭】按钮的鼠标悬浮
 <h1>资源引用</h1>
 <pre>
 <code>
-    App.xaml
-
+App.xaml文件
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+
                 <!--  DMSKin内置配色  -->
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Styles/DMColor.xaml" />
 
@@ -196,7 +196,6 @@ DMSystemButtonCloseHoverColor="Red"   //系统【关闭】按钮的鼠标悬浮
 
                 <!--  DMSKin内置按钮 样式  -->
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMButton.xaml" />
-
 
                 <!--  DMSKin其他样式  -->
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMTabControl.xaml" />
