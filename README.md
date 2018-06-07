@@ -1,14 +1,15 @@
 
  
-<h1>﻿# DMSkin-for-WPF 2.1.0.0</h1>
-<h2>升级到2.1.0.0,全新改版,支持MVVM</h2>
+<h1>﻿# DMSkin-for-WPF 2.5.0.0</h1>
+<h2>升级到2.5.0.0,全新改版,支持MVVM</h2>
 
  
 <hr/>
 <h1>前言</h1>
-<h3>WPF无边框方案(双层窗体)</h3>
+<h3>2.5+版本 将 单双层合为一个项目,便于升级与维护</h3>
 <h4>基于WPF的UI框架</h4>
-<h4>方案思路:Win32 重绘非客户区+阴影层窗口</h4>
+<h4>A:双层方案思路:Win32 重绘非客户区+阴影层窗口     - 继承DMSkinComplexWindow</h4>
+<h4>B:单层方案思路:延迟窗口Window消息防止闪烁花屏BUG - 继承DMSkinSimpleWindow</h4>
 <h4>支持：.NET Framework 3.5 - 4.7</h4>
 <h4>支持：Windows XP - Windows 7 - Windows 10</h4>
 
