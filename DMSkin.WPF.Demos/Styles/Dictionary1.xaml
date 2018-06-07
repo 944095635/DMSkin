@@ -1,10 +1,14 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:DM_Studio.Themes"
-                    xmlns:c="clr-namespace:DM_Studio.Control">
-    <Style TargetType="TabControl"  x:Key="TabControlStyle1"
-           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-           xmlns:s="clr-namespace:System;assembly=mscorlib">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:DM_Studio.Control"
+    xmlns:local="clr-namespace:DM_Studio.Themes">
+    <Style
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:s="clr-namespace:System;assembly=mscorlib"
+        x:Key="TabControlStyle1"
+        TargetType="TabControl">
         <Style.Resources>
             <ResourceDictionary />
         </Style.Resources>
@@ -46,45 +50,74 @@
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TabControl">
-                    <Grid ClipToBounds="True" SnapsToDevicePixels="True" KeyboardNavigation.TabNavigation="Local">
+                    <Grid
+                        ClipToBounds="True"
+                        KeyboardNavigation.TabNavigation="Local"
+                        SnapsToDevicePixels="True">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Name="ColumnDefinition0" />
-                            <ColumnDefinition Width="0" Name="ColumnDefinition1" />
+                            <ColumnDefinition Name="ColumnDefinition1" Width="0" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" Name="RowDefinition0" />
-                            <RowDefinition Height="*" Name="RowDefinition1" />
+                            <RowDefinition Name="RowDefinition0" Height="Auto" />
+                            <RowDefinition Name="RowDefinition1" Height="*" />
                         </Grid.RowDefinitions>
-                        <Grid  Margin="0,140,0,0" >
-                            <TabPanel IsItemsHost="True" Width="320" Name="HeaderPanel" Margin="0,0,0,0" Panel.ZIndex="1" KeyboardNavigation.TabIndex="1" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Grid Margin="0,140,0,0">
+                            <TabPanel
+                                Name="HeaderPanel"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Width="320"
+                                Margin="0,0,0,0"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Panel.ZIndex="1"
+                                IsItemsHost="True"
+                                KeyboardNavigation.TabIndex="1" />
                         </Grid>
-                        <Border BorderThickness="{TemplateBinding Border.BorderThickness}" BorderBrush="{TemplateBinding Border.BorderBrush}" Background="{TemplateBinding Panel.Background}" Name="ContentPanel" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local" KeyboardNavigation.DirectionalNavigation="Contained" Grid.Column="0" Grid.Row="1">
-                            <ContentPresenter Content="{TemplateBinding TabControl.SelectedContent}" ContentTemplate="{TemplateBinding TabControl.SelectedContentTemplate}" ContentStringFormat="{TemplateBinding TabControl.SelectedContentStringFormat}" ContentSource="SelectedContent" Name="PART_SelectedContentHost" Margin="{TemplateBinding Control.Padding}" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+                        <Border
+                            Name="ContentPanel"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Background="{TemplateBinding Panel.Background}"
+                            BorderBrush="{TemplateBinding Border.BorderBrush}"
+                            BorderThickness="{TemplateBinding Border.BorderThickness}"
+                            KeyboardNavigation.DirectionalNavigation="Contained"
+                            KeyboardNavigation.TabIndex="2"
+                            KeyboardNavigation.TabNavigation="Local">
+                            <ContentPresenter
+                                Name="PART_SelectedContentHost"
+                                Margin="{TemplateBinding Control.Padding}"
+                                Content="{TemplateBinding TabControl.SelectedContent}"
+                                ContentSource="SelectedContent"
+                                ContentStringFormat="{TemplateBinding TabControl.SelectedContentStringFormat}"
+                                ContentTemplate="{TemplateBinding TabControl.SelectedContentTemplate}"
+                                SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="TabControl.TabStripPlacement">
-                            <Setter Property="Grid.Row" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="Grid.Row">
                                 <Setter.Value>
                                     <s:Int32>1</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="Grid.Row" TargetName="ContentPanel">
+                            <Setter TargetName="ContentPanel" Property="Grid.Row">
                                 <Setter.Value>
                                     <s:Int32>0</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="RowDefinition.Height" TargetName="RowDefinition0">
+                            <Setter TargetName="RowDefinition0" Property="RowDefinition.Height">
                                 <Setter.Value>
                                     <GridLength>*</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="RowDefinition.Height" TargetName="RowDefinition1">
+                            <Setter TargetName="RowDefinition1" Property="RowDefinition.Height">
                                 <Setter.Value>
                                     <GridLength>Auto</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="FrameworkElement.Margin" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="FrameworkElement.Margin">
                                 <Setter.Value>
                                     <Thickness>2,0,2,2</Thickness>
                                 </Setter.Value>
@@ -94,47 +127,47 @@
                             </Trigger.Value>
                         </Trigger>
                         <Trigger Property="TabControl.TabStripPlacement">
-                            <Setter Property="Grid.Row" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="Grid.Row">
                                 <Setter.Value>
                                     <s:Int32>0</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="Grid.Row" TargetName="ContentPanel">
+                            <Setter TargetName="ContentPanel" Property="Grid.Row">
                                 <Setter.Value>
                                     <s:Int32>0</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="Grid.Column" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="Grid.Column">
                                 <Setter.Value>
                                     <s:Int32>0</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="Grid.Column" TargetName="ContentPanel">
+                            <Setter TargetName="ContentPanel" Property="Grid.Column">
                                 <Setter.Value>
                                     <s:Int32>1</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="ColumnDefinition.Width" TargetName="ColumnDefinition0">
+                            <Setter TargetName="ColumnDefinition0" Property="ColumnDefinition.Width">
                                 <Setter.Value>
                                     <GridLength>Auto</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="ColumnDefinition.Width" TargetName="ColumnDefinition1">
+                            <Setter TargetName="ColumnDefinition1" Property="ColumnDefinition.Width">
                                 <Setter.Value>
                                     <GridLength>*</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="RowDefinition.Height" TargetName="RowDefinition0">
+                            <Setter TargetName="RowDefinition0" Property="RowDefinition.Height">
                                 <Setter.Value>
                                     <GridLength>*</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="RowDefinition.Height" TargetName="RowDefinition1">
+                            <Setter TargetName="RowDefinition1" Property="RowDefinition.Height">
                                 <Setter.Value>
                                     <GridLength>0</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="FrameworkElement.Margin" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="FrameworkElement.Margin">
                                 <Setter.Value>
                                     <Thickness>2,2,0,2</Thickness>
                                 </Setter.Value>
@@ -144,47 +177,47 @@
                             </Trigger.Value>
                         </Trigger>
                         <Trigger Property="TabControl.TabStripPlacement">
-                            <Setter Property="Grid.Row" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="Grid.Row">
                                 <Setter.Value>
                                     <s:Int32>0</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="Grid.Row" TargetName="ContentPanel">
+                            <Setter TargetName="ContentPanel" Property="Grid.Row">
                                 <Setter.Value>
                                     <s:Int32>0</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="Grid.Column" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="Grid.Column">
                                 <Setter.Value>
                                     <s:Int32>1</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="Grid.Column" TargetName="ContentPanel">
+                            <Setter TargetName="ContentPanel" Property="Grid.Column">
                                 <Setter.Value>
                                     <s:Int32>0</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="ColumnDefinition.Width" TargetName="ColumnDefinition0">
+                            <Setter TargetName="ColumnDefinition0" Property="ColumnDefinition.Width">
                                 <Setter.Value>
                                     <GridLength>*</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="ColumnDefinition.Width" TargetName="ColumnDefinition1">
+                            <Setter TargetName="ColumnDefinition1" Property="ColumnDefinition.Width">
                                 <Setter.Value>
                                     <GridLength>Auto</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="RowDefinition.Height" TargetName="RowDefinition0">
+                            <Setter TargetName="RowDefinition0" Property="RowDefinition.Height">
                                 <Setter.Value>
                                     <GridLength>*</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="RowDefinition.Height" TargetName="RowDefinition1">
+                            <Setter TargetName="RowDefinition1" Property="RowDefinition.Height">
                                 <Setter.Value>
                                     <GridLength>0</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="FrameworkElement.Margin" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="FrameworkElement.Margin">
                                 <Setter.Value>
                                     <Thickness>0,2,2,2</Thickness>
                                 </Setter.Value>
@@ -209,30 +242,44 @@
         </Setter>
     </Style>
 
-    <Style x:Key="TabItem1" TargetType="{x:Type c:MyTabItem}" >
-        <Setter Property="Width" Value="260"></Setter>
-        <Setter Property="FontSize" Value="18"></Setter>
-        <Setter Property="Height" Value="65"></Setter>
-        <Setter Property="Template" >
+    <Style x:Key="TabItem1" TargetType="{x:Type c:MyTabItem}">
+        <Setter Property="Width" Value="260" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Height" Value="65" />
+        <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate  TargetType="{x:Type c:MyTabItem}">
-                    <Grid  Background="#00000000" >
-                        <Border x:Name="back"  Grid.Column="1" CornerRadius="5" Background="{TemplateBinding ThemeColor}" Visibility="Hidden"></Border>
+                <ControlTemplate TargetType="{x:Type c:MyTabItem}">
+                    <Grid Background="#00000000">
+                        <Border
+                            x:Name="back"
+                            Grid.Column="1"
+                            Background="{TemplateBinding ThemeColor}"
+                            CornerRadius="5"
+                            Visibility="Hidden" />
                         <Grid Margin="25,0,0,0">
-                            <TextBlock x:Name="Icon" FontSize="26" FontFamily="{StaticResource IconFont}" 
-                                           Text="{TemplateBinding Tag}" Margin="20,0,0,0" HorizontalAlignment="Left" 
-                                           VerticalAlignment="Center" 
-                                           Foreground="{TemplateBinding ThemeColor}"></TextBlock>
-                            <TextBlock x:Name="Content" Text="{TemplateBinding Header}" 
-                            HorizontalAlignment="Left"   Foreground="#6E828D"
-                            VerticalAlignment="Center" Margin="80,0,0,0" ></TextBlock>
+                            <TextBlock
+                                x:Name="Icon"
+                                Margin="20,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                FontFamily="{StaticResource IconFont}"
+                                FontSize="26"
+                                Foreground="{TemplateBinding ThemeColor}"
+                                Text="{TemplateBinding Tag}" />
+                            <TextBlock
+                                x:Name="Content"
+                                Margin="80,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Foreground="#6E828D"
+                                Text="{TemplateBinding Header}" />
                         </Grid>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="true">
-                            <Setter Property="Visibility" TargetName="back" Value="Visible"></Setter>
-                            <Setter Property="Foreground" TargetName="Content" Value="#FFFFFFFF"></Setter>
-                            <Setter Property="Foreground" TargetName="Icon" Value="#FFFFFFFF"></Setter>
+                            <Setter TargetName="back" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="Content" Property="Foreground" Value="#FFFFFFFF" />
+                            <Setter TargetName="Icon" Property="Foreground" Value="#FFFFFFFF" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -241,8 +288,7 @@
         <Setter Property="ContentTemplate">
             <Setter.Value>
                 <DataTemplate>
-                    <ContentPresenter  Margin="0"  Content="{TemplateBinding Content}"  >
-                    </ContentPresenter>
+                    <ContentPresenter Margin="0" Content="{TemplateBinding Content}" />
                 </DataTemplate>
             </Setter.Value>
         </Setter>

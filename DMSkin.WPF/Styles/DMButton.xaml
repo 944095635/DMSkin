@@ -1,28 +1,86 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:dm="clr-namespace:DMSkin.WPF.Controls">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dm="clr-namespace:DMSkin.WPF.Controls">
 
-    <!--#region 模仿百度翻译的按钮-->
-    <Style x:Key="BaiDuTranslateButton" TargetType="Button">
-        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
-        <Setter Property="VerticalAlignment" Value="Center"></Setter>
-        <Setter Property="Cursor" Value="Hand"></Setter>
-        <Setter Property="Width" Value="165"></Setter>
-        <Setter Property="Height" Value="30"></Setter>
-        <Setter Property="FontSize" Value="12"></Setter>
-        <Setter Property="Foreground" Value="#FFFFFFFF"></Setter>
+
+    <Style x:Key="DMButton" TargetType="Button">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Width" Value="260" />
+        <Setter Property="Height" Value="65" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="{StaticResource MainColor}" x:Name="bg" BorderThickness="1" Padding="5,3,5,3" CornerRadius="5" BorderBrush="Gainsboro">
-                        <ContentPresenter  HorizontalAlignment="Center" VerticalAlignment="Center">
-                        </ContentPresenter>
+                    <Border
+                        x:Name="bg"
+                        Grid.Column="1"
+                        Background="#FF4bae"
+                        CornerRadius="5">
+                        <ContentPresenter
+                            x:Name="Content"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="bg" Property="Opacity" Value="0.8" />
                         </Trigger>
-                        <Trigger Property="IsPressed"  Value="True">
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="bg" Property="Opacity" Value="0.6" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <ContentPresenter Margin="0" Content="{TemplateBinding Content}" />
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--#region 模仿百度翻译的按钮-->
+    <Style x:Key="BaiDuTranslateButton" TargetType="Button">
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Width" Value="165" />
+        <Setter Property="Height" Value="30" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Foreground" Value="#FFFFFFFF" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        x:Name="bg"
+                        Padding="5,3,5,3"
+                        Background="{StaticResource MainColor}"
+                        BorderBrush="Gainsboro"
+                        BorderThickness="1"
+                        CornerRadius="5">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="bg" Property="Opacity" Value="0.8" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="bg" Property="Opacity" Value="0.6" />
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -31,37 +89,42 @@
         </Setter>
     </Style>
     <!--#endregion-->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
     <Style x:Key="DMBorButton" TargetType="Button">
         <Setter Property="Effect">
             <Setter.Value>
-                <DropShadowEffect ShadowDepth="0" BlurRadius="3"/>
+                <DropShadowEffect BlurRadius="3" ShadowDepth="0" />
             </Setter.Value>
         </Setter>
-        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
-        <Setter Property="VerticalAlignment" Value="Center"></Setter>
-        <Setter Property="Cursor" Value="Hand"></Setter>
-        <Setter Property="FontSize" Value="12"></Setter>
-        <Setter Property="Foreground" Value="White"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Foreground" Value="White" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="#00FFFFFF" x:Name="bg" BorderThickness="1" Padding="5,3,5,3" CornerRadius="5" BorderBrush="White">
-                        <ContentPresenter  HorizontalAlignment="Center" VerticalAlignment="Center">
-                        </ContentPresenter>
+                    <Border
+                        x:Name="bg"
+                        Padding="5,3,5,3"
+                        Background="#00FFFFFF"
+                        BorderBrush="White"
+                        BorderThickness="1"
+                        CornerRadius="5">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter   Property="Foreground" Value="White" />
+                            <Setter Property="Foreground" Value="White" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -70,18 +133,18 @@
     </Style>
 
     <Style x:Key="DMIconButton" TargetType="Button">
-        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
-        <Setter Property="VerticalAlignment" Value="Center"></Setter>
-        <Setter Property="Cursor" Value="Hand"></Setter>
-        <Setter Property="Foreground" Value="#FF96A0B4"></Setter>
-        <Setter Property="FontFamily" Value="{StaticResource IconFont}"></Setter>
-        <Setter Property="FontWeight" Value="Medium"></Setter>
-        <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Foreground" Value="#FF96A0B4" />
+        <Setter Property="FontFamily" Value="{StaticResource IconFont}" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="FontSize" Value="20" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="#00FFFFFF" x:Name="bg">
-                        <ContentPresenter  HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Border x:Name="bg" Background="#00FFFFFF">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
                             <!--<ContentPresenter.Effect>
                                 <DropShadowEffect ShadowDepth="1"/>
                             </ContentPresenter.Effect>-->
@@ -89,7 +152,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter   Property="Foreground" Value="Black" />
+                            <Setter Property="Foreground" Value="Black" />
                             <!--<Setter  TargetName="bg"  Property="Background" Value="#88FFFFFF" />-->
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -98,26 +161,28 @@
         </Setter>
     </Style>
 
-   
+
     <Style x:Key="TextGraySelectButtonNoBor" TargetType="{x:Type Button}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Name="back">
                         <Grid>
-                            <TextBlock Text="&#xe86c;"
-                            FontSize="15" Margin="8,7,8,3" 
-                            FontFamily="/DMClub;component/Resources/#iconfont"
-                            Foreground="#FF575757"
-                            VerticalAlignment="Center" HorizontalAlignment="Stretch">
-                            </TextBlock>
+                            <TextBlock
+                                Margin="8,7,8,3"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Center"
+                                FontFamily="/DMClub;component/Resources/#iconfont"
+                                FontSize="15"
+                                Foreground="#FF575757"
+                                Text="&#xe86c;" />
                             <!--&#xe609;<ContentControl Name="content" FontSize="23"  Foreground="#FF333333" Content="{TemplateBinding Content}"  VerticalAlignment="Center" HorizontalAlignment="Center"/>-->
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="back" Property="Background" Value="#FFDFDFDF"/>
-                            <Setter Property="Cursor" Value="Hand"/>
+                            <Setter TargetName="back" Property="Background" Value="#FFDFDFDF" />
+                            <Setter Property="Cursor" Value="Hand" />
                             <!--<Setter TargetName="content" Property="FontWeight" Value="Bold"/>-->
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -126,15 +191,21 @@
         </Setter>
     </Style>
     <Style x:Key="TextButtonNoBor" TargetType="{x:Type Button}">
-        <Setter Property="Foreground" Value="#FF0C73C2"></Setter>
+        <Setter Property="Foreground" Value="#FF0C73C2" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <ContentControl Name="content" FontSize="{TemplateBinding FontSize}" Foreground="{TemplateBinding Foreground}" Content="{TemplateBinding Content}"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <ContentControl
+                        Name="content"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Content="{TemplateBinding Content}"
+                        FontSize="{TemplateBinding FontSize}"
+                        Foreground="{TemplateBinding Foreground}" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="content"  Property="Foreground" Value="#FF0A63A8"/>
-                            <Setter TargetName="content"  Property="Cursor" Value="Hand"/>
+                            <Setter TargetName="content" Property="Foreground" Value="#FF0A63A8" />
+                            <Setter TargetName="content" Property="Cursor" Value="Hand" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -152,8 +223,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Grid x:Name="grid"  Background="{TemplateBinding Background}">
-                        <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True" Opacity="0.75" />
+                    <Grid x:Name="grid" Background="{TemplateBinding Background}">
+                        <ContentPresenter
+                            x:Name="contentPresenter"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Opacity="0.75"
+                            RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -176,15 +253,23 @@
     </Style>
 
     <Style x:Key="DMPlayButton" TargetType="{x:Type Button}">
-        <Setter Property="Foreground" Value="{DynamicResource DMMainColor}"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource DMMainColor}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <ContentControl Name="content" Opacity="0.6" FontFamily="/DMClub;component/Resources/#iconfont" FontSize="{TemplateBinding FontSize}" Foreground="{TemplateBinding Foreground}" Content="{TemplateBinding Content}"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <ContentControl
+                        Name="content"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Content="{TemplateBinding Content}"
+                        FontFamily="/DMClub;component/Resources/#iconfont"
+                        FontSize="{TemplateBinding FontSize}"
+                        Foreground="{TemplateBinding Foreground}"
+                        Opacity="0.6" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="content"  Property="Opacity" Value="1"/>
-                            <Setter TargetName="content"  Property="Cursor" Value="Hand"/>
+                            <Setter TargetName="content" Property="Opacity" Value="1" />
+                            <Setter TargetName="content" Property="Cursor" Value="Hand" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -193,15 +278,23 @@
     </Style>
 
     <Style x:Key="DMOKButton" TargetType="{x:Type Button}">
-        <Setter Property="Foreground" Value="{DynamicResource DMMainColor}"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource DMMainColor}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <ContentControl Name="content" Opacity="0.6" FontFamily="/DMClub;component/Resources/#iconfont" FontSize="{TemplateBinding FontSize}" Foreground="{TemplateBinding Foreground}" Content="{TemplateBinding Content}"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <ContentControl
+                        Name="content"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Content="{TemplateBinding Content}"
+                        FontFamily="/DMClub;component/Resources/#iconfont"
+                        FontSize="{TemplateBinding FontSize}"
+                        Foreground="{TemplateBinding Foreground}"
+                        Opacity="0.6" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="content"  Property="Opacity" Value="1"/>
-                            <Setter TargetName="content"  Property="Cursor" Value="Hand"/>
+                            <Setter TargetName="content" Property="Opacity" Value="1" />
+                            <Setter TargetName="content" Property="Cursor" Value="Hand" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -210,15 +303,23 @@
     </Style>
 
     <Style x:Key="DMCancelButton" TargetType="{x:Type Button}">
-        <Setter Property="Foreground" Value="{DynamicResource TextColor21}"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource TextColor21}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <ContentControl Name="content" Opacity="0.8" FontFamily="/DMClub;component/Resources/#iconfont" FontSize="{TemplateBinding FontSize}" Foreground="{TemplateBinding Foreground}" Content="{TemplateBinding Content}"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <ContentControl
+                        Name="content"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Content="{TemplateBinding Content}"
+                        FontFamily="/DMClub;component/Resources/#iconfont"
+                        FontSize="{TemplateBinding FontSize}"
+                        Foreground="{TemplateBinding Foreground}"
+                        Opacity="0.8" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="content"  Property="Opacity" Value="1"/>
-                            <Setter TargetName="content"  Property="Cursor" Value="Hand"/>
+                            <Setter TargetName="content" Property="Opacity" Value="1" />
+                            <Setter TargetName="content" Property="Cursor" Value="Hand" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -226,47 +327,64 @@
         </Setter>
     </Style>
 
-    <!--播放暂停按钮-->
+    <!--  播放暂停按钮  -->
     <Style x:Key="DMTogglePlayButton" TargetType="ToggleButton">
-        <Setter Property="Foreground" Value="{DynamicResource DMMainColor}"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource DMMainColor}" />
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <ContentControl Name="content" Opacity="0.8" FontFamily="/DMClub;component/Resources/#iconfont" FontSize="{TemplateBinding FontSize}" Foreground="{TemplateBinding Foreground}" Content="&#xe631;"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <ContentControl
+                        Name="content"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Content="&#xe631;"
+                        FontFamily="/DMClub;component/Resources/#iconfont"
+                        FontSize="{TemplateBinding FontSize}"
+                        Foreground="{TemplateBinding Foreground}"
+                        Opacity="0.8" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="content"  Property="Opacity" Value="1"/>
-                            <Setter TargetName="content"  Property="Cursor" Value="Hand"/>
+                            <Setter TargetName="content" Property="Opacity" Value="1" />
+                            <Setter TargetName="content" Property="Cursor" Value="Hand" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="False">
-                            <Setter TargetName="content"  Property="Content" Value="&#xe631;"/>
+                            <Setter TargetName="content" Property="Content" Value="&#xe631;" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="content"  Property="Content" Value="&#xe618;"/>
+                            <Setter TargetName="content" Property="Content" Value="&#xe618;" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    
-    <!--声音开关-->
+
+    <!--  声音开关  -->
     <Style x:Key="DMToggleVolButton" TargetType="ToggleButton">
-        <Setter Property="Foreground" Value="{DynamicResource DMMainColor}"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource DMMainColor}" />
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <ContentControl Margin="0,3,0,0" Name="content" Opacity="0.8" FontFamily="/DMDesktopVideo;component/Resources/#iconfont" FontSize="{TemplateBinding FontSize}" Foreground="{TemplateBinding Foreground}" Content="&#xe631;"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <ContentControl
+                        Name="content"
+                        Margin="0,3,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Content="&#xe631;"
+                        FontFamily="/DMDesktopVideo;component/Resources/#iconfont"
+                        FontSize="{TemplateBinding FontSize}"
+                        Foreground="{TemplateBinding Foreground}"
+                        Opacity="0.8" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="content"  Property="Opacity" Value="1"/>
-                            <Setter TargetName="content"  Property="Cursor" Value="Hand"/>
+                            <Setter TargetName="content" Property="Opacity" Value="1" />
+                            <Setter TargetName="content" Property="Cursor" Value="Hand" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="False">
-                            <Setter TargetName="content"  Property="Content" Value="&#xe61d;"/>
+                            <Setter TargetName="content" Property="Content" Value="&#xe61d;" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="content"  Property="Content" Value="&#xe61e;"/>
+                            <Setter TargetName="content" Property="Content" Value="&#xe61e;" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

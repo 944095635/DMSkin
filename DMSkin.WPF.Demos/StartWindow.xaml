@@ -95,26 +95,20 @@
                     ThemeColor="#FF4bae">
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Button
-                            Width="200"
-                            Height="30"
                             Command="{Binding ComplexWindowCommand}"
                             Content="双层窗口 带系统动画"
-                            Style="{StaticResource DMBorButton}" />
+                            Style="{StaticResource DMButton}" />
                         <Button
-                            Width="200"
-                            Height="30"
                             Margin="0,50,0,0"
                             Command="{Binding SimpleWindowCommand}"
                             Content="单层窗口"
-                            Style="{StaticResource DMBorButton}" />
+                            Style="{StaticResource DMButton}" />
 
                         <Button
-                            Width="200"
-                            Height="30"
                             Margin="0,50,0,0"
                             Command="{Binding Demo1WindowCommand}"
                             Content="DEMO窗口"
-                            Style="{StaticResource DMBorButton}" />
+                            Style="{StaticResource DMButton}" />
                     </StackPanel>
                 </control:MyTabItem>
                 <control:MyTabItem
