@@ -1,7 +1,7 @@
 
  
 <h1>﻿# DMSkin-for-WPF 2.5.0.1</h1>
-<h2>升级到2.5.0.0,全新改版,支持MVVM</h2>
+<h2>升级到2.5,全新改版,支持MVVM,支持单双层</h2>
 
 <h2>安装</h2>
 <code>     
@@ -117,7 +117,7 @@ DFW实现了比较完美的无边框窗体方案，并且拖拽全部采用WIN32
 <h1>帮助改进</h1>
 非常欢迎参与DFW的改进。有钱出钱有力出力，如果你觉得DFW很棒，请支持我。
 如果你需要相关的资源或者学习资料也请联系我。
-<img style="width:200px;" src="https://github.com/944095635/Image/blob/master/%E5%9B%BE%E7%89%87/JZ.jpg" />
+<img style="width:200px;" src="https://github.com/944095635/Image/master/JZ.jpg" />
 
 
 <h1>使用说明</h1>
