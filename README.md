@@ -4,14 +4,12 @@
 <h2>升级到2.5,全新改版,支持MVVM,支持单双层</h2>
 
 <h2>安装</h2>
-<code>     
-Nuget安装 PM> Install-Package DMSkin.WPF -Version 2.5.0.1
-</code>
-
-下载 https://codeload.github.com/944095635/DMSkin-for-WPF/zip/master
-
+Nuget安装 <code>PM> Install-Package DMSkin.WPF -Version 2.5.0.1</code>
+<br/>
+HTTP下载 https://codeload.github.com/944095635/DMSkin-for-WPF/zip/master
+<br/>
 Git获取 https://github.com/944095635/DMSkin-for-WPF.git
-
+<br/>
 
  
 <hr/>
