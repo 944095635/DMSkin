@@ -172,8 +172,9 @@ DMSystemButtonCloseHoverColor="Red"   //系统【关闭】按钮的鼠标悬浮
 <h1>资源引用</h1>
 <pre>
 <code>
-&lt;Application.Resources&gt;
-            &lt;ResourceDictionary&gt;
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
                 <!--  DMSKin内置配色  -->
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Styles/DMColor.xaml" />
 
@@ -199,9 +200,13 @@ DMSystemButtonCloseHoverColor="Red"   //系统【关闭】按钮的鼠标悬浮
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMSlider.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMCheckBox.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMContextMenu.xaml" />
-                &lt;/ResourceDictionary.MergedDictionaries&gt;
-            &lt;/ResourceDictionary&gt;
-&lt;/Application.Resources&gt;
+
+                <!--  自己项目的样式  -->
+                <ResourceDictionary Source="/Styles/DMSkin.xaml" />
+                <ResourceDictionary Source="/Styles/Dictionary1.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
 </code>
 </pre>
 
