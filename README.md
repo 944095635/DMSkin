@@ -1,7 +1,12 @@
 
  
-<h1>﻿# DMSkin-for-WPF 2.5.0.0</h1>
+<h1>﻿# DMSkin-for-WPF 2.5.0.1</h1>
 <h2>升级到2.5.0.0,全新改版,支持MVVM</h2>
+
+<h2>安装</h2>
+<code>     
+PM> Install-Package DMSkin.WPF -Version 2.5.0.1
+</code>
 
  
 <hr/>
