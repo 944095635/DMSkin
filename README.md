@@ -8,45 +8,26 @@
 <h1>前言</h1>
 <h3>2.5+版本 将 单双层合为一个项目,便于升级与维护</h3>
 <h4>基于WPF的UI框架</h4>
-<h4>A:双层方案思路:Win32 重绘非客户区+阴影层窗口     - 继承DMSkinComplexWindow</h4>
-<h4>B:单层方案思路:延迟窗口Window消息防止闪烁花屏BUG - 继承DMSkinSimpleWindow</h4>
 <h4>支持：.NET Framework 3.5 - 4.7</h4>
 <h4>支持：Windows XP - Windows 7 - Windows 10</h4>
 
-
+<h4>A:双层方案思路:Win32 重绘非客户区+阴影层窗口     - 继承DMSkinComplexWindow</h4>
+<h4>B:单层方案思路:延迟窗口Window消息防止闪烁花屏BUG - 继承DMSkinSimpleWindow</h4>
 
 <h1>本方案以及其他方案对比</h1>
 <h3>WPF .NET Framework 4.5+ 推出了原生组件<a href='https://github.com/944095635/WindowChrome-Demo'>WindowChrome无边框方案</a></h4>
 <h3>WPF .NET Framework 3.5+ 可以调用 System.Windows.Shell  实现无边框方案</h3>
-
 <h3>以上2种方案缺点:阴影效果不好.跨系统版本兼容性差</h3>
 
-<h3>DMSkin-for-WPF-Small 单层窗口,无系统动画 <a href='https://github.com/944095635/DMSkin-for-WPF-Small'>DMSkin-for-WPF-Small</a</h3>
 
 <h1>注意事项</h1>
 <h3>本源码采用VS2017 个人版 开发,.NET FrameWork4.0,部分C# 6.0+语法 vs2015 vs2013 vs2012 请自行修改源码中不支持的部分。</h3>
-<h3>本方案优点:阴影效果DIY.</h3>
 <h3>本方案缺点:---遗留BUG:WIN7 系统上非客户区系统按钮阻挡操作(目前WIN7有点小瑕疵)---.</h3>
-
-
-<h4>WPF borderless scheme (double form)
-
-UI framework based on WPF
-
-Plan idea: Win32 redraws non customer zone + shadow layer window
-
-Support:.NET Framework 3.5 - 4.7
-
-Support: Windows XP - Windows 7 - Windows 10</h4>
-
 
 
 
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/NEW.jpg" />
 
-<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/双层.gif" />
-
-<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/GIF3.gif" />
 
 DMSkin-for-WPF是一个基于WPF的.Net WPF开源界面库,实现了无边框的WPF开发方案,内置部分控件模板.
 你可以参照模板自行修改完善。（以下简称DFW）。
@@ -263,5 +244,6 @@ DMSystemButtonCloseHoverColor="Red"   //系统【关闭】按钮的鼠标悬浮
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/B.png" />
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (3).jpg" />
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/A (4).jpg" />
-
 <img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/JSQ.jpg" />
+<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/GIF3.gif" />
+<img  src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/图片/双层.gif" />
