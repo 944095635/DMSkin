@@ -120,7 +120,7 @@ ResizeMode="CanResize"                // window resize mode (CanResiz or CanResi
 WindowStartupLocation="CenterScreen"  // window startup location
 ````
 
-#### 8. [Make Rounded window (optional)]
+#### 8. Make Rounded window (optional)
 ````xml
 <Border Background="White" CornerRadius="5"  BorderThickness="1">
         <Border.Effect>
