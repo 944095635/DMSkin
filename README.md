@@ -141,6 +141,8 @@ WindowStartupLocation="CenterScreen"  // window startup location
 </Border>
 ````
 
+## Preview
+
 ## Communication
 We appreciate it a lot if you can join us:
 
