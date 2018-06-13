@@ -6,11 +6,11 @@
 A WPF UI framework to create borderless window faster and easier.
 
 ## Preface
-DMSkin-for-WPF (aka DFW) is a WPF UI framework that aims to help WPF developers create a borderless window faster and easier. It supports .NET framework from 3.5 to 4.7, and runs well from `Windows XP` to `Windows 10`.
+DMSkin-for-WPF (aka DFW) is a WPF UI framework that aims to help WPF developers create a borderless window faster and easier. It supports .NET framework from 3.5 to 4.7, and runs well from Windows XP to Windows 10.
 
 DFW offers 2 plans for window borderless:
 #### 1. ComplexWindow Plan
-Use Windows 32 API to redraw non-client area and create a separate shadow window to for shadow's presentation.
+Use Windows 32 API to redraw non-client area and create a separate shadow window for shadow's presentation.
 #### 2. SimpleWindow Plan
 Delay Window message to prevent flickering corruption bug.
 
@@ -25,7 +25,7 @@ The follwing chart can show you the differences between `DMSkinComplexWindow` an
 ## Installation
 You can get the **`DMSkin.WPF.dll`** through 2 two different ways.
 
-#### 1. [Download DMSkin.WPF.dll directly](https://github.com/944095635/DMSkin-for-WPF/releases/download/2.5.0.1/Release.zip)
+#### 1. [Download DMSkin.WPF.dll](https://github.com/944095635/DMSkin-for-WPF/releases/download/2.5.0.1/Release.zip)
 
 The drawback of this way is the `dll` you downloaded is not always up to date.
 
@@ -41,40 +41,10 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
 #### 1. Create a new WPF project
 #### 2. [Add DMSkin.WPF.dll reference](http://p40kjburh.bkt.clouddn.com/18-6-13/50043356.jpg)
 #### 3. Modify `MainWindow.cs`
-<p style="background:rgba(230, 255, 237,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(32, 32, 32,1);margin-left:2px">+ </span>using DMSkin.WPF;</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">+  </span>	using System.Windows;</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span></p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>namespace DMSkinDemo</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>{</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>&nbsp&nbsp/// &ltsummary&gt</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>&nbsp&nbsp/// MainWindow.xaml 的交互逻辑</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>&nbsp&nbsp/// &lt/summary&gt</p>
-<p style="background:rgba(255, 238, 240,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(32, 32, 32,1);margin-left:2px">- </span>&nbsp&nbsppublic partial class MainWindow : Window</p>
-<p style="background:rgba(230, 255, 237,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(32, 32, 32,1);margin-left:2px">+ </span>&nbsp&nbsppublic partial class MainWindow : DMSkinSimpleWindow</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>&nbsp&nbsp{</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>&nbsp&nbsp&nbsp&nbsppublic MainWindow()</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>&nbsp&nbsp&nbsp&nbsp{</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspInitializeComponent();</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>&nbsp&nbsp&nbsp&nbsp}</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>&nbsp&nbsp}</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>}</p>
+![](http://p40kjburh.bkt.clouddn.com/1.png)
 
 #### 4. Modify `MainWindow.xaml`
-<p style="background:rgba(255, 238, 240,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(32, 32, 32,1);margin-left:2px">- </span>&ltWindow x:Class="DMSkinTest.MainWindow"</p>
-<p style="background:rgba(230, 255, 237,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(32, 32, 32,1);margin-left:2px">+ </span>&ltWindow x:Class="DMSkinTest.MainWindow"&ltDMSkin:DMSkinSimpleWindow x:Class="DMSkinDemo.MainWindow"</p>
-<p style="background:rgba(230, 255, 237,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(32, 32, 32,1);margin-left:2px">+ </span>xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF"</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">+  </span>	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>	xmlns:local="clr-namespace:DMSkinTest"</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>	mc:Ignorable="d"</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>	Title="MainWindow" Height="450" Width="800"&gt</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>&ltGrid&gt</p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span></p>
-<p style="background:rgba(241, 248, 255,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(241, 248, 255,1);margin-left:2px">&nbsp  </span>&ltGrid&gt</p>
-<p style="background:rgba(255, 238, 240,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(32, 32, 32,1);margin-left:2px">- </span>&lt/Window&gt</p>
-<p style="background:rgba(230, 255, 237,1);width:auto;margin:0;font-family:consolas"><span class="codepre" style="color:rgba(32, 32, 32,1);margin-left:2px">+ </span>&ltWindow x:Class="DMSkinTest.MainWindow"&ltDMSkin:DMSkinSimpleWindow x:Class="DMSkinDemo.MainWindow"</p>
+![](http://p40kjburh.bkt.clouddn.com/2.png)
 
 #### 5. Make DFW transparent (optional)
 Set DMSkinSimpleWindow `Background` property `transparent`.
@@ -111,12 +81,18 @@ WindowStartupLocation="CenterScreen"  // window startup location
 
 #### 8. [Make Rounded window (optional)](./demos/Rounded-Window.xaml)
 
+## Change Log
+### 2.5.0.0 (2018-06-07)
+1. Merge DMSkinComplexWindow and DMSkinSimpleWindow project
+2. Add some common calss for WPF, for example ViewModelBase, UI Scheduler, Converter and so on.
+3. Add Watermark Input and some controls, refactoring and release DFW to Nuget, developers can install and update it through Nuget from now on.
 
-<style>
-.codepre{
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-}
-</style>
+### 2.1.0.0 (2018-04-17)
+1. Modify framework's logic, now DFW supports MVVM.
+2. Fix a bug that shadow layers when window loads
+3. System buttons have been Separated from DFW template, developers could choose whether to add system buttons according to their needs.
+
+### 2.0.0.1 (2017-10-15)
+1. add a new demo
+
+### 
