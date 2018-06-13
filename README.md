@@ -142,15 +142,10 @@ WindowStartupLocation="CenterScreen"  // window startup location
 ````
 
 ## Preview
-<img src="https://raw.githubusercontent.com/944095635/Image/master/GIF3.gif" width="300" height="200">
-<img src="http://p40kjburh.bkt.clouddn.com/18-6-14/39594127.jpg" width="300" height="200">
-<img src="http://p40kjburh.bkt.clouddn.com/18-6-14/40136652.jpg" width="300" height="200">
-<img src="http://p40kjburh.bkt.clouddn.com/18-6-14/65115725.jpg" width="300" height="200">
-<img src="https://raw.githubusercontent.com/944095635/Image/master/A%20(1).gif" width="300" height="200">
-<img src="http://p40kjburh.bkt.clouddn.com/18-6-14/95658569.jpg" width="300" height="200">
-<img src="http://p40kjburh.bkt.clouddn.com/18-6-14/95448767.jpg" width="300" height="200">
-<img src="http://p40kjburh.bkt.clouddn.com/18-6-14/68595750.jpg" width="300" height="200">
-<img src="https://raw.githubusercontent.com/944095635/Image/master/%E5%8F%8C%E5%B1%82.gif" width="300" height="200">
+<img src="https://raw.githubusercontent.com/944095635/Image/master/A%20(1).gif" width="900" height="600">
+<img src="https://raw.githubusercontent.com/944095635/Image/master/GIF3.gif" width="900" height="600">
+<img src="https://raw.githubusercontent.com/944095635/Image/master/%E5%8F%8C%E5%B1%82.gif" width="900" height="600">
+<img src="http://p40kjburh.bkt.clouddn.com/18-6-14/3120580.jpg" width="900" height="800">
 
 ## Communication
 We appreciate it a lot if you can join us:
