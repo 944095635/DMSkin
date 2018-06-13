@@ -6,6 +6,9 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <!--  DMSKin必须引用  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Styles/DMSkin.xaml" />
+
                 <!--  DMSKin内置配色  -->
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Styles/DMColor.xaml" />
 

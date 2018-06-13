@@ -1,8 +1,7 @@
-﻿<DMSkin:DMSkinComplexWindow
+﻿<Window
     x:Class="DMSkin.WPF.Demos.StartWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF"
     xmlns:control="clr-namespace:DM_Studio.Control"
     xmlns:controls="clr-namespace:DMSkin.WPF.Controls;assembly=DMSkin.WPF"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -10,14 +9,12 @@
     xmlns:pages="clr-namespace:DMSkin.WPF.Demos.Pages"
     xmlns:system="clr-namespace:System;assembly=mscorlib"
     xmlns:viewmodels="clr-namespace:DMSkin.WPF.Demos.ViewModels"
-    Title="启动窗口"
-    Width="1600"
-    Height="1024"
+    Title="DMSkin for WPF"
+    Width="600"
+    Height="400"
     MinWidth="360"
     MinHeight="268"
     Background="White"
-    DMWindowShadowColor="#C8C8C8"
-    DMWindowShadowSize="10"
     FontSize="12"
     Foreground="White"
     ResizeMode="CanResizeWithGrip"
@@ -27,20 +24,11 @@
         <viewmodels:StartWindowViewModel />
     </Window.DataContext>
     <Grid>
-        <Grid Background="White">
-            <TabControl
-                Grid.Row="1"
-                Style="{StaticResource TabControlStyle1}"
-                TabStripPlacement="Left">
-                <control:MyTabItem
-                    Header="按钮"
-                    IsSelected="True"
-                    Style="{StaticResource TabItem1}"
-                    Tag="&#xe63f;"
-                    ThemeColor="#FF7372">
-                    <StackPanel Margin="10">
-                        <TextBlock Text="输入框" />
-                        <UniformGrid Columns="5">
+        <TabControl Grid.Row="1">
+            <TabItem Header="基础组件">
+                <StackPanel Margin="10">
+                    <GroupBox Header="输入框">
+                        <UniformGrid Columns="2">
                             <controls:DMTextBox
                                 Width="210"
                                 Height="35"
@@ -74,7 +62,7 @@
                             <controls:DMTextBox
                                 Width="220"
                                 Margin="5,15,5,15"
-                                BorderBrush="#FF32F03B"
+                                BorderBrush="#33999999"
                                 BorderThickness="1"
                                 Hint="请输入手机号码(无阴影)" />
                             <controls:DMTextBox
@@ -86,101 +74,33 @@
                                 Hint="透明水印输入框"
                                 ShadowBlurRadius="0" />
                         </UniformGrid>
-                    </StackPanel>
-                </control:MyTabItem>
-                <control:MyTabItem
-                    Header="无边框窗口"
-                    Style="{StaticResource TabItem1}"
-                    Tag="&#xe64a;"
-                    ThemeColor="#FF4bae">
-                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Button
-                            Command="{Binding ComplexWindowCommand}"
-                            Content="双层窗口 带系统动画"
-                            Style="{StaticResource DMButton}" />
-                        <Button
-                            Margin="0,50,0,0"
-                            Command="{Binding SimpleWindowCommand}"
-                            Content="单层窗口"
-                            Style="{StaticResource DMButton}" />
+                    </GroupBox>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="无边框窗口" Tag="&#xe64a;">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button
+                        Command="{Binding ComplexWindowCommand}"
+                        Content="双层窗口 带系统动画"
+                        Style="{StaticResource DMButton}" />
+                    <Button
+                        Margin="0,50,0,0"
+                        Command="{Binding SimpleWindowCommand}"
+                        Content="单层窗口"
+                        Style="{StaticResource DMButton}" />
 
-                        <Button
-                            Margin="0,50,0,0"
-                            Command="{Binding Demo1WindowCommand}"
-                            Content="DEMO窗口"
-                            Style="{StaticResource DMButton}" />
-                    </StackPanel>
-                </control:MyTabItem>
-                <control:MyTabItem
-                    Header="我的媒体"
-                    Style="{StaticResource TabItem1}"
-                    Tag="&#xe65f;"
-                    ThemeColor="#C073FF">
-                    <pages:FormatTool />
-                </control:MyTabItem>
-                <control:MyTabItem
-                    Header="我的文件"
-                    Style="{StaticResource TabItem1}"
-                    Tag="&#xe681;"
-                    ThemeColor="#FF7A73FF">
-                    <pages:DashBoard Margin="25" />
-                </control:MyTabItem>
-                <control:MyTabItem
-                    Header="备 忘 录"
-                    Style="{StaticResource TabItem1}"
-                    Tag="&#xe615;"
-                    ThemeColor="#729EFF">
-                    <!--<pages:Translate></pages:Translate>-->
-                </control:MyTabItem>
-                <control:MyTabItem
-                    Header="我的简介"
-                    Style="{StaticResource TabItem1}"
-                    Tag="&#xe605;"
-                    ThemeColor="#FF73C9FC" />
-                <control:MyTabItem
-                    Header="在线视频"
-                    Style="{StaticResource TabItem1}"
-                    Tag="&#xe623;"
-                    ThemeColor="#F4BC5F" />
-                <control:MyTabItem
-                    Header="设置中心"
-                    Style="{StaticResource TabItem1}"
-                    Tag="&#xe643;"
-                    ThemeColor="#FE9E86" />
-            </TabControl>
-            <Border
-                Width="200"
-                Height="150"
-                Margin="60,100,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top">
-                <WrapPanel
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Orientation="Vertical">
-                    <Ellipse Width="80" Height="80">
-                        <Ellipse.ToolTip>
-                            <ToolTip Content="944095635@qq.com" VerticalOffset="-60" />
-                        </Ellipse.ToolTip>
-                        <Ellipse.Fill>
-                            <ImageBrush ImageSource="Images/user.jpg" />
-                        </Ellipse.Fill>
-                    </Ellipse>
-                    <TextBlock
-                        Margin="0,10,0,0"
-                        HorizontalAlignment="Center"
-                        FontSize="20"
-                        FontWeight="Bold"
-                        Foreground="#FF5B5B5B"
-                        Text="Dream.Machine" />
-                </WrapPanel>
-            </Border>
-        </Grid>
-        <ResizeGrip
-            HorizontalAlignment="Right"
-            VerticalAlignment="Bottom"
-            HorizontalContentAlignment="Stretch"
-            VerticalContentAlignment="Stretch"
-            Visibility="{Binding DMVisibility}" />
+                    <Button
+                        Margin="0,50,0,0"
+                        Command="{Binding Demo1WindowCommand}"
+                        Content="DEMO窗口"
+                        Style="{StaticResource DMButton}" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="WPF秘籍" />
+            <TabItem Header="WPF转换器" />
+            <TabItem Header="WPF样式与模版" />
+            <TabItem Header="WPF动画" />
+            <TabItem Header="关于DMSkin" />
+        </TabControl>
     </Grid>
-</DMSkin:DMSkinComplexWindow>
+</Window>
