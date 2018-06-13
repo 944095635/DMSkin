@@ -33,7 +33,7 @@ You can get the **`DMSkin.WPF.dll`** through 2 two different ways.
 
 #### 1. [Download DMSkin.WPF.dll](https://github.com/944095635/DMSkin-for-WPF/releases/download/2.5.0.1/Release.zip)
 
-The drawback of this way is the `dll` you downloaded is not always up to date.
+The drawback of this way is the **dll** you downloaded is not always up to date.
 
 #### 2. [Download the source code](https://github.com/944095635/DMSkin-for-WPF/archive/master.zip) and compile it yourself
 Click `DMSkin-for-WPF.sln` to open the project, right click DMSkin.WPF in the solution resource manager window and click build button to complile. And then open the project folder with `file explorer`, you will find the DMSkin.WPF.dll is in `bin\Debug` folder.
@@ -95,7 +95,7 @@ We appreciate it a lot if you can join us:
 - **DMSkin QQ Group: 194684812**
 
 - **WPF Course Group (Charges) QQ Group: 611509631**
-- **[Contact Author](tencent://message/?uin=944095635)**
+- **<a href="tencent://message/?uin=944095635">Contact Author</a>**
 - **[DMSkin Website](http://www.dmskin.com)**
 
 If you can not communicate with us in Chinese.You can communicate with us by giving your issues on issues page and we will reply soon.Any issues and PRs are welcomed!
