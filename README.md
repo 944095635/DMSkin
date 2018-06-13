@@ -48,10 +48,44 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
 #### 1. Create a new WPF project
 #### 2. [Add DMSkin.WPF.dll reference](http://p40kjburh.bkt.clouddn.com/18-6-13/50043356.jpg)
 #### 3. Modify `MainWindow.cs`
-![](http://p40kjburh.bkt.clouddn.com/1.png)
+````csharp
++ using DMSkin.WPF;
+  using System.Windows;
+
+  namespace DMSkinTest
+  {
+      /// <summary>
+      /// MainWindow.xaml 的交互逻辑
+      /// </summary>
+-      public partial class MainWindow : Window
++      public partial class MainWindow : DMSkinSimpleWindow
+      {
+          public MainWindow()
+          {
+              InitializeComponent();
+          }
+      }
+  }
+````
 
 #### 4. Modify `MainWindow.xaml`
-![](http://p40kjburh.bkt.clouddn.com/2.png)
+````xml
+- <Window x:Class="DMSkinDemo.MainWindow" 
++ <DMSkin:DMSkinSimpleWindow
++         xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF" x:Class="DMSkinDemo.MainWindow"   
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+          xmlns:local="clr-namespace:DMSkinTest"
+          mc:Ignorable="d"
+          Title="MainWindow" Height="450" Width="800">
+      <Grid>
+
+      </Grid>
+- </Window>
++ </DMSkin:DMSkinSimpleWindow>
+````
 
 #### 5. Make DFW transparent (optional)
 Set DMSkinSimpleWindow `Background` property `transparent`.
