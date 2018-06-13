@@ -145,6 +145,7 @@ WindowStartupLocation="CenterScreen"  // window startup location
 <img src="https://raw.githubusercontent.com/944095635/Image/master/A%20(1).gif" width="600" height="400" align="center">
 <img src="https://raw.githubusercontent.com/944095635/Image/master/GIF3.gif" width="600" height="400" align="center">
 <img src="https://raw.githubusercontent.com/944095635/Image/master/%E5%8F%8C%E5%B1%82.gif" width="600" height="400" align="center">
+<img src="http://p40kjburh.bkt.clouddn.com/18-6-14/69366192.jpg" width="300" height="450" align="center">
 <img src="http://p40kjburh.bkt.clouddn.com/18-6-14/3120580.jpg" width="900" height="900">
 
 ## Communication
