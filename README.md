@@ -6,7 +6,7 @@
 
 A WPF UI framework to create borderless window faster and easier.
 
-[中文说明请点这里](./docs/READMECN.md)
+[中文说明请点这里](./Docs/READMECN.md)
 
 ## Preface 
 DMSkin-for-WPF (aka DFW) is a WPF UI framework that aims to help WPF developers create a borderless window faster and easier. It supports .NET framework from 3.5 to 4.7, and runs well from Windows XP to Windows 10.
@@ -48,10 +48,44 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
 #### 1. Create a new WPF project
 #### 2. [Add DMSkin.WPF.dll reference](http://p40kjburh.bkt.clouddn.com/18-6-13/50043356.jpg)
 #### 3. Modify `MainWindow.cs`
-![](http://p40kjburh.bkt.clouddn.com/1.png)
+````csharp
++ using DMSkin.WPF;
+  using System.Windows;
+
+  namespace DMSkinTest
+  {
+      /// <summary>
+      /// MainWindow.xaml 的交互逻辑
+      /// </summary>
+-      public partial class MainWindow : Window
++      public partial class MainWindow : DMSkinSimpleWindow
+      {
+          public MainWindow()
+          {
+              InitializeComponent();
+          }
+      }
+  }
+````
 
 #### 4. Modify `MainWindow.xaml`
-![](http://p40kjburh.bkt.clouddn.com/2.png)
+````xml
+- <Window x:Class="DMSkinDemo.MainWindow" 
++ <DMSkin:DMSkinSimpleWindow
++         xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF" x:Class="DMSkinDemo.MainWindow"   
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+          xmlns:local="clr-namespace:DMSkinTest"
+          mc:Ignorable="d"
+          Title="MainWindow" Height="450" Width="800">
+      <Grid>
+
+      </Grid>
+- </Window>
++ </DMSkin:DMSkinSimpleWindow>
+````
 
 #### 5. Make DFW transparent (optional)
 Set DMSkinSimpleWindow `Background` property `transparent`.
@@ -74,7 +108,7 @@ Set DMSkinSimpleWindow `Background` property `transparent`.
 ````
 
 #### 7. Config your DFW properties (optional)
-````xml
+````js
 Foreground="White"                    // window foreground color
 Background="White"                    // window background color 
 DMWindowShadowSize="10"               // window shadow size
@@ -86,7 +120,26 @@ ResizeMode="CanResize"                // window resize mode (CanResiz or CanResi
 WindowStartupLocation="CenterScreen"  // window startup location
 ````
 
-#### 8. [Make Rounded window (optional)](./demos/Rounded-Window.xaml)
+#### 8. Make Rounded window (optional)
+````xml
+<Border Background="White" CornerRadius="5"  BorderThickness="1">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="12" ShadowDepth="0" Color="#88000000"/>
+        </Border.Effect>
+        <Grid Margin="0,0,0,0">
+            <Grid Background="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Name="DMTitle">
+                </Grid>
+            </Grid>
+            <ResizeGrip VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
+        </Grid>
+</Border>
+````
 
 ## Communication
 We appreciate it a lot if you can join us:
