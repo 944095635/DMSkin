@@ -19,7 +19,6 @@ namespace DMSkin.WPF.API
                 else dispatcher.BeginInvoke(action);
             };
         }
-
         /// <summary>
         /// UI线程中执行方法
         /// </summary>

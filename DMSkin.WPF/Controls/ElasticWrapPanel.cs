@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+
 namespace DMSkin.WPF.Controls
 {
     public class ElasticWrapPanel : Panel
