@@ -22,9 +22,6 @@ Dll下载https://github.com/944095635/DMSkin-for-WPF/releases
 <h4>A:双层方案思路:Win32 重绘非客户区+阴影层窗口     - 继承DMSkinComplexWindow</h4>
 <h4>B:单层方案思路:延迟窗口Window消息防止闪烁花屏BUG - 继承DMSkinSimpleWindow</h4>
 
-<h3>本方案以及其他方案对比</h3>
-
-
 <h2>WPF 疑问&解决方案</h2>
 
 <h4>是否还有其他阴影方案?</h4>
