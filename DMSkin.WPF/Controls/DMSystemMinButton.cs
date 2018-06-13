@@ -11,7 +11,6 @@ namespace DMSkin.WPF.Controls
 {
     public class DMSystemMinButton : Button
     {
-
         Window targetWindow;
         public DMSystemMinButton()
         {

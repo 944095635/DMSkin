@@ -50,6 +50,7 @@
                         Name="ButtonSkin"
                         Width="50"
                         Height="50"
+                        Click="ButtonSkin_Click"
                         Margin="0,0,150,0"
                         Padding="0"
                         HorizontalAlignment="Right"

@@ -6,7 +6,6 @@ namespace DMSkin.WPF.API
     public static class Execute
     {
         private static Action<Action> executor = action => action();
-
         /// <summary>
         /// 初始化UI调度器
         /// </summary>

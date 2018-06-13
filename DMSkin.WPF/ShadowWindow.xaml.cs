@@ -1,23 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace DMSkin.WPF
 {
-    /// <summary>
-    /// ShadowWindow.xaml 的交互逻辑
-    /// </summary>
     public partial class ShadowWindow : Window, INotifyPropertyChanged
     {
         #region UI更新接口
@@ -62,7 +50,7 @@ namespace DMSkin.WPF
         }
 
 
-        private Brush _DMWindowShadowBackColor = new SolidColorBrush(Color.FromArgb(255,255,255,255));
+        private Brush _DMWindowShadowBackColor = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
         [Description("窗体阴影背景颜色"), Category("DMSkin")]
         public Brush DMWindowShadowBackColor
         {

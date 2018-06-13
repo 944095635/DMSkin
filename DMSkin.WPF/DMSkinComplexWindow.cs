@@ -1,7 +1,5 @@
 using System;
 using System.ComponentModel;
-using System.Diagnostics;
-using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,7 +8,6 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 using System.Windows.Threading;
 
 namespace DMSkin.WPF
@@ -20,7 +17,6 @@ namespace DMSkin.WPF
     /// </summary>
     public partial class DMSkinComplexWindow : Window
     {
-
         #region 初始化
         public DMSkinComplexWindow()
         {
@@ -34,8 +30,6 @@ namespace DMSkin.WPF
             SizeChanged += MainWindow_SizeChanged;
             LocationChanged += MainWindow_LocationChanged;
         }
-
-
         #endregion
 
         #region 切换单双窗口模式
@@ -121,7 +115,6 @@ namespace DMSkin.WPF
         #endregion
 
         #region 系统函数
-
         IntPtr Handle = IntPtr.Zero;
         void MainWindow_SourceInitialized(object sender, EventArgs e)
         {
@@ -411,18 +404,26 @@ namespace DMSkin.WPF
             }
         }
 
+        /// <summary>
+        /// 窗口第一次加载
+        /// </summary>
+        bool _theFirstTime = true;
         //窗体显示和隐藏
         void MainWindow_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            if (IsVisible == true)
-            {
-                //恢复-显示阴影
-                ShadowWindowVisibility(true);
-            }
-            else
+            if (IsVisible == false)
             {
                 //最小化-隐藏阴影
                 ShadowWindowVisibility(false);
+            }
+            else
+            {
+                //窗口初始化的时候 不显示 阴影 因为需要异步 激活 主窗口
+                if (!_theFirstTime)
+                {
+                    ShadowWindowVisibility(true);
+                }
+                _theFirstTime = false;
             }
         }
 

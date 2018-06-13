@@ -1,7 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Diagnostics;
-using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,18 +8,15 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 
 namespace DMSkin.WPF
 {
     /// <summary>
     /// 单层窗体
     /// </summary>
-    public partial class DMSkinSimpleWindow : Window
+    public partial class DMSkinSimpleWindow:Window
     {
         #region 初始化
-
-
         public DMSkinSimpleWindow()
         {
             InitializeWindowStyle();
@@ -34,7 +29,6 @@ namespace DMSkin.WPF
         #endregion
 
         #region 窗口模式
-
         /// <summary>
         /// 慢慢显示的动画
         /// </summary>
@@ -102,7 +96,6 @@ namespace DMSkin.WPF
         #endregion
 
         #region 系统函数
-
         IntPtr Handle = IntPtr.Zero;
         HwndSource source;
         void MainWindow_SourceInitialized(object sender, EventArgs e)
@@ -254,8 +247,6 @@ namespace DMSkin.WPF
         #endregion
 
         #region 窗体属性
-
-
         private bool _DMFullscreen = false;
         [Description("全屏是否保留任务栏显示"), Category("DMSkin")]
         public bool DMFullScreen
