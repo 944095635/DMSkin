@@ -404,18 +404,26 @@ namespace DMSkin.WPF
             }
         }
 
+        /// <summary>
+        /// 窗口第一次加载
+        /// </summary>
+        bool _theFirstTime = true;
         //窗体显示和隐藏
         void MainWindow_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            if (IsVisible == true)
-            {
-                //恢复-显示阴影
-                ShadowWindowVisibility(true);
-            }
-            else
+            if (IsVisible == false)
             {
                 //最小化-隐藏阴影
                 ShadowWindowVisibility(false);
+            }
+            else
+            {
+                //窗口初始化的时候 不显示 阴影 因为需要异步 激活 主窗口
+                if (!_theFirstTime)
+                {
+                    ShadowWindowVisibility(true);
+                }
+                _theFirstTime = false;
             }
         }
 

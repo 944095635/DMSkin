@@ -1,7 +1,10 @@
-﻿using System;
+﻿using DMSkin.WPF.API;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +22,18 @@ namespace DMSkin.WPF.Demos
         public ComplexWindow()
         {
             InitializeComponent();
+        }
+
+        private void ButtonSkin_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Task.Factory.StartNew(()=> {
+                Thread.Sleep(2000);
+                Execute.OnUIThread(()=> 
+                {
+                    this.Show();
+                });
+            });
         }
     }
 }
