@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/version-2.5.0.1-blue.svg)
 ![](https://img.shields.io/badge/license-MIT-green.svg)
 
-A WPF UI framework for you to create a borderless window faster and easier.
+A WPF UI framework to create borderless window faster and easier.
 
 ## Preface
 DMSkin-for-WPF (aka DFW) is a WPF UI framework that aims to help WPF developers create a borderless window faster and easier. It supports .NET framework from 3.5 to 4.7, and runs well from `Windows XP` to `Windows 10`.
@@ -15,6 +15,8 @@ Use Windows 32 API to redraw non-client area and create a separate shadow window
 Delay Window message to prevent flickering corruption bug.
 
 The follwing chart can show you the differences between `DMSkinComplexWindow` and `DMSkinSimlpeWindow`
+
+
 | Plan       | Transparency   |  Animation |
 | :----: | :---:  | :----:  | :---: |
 | DMSkinComplexWindow     | Not Support |  Support |
