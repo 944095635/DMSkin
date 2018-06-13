@@ -17,13 +17,10 @@ Delay Window message to prevent flickering corruption bug.
 The follwing chart can show you the differences between `DMSkinComplexWindow` and `DMSkinSimlpeWindow`
 
 
-| Plan       | Transparency   |  Animation |
-
-| :----: | :---:  | :----:  | :---: |
-
-| DMSkinComplexWindow     | Not Support |  Support |
-
-| DMSkinSimpleWindow      |  Support   |   Not Support |
+| Plan                | Transparency   |Animation   |
+| :----:              | :---:          | :----:     |
+| DMSkinComplexWindow | Not Support    |  Support   |
+| DMSkinSimpleWindow  |  Support       |Not Support |
 
 ## Installation
 You can get the **`DMSkin.WPF.dll`** through 2 two different ways.
