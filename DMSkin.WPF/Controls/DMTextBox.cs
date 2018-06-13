@@ -41,10 +41,5 @@ namespace DMSkin.WPF.Controls
         }
         public static readonly DependencyProperty ShadowBlurRadiusProperty =
             DependencyProperty.Register("ShadowBlurRadius", typeof(double), typeof(DMTextBox), new PropertyMetadata(0.0));
-
-        public DMTextBox()
-        {
-
-        }
     }
 }
