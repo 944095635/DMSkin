@@ -1,32 +1,64 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Style x:Key="DMSlider" TargetType="Slider" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib">
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style
+        xmlns:s="clr-namespace:System;assembly=mscorlib"
+        x:Key="DMSlider"
+        TargetType="Slider">
         <Style.Triggers>
-            <!--垂直-->
+            <!--  垂直  -->
             <Trigger Property="Slider.Orientation">
                 <Setter Property="Control.Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="Slider">
-                            <Border BorderThickness="{TemplateBinding Border.BorderThickness}" BorderBrush="{TemplateBinding Border.BorderBrush}" Background="{TemplateBinding Panel.Background}" SnapsToDevicePixels="True">
+                            <Border
+                                Background="{TemplateBinding Panel.Background}"
+                                BorderBrush="{TemplateBinding Border.BorderBrush}"
+                                BorderThickness="{TemplateBinding Border.BorderThickness}"
+                                SnapsToDevicePixels="True">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="Auto" MinWidth="{TemplateBinding FrameworkElement.MinWidth}" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <TickBar Fill="{TemplateBinding TextElement.Foreground}" Placement="Left" Name="TopTick" Width="4" Visibility="Collapsed" Grid.Column="0" />
-                                    <TickBar Fill="{TemplateBinding TextElement.Foreground}" Placement="Right" Name="BottomTick" Width="4" Visibility="Collapsed" Grid.Column="2" />
-                                    <Border BorderThickness="1,1,1,1" CornerRadius="1,1,1,1" Background="#FFE7EAEA" Name="TrackBackground" Width="4" Margin="0,5,0,5" HorizontalAlignment="Center" Grid.Column="1">
+                                    <TickBar
+                                        Name="TopTick"
+                                        Grid.Column="0"
+                                        Width="4"
+                                        Fill="{TemplateBinding TextElement.Foreground}"
+                                        Placement="Left"
+                                        Visibility="Collapsed" />
+                                    <TickBar
+                                        Name="BottomTick"
+                                        Grid.Column="2"
+                                        Width="4"
+                                        Fill="{TemplateBinding TextElement.Foreground}"
+                                        Placement="Right"
+                                        Visibility="Collapsed" />
+                                    <Border
+                                        Name="TrackBackground"
+                                        Grid.Column="1"
+                                        Width="4"
+                                        Margin="0,5,0,5"
+                                        HorizontalAlignment="Center"
+                                        Background="#FFE7EAEA"
+                                        BorderThickness="1,1,1,1"
+                                        CornerRadius="1,1,1,1">
                                         <Border.BorderBrush>
                                             <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                                                 <LinearGradientBrush.GradientStops>
-                                                    <GradientStop Color="#FFAEB1AF" Offset="0.1" />
-                                                    <GradientStop Color="#FFFFFFFF" Offset="0.9" />
+                                                    <GradientStop Offset="0.1" Color="#FFAEB1AF" />
+                                                    <GradientStop Offset="0.9" Color="#FFFFFFFF" />
                                                 </LinearGradientBrush.GradientStops>
                                             </LinearGradientBrush>
                                         </Border.BorderBrush>
                                         <Canvas Margin="-1,-6,-1,-6">
-                                            <Rectangle Fill="{StaticResource Colorgreen}"  Stroke="{StaticResource Colorgreen}" StrokeThickness="1" Name="PART_SelectionRange" Width="4" Visibility="Hidden" />
+                                            <Rectangle
+                                                Name="PART_SelectionRange"
+                                                Width="4"
+                                                Fill="{StaticResource Colorgreen}"
+                                                Stroke="{StaticResource Colorgreen}"
+                                                StrokeThickness="1"
+                                                Visibility="Hidden" />
                                         </Canvas>
                                     </Border>
                                     <Track Name="PART_Track" Grid.Column="1">
@@ -66,7 +98,7 @@
                                                 </RepeatButton.Style>
                                             </RepeatButton>
                                         </Track.DecreaseRepeatButton>
-                                        <Track.Thumb >
+                                        <Track.Thumb>
                                             <Thumb Name="Thumb">
                                                 <Thumb.Style>
                                                     <Style TargetType="Thumb">
@@ -99,7 +131,7 @@
                                                             </Setter.Value>
                                                         </Setter>
                                                         <Setter Property="Control.Template">
-                                                                <Setter.Value>
+                                                            <Setter.Value>
                                                                 <ControlTemplate TargetType="Thumb">
                                                                     <Canvas SnapsToDevicePixels="True">
                                                                         <Canvas.RenderTransform>
@@ -110,34 +142,42 @@
                                                                                 </TransformGroup.Children>
                                                                             </TransformGroup>
                                                                         </Canvas.RenderTransform>
-                                                                        <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Name="Background">
+                                                                        <Path Name="Background" Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z">
                                                                             <Path.Fill>
                                                                                 <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                                     <LinearGradientBrush.GradientStops>
-                                                                                        <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                        <GradientStop Color="#FFF0EFEF" Offset="0.4" />
-                                                                                        <GradientStop Color="#FFD6D5D5" Offset="0.8" />
+                                                                                        <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                        <GradientStop Offset="0.4" Color="#FFF0EFEF" />
+                                                                                        <GradientStop Offset="0.8" Color="#FFD6D5D5" />
                                                                                     </LinearGradientBrush.GradientStops>
                                                                                 </LinearGradientBrush>
                                                                             </Path.Fill>
                                                                         </Path>
-                                                                        <Path Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z" Stroke="#FFFFFFFF" StrokeThickness="1" Name="InnerBorder" />
-                                                                        <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Stroke="#FF929292" StrokeThickness="1" Name="OuterBorder" />
+                                                                        <Path
+                                                                            Name="InnerBorder"
+                                                                            Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z"
+                                                                            Stroke="#FFFFFFFF"
+                                                                            StrokeThickness="1" />
+                                                                        <Path
+                                                                            Name="OuterBorder"
+                                                                            Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z"
+                                                                            Stroke="#FF929292"
+                                                                            StrokeThickness="1" />
                                                                     </Canvas>
                                                                     <ControlTemplate.Triggers>
                                                                         <Trigger Property="UIElement.IsMouseOver">
-                                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                                 <Setter.Value>
                                                                                     <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                                         <LinearGradientBrush.GradientStops>
-                                                                                            <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                            <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                                            <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                                            <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                            <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                                            <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                                         </LinearGradientBrush.GradientStops>
                                                                                     </LinearGradientBrush>
                                                                                 </Setter.Value>
                                                                             </Setter>
-                                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                                 <Setter.Value>
                                                                                     <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                                 </Setter.Value>
@@ -147,18 +187,18 @@
                                                                             </Trigger.Value>
                                                                         </Trigger>
                                                                         <Trigger Property="TextElement.Foreground">
-                                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                                 <Setter.Value>
                                                                                     <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                                         <LinearGradientBrush.GradientStops>
-                                                                                            <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                            <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                                            <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                                            <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                            <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                                            <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                                         </LinearGradientBrush.GradientStops>
                                                                                     </LinearGradientBrush>
                                                                                 </Setter.Value>
                                                                             </Setter>
-                                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                                 <Setter.Value>
                                                                                     <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                                 </Setter.Value>
@@ -168,18 +208,18 @@
                                                                             </Trigger.Value>
                                                                         </Trigger>
                                                                         <Trigger Property="Thumb.IsDragging">
-                                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                                 <Setter.Value>
                                                                                     <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                                         <LinearGradientBrush.GradientStops>
-                                                                                            <GradientStop Color="#FFB8E4FA" Offset="0.25" />
-                                                                                            <GradientStop Color="#FF5EB4E3" Offset="0.5" />
-                                                                                            <GradientStop Color="#FF4C8BB4" Offset="1" />
+                                                                                            <GradientStop Offset="0.25" Color="#FFB8E4FA" />
+                                                                                            <GradientStop Offset="0.5" Color="#FF5EB4E3" />
+                                                                                            <GradientStop Offset="1" Color="#FF4C8BB4" />
                                                                                         </LinearGradientBrush.GradientStops>
                                                                                     </LinearGradientBrush>
                                                                                 </Setter.Value>
                                                                             </Setter>
-                                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                                 <Setter.Value>
                                                                                     <SolidColorBrush>#FF2C628B</SolidColorBrush>
                                                                                 </Setter.Value>
@@ -189,27 +229,27 @@
                                                                             </Trigger.Value>
                                                                         </Trigger>
                                                                         <Trigger Property="UIElement.IsEnabled">
-                                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                                 <Setter.Value>
                                                                                     <SolidColorBrush>#FFF4F4F4</SolidColorBrush>
                                                                                 </Setter.Value>
                                                                             </Setter>
-                                                                            <Setter Property="Shape.Stroke" TargetName="InnerBorder">
+                                                                            <Setter TargetName="InnerBorder" Property="Shape.Stroke">
                                                                                 <Setter.Value>
                                                                                     <x:Null />
                                                                                 </Setter.Value>
                                                                             </Setter>
-                                                                            <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                                            <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                                 <Setter.Value>
                                                                                     <StreamGeometry>M-5,-10.5L5,-10.5 5,10.5 -5,10.5z</StreamGeometry>
                                                                                 </Setter.Value>
                                                                             </Setter>
-                                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                                 <Setter.Value>
                                                                                     <SolidColorBrush>#FFAEB1AF</SolidColorBrush>
                                                                                 </Setter.Value>
                                                                             </Setter>
-                                                                            <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                                            <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                                 <Setter.Value>
                                                                                     <StreamGeometry>M4.5,-8.5L-4.5,-8.5 -4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z</StreamGeometry>
                                                                                 </Setter.Value>
@@ -267,12 +307,12 @@
                             </Border>
                             <ControlTemplate.Triggers>
                                 <Trigger Property="Slider.TickPlacement">
-                                    <Setter Property="UIElement.Visibility" TargetName="TopTick">
+                                    <Setter TargetName="TopTick" Property="UIElement.Visibility">
                                         <Setter.Value>
                                             <x:Static Member="Visibility.Visible" />
                                         </Setter.Value>
                                     </Setter>
-                                    <Setter Property="FrameworkElement.Style" TargetName="Thumb">
+                                    <Setter TargetName="Thumb" Property="FrameworkElement.Style">
                                         <Setter.Value>
                                             <Style TargetType="Thumb">
                                                 <Style.Resources>
@@ -315,34 +355,42 @@
                                                                         </TransformGroup.Children>
                                                                     </TransformGroup>
                                                                 </Canvas.RenderTransform>
-                                                                <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Name="Background">
+                                                                <Path Name="Background" Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z">
                                                                     <Path.Fill>
                                                                         <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                                                                             <LinearGradientBrush.GradientStops>
-                                                                                <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                <GradientStop Color="#FFF0EFEF" Offset="0.4" />
-                                                                                <GradientStop Color="#FFD6D5D5" Offset="0.8" />
+                                                                                <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                <GradientStop Offset="0.4" Color="#FFF0EFEF" />
+                                                                                <GradientStop Offset="0.8" Color="#FFD6D5D5" />
                                                                             </LinearGradientBrush.GradientStops>
                                                                         </LinearGradientBrush>
                                                                     </Path.Fill>
                                                                 </Path>
-                                                                <Path Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z" Stroke="#FFFFFFFF" StrokeThickness="1" Name="InnerBorder" />
-                                                                <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Stroke="#FF929292" StrokeThickness="1" Name="OuterBorder" />
+                                                                <Path
+                                                                    Name="InnerBorder"
+                                                                    Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z"
+                                                                    Stroke="#FFFFFFFF"
+                                                                    StrokeThickness="1" />
+                                                                <Path
+                                                                    Name="OuterBorder"
+                                                                    Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z"
+                                                                    Stroke="#FF929292"
+                                                                    StrokeThickness="1" />
                                                             </Canvas>
                                                             <ControlTemplate.Triggers>
                                                                 <Trigger Property="UIElement.IsMouseOver">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                                                                                 <LinearGradientBrush.GradientStops>
-                                                                                    <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                    <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                                    <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                                    <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                    <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                                    <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                                 </LinearGradientBrush.GradientStops>
                                                                             </LinearGradientBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                         </Setter.Value>
@@ -352,18 +400,18 @@
                                                                     </Trigger.Value>
                                                                 </Trigger>
                                                                 <Trigger Property="TextElement.Foreground">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                                                                                 <LinearGradientBrush.GradientStops>
-                                                                                    <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                    <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                                    <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                                    <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                    <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                                    <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                                 </LinearGradientBrush.GradientStops>
                                                                             </LinearGradientBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                         </Setter.Value>
@@ -373,18 +421,18 @@
                                                                     </Trigger.Value>
                                                                 </Trigger>
                                                                 <Trigger Property="Thumb.IsDragging">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                                                                                 <LinearGradientBrush.GradientStops>
-                                                                                    <GradientStop Color="#FFB8E4FA" Offset="0.25" />
-                                                                                    <GradientStop Color="#FF5EB4E3" Offset="0.5" />
-                                                                                    <GradientStop Color="#FF4C8BB4" Offset="1" />
+                                                                                    <GradientStop Offset="0.25" Color="#FFB8E4FA" />
+                                                                                    <GradientStop Offset="0.5" Color="#FF5EB4E3" />
+                                                                                    <GradientStop Offset="1" Color="#FF4C8BB4" />
                                                                                 </LinearGradientBrush.GradientStops>
                                                                             </LinearGradientBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FF2C628B</SolidColorBrush>
                                                                         </Setter.Value>
@@ -394,22 +442,22 @@
                                                                     </Trigger.Value>
                                                                 </Trigger>
                                                                 <Trigger Property="UIElement.IsEnabled">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FFF4F4F4</SolidColorBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="InnerBorder">
+                                                                    <Setter TargetName="InnerBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <x:Null />
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                         <Setter.Value>
                                                                             <StreamGeometry>M4.5,-8.5L-4.5,-8.5 -4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z</StreamGeometry>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FFAEB1AF</SolidColorBrush>
                                                                         </Setter.Value>
@@ -425,7 +473,7 @@
                                             </Style>
                                         </Setter.Value>
                                     </Setter>
-                                    <Setter Property="FrameworkElement.Margin" TargetName="TrackBackground">
+                                    <Setter TargetName="TrackBackground" Property="FrameworkElement.Margin">
                                         <Setter.Value>
                                             <Thickness>2,5,0,5</Thickness>
                                         </Setter.Value>
@@ -435,12 +483,12 @@
                                     </Trigger.Value>
                                 </Trigger>
                                 <Trigger Property="Slider.TickPlacement">
-                                    <Setter Property="UIElement.Visibility" TargetName="BottomTick">
+                                    <Setter TargetName="BottomTick" Property="UIElement.Visibility">
                                         <Setter.Value>
                                             <x:Static Member="Visibility.Visible" />
                                         </Setter.Value>
                                     </Setter>
-                                    <Setter Property="FrameworkElement.Style" TargetName="Thumb">
+                                    <Setter TargetName="Thumb" Property="FrameworkElement.Style">
                                         <Setter.Value>
                                             <Style TargetType="Thumb">
                                                 <Style.Resources>
@@ -483,34 +531,42 @@
                                                                         </TransformGroup.Children>
                                                                     </TransformGroup>
                                                                 </Canvas.RenderTransform>
-                                                                <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Name="Background">
+                                                                <Path Name="Background" Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z">
                                                                     <Path.Fill>
                                                                         <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
                                                                             <LinearGradientBrush.GradientStops>
-                                                                                <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                <GradientStop Color="#FFF0EFEF" Offset="0.4" />
-                                                                                <GradientStop Color="#FFD6D5D5" Offset="0.8" />
+                                                                                <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                <GradientStop Offset="0.4" Color="#FFF0EFEF" />
+                                                                                <GradientStop Offset="0.8" Color="#FFD6D5D5" />
                                                                             </LinearGradientBrush.GradientStops>
                                                                         </LinearGradientBrush>
                                                                     </Path.Fill>
                                                                 </Path>
-                                                                <Path Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z" Stroke="#FFFFFFFF" StrokeThickness="1" Name="InnerBorder" />
-                                                                <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Stroke="#FF929292" StrokeThickness="1" Name="OuterBorder" />
+                                                                <Path
+                                                                    Name="InnerBorder"
+                                                                    Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z"
+                                                                    Stroke="#FFFFFFFF"
+                                                                    StrokeThickness="1" />
+                                                                <Path
+                                                                    Name="OuterBorder"
+                                                                    Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z"
+                                                                    Stroke="#FF929292"
+                                                                    StrokeThickness="1" />
                                                             </Canvas>
                                                             <ControlTemplate.Triggers>
                                                                 <Trigger Property="UIElement.IsMouseOver">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
                                                                                 <LinearGradientBrush.GradientStops>
-                                                                                    <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                    <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                                    <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                                    <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                    <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                                    <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                                 </LinearGradientBrush.GradientStops>
                                                                             </LinearGradientBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                         </Setter.Value>
@@ -520,18 +576,18 @@
                                                                     </Trigger.Value>
                                                                 </Trigger>
                                                                 <Trigger Property="TextElement.Foreground">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
                                                                                 <LinearGradientBrush.GradientStops>
-                                                                                    <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                    <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                                    <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                                    <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                    <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                                    <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                                 </LinearGradientBrush.GradientStops>
                                                                             </LinearGradientBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                         </Setter.Value>
@@ -541,18 +597,18 @@
                                                                     </Trigger.Value>
                                                                 </Trigger>
                                                                 <Trigger Property="Thumb.IsDragging">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
                                                                                 <LinearGradientBrush.GradientStops>
-                                                                                    <GradientStop Color="#FFB8E4FA" Offset="0.25" />
-                                                                                    <GradientStop Color="#FF5EB4E3" Offset="0.5" />
-                                                                                    <GradientStop Color="#FF4C8BB4" Offset="1" />
+                                                                                    <GradientStop Offset="0.25" Color="#FFB8E4FA" />
+                                                                                    <GradientStop Offset="0.5" Color="#FF5EB4E3" />
+                                                                                    <GradientStop Offset="1" Color="#FF4C8BB4" />
                                                                                 </LinearGradientBrush.GradientStops>
                                                                             </LinearGradientBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FF2C628B</SolidColorBrush>
                                                                         </Setter.Value>
@@ -562,22 +618,22 @@
                                                                     </Trigger.Value>
                                                                 </Trigger>
                                                                 <Trigger Property="UIElement.IsEnabled">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FFF4F4F4</SolidColorBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="InnerBorder">
+                                                                    <Setter TargetName="InnerBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <x:Null />
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                         <Setter.Value>
                                                                             <StreamGeometry>M4.5,-8.5L-4.5,-8.5 -4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z</StreamGeometry>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FFAEB1AF</SolidColorBrush>
                                                                         </Setter.Value>
@@ -593,7 +649,7 @@
                                             </Style>
                                         </Setter.Value>
                                     </Setter>
-                                    <Setter Property="FrameworkElement.Margin" TargetName="TrackBackground">
+                                    <Setter TargetName="TrackBackground" Property="FrameworkElement.Margin">
                                         <Setter.Value>
                                             <Thickness>0,5,2,5</Thickness>
                                         </Setter.Value>
@@ -603,12 +659,12 @@
                                     </Trigger.Value>
                                 </Trigger>
                                 <Trigger Property="Slider.TickPlacement">
-                                    <Setter Property="UIElement.Visibility" TargetName="TopTick">
+                                    <Setter TargetName="TopTick" Property="UIElement.Visibility">
                                         <Setter.Value>
                                             <x:Static Member="Visibility.Visible" />
                                         </Setter.Value>
                                     </Setter>
-                                    <Setter Property="UIElement.Visibility" TargetName="BottomTick">
+                                    <Setter TargetName="BottomTick" Property="UIElement.Visibility">
                                         <Setter.Value>
                                             <x:Static Member="Visibility.Visible" />
                                         </Setter.Value>
@@ -618,7 +674,7 @@
                                     </Trigger.Value>
                                 </Trigger>
                                 <Trigger Property="Slider.IsSelectionRangeEnabled">
-                                    <Setter Property="UIElement.Visibility" TargetName="PART_SelectionRange">
+                                    <Setter TargetName="PART_SelectionRange" Property="UIElement.Visibility">
                                         <Setter.Value>
                                             <x:Static Member="Visibility.Visible" />
                                         </Setter.Value>
@@ -628,7 +684,7 @@
                                     </Trigger.Value>
                                 </Trigger>
                                 <Trigger Property="UIElement.IsKeyboardFocused">
-                                    <Setter Property="TextElement.Foreground" TargetName="Thumb">
+                                    <Setter TargetName="Thumb" Property="TextElement.Foreground">
                                         <Setter.Value>
                                             <SolidColorBrush>#FF0000FF</SolidColorBrush>
                                         </Setter.Value>
@@ -667,18 +723,46 @@
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Slider">
-                    <Border BorderThickness="{TemplateBinding Border.BorderThickness}" BorderBrush="{TemplateBinding Border.BorderBrush}" Background="{TemplateBinding Panel.Background}" SnapsToDevicePixels="True">
+                    <Border
+                        Background="{TemplateBinding Panel.Background}"
+                        BorderBrush="{TemplateBinding Border.BorderBrush}"
+                        BorderThickness="{TemplateBinding Border.BorderThickness}"
+                        SnapsToDevicePixels="True">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" MinHeight="{TemplateBinding FrameworkElement.MinHeight}" />
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
-                            <TickBar Fill="{TemplateBinding TextElement.Foreground}" Placement="Top" Name="TopTick" Height="4" Visibility="Collapsed" Grid.Row="0" />
-                            <TickBar Fill="{TemplateBinding TextElement.Foreground}" Placement="Bottom" Name="BottomTick" Height="4" Visibility="Collapsed" Grid.Row="2" />
-                            <Border BorderThickness="1,1,1,1" CornerRadius="1,1,1,1" Name="TrackBackground" Height="5" Margin="5,0,5,0" VerticalAlignment="Center" Grid.Row="1" Background="#FFC2C2C4">
+                            <TickBar
+                                Name="TopTick"
+                                Grid.Row="0"
+                                Height="4"
+                                Fill="{TemplateBinding TextElement.Foreground}"
+                                Placement="Top"
+                                Visibility="Collapsed" />
+                            <TickBar
+                                Name="BottomTick"
+                                Grid.Row="2"
+                                Height="4"
+                                Fill="{TemplateBinding TextElement.Foreground}"
+                                Placement="Bottom"
+                                Visibility="Collapsed" />
+                            <Border
+                                Name="TrackBackground"
+                                Grid.Row="1"
+                                Height="5"
+                                Margin="5,0,5,0"
+                                VerticalAlignment="Center"
+                                Background="#FFC2C2C4"
+                                BorderThickness="1,1,1,1"
+                                CornerRadius="1,1,1,1">
                                 <Canvas Margin="-6,-1,-6,-1">
-                                    <Rectangle Fill="{StaticResource Colorgreen}" Name="PART_SelectionRange" Height="5" Visibility="Hidden" />
+                                    <Rectangle
+                                        Name="PART_SelectionRange"
+                                        Height="5"
+                                        Fill="{StaticResource Colorgreen}"
+                                        Visibility="Hidden" />
                                 </Canvas>
                             </Border>
                             <Track Name="PART_Track" Grid.Row="1">
@@ -772,10 +856,17 @@
                                                                 <Path Data="M-5,-9.5A1,1,0,0,1,-4,-10.5L4,-10.5A1,1,0,0,1,5,-9.5L5,9.5A1,1,0,0,1,4,10.5L-4,10.5A1,1,0,0,1,-5,9.5z" Stroke="#FF929292" Name="OuterBorder" />
                                                             </Canvas>-->
                                                             <Grid>
-                                                                <Ellipse Width="15" Height="15" Stroke="#FFCCCCCD" Fill="White">
-                                                                </Ellipse>
-                                                                <Ellipse Width="5" Height="5" Fill="{StaticResource Colorgreen}" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                                                </Ellipse>
+                                                                <Ellipse
+                                                                    Width="15"
+                                                                    Height="15"
+                                                                    Fill="White"
+                                                                    Stroke="#FFCCCCCD" />
+                                                                <Ellipse
+                                                                    Width="5"
+                                                                    Height="5"
+                                                                    HorizontalAlignment="Center"
+                                                                    VerticalAlignment="Center"
+                                                                    Fill="{StaticResource Colorgreen}" />
                                                             </Grid>
                                                             <!--<ControlTemplate.Triggers>
                                                                 <Trigger Property="UIElement.IsMouseOver">
@@ -915,12 +1006,12 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="Slider.TickPlacement">
-                            <Setter Property="UIElement.Visibility" TargetName="TopTick">
+                            <Setter TargetName="TopTick" Property="UIElement.Visibility">
                                 <Setter.Value>
                                     <x:Static Member="Visibility.Visible" />
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="FrameworkElement.Style" TargetName="Thumb">
+                            <Setter TargetName="Thumb" Property="FrameworkElement.Style">
                                 <Setter.Value>
                                     <Style TargetType="Thumb">
                                         <Style.Resources>
@@ -963,34 +1054,42 @@
                                                                 </TransformGroup.Children>
                                                             </TransformGroup>
                                                         </Canvas.RenderTransform>
-                                                        <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Name="Background">
+                                                        <Path Name="Background" Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z">
                                                             <Path.Fill>
                                                                 <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                     <LinearGradientBrush.GradientStops>
-                                                                        <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                        <GradientStop Color="#FFF0EFEF" Offset="0.4" />
-                                                                        <GradientStop Color="#FFD6D5D5" Offset="0.8" />
+                                                                        <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                        <GradientStop Offset="0.4" Color="#FFF0EFEF" />
+                                                                        <GradientStop Offset="0.8" Color="#FFD6D5D5" />
                                                                     </LinearGradientBrush.GradientStops>
                                                                 </LinearGradientBrush>
                                                             </Path.Fill>
                                                         </Path>
-                                                        <Path Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z" Stroke="#FFFFFFFF" StrokeThickness="1" Name="InnerBorder" />
-                                                        <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Stroke="#FF929292" StrokeThickness="1" Name="OuterBorder" />
+                                                        <Path
+                                                            Name="InnerBorder"
+                                                            Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z"
+                                                            Stroke="#FFFFFFFF"
+                                                            StrokeThickness="1" />
+                                                        <Path
+                                                            Name="OuterBorder"
+                                                            Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z"
+                                                            Stroke="#FF929292"
+                                                            StrokeThickness="1" />
                                                     </Canvas>
                                                     <ControlTemplate.Triggers>
                                                         <Trigger Property="UIElement.IsMouseOver">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                         <LinearGradientBrush.GradientStops>
-                                                                            <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                            <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                            <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                            <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                            <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                            <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                         </LinearGradientBrush.GradientStops>
                                                                     </LinearGradientBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                 </Setter.Value>
@@ -1000,18 +1099,18 @@
                                                             </Trigger.Value>
                                                         </Trigger>
                                                         <Trigger Property="TextElement.Foreground">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                         <LinearGradientBrush.GradientStops>
-                                                                            <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                            <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                            <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                            <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                            <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                            <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                         </LinearGradientBrush.GradientStops>
                                                                     </LinearGradientBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                 </Setter.Value>
@@ -1021,18 +1120,18 @@
                                                             </Trigger.Value>
                                                         </Trigger>
                                                         <Trigger Property="Thumb.IsDragging">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                         <LinearGradientBrush.GradientStops>
-                                                                            <GradientStop Color="#FFB8E4FA" Offset="0.25" />
-                                                                            <GradientStop Color="#FF5EB4E3" Offset="0.5" />
-                                                                            <GradientStop Color="#FF4C8BB4" Offset="1" />
+                                                                            <GradientStop Offset="0.25" Color="#FFB8E4FA" />
+                                                                            <GradientStop Offset="0.5" Color="#FF5EB4E3" />
+                                                                            <GradientStop Offset="1" Color="#FF4C8BB4" />
                                                                         </LinearGradientBrush.GradientStops>
                                                                     </LinearGradientBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FF2C628B</SolidColorBrush>
                                                                 </Setter.Value>
@@ -1042,27 +1141,27 @@
                                                             </Trigger.Value>
                                                         </Trigger>
                                                         <Trigger Property="UIElement.IsEnabled">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FFF4F4F4</SolidColorBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="InnerBorder">
+                                                            <Setter TargetName="InnerBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <x:Null />
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                 <Setter.Value>
                                                                     <StreamGeometry>M-5,-10.5L5,-10.5 5,10.5 -5,10.5z</StreamGeometry>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FFAEB1AF</SolidColorBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                 <Setter.Value>
                                                                     <StreamGeometry>M4.5,-8.5L-4.5,-8.5 -4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z</StreamGeometry>
                                                                 </Setter.Value>
@@ -1078,7 +1177,7 @@
                                     </Style>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="FrameworkElement.Margin" TargetName="TrackBackground">
+                            <Setter TargetName="TrackBackground" Property="FrameworkElement.Margin">
                                 <Setter.Value>
                                     <Thickness>5,2,5,0</Thickness>
                                 </Setter.Value>
@@ -1088,12 +1187,12 @@
                             </Trigger.Value>
                         </Trigger>
                         <Trigger Property="Slider.TickPlacement">
-                            <Setter Property="UIElement.Visibility" TargetName="BottomTick">
+                            <Setter TargetName="BottomTick" Property="UIElement.Visibility">
                                 <Setter.Value>
                                     <x:Static Member="Visibility.Visible" />
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="FrameworkElement.Style" TargetName="Thumb">
+                            <Setter TargetName="Thumb" Property="FrameworkElement.Style">
                                 <Setter.Value>
                                     <Style TargetType="Thumb">
                                         <Style.Resources>
@@ -1131,34 +1230,42 @@
                                                         <Canvas.RenderTransform>
                                                             <TranslateTransform X="5" Y="9" />
                                                         </Canvas.RenderTransform>
-                                                        <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Name="Background">
+                                                        <Path Name="Background" Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z">
                                                             <Path.Fill>
                                                                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                                                                     <LinearGradientBrush.GradientStops>
-                                                                        <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                        <GradientStop Color="#FFF0EFEF" Offset="0.4" />
-                                                                        <GradientStop Color="#FFD6D5D5" Offset="0.8" />
+                                                                        <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                        <GradientStop Offset="0.4" Color="#FFF0EFEF" />
+                                                                        <GradientStop Offset="0.8" Color="#FFD6D5D5" />
                                                                     </LinearGradientBrush.GradientStops>
                                                                 </LinearGradientBrush>
                                                             </Path.Fill>
                                                         </Path>
-                                                        <Path Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z" Stroke="#FFFFFFFF" StrokeThickness="1" Name="InnerBorder" />
-                                                        <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Stroke="#FF929292" StrokeThickness="1" Name="OuterBorder" />
+                                                        <Path
+                                                            Name="InnerBorder"
+                                                            Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z"
+                                                            Stroke="#FFFFFFFF"
+                                                            StrokeThickness="1" />
+                                                        <Path
+                                                            Name="OuterBorder"
+                                                            Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z"
+                                                            Stroke="#FF929292"
+                                                            StrokeThickness="1" />
                                                     </Canvas>
                                                     <ControlTemplate.Triggers>
                                                         <Trigger Property="UIElement.IsMouseOver">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                                                                         <LinearGradientBrush.GradientStops>
-                                                                            <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                            <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                            <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                            <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                            <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                            <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                         </LinearGradientBrush.GradientStops>
                                                                     </LinearGradientBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                 </Setter.Value>
@@ -1168,18 +1275,18 @@
                                                             </Trigger.Value>
                                                         </Trigger>
                                                         <Trigger Property="TextElement.Foreground">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                                                                         <LinearGradientBrush.GradientStops>
-                                                                            <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                            <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                            <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                            <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                            <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                            <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                         </LinearGradientBrush.GradientStops>
                                                                     </LinearGradientBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                 </Setter.Value>
@@ -1189,18 +1296,18 @@
                                                             </Trigger.Value>
                                                         </Trigger>
                                                         <Trigger Property="Thumb.IsDragging">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                                                                         <LinearGradientBrush.GradientStops>
-                                                                            <GradientStop Color="#FFB8E4FA" Offset="0.25" />
-                                                                            <GradientStop Color="#FF5EB4E3" Offset="0.5" />
-                                                                            <GradientStop Color="#FF4C8BB4" Offset="1" />
+                                                                            <GradientStop Offset="0.25" Color="#FFB8E4FA" />
+                                                                            <GradientStop Offset="0.5" Color="#FF5EB4E3" />
+                                                                            <GradientStop Offset="1" Color="#FF4C8BB4" />
                                                                         </LinearGradientBrush.GradientStops>
                                                                     </LinearGradientBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FF2C628B</SolidColorBrush>
                                                                 </Setter.Value>
@@ -1210,27 +1317,27 @@
                                                             </Trigger.Value>
                                                         </Trigger>
                                                         <Trigger Property="UIElement.IsEnabled">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FFF4F4F4</SolidColorBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="InnerBorder">
+                                                            <Setter TargetName="InnerBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <x:Null />
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                 <Setter.Value>
                                                                     <StreamGeometry>M-5,-10.5L5,-10.5 5,10.5 -5,10.5z</StreamGeometry>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FFAEB1AF</SolidColorBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                 <Setter.Value>
                                                                     <StreamGeometry>M4.5,-8.5L-4.5,-8.5 -4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z</StreamGeometry>
                                                                 </Setter.Value>
@@ -1246,7 +1353,7 @@
                                     </Style>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="FrameworkElement.Margin" TargetName="TrackBackground">
+                            <Setter TargetName="TrackBackground" Property="FrameworkElement.Margin">
                                 <Setter.Value>
                                     <Thickness>5,0,5,2</Thickness>
                                 </Setter.Value>
@@ -1256,12 +1363,12 @@
                             </Trigger.Value>
                         </Trigger>
                         <Trigger Property="Slider.TickPlacement">
-                            <Setter Property="UIElement.Visibility" TargetName="TopTick">
+                            <Setter TargetName="TopTick" Property="UIElement.Visibility">
                                 <Setter.Value>
                                     <x:Static Member="Visibility.Visible" />
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="UIElement.Visibility" TargetName="BottomTick">
+                            <Setter TargetName="BottomTick" Property="UIElement.Visibility">
                                 <Setter.Value>
                                     <x:Static Member="Visibility.Visible" />
                                 </Setter.Value>
@@ -1271,7 +1378,7 @@
                             </Trigger.Value>
                         </Trigger>
                         <Trigger Property="Slider.IsSelectionRangeEnabled">
-                            <Setter Property="UIElement.Visibility" TargetName="PART_SelectionRange">
+                            <Setter TargetName="PART_SelectionRange" Property="UIElement.Visibility">
                                 <Setter.Value>
                                     <x:Static Member="Visibility.Visible" />
                                 </Setter.Value>
@@ -1281,7 +1388,7 @@
                             </Trigger.Value>
                         </Trigger>
                         <Trigger Property="UIElement.IsKeyboardFocused">
-                            <Setter Property="TextElement.Foreground" TargetName="Thumb">
+                            <Setter TargetName="Thumb" Property="TextElement.Foreground">
                                 <Setter.Value>
                                     <SolidColorBrush>#FF0000FF</SolidColorBrush>
                                 </Setter.Value>
@@ -1295,33 +1402,67 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style x:Key="DeskTopSlider" TargetType="Slider" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <Style
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:s="clr-namespace:System;assembly=mscorlib"
+        x:Key="DeskTopSlider"
+        TargetType="Slider">
         <Style.Triggers>
-            <!--垂直-->
+            <!--  垂直  -->
             <Trigger Property="Slider.Orientation">
                 <Setter Property="Control.Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="Slider">
-                            <Border BorderThickness="{TemplateBinding Border.BorderThickness}" BorderBrush="{TemplateBinding Border.BorderBrush}" Background="{TemplateBinding Panel.Background}" SnapsToDevicePixels="True">
+                            <Border
+                                Background="{TemplateBinding Panel.Background}"
+                                BorderBrush="{TemplateBinding Border.BorderBrush}"
+                                BorderThickness="{TemplateBinding Border.BorderThickness}"
+                                SnapsToDevicePixels="True">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="Auto" MinWidth="{TemplateBinding FrameworkElement.MinWidth}" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <TickBar Fill="{TemplateBinding TextElement.Foreground}" Placement="Left" Name="TopTick" Width="4" Visibility="Collapsed" Grid.Column="0" />
-                                    <TickBar Fill="{TemplateBinding TextElement.Foreground}" Placement="Right" Name="BottomTick" Width="4" Visibility="Collapsed" Grid.Column="2" />
-                                    <Border BorderThickness="1,1,1,1" Background="#FFE7EAEA" Name="TrackBackground" Width="4" Margin="0,5,0,5"  HorizontalAlignment="Center" Grid.Column="1">
+                                    <TickBar
+                                        Name="TopTick"
+                                        Grid.Column="0"
+                                        Width="4"
+                                        Fill="{TemplateBinding TextElement.Foreground}"
+                                        Placement="Left"
+                                        Visibility="Collapsed" />
+                                    <TickBar
+                                        Name="BottomTick"
+                                        Grid.Column="2"
+                                        Width="4"
+                                        Fill="{TemplateBinding TextElement.Foreground}"
+                                        Placement="Right"
+                                        Visibility="Collapsed" />
+                                    <Border
+                                        Name="TrackBackground"
+                                        Grid.Column="1"
+                                        Width="4"
+                                        Margin="0,5,0,5"
+                                        HorizontalAlignment="Center"
+                                        Background="#FFE7EAEA"
+                                        BorderThickness="1,1,1,1">
                                         <Border.BorderBrush>
                                             <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                                                 <LinearGradientBrush.GradientStops>
-                                                    <GradientStop Color="#FFAEB1AF" Offset="0.1" />
-                                                    <GradientStop Color="#FFFFFFFF" Offset="0.9" />
+                                                    <GradientStop Offset="0.1" Color="#FFAEB1AF" />
+                                                    <GradientStop Offset="0.9" Color="#FFFFFFFF" />
                                                 </LinearGradientBrush.GradientStops>
                                             </LinearGradientBrush>
                                         </Border.BorderBrush>
                                         <Canvas Margin="-1,-6,-1,-6">
-                                            <Rectangle Fill="White"  Stroke="Gray" StrokeThickness="1" Name="PART_SelectionRange" Width="4" Visibility="Hidden" />
+                                            <Rectangle
+                                                Name="PART_SelectionRange"
+                                                Width="4"
+                                                Fill="White"
+                                                Stroke="Gray"
+                                                StrokeThickness="1"
+                                                Visibility="Hidden" />
                                         </Canvas>
                                     </Border>
                                     <Track Name="PART_Track" Grid.Column="1">
@@ -1361,7 +1502,7 @@
                                                 </RepeatButton.Style>
                                             </RepeatButton>
                                         </Track.DecreaseRepeatButton>
-                                        <Track.Thumb >
+                                        <Track.Thumb>
                                             <Thumb Name="Thumb">
                                                 <Thumb.Style>
                                                     <Style TargetType="Thumb">
@@ -1405,34 +1546,42 @@
                                                                                 </TransformGroup.Children>
                                                                             </TransformGroup>
                                                                         </Canvas.RenderTransform>
-                                                                        <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Name="Background">
+                                                                        <Path Name="Background" Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z">
                                                                             <Path.Fill>
                                                                                 <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                                     <LinearGradientBrush.GradientStops>
-                                                                                        <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                        <GradientStop Color="#FFF0EFEF" Offset="0.4" />
-                                                                                        <GradientStop Color="#FFD6D5D5" Offset="0.8" />
+                                                                                        <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                        <GradientStop Offset="0.4" Color="#FFF0EFEF" />
+                                                                                        <GradientStop Offset="0.8" Color="#FFD6D5D5" />
                                                                                     </LinearGradientBrush.GradientStops>
                                                                                 </LinearGradientBrush>
                                                                             </Path.Fill>
                                                                         </Path>
-                                                                        <Path Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z" Stroke="#FFFFFFFF" StrokeThickness="1" Name="InnerBorder" />
-                                                                        <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Stroke="#FF929292" StrokeThickness="1" Name="OuterBorder" />
+                                                                        <Path
+                                                                            Name="InnerBorder"
+                                                                            Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z"
+                                                                            Stroke="#FFFFFFFF"
+                                                                            StrokeThickness="1" />
+                                                                        <Path
+                                                                            Name="OuterBorder"
+                                                                            Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z"
+                                                                            Stroke="#FF929292"
+                                                                            StrokeThickness="1" />
                                                                     </Canvas>
                                                                     <ControlTemplate.Triggers>
                                                                         <Trigger Property="UIElement.IsMouseOver">
-                                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                                 <Setter.Value>
                                                                                     <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                                         <LinearGradientBrush.GradientStops>
-                                                                                            <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                            <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                                            <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                                            <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                            <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                                            <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                                         </LinearGradientBrush.GradientStops>
                                                                                     </LinearGradientBrush>
                                                                                 </Setter.Value>
                                                                             </Setter>
-                                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                                 <Setter.Value>
                                                                                     <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                                 </Setter.Value>
@@ -1442,18 +1591,18 @@
                                                                             </Trigger.Value>
                                                                         </Trigger>
                                                                         <Trigger Property="TextElement.Foreground">
-                                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                                 <Setter.Value>
                                                                                     <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                                         <LinearGradientBrush.GradientStops>
-                                                                                            <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                            <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                                            <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                                            <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                            <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                                            <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                                         </LinearGradientBrush.GradientStops>
                                                                                     </LinearGradientBrush>
                                                                                 </Setter.Value>
                                                                             </Setter>
-                                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                                 <Setter.Value>
                                                                                     <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                                 </Setter.Value>
@@ -1463,18 +1612,18 @@
                                                                             </Trigger.Value>
                                                                         </Trigger>
                                                                         <Trigger Property="Thumb.IsDragging">
-                                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                                 <Setter.Value>
                                                                                     <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                                         <LinearGradientBrush.GradientStops>
-                                                                                            <GradientStop Color="#FFB8E4FA" Offset="0.25" />
-                                                                                            <GradientStop Color="#FF5EB4E3" Offset="0.5" />
-                                                                                            <GradientStop Color="#FF4C8BB4" Offset="1" />
+                                                                                            <GradientStop Offset="0.25" Color="#FFB8E4FA" />
+                                                                                            <GradientStop Offset="0.5" Color="#FF5EB4E3" />
+                                                                                            <GradientStop Offset="1" Color="#FF4C8BB4" />
                                                                                         </LinearGradientBrush.GradientStops>
                                                                                     </LinearGradientBrush>
                                                                                 </Setter.Value>
                                                                             </Setter>
-                                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                                 <Setter.Value>
                                                                                     <SolidColorBrush>#FF2C628B</SolidColorBrush>
                                                                                 </Setter.Value>
@@ -1484,27 +1633,27 @@
                                                                             </Trigger.Value>
                                                                         </Trigger>
                                                                         <Trigger Property="UIElement.IsEnabled">
-                                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                                 <Setter.Value>
                                                                                     <SolidColorBrush>#FFF4F4F4</SolidColorBrush>
                                                                                 </Setter.Value>
                                                                             </Setter>
-                                                                            <Setter Property="Shape.Stroke" TargetName="InnerBorder">
+                                                                            <Setter TargetName="InnerBorder" Property="Shape.Stroke">
                                                                                 <Setter.Value>
                                                                                     <x:Null />
                                                                                 </Setter.Value>
                                                                             </Setter>
-                                                                            <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                                            <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                                 <Setter.Value>
                                                                                     <StreamGeometry>M-5,-10.5L5,-10.5 5,10.5 -5,10.5z</StreamGeometry>
                                                                                 </Setter.Value>
                                                                             </Setter>
-                                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                                 <Setter.Value>
                                                                                     <SolidColorBrush>#FFAEB1AF</SolidColorBrush>
                                                                                 </Setter.Value>
                                                                             </Setter>
-                                                                            <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                                            <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                                 <Setter.Value>
                                                                                     <StreamGeometry>M4.5,-8.5L-4.5,-8.5 -4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z</StreamGeometry>
                                                                                 </Setter.Value>
@@ -1562,12 +1711,12 @@
                             </Border>
                             <ControlTemplate.Triggers>
                                 <Trigger Property="Slider.TickPlacement">
-                                    <Setter Property="UIElement.Visibility" TargetName="TopTick">
+                                    <Setter TargetName="TopTick" Property="UIElement.Visibility">
                                         <Setter.Value>
                                             <x:Static Member="Visibility.Visible" />
                                         </Setter.Value>
                                     </Setter>
-                                    <Setter Property="FrameworkElement.Style" TargetName="Thumb">
+                                    <Setter TargetName="Thumb" Property="FrameworkElement.Style">
                                         <Setter.Value>
                                             <Style TargetType="Thumb">
                                                 <Style.Resources>
@@ -1610,34 +1759,42 @@
                                                                         </TransformGroup.Children>
                                                                     </TransformGroup>
                                                                 </Canvas.RenderTransform>
-                                                                <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Name="Background">
+                                                                <Path Name="Background" Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z">
                                                                     <Path.Fill>
                                                                         <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                                                                             <LinearGradientBrush.GradientStops>
-                                                                                <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                <GradientStop Color="#FFF0EFEF" Offset="0.4" />
-                                                                                <GradientStop Color="#FFD6D5D5" Offset="0.8" />
+                                                                                <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                <GradientStop Offset="0.4" Color="#FFF0EFEF" />
+                                                                                <GradientStop Offset="0.8" Color="#FFD6D5D5" />
                                                                             </LinearGradientBrush.GradientStops>
                                                                         </LinearGradientBrush>
                                                                     </Path.Fill>
                                                                 </Path>
-                                                                <Path Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z" Stroke="#FFFFFFFF" StrokeThickness="1" Name="InnerBorder" />
-                                                                <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Stroke="#FF929292" StrokeThickness="1" Name="OuterBorder" />
+                                                                <Path
+                                                                    Name="InnerBorder"
+                                                                    Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z"
+                                                                    Stroke="#FFFFFFFF"
+                                                                    StrokeThickness="1" />
+                                                                <Path
+                                                                    Name="OuterBorder"
+                                                                    Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z"
+                                                                    Stroke="#FF929292"
+                                                                    StrokeThickness="1" />
                                                             </Canvas>
                                                             <ControlTemplate.Triggers>
                                                                 <Trigger Property="UIElement.IsMouseOver">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                                                                                 <LinearGradientBrush.GradientStops>
-                                                                                    <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                    <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                                    <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                                    <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                    <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                                    <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                                 </LinearGradientBrush.GradientStops>
                                                                             </LinearGradientBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                         </Setter.Value>
@@ -1647,18 +1804,18 @@
                                                                     </Trigger.Value>
                                                                 </Trigger>
                                                                 <Trigger Property="TextElement.Foreground">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                                                                                 <LinearGradientBrush.GradientStops>
-                                                                                    <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                    <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                                    <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                                    <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                    <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                                    <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                                 </LinearGradientBrush.GradientStops>
                                                                             </LinearGradientBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                         </Setter.Value>
@@ -1668,18 +1825,18 @@
                                                                     </Trigger.Value>
                                                                 </Trigger>
                                                                 <Trigger Property="Thumb.IsDragging">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                                                                                 <LinearGradientBrush.GradientStops>
-                                                                                    <GradientStop Color="#FFB8E4FA" Offset="0.25" />
-                                                                                    <GradientStop Color="#FF5EB4E3" Offset="0.5" />
-                                                                                    <GradientStop Color="#FF4C8BB4" Offset="1" />
+                                                                                    <GradientStop Offset="0.25" Color="#FFB8E4FA" />
+                                                                                    <GradientStop Offset="0.5" Color="#FF5EB4E3" />
+                                                                                    <GradientStop Offset="1" Color="#FF4C8BB4" />
                                                                                 </LinearGradientBrush.GradientStops>
                                                                             </LinearGradientBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FF2C628B</SolidColorBrush>
                                                                         </Setter.Value>
@@ -1689,22 +1846,22 @@
                                                                     </Trigger.Value>
                                                                 </Trigger>
                                                                 <Trigger Property="UIElement.IsEnabled">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FFF4F4F4</SolidColorBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="InnerBorder">
+                                                                    <Setter TargetName="InnerBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <x:Null />
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                         <Setter.Value>
                                                                             <StreamGeometry>M4.5,-8.5L-4.5,-8.5 -4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z</StreamGeometry>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FFAEB1AF</SolidColorBrush>
                                                                         </Setter.Value>
@@ -1720,7 +1877,7 @@
                                             </Style>
                                         </Setter.Value>
                                     </Setter>
-                                    <Setter Property="FrameworkElement.Margin" TargetName="TrackBackground">
+                                    <Setter TargetName="TrackBackground" Property="FrameworkElement.Margin">
                                         <Setter.Value>
                                             <Thickness>2,5,0,5</Thickness>
                                         </Setter.Value>
@@ -1730,12 +1887,12 @@
                                     </Trigger.Value>
                                 </Trigger>
                                 <Trigger Property="Slider.TickPlacement">
-                                    <Setter Property="UIElement.Visibility" TargetName="BottomTick">
+                                    <Setter TargetName="BottomTick" Property="UIElement.Visibility">
                                         <Setter.Value>
                                             <x:Static Member="Visibility.Visible" />
                                         </Setter.Value>
                                     </Setter>
-                                    <Setter Property="FrameworkElement.Style" TargetName="Thumb">
+                                    <Setter TargetName="Thumb" Property="FrameworkElement.Style">
                                         <Setter.Value>
                                             <Style TargetType="Thumb">
                                                 <Style.Resources>
@@ -1778,34 +1935,42 @@
                                                                         </TransformGroup.Children>
                                                                     </TransformGroup>
                                                                 </Canvas.RenderTransform>
-                                                                <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Name="Background">
+                                                                <Path Name="Background" Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z">
                                                                     <Path.Fill>
                                                                         <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
                                                                             <LinearGradientBrush.GradientStops>
-                                                                                <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                <GradientStop Color="#FFF0EFEF" Offset="0.4" />
-                                                                                <GradientStop Color="#FFD6D5D5" Offset="0.8" />
+                                                                                <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                <GradientStop Offset="0.4" Color="#FFF0EFEF" />
+                                                                                <GradientStop Offset="0.8" Color="#FFD6D5D5" />
                                                                             </LinearGradientBrush.GradientStops>
                                                                         </LinearGradientBrush>
                                                                     </Path.Fill>
                                                                 </Path>
-                                                                <Path Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z" Stroke="#FFFFFFFF" StrokeThickness="1" Name="InnerBorder" />
-                                                                <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Stroke="#FF929292" StrokeThickness="1" Name="OuterBorder" />
+                                                                <Path
+                                                                    Name="InnerBorder"
+                                                                    Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z"
+                                                                    Stroke="#FFFFFFFF"
+                                                                    StrokeThickness="1" />
+                                                                <Path
+                                                                    Name="OuterBorder"
+                                                                    Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z"
+                                                                    Stroke="#FF929292"
+                                                                    StrokeThickness="1" />
                                                             </Canvas>
                                                             <ControlTemplate.Triggers>
                                                                 <Trigger Property="UIElement.IsMouseOver">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
                                                                                 <LinearGradientBrush.GradientStops>
-                                                                                    <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                    <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                                    <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                                    <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                    <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                                    <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                                 </LinearGradientBrush.GradientStops>
                                                                             </LinearGradientBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                         </Setter.Value>
@@ -1815,18 +1980,18 @@
                                                                     </Trigger.Value>
                                                                 </Trigger>
                                                                 <Trigger Property="TextElement.Foreground">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
                                                                                 <LinearGradientBrush.GradientStops>
-                                                                                    <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                                    <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                                    <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                                    <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                                    <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                                    <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                                 </LinearGradientBrush.GradientStops>
                                                                             </LinearGradientBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                         </Setter.Value>
@@ -1836,18 +2001,18 @@
                                                                     </Trigger.Value>
                                                                 </Trigger>
                                                                 <Trigger Property="Thumb.IsDragging">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
                                                                                 <LinearGradientBrush.GradientStops>
-                                                                                    <GradientStop Color="#FFB8E4FA" Offset="0.25" />
-                                                                                    <GradientStop Color="#FF5EB4E3" Offset="0.5" />
-                                                                                    <GradientStop Color="#FF4C8BB4" Offset="1" />
+                                                                                    <GradientStop Offset="0.25" Color="#FFB8E4FA" />
+                                                                                    <GradientStop Offset="0.5" Color="#FF5EB4E3" />
+                                                                                    <GradientStop Offset="1" Color="#FF4C8BB4" />
                                                                                 </LinearGradientBrush.GradientStops>
                                                                             </LinearGradientBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FF2C628B</SolidColorBrush>
                                                                         </Setter.Value>
@@ -1857,22 +2022,22 @@
                                                                     </Trigger.Value>
                                                                 </Trigger>
                                                                 <Trigger Property="UIElement.IsEnabled">
-                                                                    <Setter Property="Shape.Fill" TargetName="Background">
+                                                                    <Setter TargetName="Background" Property="Shape.Fill">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FFF4F4F4</SolidColorBrush>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="InnerBorder">
+                                                                    <Setter TargetName="InnerBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <x:Null />
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                         <Setter.Value>
                                                                             <StreamGeometry>M4.5,-8.5L-4.5,-8.5 -4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z</StreamGeometry>
                                                                         </Setter.Value>
                                                                     </Setter>
-                                                                    <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                                    <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                         <Setter.Value>
                                                                             <SolidColorBrush>#FFAEB1AF</SolidColorBrush>
                                                                         </Setter.Value>
@@ -1888,7 +2053,7 @@
                                             </Style>
                                         </Setter.Value>
                                     </Setter>
-                                    <Setter Property="FrameworkElement.Margin" TargetName="TrackBackground">
+                                    <Setter TargetName="TrackBackground" Property="FrameworkElement.Margin">
                                         <Setter.Value>
                                             <Thickness>0,5,2,5</Thickness>
                                         </Setter.Value>
@@ -1898,12 +2063,12 @@
                                     </Trigger.Value>
                                 </Trigger>
                                 <Trigger Property="Slider.TickPlacement">
-                                    <Setter Property="UIElement.Visibility" TargetName="TopTick">
+                                    <Setter TargetName="TopTick" Property="UIElement.Visibility">
                                         <Setter.Value>
                                             <x:Static Member="Visibility.Visible" />
                                         </Setter.Value>
                                     </Setter>
-                                    <Setter Property="UIElement.Visibility" TargetName="BottomTick">
+                                    <Setter TargetName="BottomTick" Property="UIElement.Visibility">
                                         <Setter.Value>
                                             <x:Static Member="Visibility.Visible" />
                                         </Setter.Value>
@@ -1913,7 +2078,7 @@
                                     </Trigger.Value>
                                 </Trigger>
                                 <Trigger Property="Slider.IsSelectionRangeEnabled">
-                                    <Setter Property="UIElement.Visibility" TargetName="PART_SelectionRange">
+                                    <Setter TargetName="PART_SelectionRange" Property="UIElement.Visibility">
                                         <Setter.Value>
                                             <x:Static Member="Visibility.Visible" />
                                         </Setter.Value>
@@ -1923,7 +2088,7 @@
                                     </Trigger.Value>
                                 </Trigger>
                                 <Trigger Property="UIElement.IsKeyboardFocused">
-                                    <Setter Property="TextElement.Foreground" TargetName="Thumb">
+                                    <Setter TargetName="Thumb" Property="TextElement.Foreground">
                                         <Setter.Value>
                                             <SolidColorBrush>#FF0000FF</SolidColorBrush>
                                         </Setter.Value>
@@ -1946,7 +2111,7 @@
         </Style.Resources>
         <Setter Property="Effect">
             <Setter.Value>
-                <DropShadowEffect ShadowDepth="0" BlurRadius="3"/>
+                <DropShadowEffect BlurRadius="3" ShadowDepth="0" />
             </Setter.Value>
         </Setter>
         <Setter Property="Stylus.IsPressAndHoldEnabled">
@@ -1967,21 +2132,45 @@
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Slider">
-                    <Border BorderThickness="{TemplateBinding Border.BorderThickness}" BorderBrush="{TemplateBinding Border.BorderBrush}" Background="{TemplateBinding Panel.Background}" SnapsToDevicePixels="True">
+                    <Border
+                        Background="{TemplateBinding Panel.Background}"
+                        BorderBrush="{TemplateBinding Border.BorderBrush}"
+                        BorderThickness="{TemplateBinding Border.BorderThickness}"
+                        SnapsToDevicePixels="True">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" MinHeight="{TemplateBinding FrameworkElement.MinHeight}" />
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
-                            <TickBar Fill="{TemplateBinding TextElement.Foreground}" Placement="Top" Name="TopTick" Height="4" Visibility="Collapsed" Grid.Row="0" />
-                            <TickBar Fill="{TemplateBinding TextElement.Foreground}" Placement="Bottom" Name="BottomTick" Height="4" Visibility="Collapsed" Grid.Row="2" />
-                            <Border Margin="5,0,5,1" BorderThickness="1"  Name="TrackBackground" Height="3"  
-                                    VerticalAlignment="Center" Grid.Row="1" Background="#99FFFFFF">
+                            <TickBar
+                                Name="TopTick"
+                                Grid.Row="0"
+                                Height="4"
+                                Fill="{TemplateBinding TextElement.Foreground}"
+                                Placement="Top"
+                                Visibility="Collapsed" />
+                            <TickBar
+                                Name="BottomTick"
+                                Grid.Row="2"
+                                Height="4"
+                                Fill="{TemplateBinding TextElement.Foreground}"
+                                Placement="Bottom"
+                                Visibility="Collapsed" />
+                            <Border
+                                Name="TrackBackground"
+                                Grid.Row="1"
+                                Height="3"
+                                Margin="5,0,5,1"
+                                VerticalAlignment="Center"
+                                Background="#99FFFFFF"
+                                BorderThickness="1">
                                 <Canvas Margin="-10,0,0,-10">
-                                    <Rectangle  Name="PART_SelectionRange" Height="2" Visibility="Hidden" Fill="#BBFFFFFF">
-
-                                    </Rectangle>
+                                    <Rectangle
+                                        Name="PART_SelectionRange"
+                                        Height="2"
+                                        Fill="#BBFFFFFF"
+                                        Visibility="Hidden" />
                                 </Canvas>
                             </Border>
                             <Track Name="PART_Track" Grid.Row="1">
@@ -2075,11 +2264,19 @@
                                                                 <Path Data="M-5,-9.5A1,1,0,0,1,-4,-10.5L4,-10.5A1,1,0,0,1,5,-9.5L5,9.5A1,1,0,0,1,4,10.5L-4,10.5A1,1,0,0,1,-5,9.5z" Stroke="#FF929292" Name="OuterBorder" />
                                                             </Canvas>-->
                                                             <Grid>
-                                                                <Ellipse Width="18" Height="18"  Fill="#33FFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                                                    
-                                                                </Ellipse>
-                                                                <Ellipse   Margin="0,0,0,0" Width="8" Height="8"  Fill="White" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                                                </Ellipse>
+                                                                <Ellipse
+                                                                    Width="18"
+                                                                    Height="18"
+                                                                    HorizontalAlignment="Center"
+                                                                    VerticalAlignment="Center"
+                                                                    Fill="#33FFFFFF" />
+                                                                <Ellipse
+                                                                    Width="8"
+                                                                    Height="8"
+                                                                    Margin="0,0,0,0"
+                                                                    HorizontalAlignment="Center"
+                                                                    VerticalAlignment="Center"
+                                                                    Fill="White" />
                                                             </Grid>
                                                             <!--<ControlTemplate.Triggers>
                                                                 <Trigger Property="UIElement.IsMouseOver">
@@ -2219,12 +2416,12 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="Slider.TickPlacement">
-                            <Setter Property="UIElement.Visibility" TargetName="TopTick">
+                            <Setter TargetName="TopTick" Property="UIElement.Visibility">
                                 <Setter.Value>
                                     <x:Static Member="Visibility.Visible" />
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="FrameworkElement.Style" TargetName="Thumb">
+                            <Setter TargetName="Thumb" Property="FrameworkElement.Style">
                                 <Setter.Value>
                                     <Style TargetType="Thumb">
                                         <Style.Resources>
@@ -2267,34 +2464,42 @@
                                                                 </TransformGroup.Children>
                                                             </TransformGroup>
                                                         </Canvas.RenderTransform>
-                                                        <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Name="Background">
+                                                        <Path Name="Background" Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z">
                                                             <Path.Fill>
                                                                 <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                     <LinearGradientBrush.GradientStops>
-                                                                        <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                        <GradientStop Color="#FFF0EFEF" Offset="0.4" />
-                                                                        <GradientStop Color="#FFD6D5D5" Offset="0.8" />
+                                                                        <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                        <GradientStop Offset="0.4" Color="#FFF0EFEF" />
+                                                                        <GradientStop Offset="0.8" Color="#FFD6D5D5" />
                                                                     </LinearGradientBrush.GradientStops>
                                                                 </LinearGradientBrush>
                                                             </Path.Fill>
                                                         </Path>
-                                                        <Path Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z" Stroke="#FFFFFFFF" StrokeThickness="1" Name="InnerBorder" />
-                                                        <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Stroke="#FF929292" StrokeThickness="1" Name="OuterBorder" />
+                                                        <Path
+                                                            Name="InnerBorder"
+                                                            Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z"
+                                                            Stroke="#FFFFFFFF"
+                                                            StrokeThickness="1" />
+                                                        <Path
+                                                            Name="OuterBorder"
+                                                            Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z"
+                                                            Stroke="#FF929292"
+                                                            StrokeThickness="1" />
                                                     </Canvas>
                                                     <ControlTemplate.Triggers>
                                                         <Trigger Property="UIElement.IsMouseOver">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                         <LinearGradientBrush.GradientStops>
-                                                                            <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                            <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                            <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                            <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                            <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                            <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                         </LinearGradientBrush.GradientStops>
                                                                     </LinearGradientBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                 </Setter.Value>
@@ -2304,18 +2509,18 @@
                                                             </Trigger.Value>
                                                         </Trigger>
                                                         <Trigger Property="TextElement.Foreground">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                         <LinearGradientBrush.GradientStops>
-                                                                            <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                            <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                            <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                            <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                            <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                            <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                         </LinearGradientBrush.GradientStops>
                                                                     </LinearGradientBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                 </Setter.Value>
@@ -2325,18 +2530,18 @@
                                                             </Trigger.Value>
                                                         </Trigger>
                                                         <Trigger Property="Thumb.IsDragging">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                                         <LinearGradientBrush.GradientStops>
-                                                                            <GradientStop Color="#FFB8E4FA" Offset="0.25" />
-                                                                            <GradientStop Color="#FF5EB4E3" Offset="0.5" />
-                                                                            <GradientStop Color="#FF4C8BB4" Offset="1" />
+                                                                            <GradientStop Offset="0.25" Color="#FFB8E4FA" />
+                                                                            <GradientStop Offset="0.5" Color="#FF5EB4E3" />
+                                                                            <GradientStop Offset="1" Color="#FF4C8BB4" />
                                                                         </LinearGradientBrush.GradientStops>
                                                                     </LinearGradientBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FF2C628B</SolidColorBrush>
                                                                 </Setter.Value>
@@ -2346,27 +2551,27 @@
                                                             </Trigger.Value>
                                                         </Trigger>
                                                         <Trigger Property="UIElement.IsEnabled">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FFF4F4F4</SolidColorBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="InnerBorder">
+                                                            <Setter TargetName="InnerBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <x:Null />
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                 <Setter.Value>
                                                                     <StreamGeometry>M-5,-10.5L5,-10.5 5,10.5 -5,10.5z</StreamGeometry>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FFAEB1AF</SolidColorBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                 <Setter.Value>
                                                                     <StreamGeometry>M4.5,-8.5L-4.5,-8.5 -4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z</StreamGeometry>
                                                                 </Setter.Value>
@@ -2382,7 +2587,7 @@
                                     </Style>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="FrameworkElement.Margin" TargetName="TrackBackground">
+                            <Setter TargetName="TrackBackground" Property="FrameworkElement.Margin">
                                 <Setter.Value>
                                     <Thickness>5,2,5,0</Thickness>
                                 </Setter.Value>
@@ -2392,12 +2597,12 @@
                             </Trigger.Value>
                         </Trigger>
                         <Trigger Property="Slider.TickPlacement">
-                            <Setter Property="UIElement.Visibility" TargetName="BottomTick">
+                            <Setter TargetName="BottomTick" Property="UIElement.Visibility">
                                 <Setter.Value>
                                     <x:Static Member="Visibility.Visible" />
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="FrameworkElement.Style" TargetName="Thumb">
+                            <Setter TargetName="Thumb" Property="FrameworkElement.Style">
                                 <Setter.Value>
                                     <Style TargetType="Thumb">
                                         <Style.Resources>
@@ -2435,34 +2640,42 @@
                                                         <Canvas.RenderTransform>
                                                             <TranslateTransform X="5" Y="9" />
                                                         </Canvas.RenderTransform>
-                                                        <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Name="Background">
+                                                        <Path Name="Background" Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z">
                                                             <Path.Fill>
                                                                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                                                                     <LinearGradientBrush.GradientStops>
-                                                                        <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                        <GradientStop Color="#FFF0EFEF" Offset="0.4" />
-                                                                        <GradientStop Color="#FFD6D5D5" Offset="0.8" />
+                                                                        <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                        <GradientStop Offset="0.4" Color="#FFF0EFEF" />
+                                                                        <GradientStop Offset="0.8" Color="#FFD6D5D5" />
                                                                     </LinearGradientBrush.GradientStops>
                                                                 </LinearGradientBrush>
                                                             </Path.Fill>
                                                         </Path>
-                                                        <Path Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z" Stroke="#FFFFFFFF" StrokeThickness="1" Name="InnerBorder" />
-                                                        <Path Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z" Stroke="#FF929292" StrokeThickness="1" Name="OuterBorder" />
+                                                        <Path
+                                                            Name="InnerBorder"
+                                                            Data="M3.5,-7.5L-3.5,-7.5 -3.5,4.5 0,8 3.5,4.5z"
+                                                            Stroke="#FFFFFFFF"
+                                                            StrokeThickness="1" />
+                                                        <Path
+                                                            Name="OuterBorder"
+                                                            Data="M4.5,-7.5A1,1,0,0,0,3.5,-8.5L-3.5,-8.5A1,1,0,0,0,-4.5,-7.5L-4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z"
+                                                            Stroke="#FF929292"
+                                                            StrokeThickness="1" />
                                                     </Canvas>
                                                     <ControlTemplate.Triggers>
                                                         <Trigger Property="UIElement.IsMouseOver">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                                                                         <LinearGradientBrush.GradientStops>
-                                                                            <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                            <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                            <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                            <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                            <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                            <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                         </LinearGradientBrush.GradientStops>
                                                                     </LinearGradientBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                 </Setter.Value>
@@ -2472,18 +2685,18 @@
                                                             </Trigger.Value>
                                                         </Trigger>
                                                         <Trigger Property="TextElement.Foreground">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                                                                         <LinearGradientBrush.GradientStops>
-                                                                            <GradientStop Color="#FFFFFFFF" Offset="0" />
-                                                                            <GradientStop Color="#FFB8E2F9" Offset="0.5" />
-                                                                            <GradientStop Color="#FFB0DFF8" Offset="1" />
+                                                                            <GradientStop Offset="0" Color="#FFFFFFFF" />
+                                                                            <GradientStop Offset="0.5" Color="#FFB8E2F9" />
+                                                                            <GradientStop Offset="1" Color="#FFB0DFF8" />
                                                                         </LinearGradientBrush.GradientStops>
                                                                     </LinearGradientBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FF3C7FB1</SolidColorBrush>
                                                                 </Setter.Value>
@@ -2493,18 +2706,18 @@
                                                             </Trigger.Value>
                                                         </Trigger>
                                                         <Trigger Property="Thumb.IsDragging">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                                                                         <LinearGradientBrush.GradientStops>
-                                                                            <GradientStop Color="#FFB8E4FA" Offset="0.25" />
-                                                                            <GradientStop Color="#FF5EB4E3" Offset="0.5" />
-                                                                            <GradientStop Color="#FF4C8BB4" Offset="1" />
+                                                                            <GradientStop Offset="0.25" Color="#FFB8E4FA" />
+                                                                            <GradientStop Offset="0.5" Color="#FF5EB4E3" />
+                                                                            <GradientStop Offset="1" Color="#FF4C8BB4" />
                                                                         </LinearGradientBrush.GradientStops>
                                                                     </LinearGradientBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FF2C628B</SolidColorBrush>
                                                                 </Setter.Value>
@@ -2514,27 +2727,27 @@
                                                             </Trigger.Value>
                                                         </Trigger>
                                                         <Trigger Property="UIElement.IsEnabled">
-                                                            <Setter Property="Shape.Fill" TargetName="Background">
+                                                            <Setter TargetName="Background" Property="Shape.Fill">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FFF4F4F4</SolidColorBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="InnerBorder">
+                                                            <Setter TargetName="InnerBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <x:Null />
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                 <Setter.Value>
                                                                     <StreamGeometry>M-5,-10.5L5,-10.5 5,10.5 -5,10.5z</StreamGeometry>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Shape.Stroke" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Shape.Stroke">
                                                                 <Setter.Value>
                                                                     <SolidColorBrush>#FFAEB1AF</SolidColorBrush>
                                                                 </Setter.Value>
                                                             </Setter>
-                                                            <Setter Property="Path.Data" TargetName="OuterBorder">
+                                                            <Setter TargetName="OuterBorder" Property="Path.Data">
                                                                 <Setter.Value>
                                                                     <StreamGeometry>M4.5,-8.5L-4.5,-8.5 -4.5,4.5 -0.5,8.5 0.5,8.5 4.5,4.5z</StreamGeometry>
                                                                 </Setter.Value>
@@ -2550,7 +2763,7 @@
                                     </Style>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="FrameworkElement.Margin" TargetName="TrackBackground">
+                            <Setter TargetName="TrackBackground" Property="FrameworkElement.Margin">
                                 <Setter.Value>
                                     <Thickness>5,0,5,2</Thickness>
                                 </Setter.Value>
@@ -2560,12 +2773,12 @@
                             </Trigger.Value>
                         </Trigger>
                         <Trigger Property="Slider.TickPlacement">
-                            <Setter Property="UIElement.Visibility" TargetName="TopTick">
+                            <Setter TargetName="TopTick" Property="UIElement.Visibility">
                                 <Setter.Value>
                                     <x:Static Member="Visibility.Visible" />
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="UIElement.Visibility" TargetName="BottomTick">
+                            <Setter TargetName="BottomTick" Property="UIElement.Visibility">
                                 <Setter.Value>
                                     <x:Static Member="Visibility.Visible" />
                                 </Setter.Value>
@@ -2575,7 +2788,7 @@
                             </Trigger.Value>
                         </Trigger>
                         <Trigger Property="Slider.IsSelectionRangeEnabled">
-                            <Setter Property="UIElement.Visibility" TargetName="PART_SelectionRange">
+                            <Setter TargetName="PART_SelectionRange" Property="UIElement.Visibility">
                                 <Setter.Value>
                                     <x:Static Member="Visibility.Visible" />
                                 </Setter.Value>
@@ -2585,7 +2798,7 @@
                             </Trigger.Value>
                         </Trigger>
                         <Trigger Property="UIElement.IsKeyboardFocused">
-                            <Setter Property="TextElement.Foreground" TargetName="Thumb">
+                            <Setter TargetName="Thumb" Property="TextElement.Foreground">
                                 <Setter.Value>
                                     <SolidColorBrush>#FF0000FF</SolidColorBrush>
                                 </Setter.Value>

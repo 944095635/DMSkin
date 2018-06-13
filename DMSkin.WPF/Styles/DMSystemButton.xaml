@@ -1,19 +1,26 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:dm="clr-namespace:DMSkin.WPF.Controls">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dm="clr-namespace:DMSkin.WPF.Controls">
     <!--#region 系统按钮-->
     <Style TargetType="{x:Type dm:DMSystemMinButton}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type dm:DMSystemMinButton}">
-                    <Grid x:Name="grid" Height="{Binding DMSystemButtonSize, RelativeSource={RelativeSource TemplatedParent}}" 
-                          Width="{Binding DMSystemButtonSize, RelativeSource={RelativeSource TemplatedParent}}" Background="#00FFFFFF">
-                        <Label HorizontalAlignment="Center" VerticalAlignment="Center" >
-                            <Path x:Name="Content" Data="F1M0,6L0,9 9,9 9,6 0,6z" 
-                              Stretch="Fill" Width="12" Height="3"
-                              SnapsToDevicePixels="True" 
-                              Fill="{Binding DMSystemButtonForeground, RelativeSource={RelativeSource TemplatedParent}}" >
-                            </Path>
+                    <Grid
+                        x:Name="grid"
+                        Width="{Binding DMSystemButtonSize, RelativeSource={RelativeSource TemplatedParent}}"
+                        Height="{Binding DMSystemButtonSize, RelativeSource={RelativeSource TemplatedParent}}"
+                        Background="#00FFFFFF">
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Path
+                                x:Name="Content"
+                                Width="12"
+                                Height="3"
+                                Data="F1M0,6L0,9 9,9 9,6 0,6z"
+                                Fill="{Binding DMSystemButtonForeground, RelativeSource={RelativeSource TemplatedParent}}"
+                                SnapsToDevicePixels="True"
+                                Stretch="Fill" />
                         </Label>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -34,14 +41,21 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type dm:DMSystemMaxButton}">
-                    <Grid x:Name="grid" Height="{Binding DMSystemButtonSize, RelativeSource={RelativeSource TemplatedParent}}" 
-                          Width="{Binding DMSystemButtonSize, RelativeSource={RelativeSource TemplatedParent}}" Background="#00FFFFFF"
-                          Tag="{Binding IsMax, RelativeSource={RelativeSource TemplatedParent}}">
-                        <Label HorizontalAlignment="Center" VerticalAlignment="Center" >
-                            <Path x:Name="Content" Data="F1M0,0L0,9 9,9 9,0 0,0 0,3 8,3 8,8 1,8 1,3z" Stretch="Fill" Width="12" Height="12"
-                              SnapsToDevicePixels="True" 
-                              Fill="{Binding DMSystemButtonForeground, RelativeSource={RelativeSource TemplatedParent}}" >
-                            </Path>
+                    <Grid
+                        x:Name="grid"
+                        Width="{Binding DMSystemButtonSize, RelativeSource={RelativeSource TemplatedParent}}"
+                        Height="{Binding DMSystemButtonSize, RelativeSource={RelativeSource TemplatedParent}}"
+                        Background="#00FFFFFF"
+                        Tag="{Binding IsMax, RelativeSource={RelativeSource TemplatedParent}}">
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Path
+                                x:Name="Content"
+                                Width="12"
+                                Height="12"
+                                Data="F1M0,0L0,9 9,9 9,0 0,0 0,3 8,3 8,8 1,8 1,3z"
+                                Fill="{Binding DMSystemButtonForeground, RelativeSource={RelativeSource TemplatedParent}}"
+                                SnapsToDevicePixels="True"
+                                Stretch="Fill" />
                         </Label>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -49,7 +63,7 @@
                             <Setter TargetName="Content" Property="Fill" Value="{Binding DMSystemButtonHoverForeground, RelativeSource={RelativeSource TemplatedParent}}" />
                             <Setter TargetName="grid" Property="Background" Value="{Binding DMSystemButtonHoverColor, RelativeSource={RelativeSource TemplatedParent}}" />
                         </Trigger>
-                        <DataTrigger Binding="{Binding ElementName=grid,Path=Tag}" Value="True">
+                        <DataTrigger Binding="{Binding ElementName=grid, Path=Tag}" Value="True">
                             <Setter TargetName="Content" Property="Data" Value="F1M0,10L0,3 3,3 3,0 10,0 10,2 4,2 4,3 7,3 7,6 6,6 6,5 1,5 1,10z M1,10L7,10 7,7 10,7 10,2 9,2 9,6 6,6 6,9 1,9z" />
                         </DataTrigger>
                         <Trigger Property="IsPressed" Value="True">
@@ -65,14 +79,20 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type dm:DMSystemCloseButton}">
-                    <Grid x:Name="grid" Height="{Binding DMSystemButtonSize, RelativeSource={RelativeSource TemplatedParent}}" 
-                          Width="{Binding DMSystemButtonSize, RelativeSource={RelativeSource TemplatedParent}}" Background="#00FFFFFF">
-                        <Label HorizontalAlignment="Center" VerticalAlignment="Center" >
-                            <Path x:Name="Content" Data="m12.65194,6.64088l-2.65193,2.65194l-2.65195,-2.65194c-0.19527,-0.19528 -0.51189,-0.19528 -0.70718,0c-0.19529,0.19528 -0.19528,0.5119 0,0.70718l2.65194,2.65195l-2.65194,2.65193c-0.19528,0.19528 -0.19528,0.51191 0,0.70719c0.19528,0.19528 0.5119,0.19528 0.70718,0l2.65195,-2.65194l2.65193,2.65194c0.19528,0.19528 0.5119,0.19528 0.70719,0c0.19528,-0.19528 0.19528,-0.51191 0,-0.70719l-2.65194,-2.65193l2.65194,-2.65195c0.19528,-0.19527 0.19528,-0.51189 0,-0.70718c-0.19528,-0.19528 -0.5119,-0.19528 -0.70719,0z"
-                                  Stretch="Fill" Width="12" Height="12"
-                              SnapsToDevicePixels="True" 
-                              Fill="{Binding DMSystemButtonForeground, RelativeSource={RelativeSource TemplatedParent}}" >
-                            </Path>
+                    <Grid
+                        x:Name="grid"
+                        Width="{Binding DMSystemButtonSize, RelativeSource={RelativeSource TemplatedParent}}"
+                        Height="{Binding DMSystemButtonSize, RelativeSource={RelativeSource TemplatedParent}}"
+                        Background="#00FFFFFF">
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Path
+                                x:Name="Content"
+                                Width="12"
+                                Height="12"
+                                Data="m12.65194,6.64088l-2.65193,2.65194l-2.65195,-2.65194c-0.19527,-0.19528 -0.51189,-0.19528 -0.70718,0c-0.19529,0.19528 -0.19528,0.5119 0,0.70718l2.65194,2.65195l-2.65194,2.65193c-0.19528,0.19528 -0.19528,0.51191 0,0.70719c0.19528,0.19528 0.5119,0.19528 0.70718,0l2.65195,-2.65194l2.65193,2.65194c0.19528,0.19528 0.5119,0.19528 0.70719,0c0.19528,-0.19528 0.19528,-0.51191 0,-0.70719l-2.65194,-2.65193l2.65194,-2.65195c0.19528,-0.19527 0.19528,-0.51189 0,-0.70718c-0.19528,-0.19528 -0.5119,-0.19528 -0.70719,0z"
+                                Fill="{Binding DMSystemButtonForeground, RelativeSource={RelativeSource TemplatedParent}}"
+                                SnapsToDevicePixels="True"
+                                Stretch="Fill" />
                         </Label>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -89,5 +109,5 @@
         </Setter>
     </Style>
     <!--#endregion-->
-    
+
 </ResourceDictionary>

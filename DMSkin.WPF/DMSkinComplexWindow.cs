@@ -20,7 +20,6 @@ namespace DMSkin.WPF
     /// </summary>
     public partial class DMSkinComplexWindow : Window
     {
-
         #region 初始化
         public DMSkinComplexWindow()
         {
@@ -34,8 +33,6 @@ namespace DMSkin.WPF
             SizeChanged += MainWindow_SizeChanged;
             LocationChanged += MainWindow_LocationChanged;
         }
-
-
         #endregion
 
         #region 切换单双窗口模式
@@ -121,7 +118,6 @@ namespace DMSkin.WPF
         #endregion
 
         #region 系统函数
-
         IntPtr Handle = IntPtr.Zero;
         void MainWindow_SourceInitialized(object sender, EventArgs e)
         {

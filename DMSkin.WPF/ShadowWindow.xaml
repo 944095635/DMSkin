@@ -1,17 +1,28 @@
-﻿<Window x:Class="DMSkin.WPF.ShadowWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d"  AllowsTransparency="True" 
-        WindowStyle="None"   IsTabStop="False" Focusable="False" 
-        IsHitTestVisible="False" IsEnabled="False"
-        Background="Transparent" ShowInTaskbar="False" 
-        Title="" Height="0" Width="0">
+﻿<Window
+    x:Class="DMSkin.WPF.ShadowWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title=""
+    Width="0"
+    Height="0"
+    AllowsTransparency="True"
+    Background="Transparent"
+    Focusable="False"
+    IsEnabled="False"
+    IsHitTestVisible="False"
+    IsTabStop="False"
+    ShowInTaskbar="False"
+    WindowStyle="None"
+    mc:Ignorable="d">
     <Grid Margin="30" Background="White">
-            <Grid.Effect>
-                <DropShadowEffect BlurRadius="{Binding DMWindowShadowSize}" ShadowDepth="0" Color="{Binding DMWindowShadowColor}"></DropShadowEffect>
-            </Grid.Effect>
-        <Rectangle Fill="{Binding DMWindowShadowBackColor}"></Rectangle>
+        <Grid.Effect>
+            <DropShadowEffect
+                BlurRadius="{Binding DMWindowShadowSize}"
+                ShadowDepth="0"
+                Color="{Binding DMWindowShadowColor}" />
+        </Grid.Effect>
+        <Rectangle Fill="{Binding DMWindowShadowBackColor}" />
     </Grid>
 </Window>

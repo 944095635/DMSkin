@@ -3,9 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:DMSkin.WPF.Controls"
     xmlns:converters="clr-namespace:DMSkin.WPF.Converters">
-
     <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
-
     <Style TargetType="{x:Type controls:DMTextBox}">
         <Setter Property="MinHeight" Value="30" />
         <Setter Property="Foreground" Value="#FF3F3F3F" />

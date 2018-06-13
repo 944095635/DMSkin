@@ -2,8 +2,6 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:dm="clr-namespace:DMSkin.WPF.Controls">
-
-
     <Style x:Key="DMButton" TargetType="Button">
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Width" Value="260" />
@@ -40,21 +38,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!--#region 模仿百度翻译的按钮-->
     <Style x:Key="BaiDuTranslateButton" TargetType="Button">
         <Setter Property="VerticalContentAlignment" Value="Center" />
@@ -89,15 +72,6 @@
         </Setter>
     </Style>
     <!--#endregion-->
-
-
-
-
-
-
-
-
-
 
     <Style x:Key="DMBorButton" TargetType="Button">
         <Setter Property="Effect">
@@ -161,7 +135,6 @@
         </Setter>
     </Style>
 
-
     <Style x:Key="TextGraySelectButtonNoBor" TargetType="{x:Type Button}">
         <Setter Property="Template">
             <Setter.Value>
@@ -190,6 +163,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+
     <Style x:Key="TextButtonNoBor" TargetType="{x:Type Button}">
         <Setter Property="Foreground" Value="#FF0C73C2" />
         <Setter Property="Template">
