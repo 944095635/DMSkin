@@ -18,8 +18,11 @@ The follwing chart can show you the differences between `DMSkinComplexWindow` an
 
 
 | Plan       | Transparency   |  Animation |
+
 | :----: | :---:  | :----:  | :---: |
+
 | DMSkinComplexWindow     | Not Support |  Support |
+
 | DMSkinSimpleWindow      |  Support   |   Not Support |
 
 ## Installation
