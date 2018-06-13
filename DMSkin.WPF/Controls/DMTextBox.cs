@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -11,9 +6,6 @@ namespace DMSkin.WPF.Controls
 {
     public class DMTextBox : TextBox
     {
-
-
-
         public string Hint
         {
             get { return (string)GetValue(HintProperty); }

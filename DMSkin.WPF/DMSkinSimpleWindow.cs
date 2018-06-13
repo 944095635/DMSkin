@@ -1,7 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Diagnostics;
-using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,14 +8,13 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 
 namespace DMSkin.WPF
 {
     /// <summary>
     /// 单层窗体
     /// </summary>
-    public partial class DMSkinSimpleWindow : Window
+    public partial class DMSkinSimpleWindow:Window
     {
         #region 初始化
         public DMSkinSimpleWindow()

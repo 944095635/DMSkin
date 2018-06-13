@@ -1,5 +1,4 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <SolidColorBrush x:Key="LineColor">#44C8C8C8</SolidColorBrush>
 
@@ -7,25 +6,41 @@
 
     <FontFamily x:Key="IconFont">/DMSkin.WPF.Demos;component/Fonts/#iconfont</FontFamily>
 
-    <!--个性提示框-->
+    <!--  个性提示框  -->
     <Style x:Name="ToolTipBox" TargetType="ToolTip">
-        <Setter Property="Foreground" Value="White"></Setter>
-        <Setter Property="Placement"  Value="Center"></Setter>
-        <Setter Property="VerticalOffset"  Value="-30"></Setter>
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Placement" Value="Center" />
+        <Setter Property="VerticalOffset" Value="-30" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToolTip}">
                     <Grid Margin="5">
-                        <Border CornerRadius="3" Margin="0,0,0,6" Background="White" Padding="10,0,10,0">
+                        <Border
+                            Margin="0,0,0,6"
+                            Padding="10,0,10,0"
+                            Background="White"
+                            CornerRadius="3">
                             <Border.Effect>
-                                <DropShadowEffect ShadowDepth="0" Color="#FFA2A2A2" BlurRadius="3" />
+                                <DropShadowEffect
+                                    BlurRadius="3"
+                                    ShadowDepth="0"
+                                    Color="#FFA2A2A2" />
                             </Border.Effect>
                         </Border>
-                        <Border x:Name="grid" Margin="0,0,0,6" CornerRadius="1" Background="{StaticResource MainColor}" Padding="10,0,10,0">
-                            <ContentPresenter Margin="6"></ContentPresenter>
+                        <Border
+                            x:Name="grid"
+                            Margin="0,0,0,6"
+                            Padding="10,0,10,0"
+                            Background="{StaticResource MainColor}"
+                            CornerRadius="1">
+                            <ContentPresenter Margin="6" />
                         </Border>
-                        <Polygon x:Name="ButtonPolygon" VerticalAlignment="Bottom" Points="0,0 12,0 6,6" 
-                                     Fill="{StaticResource MainColor}" HorizontalAlignment="Center"></Polygon>
+                        <Polygon
+                            x:Name="ButtonPolygon"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom"
+                            Fill="{StaticResource MainColor}"
+                            Points="0,0 12,0 6,6" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -40,11 +55,19 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Grid x:Name="grid" Height="{Binding DMTitleSize}" Width="{Binding DMTitleSize}" Background="#00FFFFFF" >
-                        <Label x:Name="contentPresenter"  Foreground="#FF777777" 
-                                       FontFamily="{StaticResource IconFont}" 
-                                       Content="{TemplateBinding Tag}" FontSize="{TemplateBinding FontSize}" 
-                                       HorizontalContentAlignment="Center" VerticalAlignment="Center" ></Label>
+                    <Grid
+                        x:Name="grid"
+                        Width="{Binding DMTitleSize}"
+                        Height="{Binding DMTitleSize}"
+                        Background="#00FFFFFF">
+                        <Label
+                            x:Name="contentPresenter"
+                            VerticalAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            Content="{TemplateBinding Tag}"
+                            FontFamily="{StaticResource IconFont}"
+                            FontSize="{TemplateBinding FontSize}"
+                            Foreground="#FF777777" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -62,8 +85,8 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
 
 
@@ -71,43 +94,46 @@
         <Setter Property="FontSize" Value="16" />
         <Setter Property="Effect">
             <Setter.Value>
-                <DropShadowEffect ShadowDepth="0" BlurRadius="3"/>
+                <DropShadowEffect BlurRadius="3" ShadowDepth="0" />
             </Setter.Value>
         </Setter>
     </Style>
 
     <Style x:Key="LoginInput" TargetType="TextBox">
         <!--<Setter Property="Foreground" Value="#999999"></Setter>-->
-        <Setter Property="Background" Value="Transparent"></Setter>
-        <Setter Property="BorderBrush" Value="Transparent"></Setter>
-        <Setter Property="BorderThickness" Value="0"></Setter>
-        <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
-        <Setter Property="VerticalContentAlignment" Value="Top"></Setter>
-        <Setter Property="Padding" Value="7,11,9,11"></Setter>
-        <Setter Property="CaretBrush" Value="Gainsboro"></Setter>
-        <Setter Property="FontSize" Value="23"></Setter>
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Top" />
+        <Setter Property="Padding" Value="7,11,9,11" />
+        <Setter Property="CaretBrush" Value="Gainsboro" />
+        <Setter Property="FontSize" Value="23" />
     </Style>
 
     <Style x:Key="Title" TargetType="TextBlock">
-        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
-        <Setter Property="VerticalAlignment" Value="Center"></Setter>
-        <Setter Property="Foreground" Value="White"></Setter>
-        <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontSize" Value="20" />
         <Setter Property="Effect">
             <Setter.Value>
-                <DropShadowEffect ShadowDepth="1"/>
+                <DropShadowEffect ShadowDepth="1" />
             </Setter.Value>
         </Setter>
     </Style>
 
     <Style x:Key="Title1" TargetType="TextBlock">
-        <Setter Property="Foreground" Value="#FFFAFAFF"></Setter>
+        <Setter Property="Foreground" Value="#FFFAFAFF" />
     </Style>
 
 
-    <Style x:Key="DMTabControlLeft" TargetType="TabControl" 
-           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-           xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <Style
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:s="clr-namespace:System;assembly=mscorlib"
+        x:Key="DMTabControlLeft"
+        TargetType="TabControl">
         <Style.Resources>
             <ResourceDictionary />
         </Style.Resources>
@@ -149,51 +175,78 @@
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TabControl">
-                    <Grid ClipToBounds="True" SnapsToDevicePixels="True" KeyboardNavigation.TabNavigation="Local">
+                    <Grid
+                        ClipToBounds="True"
+                        KeyboardNavigation.TabNavigation="Local"
+                        SnapsToDevicePixels="True">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Name="ColumnDefinition0" />
-                            <ColumnDefinition Width="0" Name="ColumnDefinition1" />
+                            <ColumnDefinition Name="ColumnDefinition1" Width="0" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="60" Name="RowDefinition0" />
-                            <RowDefinition Height="*" Name="RowDefinition1" />
+                            <RowDefinition Name="RowDefinition0" Height="60" />
+                            <RowDefinition Name="RowDefinition1" Height="*" />
                         </Grid.RowDefinitions>
-                        <Border Margin="0,0,0,200" Grid.Column="0" Grid.Row="0"  BorderThickness="0,0,1,0" BorderBrush="{StaticResource LineColor}">
-                            <ScrollViewer Style="{StaticResource for_scrollviewer}" HorizontalScrollBarVisibility="Disabled">
+                        <Border
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="0,0,0,200"
+                            BorderBrush="{StaticResource LineColor}"
+                            BorderThickness="0,0,1,0">
+                            <ScrollViewer HorizontalScrollBarVisibility="Disabled" Style="{StaticResource for_scrollviewer}">
                                 <StackPanel>
-                                    <Border Height="25"></Border>
-                                    <TabPanel IsItemsHost="True"  Name="HeaderPanel" 
-                                      Panel.ZIndex="1"  KeyboardNavigation.TabIndex="1" />
+                                    <Border Height="25" />
+                                    <TabPanel
+                                        Name="HeaderPanel"
+                                        Panel.ZIndex="1"
+                                        IsItemsHost="True"
+                                        KeyboardNavigation.TabIndex="1" />
                                 </StackPanel>
                             </ScrollViewer>
                         </Border>
-                        <Border BorderThickness="{TemplateBinding Border.BorderThickness}" BorderBrush="{TemplateBinding Border.BorderBrush}" Background="{TemplateBinding Panel.Background}" Name="ContentPanel" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local" KeyboardNavigation.DirectionalNavigation="Contained" Grid.Column="0" Grid.Row="1">
-                            <ContentPresenter Content="{TemplateBinding TabControl.SelectedContent}" ContentTemplate="{TemplateBinding TabControl.SelectedContentTemplate}" ContentStringFormat="{TemplateBinding TabControl.SelectedContentStringFormat}" ContentSource="SelectedContent" Name="PART_SelectedContentHost" Margin="{TemplateBinding Control.Padding}" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+                        <Border
+                            Name="ContentPanel"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Background="{TemplateBinding Panel.Background}"
+                            BorderBrush="{TemplateBinding Border.BorderBrush}"
+                            BorderThickness="{TemplateBinding Border.BorderThickness}"
+                            KeyboardNavigation.DirectionalNavigation="Contained"
+                            KeyboardNavigation.TabIndex="2"
+                            KeyboardNavigation.TabNavigation="Local">
+                            <ContentPresenter
+                                Name="PART_SelectedContentHost"
+                                Margin="{TemplateBinding Control.Padding}"
+                                Content="{TemplateBinding TabControl.SelectedContent}"
+                                ContentSource="SelectedContent"
+                                ContentStringFormat="{TemplateBinding TabControl.SelectedContentStringFormat}"
+                                ContentTemplate="{TemplateBinding TabControl.SelectedContentTemplate}"
+                                SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="TabControl.TabStripPlacement">
-                            <Setter Property="Grid.Row" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="Grid.Row">
                                 <Setter.Value>
                                     <s:Int32>1</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="Grid.Row" TargetName="ContentPanel">
+                            <Setter TargetName="ContentPanel" Property="Grid.Row">
                                 <Setter.Value>
                                     <s:Int32>0</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="RowDefinition.Height" TargetName="RowDefinition0">
+                            <Setter TargetName="RowDefinition0" Property="RowDefinition.Height">
                                 <Setter.Value>
                                     <GridLength>*</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="RowDefinition.Height" TargetName="RowDefinition1">
+                            <Setter TargetName="RowDefinition1" Property="RowDefinition.Height">
                                 <Setter.Value>
                                     <GridLength>Auto</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="FrameworkElement.Margin" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="FrameworkElement.Margin">
                                 <Setter.Value>
                                     <Thickness>0,0,0,0</Thickness>
                                 </Setter.Value>
@@ -203,47 +256,47 @@
                             </Trigger.Value>
                         </Trigger>
                         <Trigger Property="TabControl.TabStripPlacement">
-                            <Setter Property="Grid.Row" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="Grid.Row">
                                 <Setter.Value>
                                     <s:Int32>0</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="Grid.Row" TargetName="ContentPanel">
+                            <Setter TargetName="ContentPanel" Property="Grid.Row">
                                 <Setter.Value>
                                     <s:Int32>0</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="Grid.Column" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="Grid.Column">
                                 <Setter.Value>
                                     <s:Int32>0</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="Grid.Column" TargetName="ContentPanel">
+                            <Setter TargetName="ContentPanel" Property="Grid.Column">
                                 <Setter.Value>
                                     <s:Int32>1</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="ColumnDefinition.Width" TargetName="ColumnDefinition0">
+                            <Setter TargetName="ColumnDefinition0" Property="ColumnDefinition.Width">
                                 <Setter.Value>
                                     <GridLength>Auto</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="ColumnDefinition.Width" TargetName="ColumnDefinition1">
+                            <Setter TargetName="ColumnDefinition1" Property="ColumnDefinition.Width">
                                 <Setter.Value>
                                     <GridLength>*</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="RowDefinition.Height" TargetName="RowDefinition0">
+                            <Setter TargetName="RowDefinition0" Property="RowDefinition.Height">
                                 <Setter.Value>
                                     <GridLength>*</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="RowDefinition.Height" TargetName="RowDefinition1">
+                            <Setter TargetName="RowDefinition1" Property="RowDefinition.Height">
                                 <Setter.Value>
                                     <GridLength>0</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="FrameworkElement.Margin" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="FrameworkElement.Margin">
                                 <Setter.Value>
                                     <Thickness>0,0,0,0</Thickness>
                                 </Setter.Value>
@@ -253,47 +306,47 @@
                             </Trigger.Value>
                         </Trigger>
                         <Trigger Property="TabControl.TabStripPlacement">
-                            <Setter Property="Grid.Row" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="Grid.Row">
                                 <Setter.Value>
                                     <s:Int32>0</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="Grid.Row" TargetName="ContentPanel">
+                            <Setter TargetName="ContentPanel" Property="Grid.Row">
                                 <Setter.Value>
                                     <s:Int32>0</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="Grid.Column" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="Grid.Column">
                                 <Setter.Value>
                                     <s:Int32>1</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="Grid.Column" TargetName="ContentPanel">
+                            <Setter TargetName="ContentPanel" Property="Grid.Column">
                                 <Setter.Value>
                                     <s:Int32>0</s:Int32>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="ColumnDefinition.Width" TargetName="ColumnDefinition0">
+                            <Setter TargetName="ColumnDefinition0" Property="ColumnDefinition.Width">
                                 <Setter.Value>
                                     <GridLength>*</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="ColumnDefinition.Width" TargetName="ColumnDefinition1">
+                            <Setter TargetName="ColumnDefinition1" Property="ColumnDefinition.Width">
                                 <Setter.Value>
                                     <GridLength>Auto</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="RowDefinition.Height" TargetName="RowDefinition0">
+                            <Setter TargetName="RowDefinition0" Property="RowDefinition.Height">
                                 <Setter.Value>
                                     <GridLength>*</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="RowDefinition.Height" TargetName="RowDefinition1">
+                            <Setter TargetName="RowDefinition1" Property="RowDefinition.Height">
                                 <Setter.Value>
                                     <GridLength>0</GridLength>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="FrameworkElement.Margin" TargetName="HeaderPanel">
+                            <Setter TargetName="HeaderPanel" Property="FrameworkElement.Margin">
                                 <Setter.Value>
                                     <Thickness>0,0,0,0</Thickness>
                                 </Setter.Value>
@@ -317,36 +370,49 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style x:Key="DMTopTabItemLeft" TargetType="TabItem" >
-        <Setter Property="Width" Value="140"></Setter>
-        <Setter Property="FontSize" Value="13"></Setter>
-        <Setter Property="Height" Value="45"></Setter>
-        <Setter Property="Foreground" Value="#FF888888"></Setter>
-        <Setter Property="Template" >
+    <Style x:Key="DMTopTabItemLeft" TargetType="TabItem">
+        <Setter Property="Width" Value="140" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="Height" Value="45" />
+        <Setter Property="Foreground" Value="#FF888888" />
+        <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate  TargetType="{x:Type TabItem}">
-                    <Grid  Background="Transparent" >
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Grid Background="Transparent">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="3"></ColumnDefinition>
-                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="3" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <Border  x:Name="x" Width="3" Background="{StaticResource MainColor}" Visibility="Collapsed" Grid.Column="0">
-                        </Border>
-                        <Grid x:Name="back"  Grid.Column="1">
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="25,0,0,0">
-                                <TextBlock FontFamily="{StaticResource IconFont}" Text="{TemplateBinding Tag}" Margin="0,1,10,0"></TextBlock>
-                                <TextBlock x:Name="Content" Text="{TemplateBinding Header}" 
-                            HorizontalAlignment="Center"  
-                            VerticalAlignment="Center" ></TextBlock>
+                        <Border
+                            x:Name="x"
+                            Grid.Column="0"
+                            Width="3"
+                            Background="{StaticResource MainColor}"
+                            Visibility="Collapsed" />
+                        <Grid x:Name="back" Grid.Column="1">
+                            <StackPanel
+                                Margin="25,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Orientation="Horizontal">
+                                <TextBlock
+                                    Margin="0,1,10,0"
+                                    FontFamily="{StaticResource IconFont}"
+                                    Text="{TemplateBinding Tag}" />
+                                <TextBlock
+                                    x:Name="Content"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Text="{TemplateBinding Header}" />
                             </StackPanel>
                         </Grid>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="true">
-                            <Setter Property="Visibility" TargetName="x" Value="Visible"></Setter>
-                            <Setter Property="BorderThickness" TargetName="x" Value="0"></Setter>
-                            <Setter Property="Background" TargetName="back" Value="#FFFAFAFF"></Setter>
+                            <Setter TargetName="x" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="x" Property="BorderThickness" Value="0" />
+                            <Setter TargetName="back" Property="Background" Value="#FFFAFAFF" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -355,26 +421,25 @@
         <Setter Property="ContentTemplate">
             <Setter.Value>
                 <DataTemplate>
-                    <ContentPresenter  Margin="0"  Content="{TemplateBinding Content}"  >
-                    </ContentPresenter>
+                    <ContentPresenter Margin="0" Content="{TemplateBinding Content}" />
                 </DataTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
     <Style x:Key="DMIconButton2" TargetType="Button">
-        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
-        <Setter Property="VerticalAlignment" Value="Center"></Setter>
-        <Setter Property="Cursor" Value="Hand"></Setter>
-        <Setter Property="Foreground" Value="#FF96A0B4"></Setter>
-        <Setter Property="FontFamily" Value="{StaticResource IconFont}"></Setter>
-        <Setter Property="FontWeight" Value="Medium"></Setter>
-        <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Foreground" Value="#FF96A0B4" />
+        <Setter Property="FontFamily" Value="{StaticResource IconFont}" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="FontSize" Value="20" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="#00FFFFFF" x:Name="bg">
-                        <ContentPresenter  HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Border x:Name="bg" Background="#00FFFFFF">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
                             <!--<ContentPresenter.Effect>
                                 <DropShadowEffect ShadowDepth="1"/>
                             </ContentPresenter.Effect>-->
@@ -382,7 +447,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter   Property="Foreground" Value="Black" />
+                            <Setter Property="Foreground" Value="Black" />
                             <!--<Setter  TargetName="bg"  Property="Background" Value="#88FFFFFF" />-->
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -392,58 +457,60 @@
     </Style>
 
     <Style x:Key="DMBrushButton" TargetType="{x:Type Button}">
-        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
-        <Setter Property="VerticalAlignment" Value="Center"></Setter>
-        <Setter Property="Cursor" Value="Hand"></Setter>
-        <Setter Property="FontSize" Value="15"></Setter>
-        <Setter Property="Width" Value="165"></Setter>
-        <Setter Property="Height" Value="30"></Setter>
-        <Setter Property="FontWeight" Value="Bold"></Setter>
-        <Setter Property="Foreground" Value="White"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="Width" Value="165" />
+        <Setter Property="Height" Value="30" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="White" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border x:Name="bg" Padding="5,3,5,3" CornerRadius="10">
+                    <Border
+                        x:Name="bg"
+                        Padding="5,3,5,3"
+                        CornerRadius="10">
                         <Border.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
                                 <LinearGradientBrush.RelativeTransform>
                                     <TransformGroup>
-                                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                                        <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                                        <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
-                                        <TranslateTransform/>
+                                        <ScaleTransform CenterX="0.5" CenterY="0.5" />
+                                        <SkewTransform CenterX="0.5" CenterY="0.5" />
+                                        <RotateTransform Angle="-90" CenterX="0.5" CenterY="0.5" />
+                                        <TranslateTransform />
                                     </TransformGroup>
                                 </LinearGradientBrush.RelativeTransform>
-                                <GradientStop Color="#FF1BE6E8"/>
-                                <GradientStop  Color="#FF31D5E7" Offset="0.209"/>
-                                <GradientStop Color="#FF55BBE6" Offset="0.406"/>
-                                <GradientStop Color="#FF8895E6" Offset="0.628"/>
-                                <GradientStop Color="#FFBC6FF9" Offset="0.808"/>
-                                <GradientStop Color="#FFD05FBB" Offset="1"/>
+                                <GradientStop Color="#FF1BE6E8" />
+                                <GradientStop Offset="0.209" Color="#FF31D5E7" />
+                                <GradientStop Offset="0.406" Color="#FF55BBE6" />
+                                <GradientStop Offset="0.628" Color="#FF8895E6" />
+                                <GradientStop Offset="0.808" Color="#FFBC6FF9" />
+                                <GradientStop Offset="1" Color="#FFD05FBB" />
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter  HorizontalAlignment="Center" VerticalAlignment="Center">
-                        </ContentPresenter>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="bg" Property="Background">
                                 <Setter.Value>
-                                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                    <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
                                         <LinearGradientBrush.RelativeTransform>
                                             <TransformGroup>
-                                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                                                <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
-                                                <TranslateTransform/>
+                                                <ScaleTransform CenterX="0.5" CenterY="0.5" />
+                                                <SkewTransform CenterX="0.5" CenterY="0.5" />
+                                                <RotateTransform Angle="-90" CenterX="0.5" CenterY="0.5" />
+                                                <TranslateTransform />
                                             </TransformGroup>
                                         </LinearGradientBrush.RelativeTransform>
-                                        <GradientStop Color="#ff31D5E7" Offset="0.809"/>
-                                        <GradientStop Color="#ffBC6FF9" Offset="0.208"/>
-                                        <GradientStop Color="#ff55BBE6" Offset="0.606"/>
-                                        <GradientStop Color="#ff8895E6" Offset="0.428"/>
-                                        <GradientStop Color="#ffD05FBB" Offset="1"/>
-                                        <GradientStop Color="#ff1BE6E8"/>
+                                        <GradientStop Offset="0.809" Color="#ff31D5E7" />
+                                        <GradientStop Offset="0.208" Color="#ffBC6FF9" />
+                                        <GradientStop Offset="0.606" Color="#ff55BBE6" />
+                                        <GradientStop Offset="0.428" Color="#ff8895E6" />
+                                        <GradientStop Offset="1" Color="#ffD05FBB" />
+                                        <GradientStop Color="#ff1BE6E8" />
                                     </LinearGradientBrush>
                                 </Setter.Value>
                             </Setter>
@@ -455,19 +522,27 @@
     </Style>
 
     <Style x:Key="TranslateButton" TargetType="CheckBox">
-        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
-        <Setter Property="VerticalAlignment" Value="Center"></Setter>
-        <Setter Property="Cursor" Value="Hand"></Setter>
-        <Setter Property="Width" Value="165"></Setter>
-        <Setter Property="Height" Value="30"></Setter>
-        <Setter Property="FontSize" Value="12"></Setter>
-        <Setter Property="Foreground" Value="#FF333333"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Width" Value="165" />
+        <Setter Property="Height" Value="30" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Foreground" Value="#FF333333" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="CheckBox">
-                    <Border Background="White" x:Name="bg" BorderThickness="1" Padding="5,3,5,3" CornerRadius="5" BorderBrush="Gainsboro">
-                        <ContentPresenter  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,4,0,0">
-                        </ContentPresenter>
+                    <Border
+                        x:Name="bg"
+                        Padding="5,3,5,3"
+                        Background="White"
+                        BorderBrush="Gainsboro"
+                        BorderThickness="1"
+                        CornerRadius="5">
+                        <ContentPresenter
+                            Margin="0,4,0,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
@@ -483,15 +558,20 @@
 
     <!--#region 语言选择框-->
     <Style x:Key="TranslateRadioButton" TargetType="RadioButton">
-        <Setter Property="HorizontalAlignment" Value="Left"></Setter>
-        <Setter Property="VerticalAlignment" Value="Center"></Setter>
-        <Setter Property="Cursor" Value="Hand"></Setter>
-        <Setter Property="Foreground" Value="#FF333333"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Foreground" Value="#FF333333" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="RadioButton">
-                    <Border Background="White" x:Name="bg" Padding="5,3,5,4" CornerRadius="2" BorderBrush="Gainsboro">
-                        <ContentPresenter  HorizontalAlignment="Center" VerticalAlignment="Top"></ContentPresenter>
+                    <Border
+                        x:Name="bg"
+                        Padding="5,3,5,4"
+                        Background="White"
+                        BorderBrush="Gainsboro"
+                        CornerRadius="2">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Top" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
@@ -508,9 +588,9 @@
     <!--#endregion-->
 
     <Style x:Key="TranslateTextBlock" TargetType="TextBlock">
-        <Setter Property="HorizontalAlignment" Value="Left"></Setter>
-        <Setter Property="VerticalAlignment" Value="Center"></Setter>
-        <Setter Property="Foreground" Value="Gainsboro"></Setter>
-        <Setter Property="Padding" Value="5,3,5,4"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="Gainsboro" />
+        <Setter Property="Padding" Value="5,3,5,4" />
     </Style>
 </ResourceDictionary>
