@@ -26,7 +26,7 @@ The follwing chart can show you the differences between `DMSkinComplexWindow` an
 
 ## Notice
 #### 1. DFW was developed on VS 2017 Community, .NET 4.0 Environment, contains some c# 6.0+ grammar codes.If you cannot compile it through VS 2015 and others previous VS versions, please modify the source code youself.
-#### 2. The plan still has drawback, Non-client srea system button blocking operation on Windows 7 system.
+#### 2. The plan still has drawback, Non-client area system button blocking operation on Windows 7 system.
 
 ## Installation
 You can get the **`DMSkin.WPF.dll`** through 2 two different ways.
@@ -103,7 +103,7 @@ If you can not communicate with us in Chinese.You can communicate with us by giv
 ## Donation
 If this framework really helps you a lot, you can donate me to support my work, which can encourage me to do better.
 
-<img style="width:500px;" src="http://p40kjburh.bkt.clouddn.com/18-6-13/9034578.jpg" />
+<img src="http://p40kjburh.bkt.clouddn.com/18-6-13/9034578.jpg" width="500">
 
 ## Change Log
 ### 2.5.0 (2018-06-07)
