@@ -6,7 +6,7 @@
 
 A WPF UI framework to create borderless window faster and easier.
 
-[中文说明请点这里](./docs/README-CN.md)
+[中文说明请点这里](./docs/READMECN.md)
 
 ## Preface 
 DMSkin-for-WPF (aka DFW) is a WPF UI framework that aims to help WPF developers create a borderless window faster and easier. It supports .NET framework from 3.5 to 4.7, and runs well from Windows XP to Windows 10.
@@ -74,7 +74,7 @@ Set DMSkinSimpleWindow `Background` property `transparent`.
 ````
 
 #### 7. Config your DFW properties (optional)
-````xml
+````js
 Foreground="White"                    // window foreground color
 Background="White"                    // window background color 
 DMWindowShadowSize="10"               // window shadow size
@@ -86,7 +86,26 @@ ResizeMode="CanResize"                // window resize mode (CanResiz or CanResi
 WindowStartupLocation="CenterScreen"  // window startup location
 ````
 
-#### 8. [Make Rounded window (optional)](./demos/Rounded-Window.xaml)
+#### 8. [Make Rounded window (optional)]
+````xml
+<Border Background="White" CornerRadius="5"  BorderThickness="1">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="12" ShadowDepth="0" Color="#88000000"/>
+        </Border.Effect>
+        <Grid Margin="0,0,0,0">
+            <Grid Background="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Name="DMTitle">
+                </Grid>
+            </Grid>
+            <ResizeGrip VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
+        </Grid>
+</Border>
+````
 
 ## Communication
 We appreciate it a lot if you can join us:
