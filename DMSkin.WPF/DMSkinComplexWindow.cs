@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -28,6 +28,7 @@ namespace DMSkin.WPF
             //绑定窗体操作函数
             SourceInitialized += MainWindow_SourceInitialized;
             StateChanged += MainWindow_StateChanged;
+            IsVisibleChanged += MainWindow_IsVisibleChanged;
             MouseLeftButtonDown += MainWindow_MouseLeftButtonDown;
             Closed += MainWindow_Closed;
             SizeChanged += MainWindow_SizeChanged;
@@ -409,6 +410,22 @@ namespace DMSkin.WPF
                 ShadowWindowVisibility(false);
             }
         }
+
+        //窗体显示和隐藏
+        void MainWindow_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (IsVisible == true)
+            {
+                //恢复-显示阴影
+                ShadowWindowVisibility(true);
+            }
+            else
+            {
+                //最小化-隐藏阴影
+                ShadowWindowVisibility(false);
+            }
+        }
+
         //窗体移动
         void MainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
