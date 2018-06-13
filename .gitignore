@@ -19,7 +19,6 @@
 [Rr]eleases/
 x64/
 x86/
-packages/
 bld/
 [Bb]in/
 [Oo]bj/
@@ -181,7 +180,7 @@ PublishScripts/
 # NuGet Packages
 *.nupkg
 # The packages folder can be ignored because of Package Restore
-**/[Pp]ackages/*
+[Pp]ackages/
 # except build/, which is used as an MSBuild target.
 !**/[Pp]ackages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
