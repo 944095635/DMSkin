@@ -95,7 +95,7 @@ We appreciate it a lot if you can join us:
 - **DMSkin QQ Group: 194684812**
 
 - **WPF Course Group (Charges) QQ Group: 611509631**
-- **<a href="tencent://message/?uin=944095635">Contact Author</a>**
+- **{%raw%}<a href="tencent://message/?uin=944095635">Contact Author</a>{%endraw%}**
 - **[DMSkin Website](http://www.dmskin.com)**
 
 If you can not communicate with us in Chinese.You can communicate with us by giving your issues on issues page and we will reply soon.Any issues and PRs are welcomed!
