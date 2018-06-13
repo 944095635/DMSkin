@@ -23,11 +23,14 @@ Dll下载https://github.com/944095635/DMSkin-for-WPF/releases
 <h4>B:单层方案思路:延迟窗口Window消息防止闪烁花屏BUG - 继承DMSkinSimpleWindow</h4>
 
 <h3>本方案以及其他方案对比</h3>
+
+
+<h2>WPF 疑问&解决方案</h2>
+
+<h4>是否还有其他阴影方案?</h4>
 <h5>WPF .NET Framework 4.5+ 推出了原生组件<a href='https://github.com/944095635/WindowChrome-Demo'>WindowChrome无边框方案</a></h5>
 <h5>WPF .NET Framework 3.5+ 可以调用 System.Windows.Shell  实现无边框方案</h5>
-<h5>以上2种方案缺点:阴影效果不好.跨系统版本兼容性差</h5>
 
-<h2>WPF 疑问解决方案</h2>
 <h4><a href='https://github.com/944095635/DMSkin-for-WPF/wiki/%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E5%88%B7%E6%96%B0%E9%80%9A%E7%9F%A5'>数据绑定&刷新通知</a></h4>
 <h4><a href='https://github.com/944095635/DMSkin-for-WPF/wiki/%E8%B7%A8%E7%BA%BF%E7%A8%8BUI%E8%B0%83%E5%BA%A6%E5%99%A8'>跨线程UI调度器</a></h4>
 <h4><a href=''>WPF 开启透明之后嵌入GDI+组件无法显示,Microsoft.DwayneNeed</a></h4>
