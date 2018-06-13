@@ -105,7 +105,7 @@
     <Compile Include="StartWindow.xaml.cs">
       <DependentUpon>StartWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SimpleWindow.xaml.cs">
+    <Compile Include="Views\SimpleWindow.xaml.cs">
       <DependentUpon>SimpleWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
@@ -114,15 +114,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="SimpleWindow.xaml">
+    <Page Include="Views\SimpleWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="DemoWindow.xaml">
+    <Page Include="Views\DemoWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ComplexWindow.xaml">
+    <Page Include="Views\ComplexWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -134,34 +134,34 @@
     <Compile Include="Control\MyTabItem.cs" />
     <Compile Include="Control\WaterMaskTextBox.cs" />
     <Compile Include="Converters\LocationConverters.cs" />
-    <Compile Include="DemoWindow.xaml.cs">
+    <Compile Include="Views\DemoWindow.xaml.cs">
       <DependentUpon>DemoWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ComplexWindow.xaml.cs">
+    <Compile Include="Views\ComplexWindow.xaml.cs">
       <DependentUpon>ComplexWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\Index.xaml">
+    <Page Include="Views\Index.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\DashBoard.xaml">
+    <Page Include="Views\DashBoard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\FormatTool.xaml">
+    <Page Include="Views\FormatTool.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Gallery.xaml">
+    <Page Include="Views\Gallery.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Tieba.xaml">
+    <Page Include="Views\Tieba.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Translate.xaml">
+    <Page Include="Views\Translate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -178,22 +178,22 @@
     <Compile Include="Models\LanguageModel.cs" />
     <Compile Include="Models\TranslateModel.cs" />
     <Compile Include="Models\GalleryModel.cs" />
-    <Compile Include="Pages\Index.xaml.cs">
+    <Compile Include="Views\Index.xaml.cs">
       <DependentUpon>Index.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\DashBoard.xaml.cs">
+    <Compile Include="Views\DashBoard.xaml.cs">
       <DependentUpon>DashBoard.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FormatTool.xaml.cs">
+    <Compile Include="Views\FormatTool.xaml.cs">
       <DependentUpon>FormatTool.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Gallery.xaml.cs">
+    <Compile Include="Views\Gallery.xaml.cs">
       <DependentUpon>Gallery.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Tieba.xaml.cs">
+    <Compile Include="Views\Tieba.xaml.cs">
       <DependentUpon>Tieba.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Translate.xaml.cs">
+    <Compile Include="Views\Translate.xaml.cs">
       <DependentUpon>Translate.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
