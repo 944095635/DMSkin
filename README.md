@@ -137,7 +137,8 @@ WindowStartupLocation="CenterScreen"  // window startup location
                 <Grid Grid.Row="0" Name="DMTitle">
                 </Grid>
             </Grid>
-            <ResizeGrip VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
+            <ResizeGrip VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" 
+			HorizontalAlignment="Right" VerticalAlignment="Bottom"></ResizeGrip>
         </Grid>
 </Border>
 ````
