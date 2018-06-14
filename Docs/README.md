@@ -16,10 +16,10 @@ DFW offers 2 plans for window borderless:
 DMSkin支持2种无边框方案
 #### 1. ComplexWindow Plan
 Use Windows 32 API to redraw non-client area and create a separate shadow window for shadow's presentation.
-<br>使用Windows 32 API 重绘非客户区 用窗口实现阴影层
+<h5>使用Windows 32 API 重绘非客户区 用窗口实现阴影层</h5>
 #### 2. SimpleWindow Plan
 Delay Window message to prevent flickering corruption bug.
-<br>延迟窗口Window 消息 解决因为开启AllowsTransparency=true，WindowStyle=为None 造成的闪烁花屏BUG
+<h5>延迟窗口Window 消息 解决因为开启AllowsTransparency=true，WindowStyle=为None 造成的闪烁花屏BUG</h5>
 
 The follwing chart can show you the differences between `DMSkinComplexWindow` and `DMSkinSimlpeWindow`
 <br>下面是2种方案之间的区别
