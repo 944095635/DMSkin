@@ -144,10 +144,9 @@ WindowStartupLocation="CenterScreen"  // window startup location
 ## Preview
 
 <img src="https://gitee.com/DreamMachine/Image/raw/master/Preview1.jpg" width="600" height="400" align="center">
-<img src="https://gitee.com/DreamMachine/Image/raw/master/Preview2.png" width="600" height="400" align="center">
-
-<img src="https://gitee.com/DreamMachine/Image/raw/master/A%20(1).gif" width="600" height="400" align="center">
 <img src="https://gitee.com/DreamMachine/Image/raw/master/GIF3.gif" width="600" height="400" align="center">
+<img src="https://gitee.com/DreamMachine/Image/raw/master/Preview2.png" width="600" height="400" align="center">
+<img src="https://gitee.com/DreamMachine/Image/raw/master/A%20(1).gif" width="600" height="400" align="center">
 
 ## Communication
 We appreciate it a lot if you can join us:
