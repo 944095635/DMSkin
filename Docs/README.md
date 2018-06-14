@@ -17,6 +17,7 @@ DMSkin支持2种无边框方案
 #### 1. ComplexWindow Plan
 Use Windows 32 API to redraw non-client area and create a separate shadow window for shadow's presentation.
 <h5>使用Windows 32 API 重绘非客户区 用窗口实现阴影层</h5>
+
 #### 2. SimpleWindow Plan
 Delay Window message to prevent flickering corruption bug.
 <h5>延迟窗口Window 消息 解决因为开启AllowsTransparency=true，WindowStyle=为None 造成的闪烁花屏BUG</h5>
