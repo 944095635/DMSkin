@@ -20,10 +20,10 @@ Delay Window message to prevent flickering corruption bug.
 The follwing chart can show you the differences between `DMSkinComplexWindow` and `DMSkinSimlpeWindow`
 
 
-| Plan                | Transparency   |Animation   |
-| :----:              | :---:          | :----:     |
-| DMSkinComplexWindow | Not Support    |  Support   |
-| DMSkinSimpleWindow  |  Support       |Not Support |
+| Plan                | Transparency   |Animation   |System      |
+| :----:              | :---:          | :----:     | :----:     |
+| DMSkinComplexWindow | Not Support    |  Support   |  Win7 BUG  |
+| DMSkinSimpleWindow  |  Support       |Not Support |  All       |
 
 ## Notice
 #### 1. DFW was developed on VS 2017 Community, .NET 4.0 Environment, contains some c# 6.0+ grammar codes.If you cannot compile it through VS 2015 and others previous VS versions, please modify the source code youself.
@@ -77,7 +77,6 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-          xmlns:local="clr-namespace:DMSkinTest"
           mc:Ignorable="d"
           Title="MainWindow" Height="450" Width="800">
       <Grid>
@@ -101,9 +100,12 @@ Set DMSkinSimpleWindow `Background` property `transparent`.
   -- DMSystemButtonCloseHoverColor // System close button background color
   -->
 <WrapPanel Height="{Binding DMSystemButtonSize}" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
-  <controls:DMSystemMinButton DMSystemButtonSize="50" DMSystemButtonHoverForeground="#383838" DMSystemButtonForeground="#383838"></controls:DMSystemMinButton>
-  <controls:DMSystemMaxButton DMSystemButtonSize="50" DMSystemButtonHoverForeground="#FFFFFF" DMSystemButtonForeground="#383838"></controls:DMSystemMaxButton>
-  <controls:DMSystemCloseButton DMSystemButtonSize="50" DMSystemButtonHoverForeground="#FFFFFF" DMSystemButtonForeground="#383838"></controls:DMSystemCloseButton>
+  <controls:DMSystemMinButton DMSystemButtonSize="50" 
+            DMSystemButtonHoverForeground="#383838" DMSystemButtonForeground="#383838"></controls:DMSystemMinButton>
+  <controls:DMSystemMaxButton DMSystemButtonSize="50" 
+            DMSystemButtonHoverForeground="#FFFFFF" DMSystemButtonForeground="#383838"></controls:DMSystemMaxButton>
+  <controls:DMSystemCloseButton DMSystemButtonSize="50" 
+            DMSystemButtonHoverForeground="#FFFFFF" DMSystemButtonForeground="#383838"></controls:DMSystemCloseButton>
 </WrapPanel>
 ````
 
@@ -145,7 +147,6 @@ WindowStartupLocation="CenterScreen"  // window startup location
 <img src="https://raw.githubusercontent.com/944095635/Image/master/A%20(1).gif" width="600" height="400" align="center">
 <img src="https://raw.githubusercontent.com/944095635/Image/master/GIF3.gif" width="600" height="400" align="center">
 <img src="https://raw.githubusercontent.com/944095635/Image/master/%E5%8F%8C%E5%B1%82.gif" width="600" height="400" align="center">
-<img src="http://p40kjburh.bkt.clouddn.com/18-6-14/37323667.jpg" width="900" height="450" align="center">
 <img src="http://p40kjburh.bkt.clouddn.com/18-6-14/3120580.jpg" width="900" height="900">
 
 ## Communication
