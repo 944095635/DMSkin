@@ -86,10 +86,7 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
 + </DMSkin:DMSkinSimpleWindow>
 ````
 
-#### 5. Make DFW transparent (optional)
-Set DMSkinSimpleWindow `Background` property `transparent`.
-
-#### 6. Add System Buttons (optional)
+#### 5. Add System Buttons (optional)
 ````xml
 <!-- Add below codes into MainWindow.xaml -->
 <!-- System button properties:
@@ -99,17 +96,21 @@ Set DMSkinSimpleWindow `Background` property `transparent`.
   -- DMSystemButtonHoverForeground // System button foreground color when mouse is over
   -- DMSystemButtonCloseHoverColor // System close button background color
   -->
-<WrapPanel Height="{Binding DMSystemButtonSize}" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
+<WrapPanel Height="{Binding DMSystemButtonSize}" Orientation="Horizontal" 
+            VerticalAlignment="Top" HorizontalAlignment="Right">
   <controls:DMSystemMinButton DMSystemButtonSize="50" 
-            DMSystemButtonHoverForeground="#383838" DMSystemButtonForeground="#383838"></controls:DMSystemMinButton>
+            DMSystemButtonHoverForeground="#383838" DMSystemButtonForeground="#383838">
+			</controls:DMSystemMinButton>
   <controls:DMSystemMaxButton DMSystemButtonSize="50" 
-            DMSystemButtonHoverForeground="#FFFFFF" DMSystemButtonForeground="#383838"></controls:DMSystemMaxButton>
+            DMSystemButtonHoverForeground="#FFFFFF" DMSystemButtonForeground="#383838">
+			</controls:DMSystemMaxButton>
   <controls:DMSystemCloseButton DMSystemButtonSize="50" 
-            DMSystemButtonHoverForeground="#FFFFFF" DMSystemButtonForeground="#383838"></controls:DMSystemCloseButton>
+            DMSystemButtonHoverForeground="#FFFFFF" DMSystemButtonForeground="#383838">
+			</controls:DMSystemCloseButton>
 </WrapPanel>
 ````
 
-#### 7. Config your DFW properties (optional)
+#### 6. Config your DFW properties (optional)
 ````js
 Foreground="White"                    // window foreground color
 Background="White"                    // window background color 
@@ -122,7 +123,7 @@ ResizeMode="CanResize"                // window resize mode (CanResiz or CanResi
 WindowStartupLocation="CenterScreen"  // window startup location
 ````
 
-#### 8. Make Rounded window (optional)
+#### 7. Make Rounded window (optional)
 ````xml
 <Border Background="White" CornerRadius="5"  BorderThickness="1">
         <Border.Effect>
