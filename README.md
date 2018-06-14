@@ -54,9 +54,6 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
 
   namespace DMSkinTest
   {
-      /// <summary>
-      /// MainWindow.xaml 的交互逻辑
-      /// </summary>
 -      public partial class MainWindow : Window
 +      public partial class MainWindow : DMSkinSimpleWindow
       {
@@ -77,8 +74,7 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-          mc:Ignorable="d"
-          Title="MainWindow" Height="450" Width="800">
+          mc:Ignorable="d">
       <Grid>
 
       </Grid>
