@@ -136,7 +136,7 @@
                         <ToolTip Content="944095635@qq.com" VerticalOffset="-60" />
                     </Ellipse.ToolTip>
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="Images/user.jpg" />
+                        <ImageBrush ImageSource="/DMSkin.WPF.Demos;component/Images/user.jpg" />
                     </Ellipse.Fill>
                 </Ellipse>
                 <TextBlock

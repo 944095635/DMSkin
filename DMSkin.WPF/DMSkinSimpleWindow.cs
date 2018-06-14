@@ -47,9 +47,6 @@ namespace DMSkin.WPF
             Resources.MergedDictionaries.Add(dic);
             Style = (Style)dic["MainWindow"];
 
-            ResourceDictionary dic2 = new ResourceDictionary { Source = new Uri(@"/DMSkin.WPF;component/Styles/DMSystemButton.xaml", UriKind.Relative) };
-            Resources.MergedDictionaries.Add(dic2);
-
             //string packUriAnimation = @"/DMSkin.WPF;component/Themes/Animation.xaml";
             //ResourceDictionary dicAnimation = new ResourceDictionary { Source = new Uri(packUriAnimation, UriKind.Relative) };
             //Resources.MergedDictionaries.Add(dicAnimation);
@@ -247,51 +244,41 @@ namespace DMSkin.WPF
         #endregion
 
         #region 窗体属性
-        private bool _DMFullscreen = false;
         [Description("全屏是否保留任务栏显示"), Category("DMSkin")]
         public bool DMFullScreen
         {
-            get
-            {
-                return _DMFullscreen;
-            }
-
-            set
-            {
-                _DMFullscreen = value;
-            }
+            get { return (bool)GetValue(DMFullScreenProperty); }
+            set { SetValue(DMFullScreenProperty, value); }
         }
+        public static readonly DependencyProperty DMFullScreenProperty =
+            DependencyProperty.Register("DMFullScreen", typeof(bool), typeof(DMSkinSimpleWindow), new PropertyMetadata(false));
 
-        private int _DMWindowShadowSize = 10;
         [Description("窗体阴影大小"), Category("DMSkin")]
         public int DMWindowShadowSize
         {
-            get
-            {
-                    return _DMWindowShadowSize;
-            }
-
-            set
-            {
-                    _DMWindowShadowSize = value;
-            }
+            get { return (int)GetValue(DMWindowShadowSizeProperty); }
+            set { SetValue(DMWindowShadowSizeProperty, value); }
         }
+        public static readonly DependencyProperty DMWindowShadowSizeProperty =
+            DependencyProperty.Register("DMWindowShadowSize", typeof(int), typeof(DMSkinSimpleWindow), new PropertyMetadata(10));
 
-        private Color _DMWindowShadowColor = Color.FromArgb(255, 200, 200, 200);
         [Description("窗体阴影颜色"), Category("DMSkin")]
         public Color DMWindowShadowColor
         {
-            get
-            {
-                
-                    return _DMWindowShadowColor;
-            }
-
-            set
-            {
-                    _DMWindowShadowColor = value;
-            }
+            get { return (Color)GetValue(DMWindowShadowColorProperty); }
+            set { SetValue(DMWindowShadowColorProperty, value); }
         }
+        public static readonly DependencyProperty DMWindowShadowColorProperty =
+            DependencyProperty.Register("DMWindowShadowColor", typeof(Color), typeof(DMSkinSimpleWindow), new PropertyMetadata(Color.FromArgb(255, 200, 200, 200)));
+
+        [Description("窗体阴影透明度"), Category("DMSkin")]
+        public double DMWindowShadowOpacity
+        {
+            get { return (double)GetValue(DMWindowShadowOpacityProperty); }
+            set { SetValue(DMWindowShadowOpacityProperty, value); }
+        }
+        public static readonly DependencyProperty DMWindowShadowOpacityProperty =
+            DependencyProperty.Register("DMWindowShadowOpacity", typeof(double), typeof(DMSkinSimpleWindow), new PropertyMetadata(1.0));
         #endregion
     }
 }

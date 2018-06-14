@@ -5,7 +5,7 @@ using System.Windows.Media;
 
 namespace DMSkin.WPF.Controls
 {
-    public class DMSystemMaxButton : Button
+    public class DMSystemMaxButton : DMSystemButton
     {
         Window targetWindow;
         public DMSystemMaxButton()
@@ -48,67 +48,5 @@ namespace DMSkin.WPF.Controls
 
         public static readonly DependencyProperty IsMaxProperty =
             DependencyProperty.Register("IsMax", typeof(bool), typeof(DMSystemMaxButton), new PropertyMetadata(false));
-
-
-
-
-
-        static DMSystemMaxButton()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(DMSystemMaxButton), new FrameworkPropertyMetadata(typeof(DMSystemMaxButton)));
-        }
-
-        private int _DMSystemButtonSize = 30;
-
-        public int DMSystemButtonSize
-        {
-            get { return _DMSystemButtonSize; }
-            set { _DMSystemButtonSize = value; }
-        }
-
-        private Brush _DMSystemButtonHoverColor = new SolidColorBrush(Color.FromArgb(50, 50, 50, 50));
-        [Description("窗体系统按钮鼠标悬浮背景颜色"), Category("DMSkin")]
-        public Brush DMSystemButtonHoverColor
-        {
-            get
-            {
-                return _DMSystemButtonHoverColor;
-            }
-
-            set
-            {
-                _DMSystemButtonHoverColor = value;
-            }
-        }
-
-        private Brush _DMSystemButtonForeground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
-        [Description("窗体系统按钮颜色"), Category("DMSkin")]
-        public Brush DMSystemButtonForeground
-        {
-            get
-            {
-                return _DMSystemButtonForeground;
-            }
-
-            set
-            {
-                _DMSystemButtonForeground = value;
-            }
-        }
-
-        private Brush _DMSystemButtonHoverForeground = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
-        [Description("窗体系统按钮鼠标悬按钮颜色"), Category("DMSkin")]
-        public Brush DMSystemButtonHoverForeground
-        {
-            get
-            {
-                return _DMSystemButtonHoverForeground;
-            }
-
-            set
-            {
-                _DMSystemButtonHoverForeground = value;
-            }
-        }
     }
 }

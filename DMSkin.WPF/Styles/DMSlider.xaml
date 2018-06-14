@@ -1,4 +1,5 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--#region Slider-->
     <Style
         xmlns:s="clr-namespace:System;assembly=mscorlib"
         x:Key="DMSlider"
@@ -55,8 +56,8 @@
                                             <Rectangle
                                                 Name="PART_SelectionRange"
                                                 Width="4"
-                                                Fill="{StaticResource Colorgreen}"
-                                                Stroke="{StaticResource Colorgreen}"
+                                                Fill="{StaticResource MainColor}"
+                                                Stroke="{StaticResource MainColor}"
                                                 StrokeThickness="1"
                                                 Visibility="Hidden" />
                                         </Canvas>
@@ -761,7 +762,7 @@
                                     <Rectangle
                                         Name="PART_SelectionRange"
                                         Height="5"
-                                        Fill="{StaticResource Colorgreen}"
+                                        Fill="{StaticResource MainColor}"
                                         Visibility="Hidden" />
                                 </Canvas>
                             </Border>
@@ -866,7 +867,7 @@
                                                                     Height="5"
                                                                     HorizontalAlignment="Center"
                                                                     VerticalAlignment="Center"
-                                                                    Fill="{StaticResource Colorgreen}" />
+                                                                    Fill="{StaticResource MainColor}" />
                                                             </Grid>
                                                             <!--<ControlTemplate.Triggers>
                                                                 <Trigger Property="UIElement.IsMouseOver">
@@ -1406,7 +1407,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:s="clr-namespace:System;assembly=mscorlib"
-        x:Key="DeskTopSlider"
+        x:Key="DMOpacitySlider"
         TargetType="Slider">
         <Style.Triggers>
             <!--  垂直  -->
@@ -2812,6 +2813,5 @@
             </Setter.Value>
         </Setter>
     </Style>
-
-
+    <!--#endregion-->
 </ResourceDictionary>

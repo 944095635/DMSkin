@@ -113,6 +113,7 @@ Foreground="White"                    // window foreground color
 Background="White"                    // window background color 
 DMWindowShadowSize="10"               // window shadow size
 DMWindowShadowColor="#FFC8C8C8"       // window shadow color
+DMWindowShadowOpacity="0.8"
 DMWindowShadowDragVisibility="False"  // whether show shadow when window is being dragged
 DMWindowShadowVisibility="False"      // whether show window shadow
 DMWindowShadowBackColor="#FF323CAD"   // shadow background color (only for DMSkinComplexWindow)

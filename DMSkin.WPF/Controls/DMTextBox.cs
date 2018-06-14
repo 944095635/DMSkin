@@ -34,12 +34,22 @@ namespace DMSkin.WPF.Controls
         }
         public static readonly DependencyProperty ShowIconProperty =
             DependencyProperty.Register("ShowIcon", typeof(bool), typeof(DMTextBox), new PropertyMetadata(false));
-        public double ShadowBlurRadius
-        {
-            get { return (double)GetValue(ShadowBlurRadiusProperty); }
-            set { SetValue(ShadowBlurRadiusProperty, value); }
-        }
-        public static readonly DependencyProperty ShadowBlurRadiusProperty =
-            DependencyProperty.Register("ShadowBlurRadius", typeof(double), typeof(DMTextBox), new PropertyMetadata(0.0));
+        //public double ShadowBlurRadius
+        //{
+        //    get { return (double)GetValue(ShadowBlurRadiusProperty); }
+        //    set { SetValue(ShadowBlurRadiusProperty, value); }
+        //}
+        //public static readonly DependencyProperty ShadowBlurRadiusProperty =
+        //    DependencyProperty.Register("ShadowBlurRadius", typeof(double), typeof(DMTextBox), new PropertyMetadata(0.0));
+        ///// <summary>
+        ///// 是否显示阴影
+        ///// </summary>
+        //public bool ShowShadow
+        //{
+        //    get { return (bool)GetValue(ShowShadowProperty); }
+        //    set { SetValue(ShowShadowProperty, value); }
+        //}
+        //public static readonly DependencyProperty ShowShadowProperty =
+        //    DependencyProperty.Register("ShowShadow", typeof(bool), typeof(DMTextBox), new PropertyMetadata(false));
     }
 }

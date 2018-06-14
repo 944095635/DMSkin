@@ -12,6 +12,7 @@
             To="1000,1000,0,0"
             Duration="0:0:0.3" />
     </Storyboard>
+
     <!--  慢慢显示  -->
     <Storyboard x:Key="SlowShow">
         <DoubleAnimation
@@ -25,13 +26,7 @@
             To="0,0,0,0"
             Duration="0:0:0.2" />
     </Storyboard>
-    <Window
-        x:Key="xxxx"
-        Width="300"
-        Height="121"
-        Margin="50,5,0,50"
-        VerticalAlignment="Top"
-        Left="500" />
+
     <Storyboard x:Key="Show">
         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Duration="0:0:0.1">
             <ObjectAnimationUsingKeyFrames.KeyFrames>
@@ -43,4 +38,33 @@
             </ObjectAnimationUsingKeyFrames.KeyFrames>
         </ObjectAnimationUsingKeyFrames>
     </Storyboard>
+
+    <!--  恢复大小  -->
+    <Storyboard x:Key="DM.Recovery">
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+            <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1" />
+        </DoubleAnimationUsingKeyFrames>
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+            <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1" />
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard x:Key="DM.Large_1.2">
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+            <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.2" />
+        </DoubleAnimationUsingKeyFrames>
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+            <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.2" />
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard x:Key="DM.Large_1.4">
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+            <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.4" />
+        </DoubleAnimationUsingKeyFrames>
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+            <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.4" />
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
 </ResourceDictionary>

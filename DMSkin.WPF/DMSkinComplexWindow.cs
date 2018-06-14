@@ -33,8 +33,6 @@ namespace DMSkin.WPF
         #endregion
 
         #region 切换单双窗口模式
-        string packButtonUri = @"/DMSkin.WPF;component/Styles/DMSystemButton.xaml";
-
         /// <summary>
         /// 加载双层窗口的样式
         /// </summary>
@@ -50,11 +48,6 @@ namespace DMSkin.WPF
                 Owner = _shadowWindow;//绑定阴影窗体
                 Activate();
             }), DispatcherPriority.ApplicationIdle, this);
-
-            ResourceDictionary dic = new ResourceDictionary { Source = new Uri(packButtonUri, UriKind.Relative) };
-            Resources.MergedDictionaries.Add(dic);
-
-            Style = (Style)dic["MainWindow"];
         }
         #endregion
 

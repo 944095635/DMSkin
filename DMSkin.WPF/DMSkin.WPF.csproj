@@ -48,8 +48,11 @@
     <Compile Include="API\HTTP.cs" />
     <Compile Include="API\Native.cs" />
     <Compile Include="API\ViewModelBase.cs" />
+    <Compile Include="Controls\DMLinkButton.cs" />
+    <Compile Include="Controls\DMButton.cs" />
     <Compile Include="Controls\DMSystemMaxButton.cs" />
     <Compile Include="Controls\DMSystemCloseButton.cs" />
+    <Compile Include="Controls\DMSystemButton.cs" />
     <Compile Include="Controls\DMSystemMinButton.cs" />
     <Compile Include="Controls\DMTextBox.cs" />
     <Compile Include="Controls\ElasticWrapPanel.cs" />
@@ -70,11 +73,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Styles\DMBorder.xaml">
+    <Page Include="Styles\DMToolTip.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Styles\DMControls.xaml">
+    <Page Include="Styles\DMButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -87,22 +90,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Styles\DMSkinSimpleWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Styles\DMSystemButton.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Styles\DMButton.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Styles\DMCheckBox.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Styles\DMColor.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -131,6 +118,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Styles\DMScrollViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\DMTextBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

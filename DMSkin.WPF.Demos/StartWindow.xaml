@@ -1,106 +1,360 @@
-﻿<Window
+﻿<DMSkin:DMSkinSimpleWindow
     x:Class="DMSkin.WPF.Demos.StartWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:control="clr-namespace:DM_Studio.Control"
+    xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF"
     xmlns:controls="clr-namespace:DMSkin.WPF.Controls;assembly=DMSkin.WPF"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:pages="clr-namespace:DMSkin.WPF.Demos.Pages"
-    xmlns:system="clr-namespace:System;assembly=mscorlib"
     xmlns:viewmodels="clr-namespace:DMSkin.WPF.Demos.ViewModels"
     Title="DMSkin for WPF"
-    Width="600"
-    Height="400"
+    Width="1366"
+    Height="768"
     MinWidth="360"
     MinHeight="268"
     Background="White"
+    DMWindowShadowColor="{Binding DMWindowShadowColor}"
+    DMWindowShadowOpacity="0.8"
+    DMWindowShadowSize="15"
     FontSize="12"
     Foreground="White"
     ResizeMode="CanResizeWithGrip"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
+    <DMSkin:DMSkinSimpleWindow.Resources>
+        <ContextMenu x:Key="Test">
+            <MenuItem Header="DMSkin">
+                <MenuItem Header="DMSkin" />
+                <MenuItem Header="DMSkin" />
+                <MenuItem Header="DMSkin" />
+            </MenuItem>
+            <Separator
+                Width="180"
+                Margin="-40,0,0,0"
+                Opacity="0.5" />
+            <MenuItem Header="944095635" />
+            <MenuItem Header="www.dmskin.com" />
+        </ContextMenu>
+    </DMSkin:DMSkinSimpleWindow.Resources>
     <Window.DataContext>
         <viewmodels:StartWindowViewModel />
     </Window.DataContext>
     <Grid>
-        <TabControl Grid.Row="1">
-            <TabItem Header="基础组件">
-                <StackPanel Margin="10">
-                    <GroupBox Header="输入框">
-                        <UniformGrid Columns="2">
-                            <controls:DMTextBox
-                                Width="210"
-                                Height="35"
-                                HorizontalContentAlignment="Center"
-                                CornerRadius="5"
-                                Hint="请输入手机"
-                                Icon="{StaticResource Icon_Safe}"
-                                ShadowBlurRadius="15"
-                                ShowIcon="False" />
-                            <controls:DMTextBox
-                                Width="210"
-                                Height="35"
-                                CornerRadius="5"
-                                Hint="请输入手机(图标)"
-                                Icon="{StaticResource Icon_Safe}"
-                                ShadowBlurRadius="15"
-                                ShowIcon="True" />
-                            <controls:DMTextBox
-                                Width="220"
-                                Margin="5,15,5,15"
-                                CornerRadius="5"
-                                Hint="请输入手机号码(小阴影)"
-                                ShadowBlurRadius="5" />
-                            <controls:DMTextBox
-                                Width="220"
-                                Margin="5,15,5,15"
-                                BorderThickness="1"
-                                CornerRadius="0"
-                                Hint="请输入手机号码(直角)"
-                                ShadowBlurRadius="5" />
-                            <controls:DMTextBox
-                                Width="220"
-                                Margin="5,15,5,15"
-                                BorderBrush="#33999999"
-                                BorderThickness="1"
-                                Hint="请输入手机号码(无阴影)" />
-                            <controls:DMTextBox
-                                Width="220"
-                                Margin="5,15,5,15"
-                                Background="#00FFFFFF"
-                                BorderThickness="0"
-                                CornerRadius="0"
-                                Hint="透明水印输入框"
-                                ShadowBlurRadius="0" />
-                        </UniformGrid>
-                    </GroupBox>
-                </StackPanel>
-            </TabItem>
-            <TabItem Header="无边框窗口" Tag="&#xe64a;">
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Button
-                        Command="{Binding ComplexWindowCommand}"
-                        Content="双层窗口 带系统动画"
-                        Style="{StaticResource DMButton}" />
-                    <Button
-                        Margin="0,50,0,0"
-                        Command="{Binding SimpleWindowCommand}"
-                        Content="单层窗口"
-                        Style="{StaticResource DMButton}" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Background="#2BB669">
+                <TextBlock
+                    Margin="15,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Text="DMSkin for WPF 官方案例" />
+                <WrapPanel
+                    Height="{Binding DMSystemButtonSize}"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Orientation="Horizontal">
+                    <controls:DMSystemButton
+                        DMSystemButtonForeground="White"
+                        DMSystemButtonHoverForeground="White"
+                        DMSystemButtonSize="50"
+                        Icon="M512 65.4c-327 0-448 285.2-448 445.1 0 159.9 116.3 448 438.5 448 0 0 80.1 1.4 80.1-70.6s-36-49-36-100.8c0-51.9 36-74.9 53.3-74.9 17.3 0 131.1 8.6 194.5-15.9C857.7 671.9 960 594.1 960 461.6c0-116.7-121-396.2-448-396.2zM238.9 512c-43 0-77.8-34.8-77.8-77.8s34.8-77.8 77.8-77.8 77.8 34.8 77.8 77.8c-0.1 43-34.9 77.8-77.8 77.8z m146.7-192.5c-43 0-77.8-34.8-77.8-77.8s34.8-77.8 77.8-77.8c42.9 0 77.8 34.8 77.8 77.8s-34.8 77.8-77.8 77.8z m249.5 0c-42.9 0-77.8-34.8-77.8-77.8s34.8-77.8 77.8-77.8c42.9 0 77.8 34.8 77.8 77.8s-34.8 77.8-77.8 77.8zM783.2 512c-42.9 0-77.8-34.8-77.8-77.8s34.8-77.8 77.8-77.8 77.8 34.8 77.8 77.8c0.1 43-34.8 77.8-77.8 77.8z"
+                        IconHeight="17"
+                        IconWidth="19"
+                        ToolTip="换肤" />
+                    <controls:DMSystemButton
+                        DMSystemButtonForeground="White"
+                        DMSystemButtonHoverForeground="White"
+                        DMSystemButtonSize="50"
+                        Icon="{StaticResource Skin_001}"
+                        IconHeight="17"
+                        IconWidth="20"
+                        ToolTip="主题" />
+                    <controls:DMSystemMinButton
+                        DMSystemButtonForeground="White"
+                        DMSystemButtonHoverForeground="White"
+                        DMSystemButtonSize="50" />
+                    <controls:DMSystemMaxButton
+                        DMSystemButtonForeground="White"
+                        DMSystemButtonHoverForeground="White"
+                        DMSystemButtonSize="50" />
+                    <controls:DMSystemCloseButton
+                        DMSystemButtonForeground="White"
+                        DMSystemButtonHoverForeground="White"
+                        DMSystemButtonSize="50" />
+                </WrapPanel>
+            </Grid>
+            <TabControl
+                Grid.Row="1"
+                Background="Transparent"
+                Style="{StaticResource DMTopTabControl}">
+                <TabItem
+                    Height="35"
+                    Header="基础组件"
+                    Style="{StaticResource DMTopTabItemLeft}">
+                    <StackPanel Margin="10" Orientation="Horizontal">
+                        <GroupBox Header="输入框">
+                            <StackPanel>
+                                <TextBox
+                                    Width="150"
+                                    Height="30"
+                                    Margin="5"
+                                    VerticalContentAlignment="Center"
+                                    BorderBrush="#33999999"
+                                    Text="普通输入框" />
+                                <controls:DMTextBox
+                                    Width="150"
+                                    Height="30"
+                                    Margin="5"
+                                    BorderBrush="#33999999"
+                                    BorderThickness="1"
+                                    Hint="请输入密码"
+                                    Icon="{StaticResource Icon_Safe}"
+                                    ShowIcon="True" />
+                                <controls:DMTextBox
+                                    Width="150"
+                                    Height="30"
+                                    Margin="5"
+                                    Background="White"
+                                    BorderBrush="#33999999"
+                                    BorderThickness="1"
+                                    Hint="请输入密码"
+                                    Icon="{StaticResource Icon_Tline}"
+                                    ShowIcon="True" />
+                                <controls:DMTextBox
+                                    Width="150"
+                                    Height="30"
+                                    Margin="5,15,5,15"
+                                    CornerRadius="2"
+                                    Hint="请输入手机号码(圆角)" />
+                                <controls:DMTextBox
+                                    Width="150"
+                                    Margin="5,15,5,15"
+                                    Background="#00FFFFFF"
+                                    BorderThickness="0"
+                                    CornerRadius="0"
+                                    Hint="透明水印输入框" />
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="按钮">
+                            <StackPanel Margin="15">
+                                <Button
+                                    Width="120"
+                                    Height="30"
+                                    Margin="5"
+                                    Content="普通按钮" />
 
-                    <Button
-                        Margin="0,50,0,0"
-                        Command="{Binding Demo1WindowCommand}"
-                        Content="DEMO窗口"
-                        Style="{StaticResource DMButton}" />
-                </StackPanel>
-            </TabItem>
-            <TabItem Header="WPF秘籍" />
-            <TabItem Header="WPF转换器" />
-            <TabItem Header="WPF样式与模版" />
-            <TabItem Header="WPF动画" />
-            <TabItem Header="关于DMSkin" />
-        </TabControl>
+                                <controls:DMLinkButton
+                                    Margin="5,5,5,5"
+                                    Content="超链接按钮"
+                                    DMSystemButtonHoverForeground="Red" />
+
+                                <controls:DMLinkButton
+                                    Margin="5,5,5,5"
+                                    Content="超链接按钮"
+                                    DMDisplayLine="False"
+                                    DMSystemButtonHoverColor="{StaticResource TransparentColor}"
+                                    DMSystemButtonHoverForeground="Black" />
+
+
+                                <controls:DMButton
+                                    Width="120"
+                                    Height="30"
+                                    Margin="5"
+                                    Content="按钮样式"
+                                    CornerRadius="2" />
+                                <controls:DMButton
+                                    Width="120"
+                                    Height="30"
+                                    Margin="5"
+                                    Content="按钮样式"
+                                    CornerRadius="15" />
+                                <controls:DMButton
+                                    Width="120"
+                                    Height="30"
+                                    Margin="5"
+                                    CornerRadius="15">
+                                    <WrapPanel>
+                                        <Path
+                                            Width="22"
+                                            Height="18"
+                                            Data="{StaticResource Icon_User}"
+                                            Fill="White"
+                                            Stretch="Fill" />
+                                        <Label
+                                            VerticalAlignment="Center"
+                                            Content="图标按钮"
+                                            Foreground="White" />
+                                    </WrapPanel>
+                                </controls:DMButton>
+                                <controls:DMButton
+                                    Width="120"
+                                    Height="30"
+                                    Margin="5"
+                                    Background="#FF88DD33"
+                                    BorderBrush="#FF1E9FFF"
+                                    Content="按钮样式"
+                                    CornerRadius="2"
+                                    Foreground="White" />
+                                <controls:DMButton
+                                    Width="120"
+                                    Height="30"
+                                    Margin="5"
+                                    Background="#FF1E9FFF"
+                                    Content="按钮样式-蓝"
+                                    CornerRadius="2"
+                                    Foreground="White" />
+                                <controls:DMButton
+                                    Width="120"
+                                    Height="30"
+                                    Margin="5"
+                                    Background="#2BB669"
+                                    Content="按钮样式-绿"
+                                    CornerRadius="2"
+                                    Foreground="White" />
+                                <controls:DMButton
+                                    Width="120"
+                                    Height="30"
+                                    Margin="5"
+                                    Background="#FFFF8E1E"
+                                    Content="按钮样式-橙"
+                                    CornerRadius="2"
+                                    Foreground="White" />
+                                <controls:DMButton
+                                    Width="120"
+                                    Height="30"
+                                    Margin="5"
+                                    Background="#FFFF4848"
+                                    Content="按钮样式-红"
+                                    CornerRadius="2"
+                                    Foreground="White" />
+                            </StackPanel>
+                        </GroupBox>
+                        <StackPanel>
+                            <GroupBox Header="选择框">
+                                <StackPanel Margin="15">
+                                    <CheckBox Content="普通单选框" />
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="右键菜单">
+                                <StackPanel Margin="15">
+                                    <Button Content="内置右键菜单" ContextMenu="{StaticResource Test}" />
+                                </StackPanel>
+                            </GroupBox>
+                        </StackPanel>
+                        <GroupBox Header="无边框窗口">
+                            <StackPanel Margin="15">
+                                <TextBlock Text="窗体阴影大小 正常值 0 - 25~30" />
+                                <Slider
+                                    Margin="5"
+                                    LargeChange="1"
+                                    Maximum="30"
+                                    Style="{StaticResource DMOpacitySlider}"
+                                    Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type DMSkin:DMSkinSimpleWindow}}, Path=DMWindowShadowSize}" />
+                                <TextBlock Text="窗体阴影透明度 正常值 0 - 1.0" />
+                                <Slider
+                                    Margin="5"
+                                    LargeChange="0.1"
+                                    Maximum="1"
+                                    SmallChange="0.1"
+                                    Style="{StaticResource DMSlider}"
+                                    Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type DMSkin:DMSkinSimpleWindow}}, Path=DMWindowShadowOpacity}" />
+                                <controls:DMButton
+                                    Width="120"
+                                    Height="30"
+                                    Margin="5"
+                                    Background="#FF1E9FFF"
+                                    Command="{Binding ChangeWindowCommand}"
+                                    CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Background}"
+                                    Content="窗体边框-变蓝"
+                                    CornerRadius="2"
+                                    Foreground="White" />
+                                <controls:DMButton
+                                    Width="120"
+                                    Height="30"
+                                    Margin="5"
+                                    Background="#FFFF8E1E"
+                                    Command="{Binding ChangeWindowCommand}"
+                                    CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Background}"
+                                    Content="窗体边框-变橙"
+                                    CornerRadius="2"
+                                    Foreground="White" />
+                                <controls:DMButton
+                                    Width="120"
+                                    Height="30"
+                                    Margin="5"
+                                    Background="#FFFF4848"
+                                    Command="{Binding ChangeWindowCommand}"
+                                    CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Background}"
+                                    Content="窗体边框-变红"
+                                    CornerRadius="2"
+                                    Foreground="White" />
+
+                                <TextBlock Margin="0,10,0,0" Text="窗体案例" />
+                                <controls:DMButton
+                                    Width="120"
+                                    Height="30"
+                                    Margin="5"
+                                    Command="{Binding ComplexWindowCommand}"
+                                    Content="双层窗口 带系统动画"
+                                    CornerRadius="2" />
+                                <controls:DMButton
+                                    Width="120"
+                                    Height="30"
+                                    Margin="5"
+                                    Command="{Binding SimpleWindowCommand}"
+                                    Content="单层窗口"
+                                    CornerRadius="2" />
+                                <controls:DMButton
+                                    Width="120"
+                                    Height="30"
+                                    Margin="5"
+                                    Command="{Binding Demo1WindowCommand}"
+                                    Content="DEMO窗口"
+                                    CornerRadius="2" />
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </TabItem>
+                <TabItem
+                    Height="35"
+                    Header="WPF案例"
+                    Style="{StaticResource DMTopTabItem}" />
+                <TabItem
+                    Height="35"
+                    Header="WPF秘籍"
+                    Style="{StaticResource DMTopTabItem}" />
+                <TabItem
+                    Height="35"
+                    Header="WPF转换器"
+                    Style="{StaticResource DMTopTabItem}" />
+                <TabItem
+                    Height="35"
+                    Header="WPF样式与模版"
+                    Style="{StaticResource DMTopTabItem}" />
+                <TabItem
+                    Height="35"
+                    Header="WPF动画"
+                    Style="{StaticResource DMTopTabItem}">
+                    <Frame NavigationUIVisibility="Hidden" Source="/DMSkin.WPF.Demos;component/Views/PageAnimation.xaml" />
+                </TabItem>
+                <TabItem
+                    Height="35"
+                    Header="关于DMSkin"
+                    Style="{StaticResource DMTopTabItemRight}">
+                    <Frame NavigationUIVisibility="Hidden" Source="/DMSkin.WPF.Demos;component/Views/PageAbout.xaml" />
+                </TabItem>
+            </TabControl>
+        </Grid>
+
+        <ResizeGrip
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch"
+            Visibility="{Binding DMVisibility}" />
     </Grid>
-</Window>
+</DMSkin:DMSkinSimpleWindow>

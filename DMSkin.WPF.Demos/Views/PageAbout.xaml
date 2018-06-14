@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="DMSkin.WPF.Demos.Views.PageAbout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:DMSkin.WPF.Controls;assembly=DMSkin.WPF"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DMSkin.WPF.Demos.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="clr-namespace:DMSkin.WPF.Demos.ViewModels"
+    Title="PageAbout"
+    d:DesignHeight="800"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <viewmodels:PageAboutViewModel />
+    </Page.DataContext>
+    <Page.Resources>
+        <!--  主题色  -->
+        <SolidColorBrush x:Key="ThemeColor" Color="#FF009FA5" />
+        <!--  Menu 菜单  -->
+        <SolidColorBrush x:Key="MenuColor" Color="#FF262A34" />
+        <SolidColorBrush x:Key="MenuSelectColor" Color="#0EBF9C" />
+    </Page.Resources>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Border Width="250" Height="250">
+            <Ellipse
+                Width="250"
+                Height="250"
+                RenderOptions.BitmapScalingMode="Fant">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="../Images/user.jpg" />
+                </Ellipse.Fill>
+            </Ellipse>
+        </Border>
+        <TextBlock
+            Margin="0,10,0,0"
+            HorizontalAlignment="Center"
+            FontSize="40"
+            Foreground="{StaticResource ThemeColor}"
+            Text="Dream.Machine" />
+        <TextBlock
+            Margin="0,10,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="22"
+            Foreground="{StaticResource ThemeColor}"
+            Text="QQ:944095635" />
+        <controls:DMLinkButton
+            Margin="0,10,0,0"
+            Command="{Binding OpenLinkCommand}"
+            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self},Path=Content}"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="https://github.com/944095635"
+            DMSystemButtonHoverColor="{StaticResource TransparentColor}"
+            DMSystemButtonHoverForeground="RoyalBlue"
+            FontSize="22"
+            Foreground="{StaticResource MenuSelectColor}" />
+        <TextBlock
+            Margin="0,35,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="18"
+            Text="DMSkin for WPF" />
+        <TextBlock
+            Margin="0,10,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="18"
+            Text="成都市高新区天府软件园" />
+    </StackPanel>
+</Page>
