@@ -15,7 +15,7 @@ DFW offers 2 plans for window borderless:
 #### 1. ComplexWindow Plan
 Use Windows 32 API to redraw non-client area and create a separate shadow window for shadow's presentation.
 #### 2. SimpleWindow Plan
-Delay Window message to prevent flickering corruption bug.
+Delay Window message to prevent flickering blurred bug owning to setting `AllowsTransparency=true`, `WindowStyle=None`
 
 The follwing chart can show you the differences between `DMSkinComplexWindow` and `DMSkinSimlpeWindow`
 
@@ -27,7 +27,7 @@ The follwing chart can show you the differences between `DMSkinComplexWindow` an
 
 ## Notice
 #### 1. DFW was developed on VS 2017 Community, .NET 4.0 Environment, contains some c# 6.0+ grammar codes.If you cannot compile it through VS 2015 and others previous VS versions, please modify the source code youself.
-#### 2. The plan still has drawback, Non-client area system button blocking operation on Windows 7 system.
+#### 2. The DMSkinComplexWindow plan still has drawback, Non-client area system button blocks operations on Windows 7 system.
 
 ## Installation
 You can get the **`DMSkin.WPF.dll`** through 2 two different ways.
