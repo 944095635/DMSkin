@@ -1,6 +1,7 @@
 ﻿using DMSkin.WPF.API;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Windows.Input;
@@ -36,16 +37,6 @@ namespace DMSkin.WPF.Demos.ViewModels
             }
         }
 
-        public ICommand Demo1WindowCommand
-        {
-            get
-            {
-                return new DelegateCommand(obj =>
-                {
-                    new DemoWindow().Show();
-                });
-            }
-        }
 
 
         private Color _DMWindowShadowColor;
@@ -74,7 +65,21 @@ namespace DMSkin.WPF.Demos.ViewModels
             }
         }
 
-        
+
+
+        public ICommand OpenLinkCommand
+        {
+            get
+            {
+                return new DelegateCommand(obj =>
+                {
+                    if (obj is string url)
+                    {
+                        Process.Start(url);
+                    }
+                });
+            }
+        }
 
     }
 }

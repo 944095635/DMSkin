@@ -22,10 +22,10 @@
         <SolidColorBrush x:Key="MenuSelectColor" Color="#0EBF9C" />
     </Page.Resources>
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Border Width="250" Height="250">
+        <Border Width="200" Height="200">
             <Ellipse
-                Width="250"
-                Height="250"
+                Width="200"
+                Height="200"
                 RenderOptions.BitmapScalingMode="Fant">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="../Images/user.jpg" />
@@ -47,26 +47,37 @@
             Text="QQ:944095635" />
         <controls:DMLinkButton
             Margin="0,10,0,0"
-            Command="{Binding OpenLinkCommand}"
-            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self},Path=Content}"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
+            Command="{Binding OpenLinkCommand}"
+            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}"
+            Content="http://www.dmskin.com/"
+            DMSystemButtonHoverColor="{StaticResource TransparentColor}"
+            DMSystemButtonHoverForeground="RoyalBlue"
+            FontSize="22"
+            Foreground="{StaticResource MenuSelectColor}" />
+        <controls:DMLinkButton
+            Margin="0,10,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Command="{Binding OpenLinkCommand}"
+            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}"
             Content="https://github.com/944095635"
             DMSystemButtonHoverColor="{StaticResource TransparentColor}"
             DMSystemButtonHoverForeground="RoyalBlue"
             FontSize="22"
             Foreground="{StaticResource MenuSelectColor}" />
         <TextBlock
-            Margin="0,35,0,0"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontSize="18"
-            Text="DMSkin for WPF" />
-        <TextBlock
-            Margin="0,10,0,0"
+            Margin="0,15,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             FontSize="18"
             Text="成都市高新区天府软件园" />
+        <TextBlock
+            Margin="0,15,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="18"
+            Text="WPF UI,软件,网站定制。" />
     </StackPanel>
 </Page>

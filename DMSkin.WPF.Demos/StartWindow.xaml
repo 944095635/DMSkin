@@ -8,8 +8,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewmodels="clr-namespace:DMSkin.WPF.Demos.ViewModels"
     Title="DMSkin for WPF"
-    Width="1366"
-    Height="768"
+    Width="1200"
+    Height="680"
     MinWidth="360"
     MinHeight="268"
     Background="White"
@@ -57,6 +57,14 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
                     Orientation="Horizontal">
+                    <controls:DMSystemButton
+                        DMSystemButtonForeground="White"
+                        DMSystemButtonHoverForeground="White"
+                        DMSystemButtonSize="50"
+                        Icon="M832 128 192 128C139.072 128 96 171.072 96 224l0 512c0 52.928 43.072 96 96 96l210.752 0 86.624 86.624C495.616 924.864 503.808 928 512 928s16.384-3.136 22.624-9.376L621.248 832 832 832c52.928 0 96-43.072 96-96L928 224C928 171.072 884.928 128 832 128zM336 512C309.536 512 288 490.464 288 464S309.536 416 336 416s48 21.536 48 48S362.464 512 336 512zM528 512c-26.464 0-48-21.536-48-48s21.536-48 48-48 48 21.536 48 48S554.464 512 528 512zM720 512c-26.464 0-48-21.536-48-48s21.536-48 48-48 48 21.536 48 48S746.464 512 720 512z"
+                        IconHeight="17"
+                        IconWidth="19"
+                        ToolTip="Message" />
                     <controls:DMSystemButton
                         DMSystemButtonForeground="White"
                         DMSystemButtonHoverForeground="White"
@@ -262,6 +270,16 @@
                                     SmallChange="0.1"
                                     Style="{StaticResource DMSlider}"
                                     Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type DMSkin:DMSkinSimpleWindow}}, Path=DMWindowShadowOpacity}" />
+                                <controls:DMTextBox
+                                    Width="150"
+                                    Height="30"
+                                    Margin="5"
+                                    BorderBrush="#33999999"
+                                    BorderThickness="1"
+                                    Hint="例如:#FF333333"
+                                    Icon="{StaticResource Icon_Safe}"
+                                    ShowIcon="True"
+                                    Text="{Binding DMWindowShadowColor}" />
                                 <controls:DMButton
                                     Width="120"
                                     Height="30"
@@ -308,25 +326,56 @@
                                     Command="{Binding SimpleWindowCommand}"
                                     Content="单层窗口"
                                     CornerRadius="2" />
-                                <controls:DMButton
-                                    Width="120"
-                                    Height="30"
-                                    Margin="5"
-                                    Command="{Binding Demo1WindowCommand}"
-                                    Content="DEMO窗口"
-                                    CornerRadius="2" />
                             </StackPanel>
                         </GroupBox>
+                        <StackPanel>
+                            <Image
+                                RenderOptions.BitmapScalingMode="Fant"
+                                Source="Images/image1.png"
+                                Stretch="None" />
+                        </StackPanel>
                     </StackPanel>
                 </TabItem>
                 <TabItem
                     Height="35"
-                    Header="WPF案例"
-                    Style="{StaticResource DMTopTabItem}" />
-                <TabItem
-                    Height="35"
-                    Header="WPF秘籍"
-                    Style="{StaticResource DMTopTabItem}" />
+                    Header="WPF教程"
+                    Style="{StaticResource DMTopTabItem}">
+                    <StackPanel Margin="30">
+                        <controls:DMLinkButton
+                            Margin="0,10,0,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Command="{Binding OpenLinkCommand}"
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}"
+                            Content="1.数据绑定刷新通知"
+                            DMSystemButtonHoverColor="{StaticResource TransparentColor}"
+                            DMSystemButtonHoverForeground="RoyalBlue"
+                            FontSize="22"
+                            Tag="https://github.com/944095635/DMSkin-for-WPF/wiki/%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E5%88%B7%E6%96%B0%E9%80%9A%E7%9F%A5" />
+                        <controls:DMLinkButton
+                            Margin="0,10,0,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Command="{Binding OpenLinkCommand}"
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}"
+                            Content="2.跨线程UI调度器"
+                            DMSystemButtonHoverColor="{StaticResource TransparentColor}"
+                            DMSystemButtonHoverForeground="RoyalBlue"
+                            FontSize="22"
+                            Tag="https://github.com/944095635/DMSkin-for-WPF/wiki/%E8%B7%A8%E7%BA%BF%E7%A8%8BUI%E8%B0%83%E5%BA%A6%E5%99%A8" />
+                        <controls:DMLinkButton
+                            Margin="0,10,0,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Command="{Binding OpenLinkCommand}"
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}"
+                            Content="3.开启透明并支持GDI"
+                            DMSystemButtonHoverColor="{StaticResource TransparentColor}"
+                            DMSystemButtonHoverForeground="RoyalBlue"
+                            FontSize="22"
+                            Tag="https://github.com/944095635/DMSkin-for-WPF/wiki/%E5%BC%80%E5%90%AF%E9%80%8F%E6%98%8E%E5%B9%B6%E6%94%AF%E6%8C%81GDI-" />
+                    </StackPanel>
+                </TabItem>
                 <TabItem
                     Height="35"
                     Header="WPF转换器"

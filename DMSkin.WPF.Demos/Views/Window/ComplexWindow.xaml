@@ -1,0 +1,56 @@
+﻿<DMSkin:DMSkinComplexWindow
+    x:Class="DMSkin.WPF.Demos.ComplexWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF"
+    xmlns:controls="clr-namespace:DMSkin.WPF.Controls;assembly=DMSkin.WPF"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="clr-namespace:DM_Studio.ViewModels"
+    Title="双层窗口"
+    Width="600"
+    Height="400"
+    MinWidth="360"
+    MinHeight="268"
+    Background="White"
+    DMWindowShadowColor="#888888"
+    DMWindowShadowSize="10"
+    Foreground="White"
+    ResizeMode="CanResizeWithGrip"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <viewmodels:MainWindowViewModel />
+    </Window.DataContext>
+    <Window.InputBindings>
+        <KeyBinding Command="{Binding F1Command}" Gesture="F1" />
+    </Window.InputBindings>
+    <Grid>
+
+        <WrapPanel
+            Height="{Binding DMSystemButtonSize}"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Orientation="Horizontal">
+            <controls:DMSystemMinButton
+                DMSystemButtonForeground="#383838"
+                DMSystemButtonHoverForeground="#383838"
+                DMSystemButtonSize="50" />
+            <controls:DMSystemMaxButton
+                DMSystemButtonForeground="#383838"
+                DMSystemButtonHoverForeground="#FFFFFF"
+                DMSystemButtonSize="50" />
+            <controls:DMSystemCloseButton
+                DMSystemButtonForeground="#383838"
+                DMSystemButtonHoverForeground="#FFFFFF"
+                DMSystemButtonSize="50" />
+        </WrapPanel>
+
+        <ResizeGrip
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch"
+            Visibility="{Binding DMVisibility}" />
+    </Grid>
+</DMSkin:DMSkinComplexWindow>

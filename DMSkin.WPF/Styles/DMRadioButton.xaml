@@ -17,7 +17,6 @@
                                 x:Name="Content"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
-                                FontFamily="/DMClub;component/Resources/#iconfont"
                                 Text="{TemplateBinding Content}" />
                         </Border>
                     </Grid>
@@ -53,7 +52,6 @@
                                 x:Name="Content"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
-                                FontFamily="/DMClub;component/Resources/#iconfont"
                                 Text="{TemplateBinding Content}" />
                         </Border>
                     </Grid>
@@ -88,7 +86,6 @@
                                 x:Name="Content"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
-                                FontFamily="/DMClub;component/Resources/#iconfont"
                                 Text="{TemplateBinding Content}" />
                         </Border>
                     </Grid>
@@ -124,7 +121,6 @@
                                 x:Name="Content"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
-                                FontFamily="/DMClub;component/Resources/#iconfont"
                                 Text="{TemplateBinding Content}" />
                         </Border>
                     </Grid>
@@ -213,7 +209,6 @@
                             <TextBlock
                                 HorizontalAlignment="Left"
                                 VerticalAlignment="Center"
-                                FontFamily="/DMClub;component/Resources/#iconfont"
                                 FontSize="14"
                                 Foreground="{DynamicResource DMMainColor}"
                                 Text="&#xe604;" />

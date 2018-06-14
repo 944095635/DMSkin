@@ -74,15 +74,6 @@
     <StartupObject>DMSkin.WPF.Demos.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
-      <HintPath>..\packages\LiveCharts.0.9.7\lib\net40\LiveCharts.dll</HintPath>
-    </Reference>
-    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
-      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net40\LiveCharts.Wpf.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -112,7 +103,7 @@
     <Compile Include="Views\PageAnimation.xaml.cs">
       <DependentUpon>PageAnimation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SimpleWindow.xaml.cs">
+    <Compile Include="Views\Window\SimpleWindow.xaml.cs">
       <DependentUpon>SimpleWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
@@ -129,80 +120,24 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\SimpleWindow.xaml">
+    <Page Include="Views\Window\SimpleWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\DemoWindow.xaml">
+    <Page Include="Views\Window\ComplexWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\ComplexWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="API.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Control\MyTabItem.cs" />
-    <Compile Include="Control\WaterMaskTextBox.cs" />
-    <Compile Include="Converters\LocationConverters.cs" />
-    <Compile Include="Views\DemoWindow.xaml.cs">
-      <DependentUpon>DemoWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ComplexWindow.xaml.cs">
+    <Compile Include="Views\Window\ComplexWindow.xaml.cs">
       <DependentUpon>ComplexWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\Index.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\DashBoard.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\FormatTool.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Gallery.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Tieba.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Translate.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\LanguageModel.cs" />
-    <Compile Include="Models\TranslateModel.cs" />
-    <Compile Include="Models\GalleryModel.cs" />
-    <Compile Include="Views\Index.xaml.cs">
-      <DependentUpon>Index.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DashBoard.xaml.cs">
-      <DependentUpon>DashBoard.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\FormatTool.xaml.cs">
-      <DependentUpon>FormatTool.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Gallery.xaml.cs">
-      <DependentUpon>Gallery.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Tieba.xaml.cs">
-      <DependentUpon>Tieba.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Translate.xaml.cs">
-      <DependentUpon>Translate.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -220,10 +155,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Resource Include="Fonts\iconfont.ttf" />
-    <Resource Include="Fonts\glyphicons-halflings-regular.ttf" />
-    <Resource Include="Fonts\ardestine.ttf" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -233,19 +164,17 @@
     <Resource Include="Images\user.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\BaiDuFanYi.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\BG.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DMSkin.WPF\DMSkin.WPF.csproj">
       <Project>{168352b1-6a0c-4c9c-8a32-68b512da3cfc}</Project>
       <Name>DMSkin.WPF</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\cm.jpg" />
+    <Folder Include="Fonts\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\image1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
