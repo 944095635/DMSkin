@@ -69,7 +69,8 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
 ````xml
 - <Window x:Class="DMSkinDemo.MainWindow" 
 + <DMSkin:DMSkinSimpleWindow
-+         xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF" x:Class="DMSkinDemo.MainWindow"   
++         x:Class="DMSkinDemo.MainWindow"   
++         xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF" 
           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -143,8 +144,6 @@ WindowStartupLocation="CenterScreen"  // window startup location
 ## Preview
 <img src="https://raw.githubusercontent.com/944095635/Image/master/A%20(1).gif" width="600" height="400" align="center">
 <img src="https://raw.githubusercontent.com/944095635/Image/master/GIF3.gif" width="600" height="400" align="center">
-<img src="https://raw.githubusercontent.com/944095635/Image/master/%E5%8F%8C%E5%B1%82.gif" width="600" height="400" align="center">
-<img src="http://p40kjburh.bkt.clouddn.com/18-6-14/3120580.jpg" width="900" height="900">
 
 ## Communication
 We appreciate it a lot if you can join us:
