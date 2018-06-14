@@ -146,8 +146,8 @@ WindowStartupLocation="CenterScreen"  // window startup location
 <img src="https://gitee.com/DreamMachine/Image/raw/master/Preview1.jpg" width="600" height="400" align="center">
 <img src="https://gitee.com/DreamMachine/Image/raw/master/Preview2.png" width="600" height="400" align="center">
 
-<img src="https://raw.githubusercontent.com/944095635/Image/master/A%20(1).gif" width="600" height="400" align="center">
-<img src="https://raw.githubusercontent.com/944095635/Image/master/GIF3.gif" width="600" height="400" align="center">
+<img src="https://gitee.com/DreamMachine/Image/raw/master/A%20(1).gif" width="600" height="400" align="center">
+<img src="https://gitee.com/DreamMachine/Image/raw/master/GIF3.gif" width="600" height="400" align="center">
 
 ## Communication
 We appreciate it a lot if you can join us:
