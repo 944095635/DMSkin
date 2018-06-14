@@ -1,7 +1,7 @@
 # DMSkin-for-WPF
 
 ![](https://img.shields.io/badge/.NET-%3E%3D3.5-brightgreen.svg)
-![](https://img.shields.io/badge/version-2.5.0.1-blue.svg)
+![](https://img.shields.io/badge/version-2.5.0.2-blue.svg)
 ![](https://img.shields.io/badge/license-MIT-green.svg)
 
 A WPF UI framework to create borderless window faster and easier.
