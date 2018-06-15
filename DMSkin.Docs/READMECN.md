@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/version-2.5.0.2-blue.svg)
 ![](https://img.shields.io/badge/license-MIT-green.svg)
 
-### 一个帮助你更快更轻松地创建无边框窗体的 **WPF UI** 框架。
+#### 一个帮助你更快更轻松地创建无边框窗体的 **WPF UI** 框架。
 
 <img src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo.png" align="center">
 
