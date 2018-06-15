@@ -110,7 +110,7 @@ DFW为窗体无边框提供了两种解决方案：
 ````js
 DMWindowShadowSize="10"               // 窗体阴影大小
 DMWindowShadowColor="#FFC8C8C8"       // 窗体阴影颜色
-DMWindowShadowOpacity="0.8"
+DMWindowShadowOpacity="0.8"           // 窗体阴影透明度
 DMWindowShadowDragVisibility="False"  // 当窗体被拖动时是否显示阴影
 DMWindowShadowVisibility="False"      // 是否显示窗体阴影
 DMWindowShadowBackColor="#FF323CAD"   // 阴影背景色 (只对双层方案有效)
