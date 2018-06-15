@@ -4,14 +4,14 @@
 ![](https://img.shields.io/badge/version-2.5.0.2-blue.svg)
 ![](https://img.shields.io/badge/license-MIT-green.svg)
 
-#### 一个帮助你更快更轻松地创建无边框窗体的 **WPF UI** 框架。
+#### 一个强大的WPF无边框窗体框架和控件库组合。
 
 <img src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo.png" align="center">
 
 ## 前言 
-DMSkin-for-WPF (简称 DFW) 是一个WPF UI框架，旨在帮助WPF开发者更快更轻松地创建无边框窗体。它支持的.NET Framework版本从3.5到4.7，并支持从Windows XP到Window 10的所有系统版本。
+DMSkin-for-WPF (简称 DFW) 是一个强大的WPF无边框窗体框架和控件库组合。支持窗体阴影、窗体过渡动画，自带优雅的控件库，旨在帮助开发者更加高效、迅速地创建出优美的WPF界面。它支持的.NET Framework版本从3.5到4.7，并支持从Windows XP到Window 10的所有系统版本。
 
-DFW为窗体无边框提供了两种解决方案：
+DFW为窗体无边框提供了两种方案：
 #### 1. 双层方案
 使用Win 32 API重绘非客户区，然后创建一个单独的窗体去绘制阴影。
 #### 2. 单层方案
