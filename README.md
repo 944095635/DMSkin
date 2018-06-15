@@ -50,6 +50,7 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
 #### 1. Create a new WPF project
 #### 2. [Add DMSkin.WPF.dll reference](http://p40kjburh.bkt.clouddn.com/18-6-13/50043356.jpg)
 #### 3. Modify `MainWindow.cs`
+Here we set `DMSkinSimpleWindow` as an example, if you want to apply `DMSkinComplexWindow` plan, please replace `DMSkinSimpleWindow` to `DMSkinComplexWindow` in the following code.
 ````csharp
 + using DMSkin.WPF;
   using System.Windows;
@@ -84,7 +85,7 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
 - </Window>
 + </DMSkin:DMSkinSimpleWindow>
 ````
-
+As the same, if you want to apply `DMSkinComplexWindow` plan, please replace `DMSkinSimpleWindow` to `DMSkinComplexWindow` in the above code.
 #### 5. Add System Buttons (optional)
 ````xml
 <!-- Add below codes into MainWindow.xaml -->
@@ -111,16 +112,12 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
 
 #### 6. Config your DFW properties (optional)
 ````js
-Foreground="White"                    // window foreground color
-Background="White"                    // window background color 
 DMWindowShadowSize="10"               // window shadow size
 DMWindowShadowColor="#FFC8C8C8"       // window shadow color
 DMWindowShadowOpacity="0.8"
 DMWindowShadowDragVisibility="False"  // whether show shadow when window is being dragged
 DMWindowShadowVisibility="False"      // whether show window shadow
 DMWindowShadowBackColor="#FF323CAD"   // shadow background color (only for DMSkinComplexWindow)
-ResizeMode="CanResize"                // window resize mode (CanResiz or CanResizeWithGrip)
-WindowStartupLocation="CenterScreen"  // window startup location
 ````
 
 #### 7. Make Rounded window (optional)
