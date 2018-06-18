@@ -245,6 +245,8 @@
                             <GroupBox Header="选择框">
                                 <StackPanel Margin="15">
                                     <CheckBox Content="普通单选框" />
+                                    <controls:DMCheckBox IconColor="#FF1E9FFF" Content="选择框" IsChecked="True"></controls:DMCheckBox>
+                                    <controls:DMCheckBox IconColor="#FFFF4848" Content="选择框" IsChecked="True"></controls:DMCheckBox>
                                 </StackPanel>
                             </GroupBox>
                             <GroupBox Header="右键菜单">

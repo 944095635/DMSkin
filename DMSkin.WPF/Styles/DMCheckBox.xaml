@@ -19,7 +19,7 @@
                         <Border
                             Width="15"
                             Height="15"
-                            Margin="0,0,5,2"
+                            Margin="0,1,5,0"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="1">
                             <Path
