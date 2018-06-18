@@ -39,7 +39,7 @@ DFW为窗体无边框提供了两种方案：
 
 还有一些其它的方法可以获取到 `DMSkin.WPF.dll`和源码：
 
-- Nuget  `PM> Install-Package DMSkin.WPF -Version 2.5.0.2`
+- Nuget  `PM> Install-Package DMSkin.WPF -Version 2.5.0.4`
 - Git  `git clone git@github.com:944095635/DMSkin-for-WPF.git`
 
 ## 用法 & 配置
