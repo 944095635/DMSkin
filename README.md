@@ -1,17 +1,17 @@
 # DMSkin-for-WPF
 
 ![](https://img.shields.io/badge/.NET-%3E%3D3.5-brightgreen.svg)
-![](https://img.shields.io/badge/version-2.5.0.1-blue.svg)
+![](https://img.shields.io/badge/version-2.5.0.2-blue.svg)
 ![](https://img.shields.io/badge/license-MIT-green.svg)
 
-A WPF UI framework to create borderless window faster and easier.
+#### A powerful *WPF borderless window framework* and *control library* utility.
 
 [中文说明请点这里](./DMSkin.Docs/READMECN.md)
 
 <img src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo.png" align="center">
 
 ## Preface 
-DMSkin-for-WPF (aka DFW) is a WPF UI framework that aims to help WPF developers create a borderless window faster and easier. It supports .NET framework from 3.5 to 4.7, and runs well from Windows XP to Windows 10.
+DMSkin-for-WPF (aka DFW) is a powerful WPF borderless window framework and control library utility. It supports window border shadow, window transition animation, contains lots of elegant controls. It aimed to let developers create beautiful WPF window more efficient and faster.And It supports .NET framework from 3.5 to 4.7, and runs well from Windows XP to Windows 10.
 
 DFW offers 2 plans for window borderless:
 #### 1. ComplexWindow Plan
@@ -50,6 +50,7 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
 #### 1. Create a new WPF project
 #### 2. [Add DMSkin.WPF.dll reference](http://p40kjburh.bkt.clouddn.com/18-6-13/50043356.jpg)
 #### 3. Modify `MainWindow.cs`
+Here we set `DMSkinSimpleWindow` as an example, if you want to apply `DMSkinComplexWindow` plan, please replace `DMSkinSimpleWindow` to `DMSkinComplexWindow` in the following code.
 ````csharp
 + using DMSkin.WPF;
   using System.Windows;
@@ -84,7 +85,7 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
 - </Window>
 + </DMSkin:DMSkinSimpleWindow>
 ````
-
+As the same, if you want to apply `DMSkinComplexWindow` plan, please replace `DMSkinSimpleWindow` to `DMSkinComplexWindow` in the above code.
 #### 5. Add System Buttons (optional)
 ````xml
 <!-- Add below codes into MainWindow.xaml -->
@@ -111,16 +112,12 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
 
 #### 6. Config your DFW properties (optional)
 ````js
-Foreground="White"                    // window foreground color
-Background="White"                    // window background color 
 DMWindowShadowSize="10"               // window shadow size
 DMWindowShadowColor="#FFC8C8C8"       // window shadow color
 DMWindowShadowOpacity="0.8"
 DMWindowShadowDragVisibility="False"  // whether show shadow when window is being dragged
 DMWindowShadowVisibility="False"      // whether show window shadow
 DMWindowShadowBackColor="#FF323CAD"   // shadow background color (only for DMSkinComplexWindow)
-ResizeMode="CanResize"                // window resize mode (CanResiz or CanResizeWithGrip)
-WindowStartupLocation="CenterScreen"  // window startup location
 ````
 
 #### 7. Make Rounded window (optional)
