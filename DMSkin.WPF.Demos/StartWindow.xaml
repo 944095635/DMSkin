@@ -77,7 +77,7 @@
                         DMSystemButtonForeground="White"
                         DMSystemButtonHoverForeground="White"
                         DMSystemButtonSize="50"
-                        Icon="{StaticResource Skin_001}"
+                        Icon="{StaticResource Icon_Skin_001}"
                         IconHeight="17"
                         IconWidth="20"
                         ToolTip="主题" />
