@@ -1,12 +1,12 @@
 # DMSkin-for-WPF
 
 ![](https://img.shields.io/badge/.NET-%3E%3D3.5-brightgreen.svg)
-![](https://img.shields.io/badge/version-2.5.0.2-blue.svg)
+![](https://img.shields.io/badge/version-2.5.0.4-blue.svg)
 ![](https://img.shields.io/badge/license-MIT-green.svg)
 
 #### A powerful *WPF borderless window framework* and *control library* utility.
 
-[中文说明请点这里](./DMSkin.Docs/READMECN.md)
+[中文说明请点这里](./DMSkin.Docs/)
 
 <img src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo.png" align="center">
 
