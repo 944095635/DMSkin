@@ -43,7 +43,7 @@ Click `DMSkin-for-WPF.sln` to open the project, right click DMSkin.WPF in the so
 
 There are some other ways to fetch `DMSkin.WPF.dll` and source code.
 
-- Nuget  `PM> Install-Package DMSkin.WPF -Version 2.5.0.1`
+- Nuget  `PM> Install-Package DMSkin.WPF -Version 2.5.0.4`
 - Git  `git clone git@github.com:944095635/DMSkin-for-WPF.git`
 
 ## Usage & Configration
