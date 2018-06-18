@@ -48,6 +48,7 @@
     <Compile Include="API\HTTP.cs" />
     <Compile Include="API\Native.cs" />
     <Compile Include="API\ViewModelBase.cs" />
+    <Compile Include="Controls\DMCheckBox.cs" />
     <Compile Include="Controls\DMLinkButton.cs" />
     <Compile Include="Controls\DMButton.cs" />
     <Compile Include="Controls\DMSystemMaxButton.cs" />
@@ -70,6 +71,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Styles\Animation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\DMCheckBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

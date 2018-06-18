@@ -27,19 +27,18 @@
                             </Grid.ColumnDefinitions>
                             <Border x:Name="icon" Visibility="Collapsed">
                                 <Path
-                                    Width="{TemplateBinding FontSize}"
-                                    Height="{TemplateBinding FontSize}"
-                                    Margin="10,0,0,0"
+                                    Width="{TemplateBinding IconWidth}"
+                                    Height="{TemplateBinding IconHeight}"
+                                    Margin="14,0,14,0"
                                     HorizontalAlignment="Center"
                                     Data="{TemplateBinding Icon}"
-                                    Fill="#FF3F3F3F"
+                                    Fill="{TemplateBinding Foreground}"
                                     SnapsToDevicePixels="True"
                                     Stretch="Fill" />
                             </Border>
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"
-                                Margin="5,0,0,0"
                                 VerticalAlignment="Center"
                                 Focusable="false"
                                 HorizontalScrollBarVisibility="Hidden"
@@ -47,8 +46,9 @@
                             <TextBlock
                                 x:Name="watermark"
                                 Grid.Column="1"
-                                Margin="8,0,0,0.5"
+                                Margin="3,0,0,0.5"
                                 VerticalAlignment="Center"
+                                FontSize="{TemplateBinding FontSize}"
                                 Foreground="#FF888888"
                                 IsHitTestVisible="False"
                                 Text="{TemplateBinding Hint}"

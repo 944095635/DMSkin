@@ -117,7 +117,6 @@
                         x:Name="grid"
                         Width="{Binding DMSystemButtonSize, RelativeSource={RelativeSource TemplatedParent}}"
                         Height="{Binding DMSystemButtonSize, RelativeSource={RelativeSource TemplatedParent}}"
-                        Margin="0,-1,0,0"
                         Background="{StaticResource TransparentColor}">
                         <Label HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Path
@@ -214,7 +213,7 @@
                     <Grid x:Name="grid" Background="{StaticResource TransparentColor}">
                         <TextBlock
                             x:Name="Content"
-                            Margin="0,0,0,4"
+                            Margin="0,0,0,2"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                             Foreground="{TemplateBinding Foreground}"
@@ -236,7 +235,7 @@
                             <Setter TargetName="grid" Property="Opacity" Value="0.8" />
                         </Trigger>
                         <Trigger Property="DMDisplayLine" Value="false">
-                            <Setter TargetName="line" Property="Visibility" Value="Hidden" />
+                            <Setter TargetName="line" Property="Visibility" Value="Collapsed" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
