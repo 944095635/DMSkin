@@ -1,7 +1,7 @@
 # DMSkin-for-WPF
 
 ![](https://img.shields.io/badge/.NET-%3E%3D3.5-brightgreen.svg)
-![](https://img.shields.io/badge/version-2.5.0.4-blue.svg)
+![](https://img.shields.io/badge/version-2.5.0.5-blue.svg)
 ![](https://img.shields.io/badge/license-MIT-green.svg)
 
 #### 一个强大的WPF无边框窗体框架和控件库组合。
