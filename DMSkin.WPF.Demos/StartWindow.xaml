@@ -243,11 +243,30 @@
                         </GroupBox>
                         <StackPanel>
                             <GroupBox Header="选择框">
-                                <StackPanel Margin="15">
+                                <UniformGrid
+                                    Height="140"
+                                    Margin="15"
+                                    Rows="5">
                                     <CheckBox Content="普通单选框" />
-                                    <controls:DMCheckBox IconColor="#FF1E9FFF" Content="选择框" IsChecked="True"></controls:DMCheckBox>
-                                    <controls:DMCheckBox IconColor="#FFFF4848" Content="选择框" IsChecked="True"></controls:DMCheckBox>
-                                </StackPanel>
+                                    <controls:DMCheckBox
+                                        Padding="1"
+                                        Content="选择框"
+                                        IconColor="#FF1E9FFF"
+                                        IsChecked="True" />
+                                    <controls:DMCheckBox
+                                        Content="选择框"
+                                        IconColor="#FFFF4848"
+                                        IsChecked="True" />
+                                    <controls:DMRadioButton
+                                        Content="单选框"
+                                        IconColor="#FF1E9FFF"
+                                        IsChecked="True" />
+                                    <controls:DMRadioButton
+                                        Padding="2"
+                                        Content="单选框"
+                                        IconColor="#FFFF4848"
+                                        IsChecked="True" />
+                                </UniformGrid>
                             </GroupBox>
                             <GroupBox Header="右键菜单">
                                 <StackPanel Margin="15">

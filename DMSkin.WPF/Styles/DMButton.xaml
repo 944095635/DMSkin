@@ -211,13 +211,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type controls:DMLinkButton}">
                     <Grid x:Name="grid" Background="{StaticResource TransparentColor}">
-                        <TextBlock
+                        <ContentPresenter
                             x:Name="Content"
                             Margin="0,0,0,2"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            Foreground="{TemplateBinding Foreground}"
-                            Text="{TemplateBinding Content}" />
+                            VerticalAlignment="Center" />
                         <Border
                             x:Name="line"
                             Width="{Binding ElementName=Content, Path=ActualWidth}"
@@ -227,7 +225,7 @@
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="Content" Property="Foreground" Value="{Binding DMSystemButtonHoverForeground, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter Property="Foreground" Value="{Binding DMSystemButtonHoverForeground, RelativeSource={RelativeSource TemplatedParent}}" />
                             <Setter TargetName="line" Property="Background" Value="{Binding DMSystemButtonHoverForeground, RelativeSource={RelativeSource TemplatedParent}}" />
                             <Setter TargetName="grid" Property="Background" Value="{Binding DMSystemButtonHoverColor, RelativeSource={RelativeSource TemplatedParent}}" />
                         </Trigger>

@@ -12,6 +12,10 @@
                             Fill="#90000000"
                             RadiusX="1"
                             RadiusY="1" />
+                        <Rectangle
+                            Fill="#90FFFFFF"
+                            RadiusX="1"
+                            RadiusY="1" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

@@ -8,7 +8,7 @@ using System.Windows.Media;
 
 namespace DMSkin.WPF.Controls
 {
-    public class DMCheckBox : CheckBox
+    public class DMRadioButton : RadioButton
     {
         public SolidColorBrush IconColor
         {
@@ -16,6 +16,6 @@ namespace DMSkin.WPF.Controls
             set { SetValue(IconColorProperty, value); }
         }
         public static readonly DependencyProperty IconColorProperty =
-            DependencyProperty.Register("IconColor", typeof(SolidColorBrush), typeof(DMCheckBox), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 255,255,255))));
+            DependencyProperty.Register("IconColor", typeof(SolidColorBrush), typeof(DMRadioButton), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 255,255,255))));
     }
 }

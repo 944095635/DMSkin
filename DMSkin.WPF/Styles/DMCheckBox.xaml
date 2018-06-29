@@ -2,7 +2,6 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:DMSkin.WPF.Controls">
-    <!--  超链接 按钮  -->
     <Style TargetType="{x:Type controls:DMCheckBox}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
@@ -19,19 +18,18 @@
                         <Border
                             Width="15"
                             Height="15"
-                            Margin="0,1,5,0"
+                            Margin="0,0,5,0"
+                            Padding="{TemplateBinding Padding}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="1">
-                            <Path
+                            <Rectangle
                                 x:Name="icon"
-                                Width="14"
-                                Height="8"
-                                Data="M455.68 844.8L240.64 535.04l-125.44 87.04-30.72-40.96 168.96-117.76 209.92 302.08 506.88-496.64 35.84 38.4z"
+                                Margin="1"
                                 Fill="{TemplateBinding IconColor}"
                                 Stretch="Fill"
                                 Visibility="Collapsed" />
                         </Border>
-                        <ContentPresenter Grid.Column="1" />
+                        <ContentPresenter VerticalAlignment="Center" Grid.Column="1" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">

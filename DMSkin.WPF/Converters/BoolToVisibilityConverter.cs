@@ -11,9 +11,22 @@ namespace DMSkin.WPF.Converters
         {
             if (value is bool b && b)
             {
+                return ConvertFun(Visibility.Visible, parameter);
+            }
+            return ConvertFun(Visibility.Collapsed, parameter);
+        }
+
+        public object ConvertFun(Visibility visibility, object parameter)
+        {
+            if (parameter is string p)//取反值
+            {
+                if (visibility == Visibility.Visible)
+                {
+                    return Visibility.Collapsed;
+                }
                 return Visibility.Visible;
             }
-            return Visibility.Collapsed;
+            return visibility;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
