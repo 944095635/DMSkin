@@ -75,9 +75,9 @@ Here we set `DMSkinSimpleWindow` as an example, if you want to apply `DMSkinComp
 
 #### 4. Modify `MainWindow.xaml`
 ````xml
-- <Window x:Class="DMSkinTest.MainWindow" <!-- Here you should replace DMSkinTest to your own project name. -->
+- <Window x:Class="DMSkinTest.MainWindow"
 + <DMSkin:DMSkinSimpleWindow
-+         x:Class="DMSkinTest.MainWindow"   
++         x:Class="DMSkinTest.MainWindow" <!-- Here you should replace DMSkinTest to your own project name. -->   
 +         xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF" 
           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
