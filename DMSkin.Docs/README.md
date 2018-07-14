@@ -71,9 +71,9 @@ DFW为窗体无边框提供了两种方案：
 
 #### 4. 修改 `MainWindow.xaml`
 ````xml
-- <Window x:Class="DMSkinDemo.MainWindow" 
+- <Window x:Class="DMSkinTest.MainWindow" 
 + <DMSkin:DMSkinSimpleWindow
-+         x:Class="DMSkinDemo.MainWindow"   
++         x:Class="DMSkinTest.MainWindow" <!-- 这里你需要将 DMSkinTest 换成你自己的项目名 -->  
 +         xmlns:DMSkin="clr-namespace:DMSkin.WPF;assembly=DMSkin.WPF" 
           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
