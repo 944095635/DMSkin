@@ -64,11 +64,6 @@ Here we set `DMSkinSimpleWindow` as an example, if you want to apply `DMSkinComp
           {
               InitializeComponent();
           }
-	  
-+	  private void InitializeComponent()
-+         {
-+           throw new NotImplementedException();
-+         }
       }
   }
 ````
