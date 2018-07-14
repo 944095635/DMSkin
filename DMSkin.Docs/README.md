@@ -60,6 +60,11 @@ DFW为窗体无边框提供了两种方案：
           {
               InitializeComponent();
           }
+	  
++	  private void InitializeComponent()
++         {
++           throw new NotImplementedException();
++         }
       }
   }
 ````
