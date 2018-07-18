@@ -1,0 +1,345 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:DMSkin.WPF.Controls">
+    <Style TargetType="{x:Type controls:DMRadioButton}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:DMRadioButton}">
+                    <Grid
+                        x:Name="grid"
+                        Background="{StaticResource TransparentColor}"
+                        SnapsToDevicePixels="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Border
+                            CornerRadius="100"
+                            Width="15"
+                            Height="15"
+                            Margin="0,0,5,0"
+                            Padding="{TemplateBinding Padding}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="1">
+                            <Ellipse
+                                x:Name="icon"
+                                Margin="1"
+                                Fill="{TemplateBinding IconColor}"
+                                Stretch="Fill"
+                                Visibility="Collapsed" />
+                        </Border>
+                        <ContentPresenter VerticalAlignment="Center" Grid.Column="1" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="icon" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="grid" Property="Opacity" Value="0.8" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DMTopRadioButtonLeft" TargetType="RadioButton">
+        <Setter Property="Width" Value="30" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Foreground" Value="#FF888888" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Grid Background="Transparent">
+                        <Border
+                            x:Name="x"
+                            BorderBrush="#FFE5E5E5"
+                            BorderThickness="1,1,0,1"
+                            CornerRadius="5,0,0,5">
+                            <TextBlock
+                                x:Name="Content"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="{TemplateBinding Content}" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="x" Property="Background" Value="#FFF5F5F7" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="x" Property="BorderThickness" Value="0" />
+                            <Setter TargetName="Content" Property="Foreground" Value="#FFE5E5E7" />
+                            <Setter TargetName="x" Property="Background" Value="#FF7C7D85" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="DMTopRadioButtonRight" TargetType="RadioButton">
+        <Setter Property="Width" Value="30" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Foreground" Value="#FF888888" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Grid Background="Transparent">
+                        <Border
+                            x:Name="x"
+                            BorderBrush="#FFE5E5E5"
+                            BorderThickness="1,1,1,1"
+                            CornerRadius="0,5,5,0">
+                            <TextBlock
+                                x:Name="Content"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="{TemplateBinding Content}" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="x" Property="Background" Value="#FFF5F5F7" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="Content" Property="Foreground" Value="#FFE5E5E7" />
+                            <Setter TargetName="x" Property="Background" Value="#FF7C7D85" />
+                            <Setter TargetName="x" Property="BorderThickness" Value="0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="DMTopRadioButtonItem" TargetType="RadioButton">
+        <Setter Property="Width" Value="30" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Foreground" Value="#FF969696" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Grid Background="Transparent">
+                        <Border
+                            x:Name="x"
+                            BorderBrush="#FFE5E5E5"
+                            BorderThickness="1,1,0,1">
+                            <TextBlock
+                                x:Name="Content"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="{TemplateBinding Content}" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="x" Property="Background" Value="#FFF5F5F7" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="Content" Property="Foreground" Value="#FFE5E5E7" />
+                            <Setter TargetName="x" Property="Background" Value="#FF7C7D85" />
+                            <Setter TargetName="x" Property="BorderThickness" Value="0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderBrush" Value="#FF9B9B9B" />
+        <Setter Property="HorizontalContentAlignment" Value="Right" />
+    </Style>
+
+    <Style x:Key="DMTopRadioButtonItemD" TargetType="RadioButton">
+        <Setter Property="MinWidth" Value="30" />
+        <Setter Property="Width" Value="auto" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Foreground" Value="#FF969696" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Grid Background="Transparent">
+                        <Border x:Name="x">
+                            <TextBlock
+                                x:Name="Content"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="{TemplateBinding Content}" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="x" Property="Background" Value="#FFF5F5F7" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="Content" Property="Foreground" Value="#FFE5E5E7" />
+                            <Setter TargetName="x" Property="Background" Value="#FF7C7D85" />
+                            <Setter TargetName="x" Property="BorderThickness" Value="0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderBrush" Value="#FF9B9B9B" />
+        <Setter Property="HorizontalContentAlignment" Value="Right" />
+    </Style>
+
+    <!--  类型选择样式  -->
+    <Style x:Key="DMRTypeRadioButtonItem" TargetType="RadioButton">
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="Margin" Value="5,0,5,0" />
+        <Setter Property="Foreground" Value="#FF888888" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Grid Background="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="10" />
+                        </Grid.ColumnDefinitions>
+                        <Border
+                            x:Name="x"
+                            Grid.Column="0"
+                            Padding="3,2,3,2"
+                            CornerRadius="2">
+                            <TextBlock
+                                x:Name="Content"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="{TemplateBinding Content}" />
+                        </Border>
+                        <Border
+                            Grid.Column="1"
+                            Height="15"
+                            BorderBrush="#FFCCCCCC"
+                            BorderThickness="0,0,1,0" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="x" Property="Background" Value="#FFF5F5F7" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="Content" Property="Foreground" Value="#FFE5E5E7" />
+                            <Setter TargetName="x" Property="Background" Value="#FF969696" />
+                            <Setter TargetName="x" Property="BorderThickness" Value="0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--  播放列表的子项  -->
+    <Style x:Key="DMPlayListRadioButton" TargetType="RadioButton">
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Foreground" Value="#FF888888" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Grid x:Name="back" Background="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="5" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="10" />
+                        </Grid.ColumnDefinitions>
+                        <Border
+                            Grid.Column="1"
+                            Margin="5"
+                            Visibility="{Binding IsPlayVisibility}">
+                            <TextBlock
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                FontSize="14"
+                                Foreground="{DynamicResource DMMainColor}"
+                                Text="&#xe604;" />
+                        </Border>
+                        <Border x:Name="x" Grid.Column="3">
+                            <TextBlock
+                                x:Name="Content"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Text="{TemplateBinding Content}" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="back" Property="Background" Value="#FFF5F5F7" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="Content" Property="Foreground" Value="#FF333333" />
+                            <Setter TargetName="back" Property="Background" Value="#FFE3E3E5" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DMLeftRadioButton" TargetType="RadioButton">
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Foreground" Value="#FF888888" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Grid Background="Transparent">
+                        <Border x:Name="x" Grid.Column="1">
+                            <TextBlock
+                                x:Name="Content"
+                                Padding="5,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Text="{TemplateBinding Content}" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="x" Property="Background" Value="#FFF5F5F7" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="Content" Property="Foreground" Value="#FFE5E5E7" />
+                            <Setter TargetName="x" Property="Background" Value="#FF7C7D85" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="DMLeftRadioButtonMini" TargetType="RadioButton">
+        <Setter Property="FontSize" Value="10" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Foreground" Value="#FF888888" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Grid Background="Transparent">
+                        <Border x:Name="x">
+                            <TextBlock
+                                x:Name="Content"
+                                Padding="15,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Text="{TemplateBinding Content}" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="x" Property="Background" Value="#FFF5F5F7" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="Content" Property="Foreground" Value="#FFE5E5E7" />
+                            <Setter TargetName="x" Property="Background" Value="#FF7C7D85" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

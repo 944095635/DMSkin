@@ -1,43 +1,50 @@
-﻿<Application x:Class="DM_Studio.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:DM_Studio">
+﻿<Application
+    x:Class="DMSkin.WPF.Demos.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <!--  样式分离 不用的可以不引用 减少内存暂用  -->
 
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMSkin.xaml" />
+                <!--  DMSKin内置转换器 配色  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Styles/DMSkin.xaml" />
 
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMColor.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMScrollViewer.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMTabControl.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMRadioButton.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMTreeView.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMDataGrid.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMListBox.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMSlider.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMCheckBox.xaml" />
+                <!--  DMSKin内置滚动容器  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Styles/DMScrollViewer.xaml" />
 
+                <!--  DMSKin内置SVG图标  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMIcon.xaml" />
 
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMButton.xaml" />
-                
+                <!--  DMSKin内置按钮  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMButton.xaml" />
 
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMSkin.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMColor.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Themes/DMScrollViewer.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMButton.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMTabControl.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMRadioButton.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMTreeView.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMDataGrid.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMListBox.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMSlider.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMCheckBox.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Themes/DMContextMenu.xaml" />
+                <!--  DMSKin内置选择框  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMCheckBox.xaml" />
 
-                <ResourceDictionary Source="/Themes/DMSkin.xaml" />
+                <!--  DMSKin内置动画  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Styles/Animation.xaml" />
 
-                <ResourceDictionary Source="/Themes/Dictionary1.xaml" />
+                <!--  DMSKin内置输入框  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMTextBox.xaml" />
+
+                <!--  DMSKin内置滑动  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMSlider.xaml" />
+
+                <!--  DMSKin提示框  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMToolTip.xaml" />
+
+                <!--  DMSKin右键菜单  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMContextMenu.xaml" />
+
+                <!--  DMSKin其他样式  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMTabControl.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMRadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMTreeView.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMDataGrid.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMListBox.xaml" />
+
+                <!--  最后加载项目其他的样式  -->
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

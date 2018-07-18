@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="DMSkin.WPF.Demos.Views.PageAnimation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:DMSkin.WPF.Controls;assembly=DMSkin.WPF"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DMSkin.WPF.Demos.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="PageAnimation"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+
+    <Grid Margin="15">
+        <WrapPanel Orientation="Vertical">
+            <TextBlock Text="鼠标悬浮放大 移开缩小" />
+            <controls:DMButton
+                Width="50"
+                Height="50"
+                Margin="0,10,0,0"
+                Background="{StaticResource TransparentColor}"
+                BorderBrush="#2BB669"
+                BorderThickness="1"
+                CornerRadius="25">
+                <Path
+                    x:Name="path"
+                    Width="22"
+                    Height="25"
+                    Data="M536.004105 0c189.242555 0 342.741342 183.398322 342.741342 409.668431 0 15.102082-0.759008 30.048009-2.047913 44.767387l0 0c84.453388 95.683632 89.8394 243.345866 89.8394 305.263248 0 61.841864-54.328582 16.844087-65.633064-7.514562-11.231525-24.35481-37.488334-14.568344-39.382654 3.796319-1.743286 18.287866-33.616498 53.874201-39.307138 80.584112-5.69064 26.634393 28.302162 53.340464 58.123621 65.558827 29.822739 12.215803 18.740967 46.894657 18.740967 46.894657-31.865532 86.118598-275.512186 52.429142-318.613082 31.865532-43.098337-20.714643-84.299794-5.69064-84.299794-5.69064-153.653661 69.355146-238.031532 59.943704-307.384118 1.89816-69.353866-58.124901 18.742247-101.221958 44.995216-108.662284 26.178732-7.508162 5.615123-26.328486 5.615123-26.328486-43.780548-27.164291-61.614034-63.13077-71.477296-96.744708-9.94006-33.538421-22.23266-15.706216-69.126036 33.008523-39.078027 40.823873-43.934142 3.338099-40.366932-74.966429 1.743286-37.105631 2.428057-73.147626 16.919604-108.053029 34.451023-83.165763 119.585342-144.171821 119.585342-144.171821-1.136592-13.580225-1.669049-27.468918-1.669049-41.503524C193.260203 183.398322 346.686033 0 536.004105 0"
+                    Fill="#2BB669"
+                    Stretch="Fill">
+                    <Path.LayoutTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                        </TransformGroup>
+                    </Path.LayoutTransform>
+                    <Path.Triggers>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard Storyboard="{StaticResource DM.Large_1.2}" />
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard Storyboard="{StaticResource DM.Recovery}" />
+                        </EventTrigger>
+                    </Path.Triggers>
+                </Path>
+            </controls:DMButton>
+        </WrapPanel>
+    </Grid>
+</Page>

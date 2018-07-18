@@ -4,9 +4,6 @@ using System.Windows.Controls;
 
 namespace DMSkin.WPF.Controls
 {
-    /// <summary>
-    /// Custom panel which resize elements and stretch them in itself when window is resizing
-    /// </summary>
     public class ElasticWrapPanel : Panel
     {
         /// <summary>

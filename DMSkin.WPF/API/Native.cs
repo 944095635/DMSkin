@@ -465,7 +465,6 @@ namespace DMSkin
         public System.Windows.Point p;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public struct APPBARDATA
     {
@@ -603,7 +602,6 @@ namespace DMSkin
         internal static extern bool GetMonitorInfo(HandleRef hmonitor, [In, Out] MONITORINFOEX monitorInfo);
 
     }
-
     public static class NativeConstants
     {
         public const int SM_CXSIZEFRAME = 32;

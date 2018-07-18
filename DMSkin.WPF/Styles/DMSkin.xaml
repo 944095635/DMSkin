@@ -1,0 +1,19 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="clr-namespace:DMSkin.WPF.Converters">
+
+    <!--  内置转换器  -->
+    <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+
+    <!--  全白 透明色  -->
+    <SolidColorBrush x:Key="TransparentColor" Color="#00FFFFFF" />
+    <!--  全黑 透明色  -->
+    <SolidColorBrush x:Key="TransparentBlackColor" Color="#00000000" />
+
+    <!--  线条颜色  -->
+    <SolidColorBrush x:Key="LineColor">#44C8C8C8</SolidColorBrush>
+
+    <!--  主题色  -->
+    <SolidColorBrush x:Key="MainColor">#FF88DD33</SolidColorBrush>
+</ResourceDictionary>
