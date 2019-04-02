@@ -3,7 +3,7 @@
 #### 介绍
 这是一个全新的项目,全部按照.Net Framework 4.0 + 来制作，开发编译环境Visual Studio 2017
 
-旧版本已经被我转移到[旧版本](https://github.com/944095635/DMSkin-for-WPF)
+旧版本已经被我转移到[DMSkin-for-WPF](https://github.com/944095635/DMSkin-for-WPF)
 
 #### 软件架构
 软件架构说明
