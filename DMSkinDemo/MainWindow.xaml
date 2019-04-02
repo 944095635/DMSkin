@@ -1,0 +1,68 @@
+﻿<DMSkin:DMSkinWindow
+    x:Class="DMSkinDemo.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:DMSkin="clr-namespace:DMSkin;assembly=DMSkin"
+    xmlns:controls="clr-namespace:DMSkin.Controls;assembly=DMSkin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="clr-namespace:DMSkinDemo.View"
+    Title="Powered by DMSkin"
+    Width="1366"
+    Height="768"
+    MinWidth="380"
+    MinHeight="300"
+    CaptionBackground="{StaticResource ThemeColor}"
+    CaptionHeight="50"
+    ResizeMode="CanResizeWithGrip"
+    Style="{StaticResource DMSkinWindowStyle}"
+    SystemButtonBackground="#10FFFFFF"
+    SystemButtonBackgroundHover="#88FFFFFF"
+    SystemButtonForeground="White"
+    SystemButtonSize="50"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <!--  左侧标题区域  -->
+    <DMSkin:DMSkinWindow.TitleContent>
+        <WrapPanel VerticalAlignment="Center">
+            <Image
+                Width="22"
+                Height="22"
+                Margin="10,0,10,0"
+                Source="Icon.ico" />
+            <TextBlock
+                VerticalAlignment="Center"
+                FontSize="20"
+                Foreground="White"
+                Text="Powered by D" />
+            <Path
+                Width="15"
+                Height="15"
+                Data="{StaticResource DMSkin}"
+                Fill="White"
+                Stretch="Fill" />
+            <TextBlock
+                VerticalAlignment="Center"
+                FontSize="20"
+                Foreground="White"
+                Text="Skin" />
+        </WrapPanel>
+    </DMSkin:DMSkinWindow.TitleContent>
+    <!--  系统按钮区域  -->
+    <DMSkin:DMSkinWindow.SystemContent>
+        <controls:SystemButton
+            Width="50"
+            Height="50"
+            controls:Icon.Geometry="{StaticResource DMSkin}"
+            controls:Icon.Height="20"
+            controls:Icon.Width="20"
+            Background="{StaticResource TransparentColor}"
+            Foreground="White"
+            Style="{StaticResource DMSkinSystemButton}" />
+    </DMSkin:DMSkinWindow.SystemContent>
+    <TabControl TabStripPlacement="Left">
+        <TabItem Header="蚂蚁设计 AntDesign">
+            <view:PageAntDesign Margin="50" />
+        </TabItem>
+    </TabControl>
+</DMSkin:DMSkinWindow>

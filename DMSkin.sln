@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkin.Core", "DMSkin.Core\DMSkin.Core.csproj", "{C11FCCC3-4A44-42A1-829B-57E8C146EC89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkin.AntDesign", "DMSkin.AntDesign\DMSkin.AntDesign.csproj", "{2EB8188A-5C8B-491B-AFB2-6A6506B376C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{C6848568-4FB9-4889-A956-F1E5E0B299C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkinDemo", "DMSkinDemo\DMSkinDemo.csproj", "{4C45508D-0EA6-4932-8869-4F029FB4F0C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{844580A8-984B-4DA1-AEFB-C0B01D9CED70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Support", "Support", "{47FF4E42-A7C2-4188-A4D7-FF0D76DDD90B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkin", "DMSkin\DMSkin.csproj", "{84D6E067-2DB0-4765-8F5C-5B5288A26F0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C11FCCC3-4A44-42A1-829B-57E8C146EC89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C11FCCC3-4A44-42A1-829B-57E8C146EC89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C11FCCC3-4A44-42A1-829B-57E8C146EC89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C11FCCC3-4A44-42A1-829B-57E8C146EC89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EB8188A-5C8B-491B-AFB2-6A6506B376C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EB8188A-5C8B-491B-AFB2-6A6506B376C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EB8188A-5C8B-491B-AFB2-6A6506B376C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EB8188A-5C8B-491B-AFB2-6A6506B376C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C45508D-0EA6-4932-8869-4F029FB4F0C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C45508D-0EA6-4932-8869-4F029FB4F0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C45508D-0EA6-4932-8869-4F029FB4F0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C45508D-0EA6-4932-8869-4F029FB4F0C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84D6E067-2DB0-4765-8F5C-5B5288A26F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84D6E067-2DB0-4765-8F5C-5B5288A26F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84D6E067-2DB0-4765-8F5C-5B5288A26F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84D6E067-2DB0-4765-8F5C-5B5288A26F0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C11FCCC3-4A44-42A1-829B-57E8C146EC89} = {47FF4E42-A7C2-4188-A4D7-FF0D76DDD90B}
+		{2EB8188A-5C8B-491B-AFB2-6A6506B376C0} = {844580A8-984B-4DA1-AEFB-C0B01D9CED70}
+		{4C45508D-0EA6-4932-8869-4F029FB4F0C9} = {C6848568-4FB9-4889-A956-F1E5E0B299C6}
+		{84D6E067-2DB0-4765-8F5C-5B5288A26F0A} = {47FF4E42-A7C2-4188-A4D7-FF0D76DDD90B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E25D9C2A-99A7-4A4B-945E-4E550E82071B}
+	EndGlobalSection
+EndGlobal
