@@ -22,8 +22,6 @@ namespace DMSkin.Controls
             DependencyProperty.RegisterAttached("Geometry", typeof(Geometry), typeof(Icon), new PropertyMetadata(default(Geometry)));
         #endregion
 
-
-
         #region 宽度
         public static double GetWidth(DependencyObject obj)
         {
@@ -37,9 +35,6 @@ namespace DMSkin.Controls
             DependencyProperty.RegisterAttached("Width", typeof(double), typeof(Icon), new PropertyMetadata(12.0));
         #endregion
 
-
-
-
         #region 高度
         public static double GetHeight(DependencyObject obj)
         {
@@ -52,7 +47,5 @@ namespace DMSkin.Controls
         public static readonly DependencyProperty HeightProperty =
             DependencyProperty.RegisterAttached("Height", typeof(double), typeof(Icon), new PropertyMetadata(12.0)); 
         #endregion
-
-
     }
 }

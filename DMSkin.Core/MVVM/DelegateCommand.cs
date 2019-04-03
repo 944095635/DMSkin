@@ -11,6 +11,7 @@ namespace DMSkin.Core.MVVM
         public DelegateCommand(Action<object> execute)
             : this(execute, null)
         { }
+
         public DelegateCommand(Action<object> execute, Func<object, bool> canExecute)
         {
             if (execute == null)
@@ -35,6 +36,10 @@ namespace DMSkin.Core.MVVM
                 return;
             }
             executeAction(parameter);
+        }
+        public void OnCanExecuteChanged()
+        {
+            CanExecuteChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 }

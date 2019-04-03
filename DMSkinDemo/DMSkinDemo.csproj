@@ -83,6 +83,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\AntDesignViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="View\PageAntDesign.xaml.cs">
       <DependentUpon>PageAntDesign.xaml</DependentUpon>
@@ -146,9 +147,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icon_W.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

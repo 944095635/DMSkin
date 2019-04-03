@@ -9,6 +9,9 @@ namespace DMSkin.Controls
     /// </summary>
     public class SystemButton : Button
     {
+        /// <summary>
+        /// 鼠标移上去的背景色
+        /// </summary>
         public Brush SystemButtonBackgroundHover
         {
             get { return (Brush)GetValue(SystemButtonBackgroundHoverProperty); }
@@ -16,6 +19,5 @@ namespace DMSkin.Controls
         }
         public static readonly DependencyProperty SystemButtonBackgroundHoverProperty =
             DependencyProperty.Register("SystemButtonBackgroundHover", typeof(Brush), typeof(SystemButton), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(40, 255, 255, 255))));
-
     }
 }

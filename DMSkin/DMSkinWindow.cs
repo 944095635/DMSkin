@@ -8,6 +8,7 @@ namespace DMSkin
 {
     public class DMSkinWindow : Window
     {
+        #region 初始化
         public DMSkinWindow()
         {
             var chrome = new WindowChrome
@@ -41,7 +42,8 @@ namespace DMSkin
                 Close();
             }));
             #endregion
-        }
+        } 
+        #endregion
 
         #region 属性
 
@@ -101,6 +103,7 @@ namespace DMSkin
 
         #endregion
 
+        #region 窗口属性
         /// <summary>
         /// 标题栏高度
         /// </summary>
@@ -143,7 +146,9 @@ namespace DMSkin
             set { SetValue(SystemContentProperty, value); }
         }
         public static readonly DependencyProperty SystemContentProperty =
-            DependencyProperty.Register("SystemContent", typeof(UIElement), typeof(DMSkinWindow), new PropertyMetadata(default(UIElement)));
+            DependencyProperty.Register("SystemContent", typeof(UIElement), typeof(DMSkinWindow), new PropertyMetadata(default(UIElement))); 
+        #endregion
+
         #endregion
     }
 }
