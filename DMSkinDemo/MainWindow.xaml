@@ -17,7 +17,7 @@
     CaptionHeight="50"
     ResizeMode="CanResizeWithGrip"
     Style="{StaticResource DMSkinWindowStyle}"
-    SystemButtonBackground="#10FFFFFF"
+    SystemButtonBackground="{StaticResource TransparentColor}"
     SystemButtonBackgroundHover="#88FFFFFF"
     SystemButtonForeground="White"
     SystemButtonSize="50"
