@@ -49,7 +49,9 @@ Windows XP 请自行测试,
 > Icon(附加属性类)
 
 
-如果你只需要使用Window 或 Core 模块，那么你不需要安装另外一个模块，它们是独立存在的。
+### 如果你只需要使用Window 或 Core 模块，
+### 那么你不需要安装另外一个模块，它们是独立存在的。
+### 所以你可以单独使用DMSkin.dll或DMSkin.Core.dll
 
 
 Ⅰ.可以直接通过   `https://github.com/944095635/DMSkin.git`
