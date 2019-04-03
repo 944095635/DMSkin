@@ -33,20 +33,20 @@ Windows XP 请自行测试,
 ## 下载&使用
 
 #### DMSkin中的Core模块(DMSkin.Core.dll)
-    Execute(跨线程UI调度器) ([用法](https://github.com/944095635/DMSkin/wiki/%E8%B7%A8%E7%BA%BF%E7%A8%8BUI%E8%B0%83%E5%BA%A6%E5%99%A8))
+> Execute(跨线程UI调度器) ([用法](https://github.com/944095635/DMSkin/wiki/%E8%B7%A8%E7%BA%BF%E7%A8%8BUI%E8%B0%83%E5%BA%A6%E5%99%A8))
 
-TaskManager(Task管理器)
+> TaskManager(Task管理器)
 
-DelegateCommand(ICommand实现)
+> DelegateCommand(ICommand实现)
 
-ViewModelBase(ViewModel基类)
+> ViewModelBase(ViewModel基类)
 
 #### DMSkin中的Window模块(DMSkin.dll)
-  DMSkinWindow(窗口实现)
+> DMSkinWindow(窗口实现)
 
-  SystemButton(系统按钮)
+> SystemButton(系统按钮)
 
-  Icon(附加属性类)
+> Icon(附加属性类)
 
 
 如果你只需要使用Window 或 Core 模块，那么你不需要安装另外一个模块，它们是独立存在的。
