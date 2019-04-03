@@ -13,7 +13,7 @@
 Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
 ````
 
-## 2.运行环境
+## 2.编译&环境
 ````xml
 环境：.Net Framework 4.0 (3.5 和 4.5+ 请自行修改)
 系统：Windows 7 +
@@ -23,6 +23,8 @@ Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
 注意：系统阴影(如果用户关闭了窗口阴影,界面边界无法分辨，可以考虑使用Border增加窗口边框)
 我的电脑->此电脑->高级系统设置->性能->设置->√ 在窗口下显示阴影
 ````
+
+项目基于Visual Studio 2019 Professional .Net Framework 4.0，源码包括一些C#新语法，如果你在旧版本Visual Studio版本上编译不通过的话，请自行修改中源码不兼容的部分。
 
 Windows XP 请自行测试,
 旧版本已经被我转移到[DMSkin-for-WPF](https://github.com/944095635/DMSkin-for-WPF)(备份学习之用)
@@ -64,12 +66,7 @@ Windows XP 请自行测试,
 
 > 4.2 你可以通过Nuget 搜索DMSkin安装到自己的项目中
 
-
-## 5.编译说明
-项目基于Visual Studio 2019 Professional .Net Framework 4.0，源码包括一些C#新语法，如果你在旧版本Visual Studio版本上编译不通过的话，请自行修改中源码不兼容的部分。
-
-
-## 6.代码段
+## 5.代码段
 项目中一般会使用到Visual Studio的智能提示(双tab代码段),我在项目中提供了3个代码段（请参考）。
 
 VS->工具->代码片段管理器->语言（Csharp）->Visual C#
@@ -87,13 +84,13 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC#\Snippets\20
 | propa    | 附加属性    |⭐|
 
 
-## 7.库介绍
+## 6.库介绍
 
-### 7.1 DMSkin 
-
-
-### 7.2 DMSkin.Core 
+### 6.1 DMSkin 
 
 
-### 7.3 DMSkin.AntDesign 
+### 6.2 DMSkin.Core 
+
+
+### 6.3 DMSkin.AntDesign 
 AntDesign Design https://ant.design
