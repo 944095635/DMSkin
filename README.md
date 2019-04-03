@@ -1,9 +1,15 @@
 # DMSkin
 
 #### 介绍
-这是一个全新的项目,全部按照.Net Framework 4.0 + 来制作，开发编译环境Visual Studio 2017
+这是一个全新的项目。
 
-旧版本已经被我转移到[DMSkin-for-WPF](https://github.com/944095635/DMSkin-for-WPF)
+## 开发环境
+````xml
+Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
+````
+
+Windows XP 和 Windows 7,8 请自行测试,
+旧版本已经被我转移到[DMSkin-for-WPF](https://github.com/944095635/DMSkin-for-WPF)(备份学习之用)
 
 ## 软件架构
 
