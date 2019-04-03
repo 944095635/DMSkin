@@ -19,12 +19,12 @@ Windows XP 请自行测试,
 
 ## 软件方案架构
 
-| 项目                |   描述    |
-| :----:              |   :----:      |
-| DMSkinDemo  | 演示Demo项目 |
-| DMSkin | DMSkin窗体&DMSkin主题样式  |
-| DMSkin.Core | WPF MVVM 相关内容  |
-| DMSkin.AntDesign  |  Ant Design https://ant.design |
+| 项目                |   描述    | 版本    |
+| :----:              |   :----:      |   :----:   |
+| DMSkinDemo  | 演示Demo项目 |     |
+| DMSkin | DMSkin窗体&DMSkin主题样式  | 3.0.0.1000    |
+| DMSkin.Core | WPF MVVM 相关内容  | 3.0.0.1000    |
+| DMSkin.AntDesign  |  Ant Design https://ant.design |     |
 
 ## 代码段
 项目中一般会使用到Visual Studio的智能提示(双tab代码段),我在项目中提供了3个代码段（请参考）。
