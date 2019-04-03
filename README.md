@@ -3,7 +3,7 @@
 #### 介绍
 这是一个全新的项目，快速开发WPF客户端的UI框架。
 
-<img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/Demo.png" width="600" height="210" align="center">
+<img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/Demo.png" width="985" height="633" align="center">
 
 ## 1.开发环境
 
