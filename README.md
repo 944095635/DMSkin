@@ -23,7 +23,7 @@ Windows XP 请自行测试,
 | :----:            |   :----:                       |   :----:       |:----:  | 
 | DMSkinDemo        | 演示Demo项目                    |                |        |  
 | DMSkin            | DMSkin窗体&DMSkin主题样式        | 3.0.0.1000     |        |
-| DMSkin.Core       | WPF MVVM 相关内容               | 3.0.0.1000     |         |
+| DMSkin.Core       | WPF MVVM 相关内容               | 3.0.0.1000     |        |
 | DMSkin.AntDesign  | Ant Design https://ant.design  | 1.0.0.1000     |        |
 
 
@@ -57,4 +57,4 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC#\Snippets\20
 
 # 库介绍
 
-## Ⅰ.Ant Design https://ant.design
+## Ⅰ.DMSkin.AntDesign Design https://ant.design
