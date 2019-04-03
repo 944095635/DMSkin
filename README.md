@@ -1,9 +1,9 @@
 # DMSkin
 
 #### 介绍
-这是一个全新的项目。
+这是一个全新的项目，快速开发WPF客户端的UI框架。
 
-## 开发环境
+## 1.开发环境
 
 <img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/VS.png" width="310" height="101" align="center">
 
@@ -11,7 +11,7 @@
 Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
 ````
 
-## 运行环境
+## 2.运行环境
 ````xml
 环境：.Net Framework 4.0 (3.5 和 4.5+ 请自行修改)
 系统：Windows 7 +
@@ -20,7 +20,7 @@ Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
 Windows XP 请自行测试,
 旧版本已经被我转移到[DMSkin-for-WPF](https://github.com/944095635/DMSkin-for-WPF)(备份学习之用)
 
-## 软件架构
+## 3.项目模块&使用说明
 
 | 项目               |   描述                         | 最新版本            | Nuget |
 | :----:            |   :----:                       |   :----:       |:----:  | 
@@ -29,36 +29,40 @@ Windows XP 请自行测试,
 | DMSkin.Core       | WPF MVVM 相关内容               | 3.0.0.1000     |        |
 | DMSkin.AntDesign  | Ant Design https://ant.design  | 1.0.0.1000     |        |
 
+如果你只需要使用Window 或 Core 或任一模块，那么你不需要安装其它模块，它们是独立存在的。
 
-## 下载&使用
+所以你可以单独使用DMSkin.dll或DMSkin.Core.dll或DMSkin.AntDesign.dll
 
-#### DMSkin中的Core模块(DMSkin.Core.dll)
-Execute(跨线程UI调度器)
-TaskManager(Task管理器)
-DelegateCommand(ICommand实现)
-ViewModelBase(ViewModel基类)
+#### 3.1 DMSkin中的Core模块(DMSkin.Core.dll)
+> Execute(跨线程UI调度器) [[详情]](https://github.com/944095635/DMSkin/wiki/%E8%B7%A8%E7%BA%BF%E7%A8%8BUI%E8%B0%83%E5%BA%A6%E5%99%A8)
 
-#### DMSkin中的Window模块(DMSkin.dll)
-DMSkinWindow(窗口实现)
-SystemButton(系统按钮)
-Icon(附加属性)
+> TaskManager(Task管理器)
+
+> DelegateCommand(ICommand实现)
+
+> ViewModelBase(ViewModel基类)
+
+#### 3.2 DMSkin中的Window模块(DMSkin.dll)
+> DMSkinWindow(窗口实现)
+
+> SystemButton(系统按钮)
+
+> Icon(附加属性类)
 
 
-如果你只需要使用Window 或 Core 模块，那么你不需要安装另外一个模块，它们是独立存在的。
-
-
-Ⅰ.可以直接通过   `https://github.com/944095635/DMSkin.git`
+## 4.下载&引用
+> 4.1 可以直接通过   `https://github.com/944095635/DMSkin.git`
 
 克隆代码到本地，通过引用项目的方式导入DMSkin到你的解决方案中
 
-Ⅱ.你可以通过Nuget 搜索DMSkin安装到自己的项目中
+> 4.2 你可以通过Nuget 搜索DMSkin安装到自己的项目中
 
 
-## 编译说明
+## 5.编译说明
 项目基于Visual Studio 2019 Professional .Net Framework 4.0，源码包括一些C#新语法，如果你在旧版本Visual Studio版本上编译不通过的话，请自行修改中源码不兼容的部分。
 
 
-## 代码段
+## 6.代码段
 项目中一般会使用到Visual Studio的智能提示(双tab代码段),我在项目中提供了3个代码段（请参考）。
 
 VS->工具->代码片段管理器->语言（Csharp）->Visual C#
@@ -76,13 +80,13 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC#\Snippets\20
 | propa    | 附加属性    |⭐|
 
 
-## 库介绍
+## 7.库介绍
 
-### Ⅰ.DMSkin 
-
-
-### Ⅱ.DMSkin.Core 
+### 7.1 DMSkin 
 
 
-### Ⅲ.DMSkin.AntDesign 
+### 7.2 DMSkin.Core 
+
+
+### 7.3 DMSkin.AntDesign 
 AntDesign Design https://ant.design
