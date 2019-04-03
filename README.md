@@ -27,14 +27,14 @@ Windows XP 请自行测试,
 | DMSkin.AntDesign  | Ant Design https://ant.design  | 1.0.0.1000     |        |
 
 
-## 使用&编译
-Ⅰ.可以直接通过`https://github.com/944095635/DMSkin.git`克隆代码到本地。
-
-通过引用项目的方式导入DMSkin到你的解决方案中
+## 下载&使用
+Ⅰ.可以直接通过`https://github.com/944095635/DMSkin.git`克隆代码到本地，通过引用项目的方式导入DMSkin到你的解决方案中
 
 Ⅱ.你可以通过Nuget 搜索DMSkin安装到自己的项目中
 
 
+## 编译说明
+项目基于Visual Studio 2019 Professional .Net Framework 4.0，源码包括一些C#新语法，如果你在旧版本Visual Studio版本上编译不通过的话，请自行修改中源码不兼容的部分。
 
 
 ## 代码段
