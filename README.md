@@ -17,14 +17,25 @@ Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
 Windows XP 请自行测试,
 旧版本已经被我转移到[DMSkin-for-WPF](https://github.com/944095635/DMSkin-for-WPF)(备份学习之用)
 
-## 软件方案架构
+## 软件架构
 
-| 项目                |   描述    | 版本    |
-| :----:              |   :----:      |   :----:   |
-| DMSkinDemo  | 演示Demo项目 |     |
-| DMSkin | DMSkin窗体&DMSkin主题样式  | 3.0.0.1000    |
-| DMSkin.Core | WPF MVVM 相关内容  | 3.0.0.1000    |
-| DMSkin.AntDesign  |  Ant Design https://ant.design |     |
+| 项目               |   描述                         | 最新版本            | Nuget |
+| :----:            |   :----:                       |   :----:       |:----:  | 
+| DMSkinDemo        | 演示Demo项目                    |                |        |  
+| DMSkin            | DMSkin窗体&DMSkin主题样式        | 3.0.0.1000     |        |
+| DMSkin.Core       | WPF MVVM 相关内容               | 3.0.0.1000     |         |
+| DMSkin.AntDesign  | Ant Design https://ant.design  | 1.0.0.1000     |        |
+
+
+## 使用&编译
+Ⅰ.可以直接通过`https://github.com/944095635/DMSkin.git`克隆代码到本地。
+
+通过引用项目的方式导入DMSkin到你的解决方案中
+
+Ⅱ.你可以通过Nuget 搜索DMSkin安装到自己的项目中
+
+
+
 
 ## 代码段
 项目中一般会使用到Visual Studio的智能提示(双tab代码段),我在项目中提供了3个代码段（请参考）。
