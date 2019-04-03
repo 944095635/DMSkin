@@ -8,7 +8,13 @@
 Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
 ````
 
-Windows XP 和 Windows 7,8 请自行测试,
+## 运行环境
+````xml
+.Net Framework 3.5 +
+Windows 7 / Windows 8 / Windows 8.1 / Windows 10
+````
+
+Windows XP 请自行测试,
 旧版本已经被我转移到[DMSkin-for-WPF](https://github.com/944095635/DMSkin-for-WPF)(备份学习之用)
 
 ## 软件方案架构
