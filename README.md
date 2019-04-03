@@ -30,7 +30,10 @@ Windows XP 请自行测试,
 | DMSkin.AntDesign  | Ant Design https://ant.design  | 1.0.0.1000     |        |
 
 
-## 下载&使用
+## 使用说明
+#### 如果你只需要使用Window 或 Core 模块，
+#### 那么你不需要安装另外一个模块，它们是独立存在的。
+#### 所以你可以单独使用DMSkin.dll或DMSkin.Core.dll
 
 #### DMSkin中的Core模块(DMSkin.Core.dll)
 > Execute(跨线程UI调度器) ([用法](https://github.com/944095635/DMSkin/wiki/%E8%B7%A8%E7%BA%BF%E7%A8%8BUI%E8%B0%83%E5%BA%A6%E5%99%A8))
@@ -49,11 +52,7 @@ Windows XP 请自行测试,
 > Icon(附加属性类)
 
 
-### 如果你只需要使用Window 或 Core 模块，
-### 那么你不需要安装另外一个模块，它们是独立存在的。
-### 所以你可以单独使用DMSkin.dll或DMSkin.Core.dll
-
-
+## 下载&引用
 Ⅰ.可以直接通过   `https://github.com/944095635/DMSkin.git`
 
 克隆代码到本地，通过引用项目的方式导入DMSkin到你的解决方案中
