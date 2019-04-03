@@ -5,20 +5,17 @@
 
 <img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/Demo.png" width="615" height="395" align="center">
 
-## 1.开发环境
+## 1.开发&编译&环境&问题
 
 <img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/VS.png" width="310" height="101" align="center">
 
 ````xml
-Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
+开发环境：Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
 ````
-
-## 2.编译&环境&问题
 ````xml
 环境：.Net Framework 4.0 (3.5 和 4.5+ 请自行修改)
 系统：Windows 7 +
 ````
-
 ````xml
 注意：系统阴影(如果用户关闭了窗口阴影,界面边界无法分辨，可以考虑使用Border增加窗口边框)
 我的电脑->此电脑->高级系统设置->性能->设置->√ 在窗口下显示阴影
@@ -31,7 +28,7 @@ Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
 Windows XP 请自行测试,
 旧版本已经被我转移到[DMSkin-for-WPF](https://github.com/944095635/DMSkin-for-WPF)(备份学习之用)
 ````
-## 3.项目模块&使用说明
+## 2.项目模块&使用说明
 
 | 项目               |   描述                         | 最新版本            | Nuget |
 | :----:            |   :----:                       |   :----:       |:----:  | 
@@ -44,7 +41,7 @@ Windows XP 请自行测试,
 
 所以你可以单独使用DMSkin.dll或DMSkin.Core.dll或DMSkin.AntDesign.dll
 
-#### 3.1 DMSkin中的Core模块(DMSkin.Core.dll)
+#### 2.1 DMSkin中的Core模块(DMSkin.Core.dll)
 > Execute(跨线程UI调度器) [[详情]](https://github.com/944095635/DMSkin/wiki/%E8%B7%A8%E7%BA%BF%E7%A8%8BUI%E8%B0%83%E5%BA%A6%E5%99%A8)
 
 > TaskManager(Task管理器)
@@ -53,7 +50,7 @@ Windows XP 请自行测试,
 
 > ViewModelBase(ViewModel基类)
 
-#### 3.2 DMSkin中的Window模块(DMSkin.dll)
+#### 2.2 DMSkin中的Window模块(DMSkin.dll)
 > DMSkinWindow(窗口实现)
 
 > SystemButton(系统按钮)
@@ -61,14 +58,14 @@ Windows XP 请自行测试,
 > Icon(附加属性类)
 
 
-## 4.下载&引用
-> 4.1 可以直接通过   `https://github.com/944095635/DMSkin.git`
+## 3.下载&引用
+> 3.1 可以直接通过   `https://github.com/944095635/DMSkin.git`
 
 克隆代码到本地，通过引用项目的方式导入DMSkin到你的解决方案中
 
-> 4.2 你可以通过Nuget 搜索DMSkin安装到自己的项目中
+> 3.2 你可以通过Nuget 搜索DMSkin安装到自己的项目中
 
-## 5.代码段
+## 4.代码段
 项目中一般会使用到Visual Studio的智能提示(双tab代码段),我在项目中提供了3个代码段（请参考）。
 
 VS->工具->代码片段管理器->语言（Csharp）->Visual C#
@@ -86,13 +83,13 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC#\Snippets\20
 | propa    | 附加属性    |⭐|
 
 
-## 6.库介绍
+## 5.库介绍
 
-### 6.1 DMSkin 
-
-
-### 6.2 DMSkin.Core 
+### 5.1 DMSkin 
 
 
-### 6.3 DMSkin.AntDesign 
+### 5.2 DMSkin.Core 
+
+
+### 5.3 DMSkin.AntDesign 
 AntDesign Design https://ant.design
