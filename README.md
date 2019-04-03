@@ -32,14 +32,24 @@ Windows XP 请自行测试,
 
 ## 下载&使用
 
-#### DMSkin中的MVVM模块(包含在DMSkin.Core中)
-  
-#### DMSkin中的Window模块(包含在DMSkin中)
+#### DMSkin中的Core模块(DMSkin.Core.dll)
+Execute(跨线程UI调度器)
+TaskManager(Task管理器)
+DelegateCommand(ICommand实现)
+ViewModelBase(ViewModel基类)
+
+#### DMSkin中的Window模块(DMSkin.dll)
+DMSkinWindow(窗口实现)
+SystemButton(系统按钮)
+Icon(附加属性)
+
 
 如果你只需要使用Window 或 Core 模块，那么你不需要安装另外一个模块，它们是独立存在的。
 
 
-Ⅰ.可以直接通过`https://github.com/944095635/DMSkin.git`克隆代码到本地，通过引用项目的方式导入DMSkin到你的解决方案中
+Ⅰ.可以直接通过   `https://github.com/944095635/DMSkin.git`
+
+克隆代码到本地，通过引用项目的方式导入DMSkin到你的解决方案中
 
 Ⅱ.你可以通过Nuget 搜索DMSkin安装到自己的项目中
 
