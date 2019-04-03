@@ -58,10 +58,10 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC#\Snippets\20
 ## 库介绍
 
 ### Ⅰ.DMSkin 
-AntDesign Design https://ant.design
+
 
 ### Ⅱ.DMSkin.Core 
-AntDesign Design https://ant.design
+
 
 ### Ⅲ.DMSkin.AntDesign 
 AntDesign Design https://ant.design
