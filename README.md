@@ -22,6 +22,7 @@ Windows XP 请自行测试,
 | 项目                |   描述    |
 | :----:              |   :----:      |
 | DMSkinDemo  | 演示Demo项目 |
+| DMSkin | DMSkin窗体&DMSkin主题样式  |
 | DMSkin.Core | WPF MVVM 相关内容  |
 | DMSkin.AntDesign  |  Ant Design https://ant.design |
 
