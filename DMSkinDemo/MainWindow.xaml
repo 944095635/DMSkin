@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:view="clr-namespace:DMSkinDemo.View"
+    xmlns:viewmodel="clr-namespace:DMSkinDemo.ViewModel"
     Title="Powered by DMSkin"
     Width="1366"
     Height="768"
@@ -22,6 +23,9 @@
     SystemButtonSize="50"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
+    <Window.DataContext>
+        <viewmodel:MainViewModel />
+    </Window.DataContext>
     <!--  左侧标题区域  -->
     <DMSkin:DMSkinWindow.TitleContent>
         <WrapPanel VerticalAlignment="Center">
@@ -60,9 +64,8 @@
             Foreground="White"
             Style="{StaticResource DMSkinSystemButton}" />
     </DMSkin:DMSkinWindow.SystemContent>
-    <TabControl TabStripPlacement="Left"
-                BorderThickness="0">
-        <TabItem Header="蚂蚁设计 AntDesign" BorderThickness="0">
+    <TabControl BorderThickness="0" TabStripPlacement="Left">
+        <TabItem BorderThickness="0" Header="蚂蚁设计 AntDesign">
             <view:PageAntDesign Margin="50" />
         </TabItem>
     </TabControl>
