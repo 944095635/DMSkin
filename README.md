@@ -19,6 +19,11 @@ Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
 系统：Windows 7 +
 ````
 
+````xml
+注意：系统阴影(如果用户关闭了窗口阴影,界面边界无法分辨，可以考虑使用Border增加窗口边框)
+我的电脑->此电脑->高级系统设置->性能->设置->√ 在窗口下显示阴影
+````
+
 Windows XP 请自行测试,
 旧版本已经被我转移到[DMSkin-for-WPF](https://github.com/944095635/DMSkin-for-WPF)(备份学习之用)
 
