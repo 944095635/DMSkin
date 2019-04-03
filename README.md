@@ -33,7 +33,7 @@ Windows XP 请自行测试,
 ## 下载&使用
 
 #### DMSkin中的Core模块(DMSkin.Core.dll)
-Execute(跨线程UI调度器) [用法]()
+    Execute(跨线程UI调度器) ([用法](https://github.com/944095635/DMSkin/wiki/%E8%B7%A8%E7%BA%BF%E7%A8%8BUI%E8%B0%83%E5%BA%A6%E5%99%A8))
 
 TaskManager(Task管理器)
 
