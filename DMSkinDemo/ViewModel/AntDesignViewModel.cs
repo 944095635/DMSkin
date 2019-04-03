@@ -1,4 +1,5 @@
-﻿using DMSkin.Core.MVVM;
+﻿using DMSkin.Core.Common;
+using DMSkin.Core.MVVM;
 using System.Windows;
 using System.Windows.Input;
 
@@ -6,6 +7,16 @@ namespace DMSkinDemo.ViewModel
 {
     public class AntDesignViewModel
     {
+        #region 初始化
+        public AntDesignViewModel()
+        {
+            Execute.OnUIThread(() =>
+            {
+
+            }, false);
+        } 
+        #endregion
+
         #region 属性
 
         #endregion
