@@ -13,8 +13,6 @@
     Height="600"
     MinWidth="380"
     MinHeight="300"
-    BorderBrush="#55888888"
-    BorderThickness="1"
     CaptionBackground="{StaticResource ThemeColor}"
     CaptionHeight="50"
     ResizeMode="CanResizeWithGrip"
@@ -30,13 +28,9 @@
     </Window.DataContext>
     <!--  左侧标题区域  -->
     <DMSkin:DMSkinWindow.TitleContent>
-        <WrapPanel VerticalAlignment="Center">
-            <Image
-                Width="22"
-                Height="22"
-                Margin="10,0,10,0"
-                Source="Icon.ico" />
+        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
             <TextBlock
+                Margin="10,0,0,0"
                 VerticalAlignment="Center"
                 FontSize="20"
                 Foreground="White"
@@ -52,7 +46,7 @@
                 FontSize="20"
                 Foreground="White"
                 Text="Skin" />
-        </WrapPanel>
+        </StackPanel>
     </DMSkin:DMSkinWindow.TitleContent>
     <!--  系统按钮区域  -->
     <DMSkin:DMSkinWindow.SystemContent>
@@ -66,9 +60,125 @@
             Foreground="White"
             Style="{StaticResource DMSkinSystemButton}" />
     </DMSkin:DMSkinWindow.SystemContent>
-    <TabControl BorderThickness="0" TabStripPlacement="Left">
-        <TabItem BorderThickness="0" Header="蚂蚁设计 AntDesign">
-            <view:PageAntDesign Margin="50" />
-        </TabItem>
-    </TabControl>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Background="#F5F5F7">
+                <Expander
+                    Header="DMSkin"
+                    IsExpanded="True"
+                    Style="{StaticResource NoExpander}">
+                    <StackPanel>
+                        <RadioButton
+                            controls:Icon.Geometry="{StaticResource DMSkin}"
+                            controls:Icon.Height="15"
+                            controls:Icon.Width="15"
+                            Content="颜色 Colors"
+                            GroupName="Menu"
+                            IsChecked="True"
+                            Style="{StaticResource MenuRadioButtom}" />
+                    </StackPanel>
+                </Expander>
+                <Expander
+                    Header="AntDesign"
+                    IsExpanded="{Binding IsPluginExpanded}"
+                    Style="{StaticResource Expander}">
+                    <StackPanel>
+                        <RadioButton
+                            controls:Icon.Geometry="{StaticResource DMSkin}"
+                            controls:Icon.Height="15"
+                            controls:Icon.Width="15"
+                            Content="插件A"
+                            GroupName="Menu"
+                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
+                            Style="{StaticResource MenuRadioButtom}" />
+                        <RadioButton
+                            controls:Icon.Geometry="{StaticResource DMSkin}"
+                            controls:Icon.Height="15"
+                            controls:Icon.Width="15"
+                            Content="插件B"
+                            GroupName="Menu"
+                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
+                            Style="{StaticResource MenuRadioButtom}" />
+                        <RadioButton
+                            controls:Icon.Geometry="{StaticResource DMSkin}"
+                            controls:Icon.Height="15"
+                            controls:Icon.Width="15"
+                            Content="插件B"
+                            GroupName="Menu"
+                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
+                            Style="{StaticResource MenuRadioButtom}" />
+                        <RadioButton
+                            controls:Icon.Geometry="{StaticResource DMSkin}"
+                            controls:Icon.Height="15"
+                            controls:Icon.Width="15"
+                            Content="插件D"
+                            GroupName="Menu"
+                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
+                            Style="{StaticResource MenuRadioButtom}" />
+                        <RadioButton
+                            controls:Icon.Geometry="{StaticResource DMSkin}"
+                            controls:Icon.Height="15"
+                            controls:Icon.Width="15"
+                            Content="插件A"
+                            GroupName="Menu"
+                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
+                            Style="{StaticResource MenuRadioButtom}" />
+                        <RadioButton
+                            controls:Icon.Geometry="{StaticResource DMSkin}"
+                            controls:Icon.Height="15"
+                            controls:Icon.Width="15"
+                            Content="插件B"
+                            GroupName="Menu"
+                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
+                            Style="{StaticResource MenuRadioButtom}" />
+                        <RadioButton
+                            controls:Icon.Geometry="{StaticResource DMSkin}"
+                            controls:Icon.Height="15"
+                            controls:Icon.Width="15"
+                            Content="插件B"
+                            GroupName="Menu"
+                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
+                            Style="{StaticResource MenuRadioButtom}" />
+                        <RadioButton
+                            controls:Icon.Geometry="{StaticResource DMSkin}"
+                            controls:Icon.Height="15"
+                            controls:Icon.Width="15"
+                            Content="插件D"
+                            GroupName="Menu"
+                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
+                            Style="{StaticResource MenuRadioButtom}" />
+                    </StackPanel>
+                </Expander>
+                <Expander Header="我的应用" Style="{StaticResource Expander}">
+                    <StackPanel>
+                        <RadioButton
+                            controls:Icon.Geometry="{StaticResource DMSkin}"
+                            controls:Icon.Height="15"
+                            controls:Icon.Width="15"
+                            Content="个人中心"
+                            GroupName="Menu"
+                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
+                            Style="{StaticResource MenuRadioButtom}" />
+                        <RadioButton
+                            controls:Icon.Geometry="{StaticResource DMSkin}"
+                            controls:Icon.Height="15"
+                            controls:Icon.Width="15"
+                            Content="下载管理"
+                            GroupName="Menu"
+                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
+                            Style="{StaticResource MenuRadioButtom}" />
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+        </ScrollViewer>
+        <Frame Grid.Column="1">
+            <Frame.Content>
+                <view:PageAntDesign />
+            </Frame.Content>
+        </Frame>
+    </Grid>
 </DMSkin:DMSkinWindow>

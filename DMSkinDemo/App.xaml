@@ -2,12 +2,20 @@
     x:Class="DMSkinDemo.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="clr-namespace:DMSkin.Core.Converters;assembly=DMSkin.Core"
     StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <converters:EnumToBooleanConverter x:Key="EnumToBooleanConverter" />
+                </ResourceDictionary>
+
                 <!--  如果你用到DMSkin无边框窗体需要导入  -->
                 <ResourceDictionary Source="pack://application:,,,/DMSkin;component/Style/DMSkin.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin;component/Style/Style.xaml" />
+
+
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

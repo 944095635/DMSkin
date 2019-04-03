@@ -94,6 +94,9 @@
     <Compile Include="View\PageAntDesign.xaml.cs">
       <DependentUpon>PageAntDesign.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\PageColors.xaml.cs">
+      <DependentUpon>PageColors.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -107,6 +110,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\PageAntDesign.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PageColors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
