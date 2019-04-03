@@ -55,25 +55,6 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC#\Snippets\20
 | propa    | 附加属性    |⭐|
 
 
-#### 安装教程
+#库介绍
 
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 使用说明
-
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 参与贡献
-
-1. Fork 本仓库
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
-
-
-#### 特技
-
+##Ⅰ.Ant Design https://ant.design
