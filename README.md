@@ -11,8 +11,15 @@ Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
 Windows XP 和 Windows 7,8 请自行测试,
 旧版本已经被我转移到[DMSkin-for-WPF](https://github.com/944095635/DMSkin-for-WPF)(备份学习之用)
 
-## 软件架构
+## 软件方案架构
 
+| 项目                |   描述    |
+| :----:              |   :----:      |
+| DMSkinDemo  | 演示Demo项目 |
+| DMSkin.Core | WPF MVVM 相关内容  |
+| DMSkin.AntDesign  |  Ant Design https://ant.design |
+
+## 代码段
 项目中一般会使用到Visual Studio的智能提示(双tab代码段),我在项目中提供了3个代码段（请参考）。
 
 VS->工具->代码片段管理器->语言（Csharp）->Visual C#
