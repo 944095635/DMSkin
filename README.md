@@ -10,8 +10,8 @@ Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
 
 ## 运行环境
 ````xml
-.Net Framework 4.0 (3.5 和 4.5+ 请自行修改)
-Windows 7 / Windows 8 / Windows 8.1 / Windows 10
+环境：.Net Framework 4.0 (3.5 和 4.5+ 请自行修改)
+系统：Windows 7 +
 ````
 
 Windows XP 请自行测试,
