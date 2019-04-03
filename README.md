@@ -33,13 +33,13 @@ Windows XP 请自行测试,
 ## 下载&使用
 
 #### DMSkin中的Core模块(DMSkin.Core.dll)
-  Execute(跨线程UI调度器)
+Execute(跨线程UI调度器) [用法]()
 
-  TaskManager(Task管理器)
+TaskManager(Task管理器)
 
-  DelegateCommand(ICommand实现)
+DelegateCommand(ICommand实现)
 
-  ViewModelBase(ViewModel基类)
+ViewModelBase(ViewModel基类)
 
 #### DMSkin中的Window模块(DMSkin.dll)
   DMSkinWindow(窗口实现)
