@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>propfull</Title>
+			<Shortcut>propfull</Shortcut>
+			<Description>属性和支持字段的代码片段</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>属性类型</ToolTip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>property</ID>
+					<ToolTip>属性名</ToolTip>
+					<Default>MyProperty</Default>
+				</Literal>
+				<Literal>
+					<ID>field</ID>
+					<ToolTip>支持此属性的变量</ToolTip>
+					<Default>myVar</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[private $type$ $field$;
+  /// <summary>
+  /// XXX
+  /// </summary>
+	public $type$ $property$
+	{
+		get { 
+            return $field$;}
+		set { 
+            $field$ = value;
+            OnPropertyChanged(nameof($property$));
+        }
+	}
+	$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

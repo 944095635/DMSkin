@@ -22,9 +22,9 @@ namespace DMSkin
 
             #region 绑定系统Command
             CommandBindings.Add(new CommandBinding(SystemCommands.MinimizeWindowCommand, (sender, e) =>
-                 {
-                     WindowState = WindowState.Minimized;
-                 }));
+            {
+                WindowState = WindowState.Minimized;
+            }));
 
             CommandBindings.Add(new CommandBinding(SystemCommands.MaximizeWindowCommand, (sender, e) =>
              {
@@ -39,7 +39,7 @@ namespace DMSkin
             CommandBindings.Add(new CommandBinding(SystemCommands.CloseWindowCommand, (sender, e) =>
             {
                 Close();
-            })); 
+            }));
             #endregion
         }
 

@@ -60,8 +60,9 @@
             Foreground="White"
             Style="{StaticResource DMSkinSystemButton}" />
     </DMSkin:DMSkinWindow.SystemContent>
-    <TabControl TabStripPlacement="Left">
-        <TabItem Header="蚂蚁设计 AntDesign">
+    <TabControl TabStripPlacement="Left"
+                BorderThickness="0">
+        <TabItem Header="蚂蚁设计 AntDesign" BorderThickness="0">
             <view:PageAntDesign Margin="50" />
         </TabItem>
     </TabControl>
