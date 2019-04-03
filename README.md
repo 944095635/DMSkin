@@ -13,7 +13,7 @@
 Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
 ````
 
-## 2.编译&环境
+## 2.编译&环境&问题
 ````xml
 环境：.Net Framework 4.0 (3.5 和 4.5+ 请自行修改)
 系统：Windows 7 +
@@ -23,12 +23,14 @@ Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
 注意：系统阴影(如果用户关闭了窗口阴影,界面边界无法分辨，可以考虑使用Border增加窗口边框)
 我的电脑->此电脑->高级系统设置->性能->设置->√ 在窗口下显示阴影
 ````
-
-项目基于Visual Studio 2019 Professional .Net Framework 4.0，源码包括一些C#新语法，如果你在旧版本Visual Studio版本上编译不通过的话，请自行修改中源码不兼容的部分。
-
+````xml
+项目基于Visual Studio 2019 Professional .Net Framework 4.0，源码包括一些C#新语法。
+如果你在旧版本Visual Studio版本上编译不通过的话，请自行修改中源码不兼容的部分。
+````
+````xml
 Windows XP 请自行测试,
 旧版本已经被我转移到[DMSkin-for-WPF](https://github.com/944095635/DMSkin-for-WPF)(备份学习之用)
-
+````
 ## 3.项目模块&使用说明
 
 | 项目               |   描述                         | 最新版本            | Nuget |
