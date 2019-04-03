@@ -44,6 +44,8 @@ Windows XP 请自行测试,
 #### 2.1 DMSkin中的Core模块(DMSkin.Core.dll)
 > Execute(跨线程UI调度器) [[详情]](https://github.com/944095635/DMSkin/wiki/%E8%B7%A8%E7%BA%BF%E7%A8%8BUI%E8%B0%83%E5%BA%A6%E5%99%A8)
 
+> MethodRegister(方法注册器)
+
 > TaskManager(Task管理器)
 
 > DelegateCommand(ICommand实现)
