@@ -5,8 +5,11 @@ using System.Text;
 using System.Windows;
 using System.Windows.Media;
 
-namespace DMSkin.Controls
+namespace DMSkin.Attached
 {
+    /// <summary>
+    /// 附加属性-图标
+    /// </summary>
     public class Icon
     {
         #region 图标

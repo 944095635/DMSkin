@@ -57,6 +57,7 @@
     <Compile Include="Converters\TimeSpanToStringConverter.cs" />
     <Compile Include="MVVM\DelegateCommand.cs" />
     <Compile Include="MVVM\ViewModelBase.cs" />
+    <Compile Include="MethodRegister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaskManager.cs" />
     <Compile Include="WIN32\DesktopAPI.cs" />

@@ -89,8 +89,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Menu.cs" />
     <Compile Include="ViewModel\AntDesignViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="View\PageAduDesign.xaml.cs">
+      <DependentUpon>PageAduDesign.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\PageAntDesign.xaml.cs">
       <DependentUpon>PageAntDesign.xaml</DependentUpon>
     </Compile>
@@ -109,6 +113,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\PageAduDesign.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\PageAntDesign.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -146,6 +154,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DMSkin.AduDesign\DMSkin.AduDesign.csproj">
+      <Project>{e55f4d48-0893-4db1-84dc-0844ce3f957b}</Project>
+      <Name>DMSkin.AduDesign</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DMSkin.AntDesign\DMSkin.AntDesign.csproj">
       <Project>{2eb8188a-5c8b-491b-afb2-6a6506b376c0}</Project>
       <Name>DMSkin.AntDesign</Name>

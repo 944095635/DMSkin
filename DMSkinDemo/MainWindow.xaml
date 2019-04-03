@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:DMSkin="clr-namespace:DMSkin;assembly=DMSkin"
+    xmlns:attached="clr-namespace:DMSkin.Attached;assembly=DMSkin"
     xmlns:controls="clr-namespace:DMSkin.Controls;assembly=DMSkin"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -53,9 +54,9 @@
         <controls:SystemButton
             Width="50"
             Height="50"
-            controls:Icon.Geometry="{StaticResource DMSkin}"
-            controls:Icon.Height="20"
-            controls:Icon.Width="20"
+            attached:Icon.Geometry="{StaticResource DMSkin}"
+            attached:Icon.Height="20"
+            attached:Icon.Width="20"
             Background="{StaticResource TransparentColor}"
             Foreground="White"
             Style="{StaticResource DMSkinSystemButton}" />
@@ -73,9 +74,9 @@
                     Style="{StaticResource NoExpander}">
                     <StackPanel>
                         <RadioButton
-                            controls:Icon.Geometry="{StaticResource DMSkin}"
-                            controls:Icon.Height="15"
-                            controls:Icon.Width="15"
+                            attached:Icon.Geometry="{StaticResource DMSkin}"
+                            attached:Icon.Height="15"
+                            attached:Icon.Width="15"
                             Content="颜色 Colors"
                             GroupName="Menu"
                             IsChecked="True"
@@ -83,102 +84,33 @@
                     </StackPanel>
                 </Expander>
                 <Expander
-                    Header="AntDesign"
+                    Header="样式库"
                     IsExpanded="{Binding IsPluginExpanded}"
                     Style="{StaticResource Expander}">
                     <StackPanel>
                         <RadioButton
-                            controls:Icon.Geometry="{StaticResource DMSkin}"
-                            controls:Icon.Height="15"
-                            controls:Icon.Width="15"
-                            Content="插件A"
+                            attached:Icon.Geometry="{StaticResource DMSkin}"
+                            attached:Icon.Height="15"
+                            attached:Icon.Width="15"
+                            Content="AntDesign"
                             GroupName="Menu"
-                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
+                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=AntDesign}"
                             Style="{StaticResource MenuRadioButtom}" />
                         <RadioButton
-                            controls:Icon.Geometry="{StaticResource DMSkin}"
-                            controls:Icon.Height="15"
-                            controls:Icon.Width="15"
-                            Content="插件B"
+                            attached:Icon.Geometry="{StaticResource DMSkin}"
+                            attached:Icon.Height="15"
+                            attached:Icon.Width="15"
+                            Content="AduDesign"
                             GroupName="Menu"
-                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
-                            Style="{StaticResource MenuRadioButtom}" />
-                        <RadioButton
-                            controls:Icon.Geometry="{StaticResource DMSkin}"
-                            controls:Icon.Height="15"
-                            controls:Icon.Width="15"
-                            Content="插件B"
-                            GroupName="Menu"
-                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
-                            Style="{StaticResource MenuRadioButtom}" />
-                        <RadioButton
-                            controls:Icon.Geometry="{StaticResource DMSkin}"
-                            controls:Icon.Height="15"
-                            controls:Icon.Width="15"
-                            Content="插件D"
-                            GroupName="Menu"
-                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
-                            Style="{StaticResource MenuRadioButtom}" />
-                        <RadioButton
-                            controls:Icon.Geometry="{StaticResource DMSkin}"
-                            controls:Icon.Height="15"
-                            controls:Icon.Width="15"
-                            Content="插件A"
-                            GroupName="Menu"
-                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
-                            Style="{StaticResource MenuRadioButtom}" />
-                        <RadioButton
-                            controls:Icon.Geometry="{StaticResource DMSkin}"
-                            controls:Icon.Height="15"
-                            controls:Icon.Width="15"
-                            Content="插件B"
-                            GroupName="Menu"
-                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
-                            Style="{StaticResource MenuRadioButtom}" />
-                        <RadioButton
-                            controls:Icon.Geometry="{StaticResource DMSkin}"
-                            controls:Icon.Height="15"
-                            controls:Icon.Width="15"
-                            Content="插件B"
-                            GroupName="Menu"
-                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
-                            Style="{StaticResource MenuRadioButtom}" />
-                        <RadioButton
-                            controls:Icon.Geometry="{StaticResource DMSkin}"
-                            controls:Icon.Height="15"
-                            controls:Icon.Width="15"
-                            Content="插件D"
-                            GroupName="Menu"
-                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
-                            Style="{StaticResource MenuRadioButtom}" />
-                    </StackPanel>
-                </Expander>
-                <Expander Header="我的应用" Style="{StaticResource Expander}">
-                    <StackPanel>
-                        <RadioButton
-                            controls:Icon.Geometry="{StaticResource DMSkin}"
-                            controls:Icon.Height="15"
-                            controls:Icon.Width="15"
-                            Content="个人中心"
-                            GroupName="Menu"
-                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
-                            Style="{StaticResource MenuRadioButtom}" />
-                        <RadioButton
-                            controls:Icon.Geometry="{StaticResource DMSkin}"
-                            controls:Icon.Height="15"
-                            controls:Icon.Width="15"
-                            Content="下载管理"
-                            GroupName="Menu"
-                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Word}"
+                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=AduDesign}"
                             Style="{StaticResource MenuRadioButtom}" />
                     </StackPanel>
                 </Expander>
             </StackPanel>
         </ScrollViewer>
-        <Frame Grid.Column="1">
-            <Frame.Content>
-                <view:PageAntDesign />
-            </Frame.Content>
-        </Frame>
+        <Frame
+            x:Name="Frame"
+            Grid.Column="1"
+            NavigationUIVisibility="Hidden" />
     </Grid>
 </DMSkin:DMSkinWindow>
