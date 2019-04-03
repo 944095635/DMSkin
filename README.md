@@ -10,7 +10,7 @@ Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
 
 ## 运行环境
 
-<img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/VS.png" width="600" height="400" align="center">
+<img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/VS.png" width="310" height="101" align="center">
 
 ````xml
 环境：.Net Framework 4.0 (3.5 和 4.5+ 请自行修改)
