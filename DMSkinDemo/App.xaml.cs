@@ -1,4 +1,5 @@
 ﻿using DMSkin.Core;
+using DMSkin.Core.Common;
 using System.Windows;
 
 namespace DMSkinDemo
@@ -8,7 +9,10 @@ namespace DMSkinDemo
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            MethodRegister.Init();
+
+            Execute.InitializeWithDispatcher();
+
+            MethodRegister.Initialize();
         }
 }
 }

@@ -15,7 +15,7 @@ namespace DMSkin.Core
         /// <summary>
         /// 初始化
         /// </summary>
-        public static void Init()
+        public static void Initialize()
         {
             actions = new Dictionary<string, object>();
         }
