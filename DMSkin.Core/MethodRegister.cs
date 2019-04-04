@@ -10,7 +10,15 @@ namespace DMSkin.Core
     /// </summary>
     public class MethodRegister
     {
-        private static Dictionary<string, object> actions = new Dictionary<string, object>();
+        private static Dictionary<string, object> actions;
+
+        /// <summary>
+        /// 初始化
+        /// </summary>
+        public static void Init()
+        {
+            actions = new Dictionary<string, object>();
+        }
 
         #region 注册方法
         /// <summary>
@@ -68,5 +76,9 @@ namespace DMSkin.Core
         /// 导航
         /// </summary>
         Navigation,
+        /// <summary>
+        /// 数据传递
+        /// </summary>
+        Data,
     }
 }
