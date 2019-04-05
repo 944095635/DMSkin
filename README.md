@@ -13,17 +13,21 @@
 开发环境：Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.5
 
 项目基于Visual Studio 2019 Professional .Net Framework 4.5，源码包括一些C#新语法。
+
 如果你在旧版本Visual Studio版本上编译不通过的话，请自行修改中源码不兼容的部分。
 ````
 ````xml
 支持环境：Windows 7/10 +  .Net Framework 4.5
 ````
 ````xml
-兼容3.5或者4.0
+如果你需要 兼容3.5或者4.0
 Demo修改方式:
-将DMSkin修改为3.5 或者 4.0
-将DMSkinDemo的.NET 修改为3.5 或者 4.0
-将DMSkinDemo的引用 DMSkin.WindowNET45 修改为 DMSkin.WindowNET40
+  将DMSkin修改为3.5 或者 4.0
+  将DMSkinDemo的.NET 修改为3.5 或者 4.0
+  将DMSkinDemo的引用 DMSkin.WindowNET45 修改为 DMSkin.WindowNET40
+
+DMSkin.WindowNET45 支持 .Net Framework 4.5+
+DMSkin.WindowNET40 支持 .Net Framework 3.5+
 ````
 ````xml
 注意：系统阴影(如果用户关闭了窗口阴影,界面边界无法分辨，可以考虑使用Border增加窗口边框)
