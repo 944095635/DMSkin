@@ -21,7 +21,9 @@
 ````
 ````xml
 如果你需要 兼容3.5或者4.0
+
 Demo修改方式:
+
   将DMSkin修改为3.5 或者 4.0
   将DMSkinDemo的.NET 修改为3.5 或者 4.0
   将DMSkinDemo的引用 DMSkin.WindowNET45 修改为 DMSkin.WindowNET40
