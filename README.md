@@ -10,11 +10,17 @@
 <img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/VS.png" width="310" height="101" align="center">
 
 ````xml
-开发环境：Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.0
+开发环境：Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.5
 ````
 ````xml
-环境：.Net Framework 4.0 (3.5 和 4.5+ 请自行修改)
-系统：Windows 7 +
+支持环境：Windows 7/10 +  .Net Framework 4.5
+````
+````xml
+兼容3.5或者4.0
+Demo修改方式:
+将DMSkin修改为3.5 或者 4.0
+将DMSkinDemo的.NET 修改为3.5 或者 4.0
+将DMSkinDemo的引用 DMSkin.WindowNET45 修改为 DMSkin.WindowNET40
 ````
 ````xml
 注意：系统阴影(如果用户关闭了窗口阴影,界面边界无法分辨，可以考虑使用Border增加窗口边框)
@@ -34,6 +40,7 @@ Windows XP 请自行测试,
 | :----:            |   :----:                       |   :----:       |:----:  | 
 | DMSkinDemo        | 演示Demo项目                    |                |        |  
 | DMSkin            | DMSkin窗体&DMSkin主题样式        | 3.0.0.1000     |        |
+| DMSkin.Window     | DMSkin窗体实现（包括 NET3.5/4.0 和 NET4.5 2个版本）| 3.0.0.1000     |        |
 | DMSkin.Core       | WPF MVVM 相关内容               | 3.0.0.1000     |        |
 | DMSkin.AntDesign  | Ant Design https://ant.design  | 1.0.0.1000     |        |
 
