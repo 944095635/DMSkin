@@ -11,6 +11,9 @@
 
 ````xml
 开发环境：Windows 10  +  Visual Studio 2019 Professional  +  .Net Framework 4.5
+
+项目基于Visual Studio 2019 Professional .Net Framework 4.0，源码包括一些C#新语法。
+如果你在旧版本Visual Studio版本上编译不通过的话，请自行修改中源码不兼容的部分。
 ````
 ````xml
 支持环境：Windows 7/10 +  .Net Framework 4.5
@@ -25,10 +28,6 @@ Demo修改方式:
 ````xml
 注意：系统阴影(如果用户关闭了窗口阴影,界面边界无法分辨，可以考虑使用Border增加窗口边框)
 我的电脑->此电脑->高级系统设置->性能->设置->√ 在窗口下显示阴影
-````
-````xml
-项目基于Visual Studio 2019 Professional .Net Framework 4.0，源码包括一些C#新语法。
-如果你在旧版本Visual Studio版本上编译不通过的话，请自行修改中源码不兼容的部分。
 ````
 ````xml
 Windows XP 请自行测试,
