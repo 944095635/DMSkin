@@ -1,8 +1,8 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="clr-namespace:DMSkin.Controls"
-     xmlns:attached="clr-namespace:DMSkin.Attached"
+    xmlns:attached="clr-namespace:DMSkin.Attached;assembly=DMSkin"
+    xmlns:controls="clr-namespace:DMSkin.Controls;assembly=DMSkin"
     xmlns:dmskin="clr-namespace:DMSkin"
     xmlns:shell="http://schemas.microsoft.com/winfx/2006/xaml/presentation/shell">
 

@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>DMSkinDemo</RootNamespace>
     <AssemblyName>DMSkinDemo</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -41,6 +41,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -50,6 +51,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>F211C4F13EA9E69AAA7C9C6D6888E19376837D66</ManifestCertificateThumbprint>
@@ -154,17 +156,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DMSkin.AduDesign\DMSkin.AduDesign.csproj">
+    <ProjectReference Include="..\DesignLibrary\DMSkin.AduDesign\DMSkin.AduDesign.csproj">
       <Project>{e55f4d48-0893-4db1-84dc-0844ce3f957b}</Project>
       <Name>DMSkin.AduDesign</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DMSkin.AntDesign\DMSkin.AntDesign.csproj">
+    <ProjectReference Include="..\DesignLibrary\DMSkin.AntDesign\DMSkin.AntDesign.csproj">
       <Project>{2eb8188a-5c8b-491b-afb2-6a6506b376c0}</Project>
       <Name>DMSkin.AntDesign</Name>
     </ProjectReference>
     <ProjectReference Include="..\DMSkin.Core\DMSkin.Core.csproj">
       <Project>{c11fccc3-4a44-42a1-829b-57e8c146ec89}</Project>
       <Name>DMSkin.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMSkin.Window\NET45\DMSkin.WindowNET45.csproj">
+      <Project>{6baab117-4ee9-48a6-81bd-005746469ebd}</Project>
+      <Name>DMSkin.WindowNET45</Name>
     </ProjectReference>
     <ProjectReference Include="..\DMSkin\DMSkin.csproj">
       <Project>{84d6e067-2db0-4765-8f5c-5b5288a26f0a}</Project>
