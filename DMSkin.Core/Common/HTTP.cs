@@ -96,6 +96,34 @@ namespace DMSkin.Core.Common
             return result;
         }
 
+        public HttpResult GetResponseURL(HttpItem item)
+        {
+            //返回参数
+            HttpResult result = new HttpResult();
+            try
+            {
+                //准备参数
+                SetRequest(item);
+            }
+            catch (Exception ex)
+            {
+                //配置参数时出错
+                return new HttpResult() { Cookie = string.Empty, Header = null, Html = ex.Message, StatusDescription = "配置参数时出错：" + ex.Message };
+            }
+            try
+            {
+                //请求数据
+                using (response = (HttpWebResponse)request.GetResponse())
+                {
+                    result.ResponseUri = response.ResponseUri.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Html = ex.Message;
+            }
+            return result;
+        }
         #endregion Public
 
         #region GetData
@@ -545,7 +573,7 @@ namespace DMSkin.Core.Common
             set { _ContentType = value; }
         }
 
-        private string _UserAgent = "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)";
+        private string _UserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36";
 
         /// <summary>
         /// 客户端访问信息默认Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
