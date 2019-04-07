@@ -5,6 +5,8 @@
 #### 内容：MVVM 框架模块 + DesignLibrary 控件样式库
 #### 开发PC客户端 一套搞定
 
+## 目前项目还在开发中，仅供参考
+
 
 <img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/Demo.png" width="615" height="395" align="center">
 
