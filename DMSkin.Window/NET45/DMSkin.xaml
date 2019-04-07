@@ -78,18 +78,12 @@
                                 WindowChrome.ResizeGripDirection="BottomRight" />
                             <Grid Background="{TemplateBinding CaptionBackground}">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition />
                                     <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <ContentPresenter Content="{TemplateBinding TitleContent}" WindowChrome.IsHitTestVisibleInChrome="True" />
-                                <ContentPresenter
-                                    Grid.Column="2"
-                                    Content="{TemplateBinding SystemContent}"
-                                    WindowChrome.IsHitTestVisibleInChrome="True" />
+                                <ContentPresenter Content="{TemplateBinding TitleContent}" />
                                 <StackPanel
-                                    Grid.Column="3"
+                                    Grid.Column="1"
                                     Orientation="Horizontal"
                                     WindowChrome.IsHitTestVisibleInChrome="True">
                                     <controls:Button

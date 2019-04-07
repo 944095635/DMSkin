@@ -139,18 +139,6 @@ namespace DMSkin
             DependencyProperty.Register("TitleContent", typeof(UIElement), typeof(DMSkinWindow), new PropertyMetadata(default));
 
         /// <summary>
-        /// 系统区域的内容
-        /// </summary>
-        public UIElement SystemContent
-        {
-            get { return (UIElement)GetValue(SystemContentProperty); }
-            set { SetValue(SystemContentProperty, value); }
-        }
-        public static readonly DependencyProperty SystemContentProperty =
-            DependencyProperty.Register("SystemContent", typeof(UIElement), typeof(DMSkinWindow), new PropertyMetadata(default));
-
-
-        /// <summary>
         /// 沉浸式标题栏
         /// </summary>
         public bool FitSystemWindow
