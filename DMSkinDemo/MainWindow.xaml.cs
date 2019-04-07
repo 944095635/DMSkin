@@ -10,7 +10,7 @@ namespace DMSkinDemo
             InitializeComponent();
 
             //注册导航事件-在需要导航页面的时候可以调用
-            Broadcast.RegisterBroadcast<Page>(BroadcastType.Navigation, (obj)=> 
+            Broadcast.RegisterBroadcast<Page>("Navigation", (obj)=> 
             {
                 Frame.Navigate(obj);
             });

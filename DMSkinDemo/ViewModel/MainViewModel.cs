@@ -28,11 +28,14 @@ namespace DMSkinDemo.ViewModel
                 selectMenu = value;
                 switch (value)
                 {
+                    case Menu.Broadcast:
+                        Broadcast.PushBroadcast("Navigation", new PageBroadcast());
+                        break;
                     case Menu.AntDesign:
-                        Broadcast.PushBroadcast(BroadcastType.Navigation, new PageAntDesign());
+                        Broadcast.PushBroadcast("Navigation", new PageAntDesign());
                         break;
                     case Menu.AduDesign:
-                        Broadcast.PushBroadcast(BroadcastType.Navigation, new PageAduDesign());
+                        Broadcast.PushBroadcast("Navigation", new PageAduDesign());
                         break;
                     default:
                         break;

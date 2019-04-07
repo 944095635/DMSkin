@@ -14,6 +14,7 @@ namespace DMSkin
             var chrome = new WindowChrome
             {
                 GlassFrameThickness = new Thickness(1),
+                ResizeBorderThickness = new Thickness(4)
             };
             WindowChrome.SetWindowChrome(this, chrome);
 

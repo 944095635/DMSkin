@@ -19,33 +19,6 @@
     <Geometry x:Key="SystemRestore">F1M0,10L0,3 3,3 3,0 10,0 10,2 4,2 4,3 7,3 7,6 6,6 6,5 1,5 1,10z M1,10L7,10 7,7 10,7 10,2 9,2 9,6 6,6 6,9 1,9z</Geometry>
     <Geometry x:Key="SystemClose">m12.65194,6.64088l-2.65193,2.65194l-2.65195,-2.65194c-0.19527,-0.19528 -0.51189,-0.19528 -0.70718,0c-0.19529,0.19528 -0.19528,0.5119 0,0.70718l2.65194,2.65195l-2.65194,2.65193c-0.19528,0.19528 -0.19528,0.51191 0,0.70719c0.19528,0.19528 0.5119,0.19528 0.70718,0l2.65195,-2.65194l2.65193,2.65194c0.19528,0.19528 0.5119,0.19528 0.70719,0c0.19528,-0.19528 0.19528,-0.51191 0,-0.70719l-2.65194,-2.65193l2.65194,-2.65195c0.19528,-0.19527 0.19528,-0.51189 0,-0.70718c-0.19528,-0.19528 -0.5119,-0.19528 -0.70719,0z</Geometry>
 
-    <Style x:Key="DMSkinResizeGrip" TargetType="ResizeGrip">
-        <Setter Property="Foreground" Value="Black" />
-        <Setter Property="HorizontalAlignment" Value="Right" />
-        <Setter Property="VerticalAlignment" Value="Bottom" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate>
-                    <Path
-                        Width="12"
-                        Height="12"
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Bottom"
-                        Data="M15.796278,16.882958 L29.796278,16.882958 29.796278,18.882958 15.796278,18.882958 z M8.389616,8.9336629 L37.389616,8.9336629 37.389616,10.933663 8.389616,10.933663 z M0.5,0.5 L44.5,0.5 44.5,2.5 0.5,2.5 z"
-                        Fill="{TemplateBinding Foreground}"
-                        RenderOptions.BitmapScalingMode="Fant"
-                        Stretch="Uniform">
-                        <Path.LayoutTransform>
-                            <TransformGroup>
-                                <RotateTransform Angle="-45" />
-                            </TransformGroup>
-                        </Path.LayoutTransform>
-                    </Path>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
     <Style x:Key="DMSkinSystemButton" TargetType="controls:SystemButton">
         <Setter Property="Template">
             <Setter.Value>
@@ -160,11 +133,12 @@
                             <ResizeGrip
                                 x:Name="ResizeGrip"
                                 Grid.Row="1"
+                                Margin="0,0,5,5"
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Bottom"
                                 IsTabStop="False"
-                                Style="{StaticResource DMSkinResizeGrip}"
-                                Visibility="Collapsed" />
+                                Visibility="Collapsed"
+                                WindowChrome.ResizeGripDirection="BottomRight" />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>

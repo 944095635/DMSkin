@@ -9,6 +9,8 @@ namespace DMSkinDemo.Model
     {
         Null,
         AntDesign,
-        AduDesign
+        AduDesign,
+        Broadcast,
+
     }
 }

@@ -93,12 +93,16 @@
     </ApplicationDefinition>
     <Compile Include="Model\Menu.cs" />
     <Compile Include="ViewModel\AntDesignViewModel.cs" />
+    <Compile Include="ViewModel\BroadcastViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="View\PageAduDesign.xaml.cs">
       <DependentUpon>PageAduDesign.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\PageAntDesign.xaml.cs">
       <DependentUpon>PageAntDesign.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PageBroadcast.xaml.cs">
+      <DependentUpon>PageBroadcast.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\PageColors.xaml.cs">
       <DependentUpon>PageColors.xaml</DependentUpon>
@@ -120,6 +124,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\PageAntDesign.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PageBroadcast.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -186,6 +194,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Style\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

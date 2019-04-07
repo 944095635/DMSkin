@@ -84,6 +84,21 @@
                     </StackPanel>
                 </Expander>
                 <Expander
+                    Header="DMSkin.Core"
+                    IsExpanded="True"
+                    Style="{StaticResource NoExpander}">
+                    <StackPanel>
+                        <RadioButton
+                            attached:Icon.Geometry="{StaticResource DMSkin}"
+                            attached:Icon.Height="15"
+                            attached:Icon.Width="15"
+                            Content="广播 Broadcast"
+                            GroupName="Menu"
+                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Broadcast}"
+                            Style="{StaticResource MenuRadioButtom}" />
+                    </StackPanel>
+                </Expander>
+                <Expander
                     Header="样式库"
                     IsExpanded="{Binding IsPluginExpanded}"
                     Style="{StaticResource Expander}">
