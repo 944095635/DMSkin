@@ -17,7 +17,7 @@
     CaptionBackground="{StaticResource ThemeColor}"
     CaptionHeight="50"
     ResizeMode="CanResizeWithGrip"
-    Style="{StaticResource DMSkinWindowNoTitleStyle}"
+    Style="{StaticResource DMSkinWindowStyle}"
     SystemButtonBackground="{StaticResource TransparentColor}"
     SystemButtonBackgroundHover="#88FFFFFF"
     SystemButtonForeground="White"
@@ -61,7 +61,7 @@
             Foreground="White"
             Style="{StaticResource DMSkinSystemButton}" />
     </DMSkin:DMSkinWindow.SystemContent>
-    <Grid Margin="0,50,0,0">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="160" />
             <ColumnDefinition />
