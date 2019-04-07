@@ -29,10 +29,10 @@ namespace DMSkinDemo.ViewModel
                 switch (value)
                 {
                     case Menu.AntDesign:
-                        MethodRegister.Execute(MethodType.Navigation, new PageAntDesign());
+                        Broadcast.PushBroadcast(BroadcastType.Navigation, new PageAntDesign());
                         break;
                     case Menu.AduDesign:
-                        MethodRegister.Execute(MethodType.Navigation, new PageAduDesign());
+                        Broadcast.PushBroadcast(BroadcastType.Navigation, new PageAduDesign());
                         break;
                     default:
                         break;
