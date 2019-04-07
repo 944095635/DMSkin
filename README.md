@@ -54,9 +54,9 @@ Windows XP 请自行测试,
 所以你可以单独使用DMSkin.dll或DMSkin.Core.dll或DMSkin.AntDesign.dll
 
 #### 2.1 DMSkin中的Core模块(DMSkin.Core.dll)
-> Execute(跨线程UI调度器) [[详情]](https://github.com/944095635/DMSkin/wiki/Execute(%E8%B7%A8%E7%BA%BF%E7%A8%8BUI%E8%B0%83%E5%BA%A6%E5%99%A8))
+> Execute(跨线程UI调度器) [[使用文档]](https://github.com/944095635/DMSkin/wiki/Execute%E8%B7%A8%E7%BA%BF%E7%A8%8BUI%E8%B0%83%E5%BA%A6%E5%99%A8)
 
-> Broadcast(广播器) [[详情]](https://github.com/944095635/DMSkin/wiki/Broadcast(%E5%B9%BF%E6%92%AD%E5%99%A8))
+> Broadcast(广播器) [[使用文档]](https://github.com/944095635/DMSkin/wiki/Broadcast%E5%B9%BF%E6%92%AD%E5%99%A8)
 
 > TaskManager(Task管理器)
 
@@ -65,7 +65,7 @@ Windows XP 请自行测试,
 > ViewModelBase(ViewModel基类)
 
 #### 2.2 DMSkin中的Window模块(DMSkin.dll)
-> DMSkinWindow[[详情]](https://github.com/944095635/DMSkin/wiki/%E7%AA%97%E5%8F%A3DMSkinWindow)
+> DMSkinWindow[[使用文档]](https://github.com/944095635/DMSkin/wiki/%E7%AA%97%E5%8F%A3DMSkinWindow)
 
 > SystemButton(系统按钮)
 
