@@ -148,6 +148,17 @@ namespace DMSkin
         }
         public static readonly DependencyProperty SystemContentProperty =
             DependencyProperty.Register("SystemContent", typeof(UIElement), typeof(DMSkinWindow), new PropertyMetadata(default));
+
+        /// <summary>
+        /// 沉浸式任务栏
+        /// </summary>
+        public bool FitSystemWindow
+        {
+            get { return (bool)GetValue(FitSystemWindowProperty); }
+            set { SetValue(FitSystemWindowProperty, value); }
+        }
+        public static readonly DependencyProperty FitSystemWindowProperty =
+            DependencyProperty.Register("FitSystemWindow", typeof(bool), typeof(DMSkinWindow), new PropertyMetadata(default));
         #endregion
 
         #endregion

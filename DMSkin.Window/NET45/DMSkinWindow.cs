@@ -70,7 +70,7 @@ namespace DMSkin
         public static readonly DependencyProperty SystemButtonSizeProperty =
             DependencyProperty.Register("SystemButtonSize", typeof(double), typeof(DMSkinWindow), new PropertyMetadata(30.0));
         /// <summary>
-        /// 标题栏前景色
+        /// 系统按钮前景色
         /// </summary>
         public Brush SystemButtonForeground
         {
@@ -148,6 +148,20 @@ namespace DMSkin
         }
         public static readonly DependencyProperty SystemContentProperty =
             DependencyProperty.Register("SystemContent", typeof(UIElement), typeof(DMSkinWindow), new PropertyMetadata(default));
+
+
+        /// <summary>
+        /// 沉浸式标题栏
+        /// </summary>
+        public bool FitSystemWindow
+        {
+            get { return (bool)GetValue(FitSystemWindowProperty); }
+            set { SetValue(FitSystemWindowProperty, value); }
+        }
+        public static readonly DependencyProperty FitSystemWindowProperty =
+            DependencyProperty.Register("FitSystemWindow", typeof(bool), typeof(DMSkinWindow), new PropertyMetadata(default));
+
+
         #endregion
 
         #endregion

@@ -182,7 +182,7 @@
                         BorderThickness="{TemplateBinding BorderThickness}"
                         SnapsToDevicePixels="True">
                         <Grid Margin="{TemplateBinding Padding}">
-                            <AdornerDecorator>
+                            <AdornerDecorator x:Name="content">
                                 <ContentPresenter />
                             </AdornerDecorator>
                             <Grid VerticalAlignment="Top" Background="{TemplateBinding CaptionBackground}">
@@ -258,6 +258,10 @@
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="FitSystemWindow" Value="True">
+                            <Setter TargetName="content" Property="Grid.Row" Value="0" />
+                            <Setter TargetName="content" Property="Grid.RowSpan" Value="2" />
+                        </Trigger>
                         <Trigger Property="WindowState" Value="Maximized">
                             <Setter Property="Padding" Value="8" />
                             <Setter TargetName="ButtonMax" Property="Visibility" Value="Collapsed" />
