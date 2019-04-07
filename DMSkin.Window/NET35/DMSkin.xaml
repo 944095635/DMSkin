@@ -70,7 +70,7 @@
                                     <ColumnDefinition />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <ContentPresenter shell:WindowChrome.IsHitTestVisibleInChrome="True" Content="{TemplateBinding TitleContent}" />
+                                <ContentPresenter Content="{TemplateBinding TitleContent}" />
                                 <StackPanel
                                     Grid.Column="1"
                                     shell:WindowChrome.IsHitTestVisibleInChrome="True"

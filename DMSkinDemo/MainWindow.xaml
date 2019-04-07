@@ -15,7 +15,7 @@
     MinWidth="380"
     MinHeight="300"
     CaptionBackground="{StaticResource ThemeColor}"
-    CaptionHeight="50"
+    CaptionHeight="50" WindowStyle="None"
     FitSystemWindow="False"
     ResizeMode="CanResizeWithGrip"
     Style="{StaticResource DMSkinWindowStyle}"
