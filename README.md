@@ -65,7 +65,7 @@ Windows XP 请自行测试,
 > ViewModelBase(ViewModel基类)
 
 #### 2.2 DMSkin中的Window模块(DMSkin.dll)
-> DMSkinWindow(窗口实现)
+> DMSkinWindow[[详情]]https://github.com/944095635/DMSkin/wiki/窗口DMSkinWindow
 
 > SystemButton(系统按钮)
 
