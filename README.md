@@ -1,9 +1,9 @@
 # DMSkin
 
 #### 介绍
-###### 这是一个全新的项目，快速开发WPF客户端的框架。
-###### 内容：MVVM 框架模块 + DesignLibrary控件样式库
-###### 开发PC客户端 一套搞定
+#### 这是一个全新的项目，快速开发WPF客户端的框架。
+#### 内容：MVVM 框架模块 + DesignLibrary控件样式库
+#### 开发PC客户端 一套搞定
 
 
 <img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/Demo.png" width="615" height="395" align="center">
