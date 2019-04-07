@@ -19,10 +19,10 @@
     <Geometry x:Key="SystemRestore">F1M0,10L0,3 3,3 3,0 10,0 10,2 4,2 4,3 7,3 7,6 6,6 6,5 1,5 1,10z M1,10L7,10 7,7 10,7 10,2 9,2 9,6 6,6 6,9 1,9z</Geometry>
     <Geometry x:Key="SystemClose">m12.65194,6.64088l-2.65193,2.65194l-2.65195,-2.65194c-0.19527,-0.19528 -0.51189,-0.19528 -0.70718,0c-0.19529,0.19528 -0.19528,0.5119 0,0.70718l2.65194,2.65195l-2.65194,2.65193c-0.19528,0.19528 -0.19528,0.51191 0,0.70719c0.19528,0.19528 0.5119,0.19528 0.70718,0l2.65195,-2.65194l2.65193,2.65194c0.19528,0.19528 0.5119,0.19528 0.70719,0c0.19528,-0.19528 0.19528,-0.51191 0,-0.70719l-2.65194,-2.65193l2.65194,-2.65195c0.19528,-0.19527 0.19528,-0.51189 0,-0.70718c-0.19528,-0.19528 -0.5119,-0.19528 -0.70719,0z</Geometry>
 
-    <Style x:Key="DMSkinSystemButton" TargetType="controls:SystemButton">
+    <Style x:Key="DMSkinSystemButton" TargetType="controls:Button">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="controls:SystemButton">
+                <ControlTemplate TargetType="controls:Button">
                     <Grid
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
@@ -80,7 +80,7 @@
                                     Grid.Column="3"
                                     Orientation="Horizontal"
                                     WindowChrome.IsHitTestVisibleInChrome="True">
-                                    <controls:SystemButton
+                                    <controls:Button
                                         x:Name="ButtonMin"
                                         Width="{TemplateBinding SystemButtonSize}"
                                         Height="{TemplateBinding SystemButtonSize}"
@@ -92,7 +92,7 @@
                                         IsTabStop="False"
                                         Style="{StaticResource DMSkinSystemButton}"
                                         SystemButtonBackgroundHover="{TemplateBinding SystemButtonBackgroundHover}" />
-                                    <controls:SystemButton
+                                    <controls:Button
                                         x:Name="ButtonMax"
                                         Width="{TemplateBinding SystemButtonSize}"
                                         Height="{TemplateBinding SystemButtonSize}"
@@ -103,7 +103,7 @@
                                         IsTabStop="False"
                                         Style="{StaticResource DMSkinSystemButton}"
                                         SystemButtonBackgroundHover="{TemplateBinding SystemButtonBackgroundHover}" />
-                                    <controls:SystemButton
+                                    <controls:Button
                                         x:Name="ButtonRestore"
                                         Width="{TemplateBinding SystemButtonSize}"
                                         Height="{TemplateBinding SystemButtonSize}"
@@ -114,7 +114,7 @@
                                         IsTabStop="False"
                                         Style="{StaticResource DMSkinSystemButton}"
                                         SystemButtonBackgroundHover="{TemplateBinding SystemButtonBackgroundHover}" />
-                                    <controls:SystemButton
+                                    <controls:Button
                                         x:Name="ButtonClose"
                                         Width="{TemplateBinding SystemButtonSize}"
                                         Height="{TemplateBinding SystemButtonSize}"
@@ -133,6 +133,124 @@
                             <ResizeGrip
                                 x:Name="ResizeGrip"
                                 Grid.Row="1"
+                                Margin="0,0,5,5"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Bottom"
+                                IsTabStop="False"
+                                Visibility="Collapsed"
+                                WindowChrome.ResizeGripDirection="BottomRight" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="WindowState" Value="Maximized">
+                            <Setter Property="Padding" Value="8" />
+                            <Setter TargetName="ButtonMax" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="ButtonRestore" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="WindowState" Value="Normal">
+                            <Setter TargetName="ButtonMax" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="ButtonRestore" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="ResizeMode" Value="NoResize">
+                            <Setter TargetName="ButtonMin" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="ButtonMax" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="ButtonRestore" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="ResizeMode" Value="CanMinimize">
+                            <Setter TargetName="ButtonMax" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="ButtonRestore" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="ResizeMode" Value="CanResizeWithGrip" />
+                                <Condition Property="WindowState" Value="Normal" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="ResizeGrip" Property="Visibility" Value="Visible" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DMSkinWindowNoTitleStyle" TargetType="dmskin:DMSkinWindow">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="dmskin:DMSkinWindow">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        SnapsToDevicePixels="True">
+                        <Grid Margin="{TemplateBinding Padding}">
+                            <AdornerDecorator>
+                                <ContentPresenter />
+                            </AdornerDecorator>
+                            <Grid VerticalAlignment="Top" Background="{TemplateBinding CaptionBackground}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <ContentPresenter Content="{TemplateBinding TitleContent}" WindowChrome.IsHitTestVisibleInChrome="True" />
+                                <ContentPresenter
+                                    Grid.Column="2"
+                                    Content="{TemplateBinding SystemContent}"
+                                    WindowChrome.IsHitTestVisibleInChrome="True" />
+                                <StackPanel
+                                    Grid.Column="3"
+                                    Orientation="Horizontal"
+                                    WindowChrome.IsHitTestVisibleInChrome="True">
+                                    <controls:Button
+                                        x:Name="ButtonMin"
+                                        Width="{TemplateBinding SystemButtonSize}"
+                                        Height="{TemplateBinding SystemButtonSize}"
+                                        attached:Icon.Geometry="{StaticResource SystemMin}"
+                                        attached:Icon.Height="3"
+                                        Background="{TemplateBinding SystemButtonBackground}"
+                                        Command="SystemCommands.MinimizeWindowCommand"
+                                        Foreground="{TemplateBinding SystemButtonForeground}"
+                                        IsTabStop="False"
+                                        Style="{StaticResource DMSkinSystemButton}"
+                                        SystemButtonBackgroundHover="{TemplateBinding SystemButtonBackgroundHover}" />
+                                    <controls:Button
+                                        x:Name="ButtonMax"
+                                        Width="{TemplateBinding SystemButtonSize}"
+                                        Height="{TemplateBinding SystemButtonSize}"
+                                        attached:Icon.Geometry="{StaticResource SystemMax}"
+                                        Background="{TemplateBinding SystemButtonBackground}"
+                                        Command="SystemCommands.MaximizeWindowCommand"
+                                        Foreground="{TemplateBinding SystemButtonForeground}"
+                                        IsTabStop="False"
+                                        Style="{StaticResource DMSkinSystemButton}"
+                                        SystemButtonBackgroundHover="{TemplateBinding SystemButtonBackgroundHover}" />
+                                    <controls:Button
+                                        x:Name="ButtonRestore"
+                                        Width="{TemplateBinding SystemButtonSize}"
+                                        Height="{TemplateBinding SystemButtonSize}"
+                                        attached:Icon.Geometry="{StaticResource SystemRestore}"
+                                        Background="{TemplateBinding SystemButtonBackground}"
+                                        Command="SystemCommands.RestoreWindowCommand"
+                                        Foreground="{TemplateBinding SystemButtonForeground}"
+                                        IsTabStop="False"
+                                        Style="{StaticResource DMSkinSystemButton}"
+                                        SystemButtonBackgroundHover="{TemplateBinding SystemButtonBackgroundHover}" />
+                                    <controls:Button
+                                        x:Name="ButtonClose"
+                                        Width="{TemplateBinding SystemButtonSize}"
+                                        Height="{TemplateBinding SystemButtonSize}"
+                                        attached:Icon.Geometry="{StaticResource SystemClose}"
+                                        Background="{TemplateBinding SystemButtonBackground}"
+                                        Command="SystemCommands.CloseWindowCommand"
+                                        Foreground="{TemplateBinding SystemButtonForeground}"
+                                        IsTabStop="False"
+                                        Style="{StaticResource DMSkinSystemButton}"
+                                        SystemButtonBackgroundHover="{TemplateBinding SystemCloseButtonBackgroundHover}" />
+                                </StackPanel>
+                            </Grid>
+                            <ResizeGrip
+                                x:Name="ResizeGrip"
                                 Margin="0,0,5,5"
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Bottom"

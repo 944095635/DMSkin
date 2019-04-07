@@ -55,6 +55,7 @@
     <Compile Include="Attached\Icon.cs" />
     <Compile Include="Controls\SystemButton.cs" />
     <Compile Include="Controls\TextBox.cs" />
+    <Compile Include="Controls\VirtualizingWrapPanel .cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

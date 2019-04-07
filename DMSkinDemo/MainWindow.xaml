@@ -17,7 +17,7 @@
     CaptionBackground="{StaticResource ThemeColor}"
     CaptionHeight="50"
     ResizeMode="CanResizeWithGrip"
-    Style="{StaticResource DMSkinWindowStyle}"
+    Style="{StaticResource DMSkinWindowNoTitleStyle}"
     SystemButtonBackground="{StaticResource TransparentColor}"
     SystemButtonBackgroundHover="#88FFFFFF"
     SystemButtonForeground="White"
@@ -51,7 +51,7 @@
     </DMSkin:DMSkinWindow.TitleContent>
     <!--  系统按钮区域  -->
     <DMSkin:DMSkinWindow.SystemContent>
-        <controls:SystemButton
+        <controls:Button
             Width="50"
             Height="50"
             attached:Icon.Geometry="{StaticResource DMSkin}"
@@ -61,7 +61,7 @@
             Foreground="White"
             Style="{StaticResource DMSkinSystemButton}" />
     </DMSkin:DMSkinWindow.SystemContent>
-    <Grid>
+    <Grid Margin="0,50,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="160" />
             <ColumnDefinition />
