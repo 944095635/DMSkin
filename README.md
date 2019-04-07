@@ -1,7 +1,12 @@
 # DMSkin
 
+## 目前项目还在开发中，仅供参考
+
 #### 介绍
-这是一个全新的项目，快速开发WPF客户端的UI框架。
+#### 这是一个全新的项目，快速开发WPF客户端的框架。
+#### 内容：MVVM 框架模块 + DesignLibrary 控件样式库
+#### 开发PC客户端 一套搞定
+
 
 <img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/Demo.png" width="615" height="395" align="center">
 
@@ -70,7 +75,7 @@ Windows XP 请自行测试,
 > Icon(附加属性类)
 
 #### 2.3 DMSkin.Window模块(DMSkin.Window.dll)
-> DMSkinWindow[[使用文档]](https://github.com/944095635/DMSkin/wiki/%E7%AA%97%E5%8F%A3DMSkinWindow)
+> DMSkinWindow[[使用文档]](https://github.com/944095635/DMSkin/wiki/DMSkinWindow%E7%AA%97%E5%8F%A3)
 
 
 ## 3.下载&引用
@@ -81,9 +86,12 @@ Windows XP 请自行测试,
 > 3.2 你可以通过Nuget 搜索DMSkin安装到自己的项目中
 
 ## 4.代码段
-项目中一般会使用到Visual Studio的智能提示(双tab代码段),我在项目中提供了3个代码段（请参考）。
+项目中一般会使用到Visual Studio的智能提示(双tab代码段),
+
+我在项目中提供了3个代码段（在当前项目的Docs文件夹中可以找到）。
 
 VS->工具->代码片段管理器->语言（Csharp）->Visual C#
+
 我的VS安装在C盘路径是:
 ````xml
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC#\Snippets\2052\Visual C#
