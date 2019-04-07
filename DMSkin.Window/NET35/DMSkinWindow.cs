@@ -43,7 +43,7 @@ namespace DMSkin
                 Close();
             }));
             #endregion
-        } 
+        }
         #endregion
 
         #region 属性
@@ -125,7 +125,7 @@ namespace DMSkin
             set { SetValue(CaptionBackgroundProperty, value); }
         }
         public static readonly DependencyProperty CaptionBackgroundProperty =
-            DependencyProperty.Register("CaptionBackground", typeof(Brush), typeof(DMSkinWindow), new PropertyMetadata(default(Brush)));
+            DependencyProperty.Register("CaptionBackground", typeof(Brush), typeof(DMSkinWindow), new PropertyMetadata(default));
 
         /// <summary>
         /// 标题栏的内容
@@ -136,7 +136,7 @@ namespace DMSkin
             set { SetValue(TitleContentProperty, value); }
         }
         public static readonly DependencyProperty TitleContentProperty =
-            DependencyProperty.Register("TitleContent", typeof(UIElement), typeof(DMSkinWindow), new PropertyMetadata(default(UIElement)));
+            DependencyProperty.Register("TitleContent", typeof(UIElement), typeof(DMSkinWindow), new PropertyMetadata(default));
 
         /// <summary>
         /// 系统区域的内容
@@ -147,7 +147,7 @@ namespace DMSkin
             set { SetValue(SystemContentProperty, value); }
         }
         public static readonly DependencyProperty SystemContentProperty =
-            DependencyProperty.Register("SystemContent", typeof(UIElement), typeof(DMSkinWindow), new PropertyMetadata(default(UIElement))); 
+            DependencyProperty.Register("SystemContent", typeof(UIElement), typeof(DMSkinWindow), new PropertyMetadata(default));
         #endregion
 
         #endregion

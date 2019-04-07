@@ -22,6 +22,6 @@ namespace DMSkin.Attached
         }
 
         public static readonly DependencyProperty ValueProperty =
-            DependencyProperty.RegisterAttached("Value", typeof(CornerRadius), typeof(CornerRadius), new PropertyMetadata(default(CornerRadius)));
+            DependencyProperty.RegisterAttached("Value", typeof(CornerRadius), typeof(CornerRadius), new PropertyMetadata(default));
     }
 }
