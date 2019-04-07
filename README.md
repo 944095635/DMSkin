@@ -75,7 +75,7 @@ Windows XP 请自行测试,
 > Icon(附加属性类)
 
 #### 2.3 DMSkin.Window模块(DMSkin.Window.dll)
-> DMSkinWindow[[使用文档]](https://github.com/944095635/DMSkin/wiki/%E7%AA%97%E5%8F%A3DMSkinWindow)
+> DMSkinWindow[[使用文档]](https://github.com/944095635/DMSkin/wiki/DMSkinWindow%E7%AA%97%E5%8F%A3)
 
 
 ## 3.下载&引用
@@ -91,6 +91,7 @@ Windows XP 请自行测试,
 我在项目中提供了3个代码段（在当前项目的Docs文件夹中可以找到）。
 
 VS->工具->代码片段管理器->语言（Csharp）->Visual C#
+
 我的VS安装在C盘路径是:
 ````xml
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC#\Snippets\2052\Visual C#
