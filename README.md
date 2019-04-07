@@ -64,12 +64,13 @@ Windows XP 请自行测试,
 
 > ViewModelBase(ViewModel基类)
 
-#### 2.2 DMSkin中的Window模块(DMSkin.dll)
-> DMSkinWindow[[使用文档]](https://github.com/944095635/DMSkin/wiki/%E7%AA%97%E5%8F%A3DMSkinWindow)
-
+#### 2.2 DMSkin模块(DMSkin.dll)
 > SystemButton(系统按钮)
 
 > Icon(附加属性类)
+
+#### 2.3 DMSkin.Window模块(DMSkin.Window.dll)
+> DMSkinWindow[[使用文档]](https://github.com/944095635/DMSkin/wiki/%E7%AA%97%E5%8F%A3DMSkinWindow)
 
 
 ## 3.下载&引用
