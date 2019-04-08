@@ -6,17 +6,63 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:DMSkinDemo.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="clr-namespace:DMSkinDemo.ViewModel"
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
+    <Page.DataContext>
+        <viewmodels:AduDesignViewModel />
+    </Page.DataContext>
+
     <!--  单独的样式引用  -->
     <Page.Resources>
-        <ResourceDictionary Source="pack://application:,,,/DMSkin.AduDesign;Component/Style.xaml" />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.AduDesign;Component/Style.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkinDemo;component/Styles/SIcon.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Page.Resources>
     <Grid>
-        <Button
-            attached:Icon.Geometry="{StaticResource DMSkin}"
-            attached:Icon.Height="20"
-            attached:Icon.Width="20" />
+        <ScrollViewer>
+            <StackPanel Margin="30" HorizontalAlignment="Left">
+                <GroupBox Header="按钮">
+                    <StackPanel Orientation="Horizontal">
+                        <Button
+                            attached:Icon.Geometry="{StaticResource Icon_Home}"
+                            attached:Icon.Height="16"
+                            Background="Transparent" />
+                        <Button
+                            attached:Icon.Geometry="{StaticResource Icon_Logo}"
+                            attached:Icon.Height="20"
+                            attached:Icon.Width="20"
+                            Background="Transparent" />
+                        <Button
+                            attached:Icon.Geometry="{StaticResource Icon_Player}"
+                            attached:Icon.Height="16"
+                            Background="Transparent" />
+                        <Button
+                            attached:Icon.Geometry="{StaticResource Icon_Delete}"
+                            attached:Icon.Height="16"
+                            Background="Transparent" />
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="按钮">
+                    <StackPanel Orientation="Horizontal">
+                        <ComboBox
+                            DisplayMemberPath="CodeName"
+                            ItemsSource="{Binding CodeList}"
+                            SelectedIndex="1"
+                            SelectedValuePath="CodeID" />
+                        <ComboBox
+                            DisplayMemberPath="CodeName"
+                            ItemsSource="{Binding CodeList}"
+                            SelectedIndex="1"
+                            SelectedValuePath="CodeID" />
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </ScrollViewer>
+
     </Grid>
 </Page>

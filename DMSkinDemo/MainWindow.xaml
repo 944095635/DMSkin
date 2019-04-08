@@ -27,6 +27,13 @@
     <Window.DataContext>
         <viewmodel:MainViewModel />
     </Window.DataContext>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/DMSkinDemo;component/Styles/SIcon.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <!--  左侧标题区域  -->
     <DMSkin:DMSkinWindow.TitleContent>
         <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
@@ -97,9 +104,9 @@
                             IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=AntDesign}"
                             Style="{StaticResource MenuRadioButtom}" />
                         <RadioButton
-                            attached:Icon.Geometry="{StaticResource DMSkin}"
+                            attached:Icon.Geometry="{StaticResource Icon_Logo}"
                             attached:Icon.Height="15"
-                            attached:Icon.Width="15"
+                            attached:Icon.Width="18"
                             Content="AduDesign"
                             GroupName="Menu"
                             IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=AduDesign}"
