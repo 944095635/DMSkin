@@ -112,6 +112,9 @@
     <Compile Include="View\PageColors.xaml.cs">
       <DependentUpon>PageColors.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\WinDemo_Adu.xaml.cs">
+      <DependentUpon>WinDemo_Adu.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -141,6 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\PageColors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinDemo_Adu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

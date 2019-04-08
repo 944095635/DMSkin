@@ -66,6 +66,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Styles\AduWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Styles\Svg_Icon.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

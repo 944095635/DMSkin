@@ -30,7 +30,7 @@
                     <StackPanel Orientation="Horizontal">
                         <Button
                             attached:Icon.Geometry="{StaticResource Icon_Home}"
-                            attached:Icon.Height="16"
+                            attached:Icon.Height="16"  Command="{Binding WinDemoCommand}"
                             Background="Transparent" />
                         <Button
                             attached:Icon.Geometry="{StaticResource Icon_Logo}"

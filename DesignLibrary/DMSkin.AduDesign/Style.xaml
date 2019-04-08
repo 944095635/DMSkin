@@ -9,4 +9,6 @@
         <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/GroupBox.xaml" />
         <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/Scrollview.xaml" />
     </ResourceDictionary.MergedDictionaries>
+    
+    
 </ResourceDictionary>

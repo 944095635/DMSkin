@@ -1,6 +1,7 @@
 ﻿using DMSkin.Core.Common;
 using DMSkin.Core.MVVM;
 using DMSkinDemo.Model;
+using DMSkinDemo.View;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
@@ -47,6 +48,16 @@ namespace DMSkinDemo.ViewModel
         {
             MessageBox.Show("DMSkin");
         });
+
+
+        /// <summary>
+        /// XXX
+        /// </summary>    
+        public ICommand WinDemoCommand => new DelegateCommand(obj =>
+        {
+            new WinDemo_Adu().Show();
+        });
+
         #endregion
     }
 }
