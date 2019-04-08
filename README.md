@@ -51,15 +51,15 @@ Windows XP 请自行测试,
 | DMSkin            | DMSkin 基础控件&基础主题样式        | 3.0.0.1000     |        |
 | DMSkin.Core       | MVVM,Broadcast,DelegateCommand,ViewModelBase | 3.0.0.1000     |        |
 
-| DMSkinWindow窗口 |  描述                     | 最新版本            | Nuget |
-| :----:            |   :----:                       |   :----:       |:----:  | 
-| NET35             |  兼容.Net Framework 3.5+   | 1.0.0.1000        |        |
-| NET45             |  兼容.Net Framework 4.5+   | 1.0.0.1000        |    
+| DMSkinWindow窗口  |  描述                      |  最新版本            | Nuget |
+| :----:            |   :----:                  |   :----:            |:----:  | 
+| NET35             |  兼容.Net Framework 3.5+   | 1.0.0.1000          |        |
+| NET45             |  兼容.Net Framework 4.5+   | 1.0.0.1000          |    
 
-| DesignLibrary样式库| 依赖于DMSkin.dll,实现自定义控件样式 | 最新版本            | Nuget |
+| DesignLibrary样式库| 依赖于DMSkin.dll,DMSkinWindow.dll | 最新版本      | Nuget |
 | :----:            |   :----:                       |   :----:       |:----:  | 
 | DMSkin.AntDesign  | Ant Design https://ant.design  | 1.0.0.1000     |        |
-| DMSkin.AduDesign  | Adu为DMSkin设计的样式库  | 1.0.0.1000     |        |
+| DMSkin.AduDesign  | Adu为DMSkin设计的样式库          | 1.0.0.1000     |        |
 
 如果你只需要使用Window 或 Core 或任一模块，那么你不需要安装其它模块，它们是独立存在的。
 
