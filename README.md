@@ -52,9 +52,12 @@ Windows XP 请自行测试,
 | DMSkin.AntDesign  | Ant Design https://ant.design  | 1.0.0.1000     |        |
 | DMSkin.AduDesign  | Adu为DMSkin设计的样式库          | 1.0.0.1000     |        |
 
-如果你只需要使用Window 或 Core 或任一模块，那么你不需要安装其它模块，它们是独立存在的。
+DesignLibrary样式库都依赖于DMSkin.dll。
 
-所以你可以单独使用DMSkin.dll或DMSkin.Core.dll或DMSkin.AntDesign.dll
+DMSkin.dll 可以独立存在。
+
+DMSkin.Core.dll 可以独立存在。
+
 
 #### 2.1 DMSkin中的Core模块(DMSkin.Core.dll)
 > Execute(跨线程UI调度器) [[使用文档]](https://github.com/944095635/DMSkin/wiki/Execute%E8%B7%A8%E7%BA%BF%E7%A8%8BUI%E8%B0%83%E5%BA%A6%E5%99%A8)
