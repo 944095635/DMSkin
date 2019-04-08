@@ -48,10 +48,9 @@ Windows XP 请自行测试,
 
 | 项目               |   描述                         | 最新版本            | Nuget |
 | :----:            |   :----:                       |   :----:       |:----:  | 
-| DMSkinDemo        | 演示Demo项目                    |                |        |  
 | DMSkin            | DMSkin 基础控件&基础主题样式        | 3.0.0.1000     |        |
+| DMSkin.Core       | MVVM,Broadcast,DelegateCommand,ViewModelBase | 3.0.0.1000     |        |
 | DMSkin.Window     | 窗体实现（包括 NET3.5/4.0 和 NET4.5）| 3.0.0.1000     |        |
-| DMSkin.Core       | WPF开发常用的辅助类               | 3.0.0.1000     |        |
 | DMSkin.AntDesign  | Ant Design https://ant.design  | 1.0.0.1000     |        |
 
 如果你只需要使用Window 或 Core 或任一模块，那么你不需要安装其它模块，它们是独立存在的。
