@@ -176,10 +176,6 @@
       <Project>{c11fccc3-4a44-42a1-829b-57e8c146ec89}</Project>
       <Name>DMSkin.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DMSkin.Window\NET45\DMSkin.WindowNET45.csproj">
-      <Project>{6baab117-4ee9-48a6-81bd-005746469ebd}</Project>
-      <Name>DMSkin.WindowNET45</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DMSkin\DMSkin.csproj">
       <Project>{84d6e067-2db0-4765-8f5c-5b5288a26f0a}</Project>
       <Name>DMSkin</Name>
