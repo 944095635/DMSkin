@@ -52,10 +52,12 @@ Windows XP 请自行测试,
 | DMSkin.Core       | MVVM,Broadcast,DelegateCommand,ViewModelBase | 3.0.0.1000     |        |
 
 | DMSkin.Window 窗口 |  描述                     | 最新版本            | Nuget |
+| :----:            |   :----:                       |   :----:       |:----:  | 
 | NET35             |  兼容.Net Framework 3.5+   | 1.0.0.1000        |        |
 | NET45             |  兼容.Net Framework 4.5+   | 1.0.0.1000        |    
 
 | DesignLibrary样式库|   样式库全部依赖于DMSkin                    | 最新版本            | Nuget |
+| :----:            |   :----:                       |   :----:       |:----:  | 
 | DMSkin.AntDesign  | Ant Design https://ant.design  | 1.0.0.1000     |        |
 | DMSkin.AduDesign  | Adu为DMSkin设计的样式库  | 1.0.0.1000     |        |
 
