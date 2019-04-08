@@ -56,7 +56,7 @@ Windows XP 请自行测试,
 | NET35             |  兼容.Net Framework 3.5+   | 1.0.0.1000          |        |
 | NET45             |  兼容.Net Framework 4.5+   | 1.0.0.1000          |    
 
-| DesignLibrary样式库| 依赖于DMSkin.dll,DMSkinWindow.dll | 最新版本      | Nuget |
+| DesignLibrary样式库| 依赖于DMSkin.dll,DMSkin.Window.dll | 最新版本      | Nuget |
 | :----:            |   :----:                       |   :----:       |:----:  | 
 | DMSkin.AntDesign  | Ant Design https://ant.design  | 1.0.0.1000     |        |
 | DMSkin.AduDesign  | Adu为DMSkin设计的样式库          | 1.0.0.1000     |        |
