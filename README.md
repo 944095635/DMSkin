@@ -27,7 +27,8 @@
 ````xml
 1.目前绝对放弃Windows XP
 2.WPF多数是企业软件,如果要适配windows 7,单独装.Net Framework 4.5的库
-3.UI库的初衷就是为了制作更精美的界面,精美的效果在旧系统中并不能正常的显示,为了适配旧版本的系统而放弃语言新特性,得不偿失。
+3.UI库的初衷就是为了制作更精美的界面,精美的效果在旧系统中并不能正常的显示,
+  为了适配旧版本的系统而放弃语言新特性,得不偿失。
 
 目前Windows 10 占有率已经超过Windows 7
 ````
@@ -67,12 +68,11 @@ Windows XP 请自行测试,
 > ViewModelBase(ViewModel基类)
 
 #### 2.2 DMSkin模块(DMSkin.dll)
+> DMSkinWindow[[使用文档]](https://github.com/944095635/DMSkin/wiki/DMSkinWindow%E7%AA%97%E5%8F%A3)
+
 > SystemButton(系统按钮)
 
 > Icon(附加属性类)
-
-#### 2.3 DMSkin.Window模块(DMSkin.Window.dll)
-> DMSkinWindow[[使用文档]](https://github.com/944095635/DMSkin/wiki/DMSkinWindow%E7%AA%97%E5%8F%A3)
 
 
 ## 3.下载&引用
