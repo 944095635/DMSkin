@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="DMSkinDemo.View.PageBroadcast"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="clr-namespace:DMSkinDemo.ViewModel"
+    Title="PageBroadcast"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <viewmodel:BroadcastViewModel />
+    </Page.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <GroupBox HorizontalAlignment="Left" Header="单向通知广播(适用于单向广播通知)">
+                <UniformGrid HorizontalAlignment="Left" Rows="1">
+                    <Button
+                        Margin="10"
+                        Command="{Binding RegisterBroadcast1}"
+                        Content="注册单向广播接收器" />
+                    <Button
+                        Margin="10"
+                        Command="{Binding RegisterBroadcast1_1}"
+                        Content="注册单向广播接收器" />
+                    <Button
+                        Margin="10"
+                        Command="{Binding PushBroadcast1}"
+                        Content="推送单向广播" />
+                </UniformGrid>
+            </GroupBox>
+            <GroupBox HorizontalAlignment="Left" Header="多播广播(发布广播，并发布回传通道，适用于多个数据回传)">
+                <UniformGrid HorizontalAlignment="Left" Rows="1">
+                    <Button
+                        Margin="10"
+                        Command="{Binding RegisterBroadcast2}"
+                        Content="注册广播接收器-回调1" />
+                    <Button
+                        Margin="10"
+                        Command="{Binding RegisterBroadcast2_1}"
+                        Content="注册广播接收器-回调2" />
+                    <Button
+                        Margin="10"
+                        Command="{Binding PushBroadcast2}"
+                        Content="推送广播接受回调" />
+                </UniformGrid>
+            </GroupBox>
+            <GroupBox HorizontalAlignment="Left" Header="直连广播(发布广播，并接受回传信息,适用于单个数据回传)">
+                <UniformGrid HorizontalAlignment="Left" Rows="1">
+                    <Button
+                        Margin="10"
+                        Command="{Binding RegisterBroadcast3}"
+                        Content="注册广播接收器-返回值" />
+                    <Button
+                        Margin="10"
+                        Command="{Binding PushBroadcast3}"
+                        Content="推送广播接受返回值" />
+                </UniformGrid>
+            </GroupBox>
+
+            <GroupBox HorizontalAlignment="Left" Header="卸载所有广播">
+                <Button
+                    Margin="10"
+                    Command="{Binding UninstallBroadcast}"
+                    Content="卸载" />
+            </GroupBox>
+
+        </StackPanel>
+        <ListBox Grid.Row="1" ItemsSource="{Binding Message}" />
+    </Grid>
+</Page>

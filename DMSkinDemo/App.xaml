@@ -12,7 +12,7 @@
                 </ResourceDictionary>
 
                 <!--  如果你用到DMSkin无边框窗体需要导入  -->
-                <ResourceDictionary Source="pack://application:,,,/DMSkin;component/Style/DMSkin.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin;component/DMSkin.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/DMSkin;component/Style/Style.xaml" />
 
 

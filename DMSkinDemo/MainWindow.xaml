@@ -4,10 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:DMSkin="clr-namespace:DMSkin;assembly=DMSkin"
     xmlns:attached="clr-namespace:DMSkin.Attached;assembly=DMSkin"
-    xmlns:controls="clr-namespace:DMSkin.Controls;assembly=DMSkin"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:view="clr-namespace:DMSkinDemo.View"
     xmlns:viewmodel="clr-namespace:DMSkinDemo.ViewModel"
     Title="Powered by DMSkin"
     Width="950"
@@ -16,6 +14,7 @@
     MinHeight="300"
     CaptionBackground="{StaticResource ThemeColor}"
     CaptionHeight="50"
+    FitSystemWindow="False"
     ResizeMode="CanResizeWithGrip"
     Style="{StaticResource DMSkinWindowStyle}"
     SystemButtonBackground="{StaticResource TransparentColor}"
@@ -36,38 +35,28 @@
     </Window.Resources>
     <!--  左侧标题区域  -->
     <DMSkin:DMSkinWindow.TitleContent>
-        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-            <TextBlock
-                Margin="10,0,0,0"
-                VerticalAlignment="Center"
-                FontSize="20"
-                Foreground="White"
-                Text="Powered by D" />
-            <Path
-                Width="15"
-                Height="15"
-                Data="{StaticResource DMSkin}"
-                Fill="White"
-                Stretch="Fill" />
-            <TextBlock
-                VerticalAlignment="Center"
-                FontSize="20"
-                Foreground="White"
-                Text="Skin" />
-        </StackPanel>
+        <Grid Background="#33FFFFFF">
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock
+                    Margin="10,0,0,0"
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Foreground="White"
+                    Text="Powered by D" />
+                <Path
+                    Width="15"
+                    Height="15"
+                    Data="{StaticResource DMSkin}"
+                    Fill="White"
+                    Stretch="Fill" />
+                <TextBlock
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Foreground="White"
+                    Text="Skin" />
+            </StackPanel>
+        </Grid>
     </DMSkin:DMSkinWindow.TitleContent>
-    <!--  系统按钮区域  -->
-    <DMSkin:DMSkinWindow.SystemContent>
-        <controls:SystemButton
-            Width="50"
-            Height="50"
-            attached:Icon.Geometry="{StaticResource DMSkin}"
-            attached:Icon.Height="20"
-            attached:Icon.Width="20"
-            Background="{StaticResource TransparentColor}"
-            Foreground="White"
-            Style="{StaticResource DMSkinSystemButton}" />
-    </DMSkin:DMSkinWindow.SystemContent>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="160" />
@@ -87,6 +76,21 @@
                             Content="颜色 Colors"
                             GroupName="Menu"
                             IsChecked="True"
+                            Style="{StaticResource MenuRadioButtom}" />
+                    </StackPanel>
+                </Expander>
+                <Expander
+                    Header="DMSkin.Core"
+                    IsExpanded="True"
+                    Style="{StaticResource NoExpander}">
+                    <StackPanel>
+                        <RadioButton
+                            attached:Icon.Geometry="{StaticResource DMSkin}"
+                            attached:Icon.Height="15"
+                            attached:Icon.Width="15"
+                            Content="广播 Broadcast"
+                            GroupName="Menu"
+                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Broadcast}"
                             Style="{StaticResource MenuRadioButtom}" />
                     </StackPanel>
                 </Expander>

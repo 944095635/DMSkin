@@ -1,8 +1,8 @@
-﻿using Microsoft.Windows.Shell;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Shell;
 
 namespace DMSkin
 {
@@ -14,6 +14,7 @@ namespace DMSkin
             var chrome = new WindowChrome
             {
                 GlassFrameThickness = new Thickness(1),
+                ResizeBorderThickness = new Thickness(4)
             };
             WindowChrome.SetWindowChrome(this, chrome);
 
@@ -42,7 +43,7 @@ namespace DMSkin
                 Close();
             }));
             #endregion
-        } 
+        }
         #endregion
 
         #region 属性
@@ -69,7 +70,7 @@ namespace DMSkin
         public static readonly DependencyProperty SystemButtonSizeProperty =
             DependencyProperty.Register("SystemButtonSize", typeof(double), typeof(DMSkinWindow), new PropertyMetadata(30.0));
         /// <summary>
-        /// 标题栏前景色
+        /// 系统按钮前景色
         /// </summary>
         public Brush SystemButtonForeground
         {
@@ -124,7 +125,7 @@ namespace DMSkin
             set { SetValue(CaptionBackgroundProperty, value); }
         }
         public static readonly DependencyProperty CaptionBackgroundProperty =
-            DependencyProperty.Register("CaptionBackground", typeof(Brush), typeof(DMSkinWindow), new PropertyMetadata(default(Brush)));
+            DependencyProperty.Register("CaptionBackground", typeof(Brush), typeof(DMSkinWindow), new PropertyMetadata(default));
 
         /// <summary>
         /// 标题栏的内容
@@ -135,18 +136,20 @@ namespace DMSkin
             set { SetValue(TitleContentProperty, value); }
         }
         public static readonly DependencyProperty TitleContentProperty =
-            DependencyProperty.Register("TitleContent", typeof(UIElement), typeof(DMSkinWindow), new PropertyMetadata(default(UIElement)));
+            DependencyProperty.Register("TitleContent", typeof(UIElement), typeof(DMSkinWindow), new PropertyMetadata(default));
 
         /// <summary>
-        /// 系统区域的内容
+        /// 沉浸式标题栏
         /// </summary>
-        public UIElement SystemContent
+        public bool FitSystemWindow
         {
-            get { return (UIElement)GetValue(SystemContentProperty); }
-            set { SetValue(SystemContentProperty, value); }
+            get { return (bool)GetValue(FitSystemWindowProperty); }
+            set { SetValue(FitSystemWindowProperty, value); }
         }
-        public static readonly DependencyProperty SystemContentProperty =
-            DependencyProperty.Register("SystemContent", typeof(UIElement), typeof(DMSkinWindow), new PropertyMetadata(default(UIElement))); 
+        public static readonly DependencyProperty FitSystemWindowProperty =
+            DependencyProperty.Register("FitSystemWindow", typeof(bool), typeof(DMSkinWindow), new PropertyMetadata(default));
+
+
         #endregion
 
         #endregion

@@ -1,10 +1,9 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:attached="clr-namespace:DMSkin.Attached"
     xmlns:controls="clr-namespace:DMSkin.Controls"
-     xmlns:attached="clr-namespace:DMSkin.Attached"
-    xmlns:dmskin="clr-namespace:DMSkin"
-    xmlns:shell="http://schemas.microsoft.com/winfx/2006/xaml/presentation/shell">
+    xmlns:dmskin="clr-namespace:DMSkin">
 
     <!--  全白 透明色  -->
     <SolidColorBrush x:Key="TransparentColor" Color="#00FFFFFF" />
@@ -18,39 +17,12 @@
     <Geometry x:Key="SystemMin">F1M0,6L0,9 9,9 9,6 0,6z</Geometry>
     <Geometry x:Key="SystemMax">F1M0,0L0,9 9,9 9,0 0,0 0,3 8,3 8,8 1,8 1,3z</Geometry>
     <Geometry x:Key="SystemRestore">F1M0,10L0,3 3,3 3,0 10,0 10,2 4,2 4,3 7,3 7,6 6,6 6,5 1,5 1,10z M1,10L7,10 7,7 10,7 10,2 9,2 9,6 6,6 6,9 1,9z</Geometry>
-    <Geometry x:Key="SystemClose">m12.65194,6.64088l-2.65193,2.65194l-2.65195,-2.65194c-0.19527,-0.19528 -0.51189,-0.19528 -0.70718,0c-0.19529,0.19528 -0.19528,0.5119 0,0.70718l2.65194,2.65195l-2.65194,2.65193c-0.19528,0.19528 -0.19528,0.51191 0,0.70719c0.19528,0.19528 0.5119,0.19528 0.70718,0l2.65195,-2.65194l2.65193,2.65194c0.19528,0.19528 0.5119,0.19528 0.70719,0c0.19528,-0.19528 0.19528,-0.51191 0,-0.70719l-2.65194,-2.65193l2.65194,-2.65195c0.19528,-0.19527 0.19528,-0.51189 0,-0.70718c-0.19528,-0.19528 -0.5119,-0.19528 -0.70719,0z</Geometry>
+    <Geometry x:Key="SystemClose">M453.44 512L161.472 220.032a41.408 41.408 0 0 1 58.56-58.56L512 453.44 803.968 161.472a41.408 41.408 0 0 1 58.56 58.56L570.56 512l291.968 291.968a41.408 41.408 0 0 1-58.56 58.56L512 570.56 220.032 862.528a41.408 41.408 0 0 1-58.56-58.56L453.44 512z</Geometry>
 
-    <Style x:Key="DMSkinResizeGrip" TargetType="ResizeGrip">
-        <Setter Property="Foreground" Value="Black" />
-        <Setter Property="HorizontalAlignment" Value="Right" />
-        <Setter Property="VerticalAlignment" Value="Bottom" />
+    <Style x:Key="DMSkinSystemButton" TargetType="controls:Button">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate>
-                    <Path
-                        Width="12"
-                        Height="12"
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Bottom"
-                        Data="M15.796278,16.882958 L29.796278,16.882958 29.796278,18.882958 15.796278,18.882958 z M8.389616,8.9336629 L37.389616,8.9336629 37.389616,10.933663 8.389616,10.933663 z M0.5,0.5 L44.5,0.5 44.5,2.5 0.5,2.5 z"
-                        Fill="{TemplateBinding Foreground}"
-                        RenderOptions.BitmapScalingMode="Fant"
-                        Stretch="Uniform">
-                        <Path.LayoutTransform>
-                            <TransformGroup>
-                                <RotateTransform Angle="-45" />
-                            </TransformGroup>
-                        </Path.LayoutTransform>
-                    </Path>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
-    <Style x:Key="DMSkinSystemButton" TargetType="controls:SystemButton">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="controls:SystemButton">
+                <ControlTemplate TargetType="controls:Button">
                     <Grid
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
@@ -78,10 +50,10 @@
         </Setter>
     </Style>
 
-    <Style x:Key="DMSkinWindowStyle" TargetType="dmskin:DMSkinWindow">
+    <Style x:Key="DMSkinWindowStyle" TargetType="{x:Type dmskin:DMSkinWindow}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="dmskin:DMSkinWindow">
+                <ControlTemplate TargetType="{x:Type dmskin:DMSkinWindow}">
                     <Border
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
@@ -92,83 +64,82 @@
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition />
                             </Grid.RowDefinitions>
+                            <AdornerDecorator x:Name="content" Grid.Row="1">
+                                <ContentPresenter />
+                            </AdornerDecorator>
+                            <ResizeGrip
+                                x:Name="ResizeGrip"
+                                Grid.Row="1"
+                                Margin="0,0,5,5"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Bottom"
+                                IsTabStop="False"
+                                Visibility="Collapsed"
+                                WindowChrome.ResizeGripDirection="BottomRight" />
                             <Grid Background="{TemplateBinding CaptionBackground}">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition />
                                     <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <ContentPresenter shell:WindowChrome.IsHitTestVisibleInChrome="True" Content="{TemplateBinding TitleContent}" />
-                                <ContentPresenter
-                                    Grid.Column="2"
-                                    shell:WindowChrome.IsHitTestVisibleInChrome="True"
-                                    Content="{TemplateBinding SystemContent}" />
+                                <ContentPresenter Content="{TemplateBinding TitleContent}" />
                                 <StackPanel
-                                    Grid.Column="3"
-                                    shell:WindowChrome.IsHitTestVisibleInChrome="True"
-                                    Orientation="Horizontal">
-                                    <controls:SystemButton
+                                    Grid.Column="1"
+                                    Orientation="Horizontal"
+                                    WindowChrome.IsHitTestVisibleInChrome="True">
+                                    <controls:Button
                                         x:Name="ButtonMin"
                                         Width="{TemplateBinding SystemButtonSize}"
                                         Height="{TemplateBinding SystemButtonSize}"
                                         attached:Icon.Geometry="{StaticResource SystemMin}"
                                         attached:Icon.Height="3"
                                         Background="{TemplateBinding SystemButtonBackground}"
-                                        Command="shell:SystemCommands.MinimizeWindowCommand"
+                                        Command="SystemCommands.MinimizeWindowCommand"
                                         Foreground="{TemplateBinding SystemButtonForeground}"
                                         IsTabStop="False"
                                         Style="{StaticResource DMSkinSystemButton}"
                                         SystemButtonBackgroundHover="{TemplateBinding SystemButtonBackgroundHover}" />
-                                    <controls:SystemButton
+                                    <controls:Button
                                         x:Name="ButtonMax"
                                         Width="{TemplateBinding SystemButtonSize}"
                                         Height="{TemplateBinding SystemButtonSize}"
                                         attached:Icon.Geometry="{StaticResource SystemMax}"
                                         Background="{TemplateBinding SystemButtonBackground}"
-                                        Command="shell:SystemCommands.MaximizeWindowCommand"
+                                        Command="SystemCommands.MaximizeWindowCommand"
                                         Foreground="{TemplateBinding SystemButtonForeground}"
                                         IsTabStop="False"
                                         Style="{StaticResource DMSkinSystemButton}"
                                         SystemButtonBackgroundHover="{TemplateBinding SystemButtonBackgroundHover}" />
-                                    <controls:SystemButton
+                                    <controls:Button
                                         x:Name="ButtonRestore"
                                         Width="{TemplateBinding SystemButtonSize}"
                                         Height="{TemplateBinding SystemButtonSize}"
                                         attached:Icon.Geometry="{StaticResource SystemRestore}"
                                         Background="{TemplateBinding SystemButtonBackground}"
-                                        Command="shell:SystemCommands.RestoreWindowCommand"
+                                        Command="SystemCommands.RestoreWindowCommand"
                                         Foreground="{TemplateBinding SystemButtonForeground}"
                                         IsTabStop="False"
                                         Style="{StaticResource DMSkinSystemButton}"
                                         SystemButtonBackgroundHover="{TemplateBinding SystemButtonBackgroundHover}" />
-                                    <controls:SystemButton
+                                    <controls:Button
                                         x:Name="ButtonClose"
                                         Width="{TemplateBinding SystemButtonSize}"
                                         Height="{TemplateBinding SystemButtonSize}"
                                         attached:Icon.Geometry="{StaticResource SystemClose}"
                                         Background="{TemplateBinding SystemButtonBackground}"
-                                        Command="shell:SystemCommands.CloseWindowCommand"
+                                        Command="SystemCommands.CloseWindowCommand"
                                         Foreground="{TemplateBinding SystemButtonForeground}"
                                         IsTabStop="False"
                                         Style="{StaticResource DMSkinSystemButton}"
                                         SystemButtonBackgroundHover="{TemplateBinding SystemCloseButtonBackgroundHover}" />
                                 </StackPanel>
                             </Grid>
-                            <AdornerDecorator Grid.Row="1">
-                                <ContentPresenter />
-                            </AdornerDecorator>
-                            <ResizeGrip
-                                x:Name="ResizeGrip"
-                                Grid.Row="1"
-                                HorizontalAlignment="Right"
-                                VerticalAlignment="Bottom"
-                                IsTabStop="False"
-                                Style="{StaticResource DMSkinResizeGrip}"
-                                Visibility="Collapsed" />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="FitSystemWindow" Value="True">
+                            <Setter TargetName="content" Property="Grid.Row" Value="0" />
+                            <Setter TargetName="content" Property="Grid.RowSpan" Value="2" />
+                        </Trigger>
                         <Trigger Property="WindowState" Value="Maximized">
                             <Setter Property="Padding" Value="8" />
                             <Setter TargetName="ButtonMax" Property="Visibility" Value="Collapsed" />
