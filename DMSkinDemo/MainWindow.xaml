@@ -15,12 +15,14 @@
     CaptionBackground="{StaticResource ThemeColor}"
     CaptionHeight="50"
     FitSystemWindow="False"
+    Foreground="White"
     ResizeMode="CanResizeWithGrip"
     Style="{StaticResource DMSkinWindowStyle}"
-    SystemButtonBackground="{StaticResource TransparentColor}"
-    SystemButtonBackgroundHover="#88FFFFFF"
+    SystemButtonColor="{StaticResource TransparentColor}"
     SystemButtonForeground="White"
+    SystemButtonOverColor="#10FFFFFF"
     SystemButtonSize="50"
+    SystemButtonCloseOverColor="Red"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
     <Window.DataContext>

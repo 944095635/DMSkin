@@ -54,10 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attached\CornerRadius.cs" />
+    <Compile Include="Attached\Hint.cs" />
     <Compile Include="Attached\Icon.cs" />
-    <Compile Include="Controls\SystemButton.cs" />
-    <Compile Include="Controls\TextBox.cs" />
-    <Compile Include="Controls\VirtualizingWrapPanel .cs" />
+    <Compile Include="Attached\Mouse.cs" />
     <Compile Include="DMSkinWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -73,6 +72,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

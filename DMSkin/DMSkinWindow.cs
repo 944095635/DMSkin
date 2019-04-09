@@ -49,16 +49,18 @@ namespace DMSkin
         #region 属性
 
         #region 系统按钮
+        
         /// <summary>
         /// 系统按钮背景色
         /// </summary>
-        public Brush SystemButtonBackground
+        public Brush SystemButtonColor
         {
-            get { return (Brush)GetValue(SystemButtonBackgroundProperty); }
-            set { SetValue(SystemButtonBackgroundProperty, value); }
+            get { return (Brush)GetValue(SystemButtonColorProperty); }
+            set { SetValue(SystemButtonColorProperty, value); }
         }
-        public static readonly DependencyProperty SystemButtonBackgroundProperty =
-            DependencyProperty.Register("SystemButtonBackground", typeof(Brush), typeof(DMSkinWindow), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(0, 255, 255, 255))));
+        public static readonly DependencyProperty SystemButtonColorProperty =
+            DependencyProperty.Register("SystemButtonColor", typeof(Brush), typeof(DMSkinWindow), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(0, 255, 255, 255))));
+
         /// <summary>
         /// 系统按钮大小
         /// </summary>
@@ -83,24 +85,26 @@ namespace DMSkin
         /// <summary>
         /// 系统按钮悬浮背景色
         /// </summary>
-        public Brush SystemButtonBackgroundHover
+        public Brush SystemButtonOverColor
         {
-            get { return (Brush)GetValue(SystemButtonBackgroundHoverProperty); }
-            set { SetValue(SystemButtonBackgroundHoverProperty, value); }
+            get { return (Brush)GetValue(SystemButtonOverColorProperty); }
+            set { SetValue(SystemButtonOverColorProperty, value); }
         }
-        public static readonly DependencyProperty SystemButtonBackgroundHoverProperty =
-            DependencyProperty.Register("SystemButtonBackgroundHover", typeof(Brush), typeof(DMSkinWindow), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(40, 255, 255, 255))));
+        public static readonly DependencyProperty SystemButtonOverColorProperty =
+            DependencyProperty.Register("SystemButtonOverColor", typeof(Brush), typeof(DMSkinWindow), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(40, 255, 255, 255))));
+
+
 
         /// <summary>
         /// 关闭按钮悬浮背景色
         /// </summary>
-        public Brush SystemCloseButtonBackgroundHover
+        public Brush SystemButtonCloseOverColor
         {
-            get { return (Brush)GetValue(SystemCloseButtonBackgroundHoverProperty); }
-            set { SetValue(SystemCloseButtonBackgroundHoverProperty, value); }
+            get { return (Brush)GetValue(SystemButtonCloseOverColorProperty); }
+            set { SetValue(SystemButtonCloseOverColorProperty, value); }
         }
-        public static readonly DependencyProperty SystemCloseButtonBackgroundHoverProperty =
-            DependencyProperty.Register("SystemCloseButtonBackgroundHover", typeof(Brush), typeof(DMSkinWindow), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(255, 0, 0))));
+        public static readonly DependencyProperty SystemButtonCloseOverColorProperty =
+            DependencyProperty.Register("SystemButtonCloseOverColor", typeof(Brush), typeof(DMSkinWindow), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(255, 0, 0))));
 
         #endregion
 
