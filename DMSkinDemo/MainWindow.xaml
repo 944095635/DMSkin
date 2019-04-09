@@ -98,7 +98,7 @@
                 </Expander>
                 <Expander
                     Header="样式库"
-                    IsExpanded="{Binding IsPluginExpanded}"
+                    IsExpanded="True"
                     Style="{StaticResource Expander}">
                     <StackPanel>
                         <RadioButton
