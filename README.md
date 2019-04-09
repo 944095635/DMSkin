@@ -72,6 +72,7 @@ DMSkin.Core.dll 可以独立存在。
 
 #### 2.2 DMSkin模块(DMSkin.dll)
 > DMSkinWindow[[使用文档]](https://github.com/944095635/DMSkin/wiki/DMSkinWindow%E7%AA%97%E5%8F%A3)
+> [学习WPF的窗口跳转和内容切换](https://github.com/944095635/DMSkin/wiki/%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD&%E7%AA%97%E5%8F%A3%E8%B7%B3%E8%BD%AC)
 
 > SystemButton(系统按钮)
 
