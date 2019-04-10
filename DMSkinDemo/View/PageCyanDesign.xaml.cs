@@ -1,8 +1,8 @@
 ﻿namespace DMSkinDemo.View
 {
-    public partial class Windwo_CyanDesign
+    public partial class PageCyanDesign
     {
-        public Windwo_CyanDesign()
+        public PageCyanDesign()
         {
             InitializeComponent();
         }

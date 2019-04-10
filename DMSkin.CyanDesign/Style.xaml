@@ -3,11 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:attached="clr-namespace:DMSkin.Attached;assembly=DMSkin">
 
-    <!--#region 主题色-->
-    <SolidColorBrush x:Key="ThemeSolidColor">#49A9EE</SolidColorBrush>
-    <SolidColorBrush x:Key="ThemeSolidColorLight">#CFE8FB</SolidColorBrush>
-
-
+    <!--  主题色  -->
     <SolidColorBrush x:Key="ThemeColor">#5B95FF</SolidColorBrush>
 
     <!--  灰色1  -->
@@ -62,12 +58,9 @@
         <Setter Property="attached:Icon.Height" Value="24" />
         <Setter Property="Width" Value="80" />
         <Setter Property="Height" Value="80" />
-        <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Foreground" Value="#A8A8AA" />
         <Setter Property="Background" Value="White" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="Margin" Value="0" />
-        <Setter Property="Padding" Value="6,2,6,2" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="VerticalContentAlignment" Value="Stretch" />
         <Setter Property="Template">
@@ -77,6 +70,7 @@
                         x:Name="templateRoot"
                         Margin="{TemplateBinding Padding}"
                         Background="{StaticResource TransparentColor}"
+                        Cursor="Hand"
                         SnapsToDevicePixels="true">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
@@ -127,12 +121,9 @@
         <Setter Property="Width" Value="80" />
         <Setter Property="Height" Value="40" />
         <Setter Property="FontSize" Value="16" />
-        <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Foreground" Value="#A8A8AA" />
         <Setter Property="Background" Value="White" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="Margin" Value="0" />
-        <Setter Property="Padding" Value="6,2,6,2" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="VerticalContentAlignment" Value="Stretch" />
         <Setter Property="Template">
@@ -142,6 +133,7 @@
                         x:Name="templateRoot"
                         Margin="{TemplateBinding Padding}"
                         Background="{StaticResource TransparentColor}"
+                        Cursor="Hand"
                         SnapsToDevicePixels="true">
                         <ContentPresenter
                             x:Name="contentPresenter"
@@ -260,13 +252,12 @@
         <Setter Property="attached:Corner.Value" Value="15" />
         <Setter Property="Background" Value="{StaticResource ThemeColor}" />
         <Setter Property="Foreground" Value="White" />
-        <Setter Property="Padding" Value="30" />
+        <Setter Property="Padding" Value="10,5,10,5" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="Padding" Value="1" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -277,15 +268,14 @@
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="{TemplateBinding attached:Corner.Value}"
                         SnapsToDevicePixels="true">
-                        <Grid Margin="{TemplateBinding Padding}">
-                            <ContentPresenter
-                                x:Name="contentPresenter"
-                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                Focusable="False"
-                                RecognizesAccessKey="True"
-                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                        </Grid>
+                        <ContentPresenter
+                            x:Name="contentPresenter"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Focusable="False"
+                            RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="true">
@@ -295,8 +285,8 @@
                             <Setter TargetName="border" Property="Opacity" Value="0.7" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter TargetName="border" Property="Background" Value="{StaticResource Button.Disabled.Background}" />
-                            <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{StaticResource Button.Disabled.Foreground}" />
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource GrayColor5}" />
+                            <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{StaticResource GrayColor4}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

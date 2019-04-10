@@ -10,6 +10,7 @@ namespace DMSkinDemo.Model
         Null,
         AntDesign,
         AduDesign,
+        CyanDesign,
         Broadcast,
 
     }

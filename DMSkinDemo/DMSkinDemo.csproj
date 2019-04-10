@@ -115,8 +115,8 @@
     <Compile Include="View\WinDemo_Adu.xaml.cs">
       <DependentUpon>WinDemo_Adu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windwo_CyanDesign.xaml.cs">
-      <DependentUpon>Windwo_CyanDesign.xaml</DependentUpon>
+    <Compile Include="View\PageCyanDesign.xaml.cs">
+      <DependentUpon>PageCyanDesign.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -154,7 +154,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windwo_CyanDesign.xaml">
+    <Page Include="View\PageCyanDesign.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

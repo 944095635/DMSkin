@@ -1,17 +1,15 @@
-﻿<dmskin:DMSkinWindow
-    x:Class="DMSkinDemo.View.Windwo_CyanDesign"
+﻿<Page
+    x:Class="DMSkinDemo.View.PageCyanDesign"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:attached="clr-namespace:DMSkin.Attached;assembly=DMSkin"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:dmskin="clr-namespace:DMSkin;assembly=DMSkin"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Windwo_CyanDesign"
-    Width="1200"
-    Height="680"
-    CaptionHeight="90"
+    d:DesignHeight="780"
+    d:DesignWidth="1300"
     mc:Ignorable="d">
-    <Window.Resources>
+    <Page.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.CyanDesign;component/Style.xaml" />
@@ -28,7 +26,7 @@
 
 
         </ResourceDictionary>
-    </Window.Resources>
+    </Page.Resources>
     <Grid Background="{StaticResource GrayColor8}">
         <TabControl Style="{DynamicResource TabControlStyle}" TabStripPlacement="Left">
             <TabItem
@@ -96,8 +94,30 @@
                         </Grid.RowDefinitions>
                         <TabControl Grid.Row="1" Style="{DynamicResource TabControlStyle}">
                             <TabItem Header="Photos" Style="{StaticResource TabItemCyanStyle}">
-                                <StackPanel>
-                                    <Button Content="DownLoad" Style="{DynamicResource ButtonStyle}" />
+                                <StackPanel
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Bottom"
+                                    Orientation="Horizontal">
+                                    <Button
+                                        Margin="10"
+                                        Content="Send Gray"
+                                        Style="{DynamicResource ButtonStyle}" />
+                                    <Button
+                                        Margin="10"
+                                        Background="{StaticResource GreenColor}"
+                                        Content="Open Green"
+                                        Style="{DynamicResource ButtonStyle}" />
+                                    <Button
+                                        Margin="10"
+                                        Background="{StaticResource YellowColor}"
+                                        Content="Delete Yellow"
+                                        Style="{DynamicResource ButtonStyle}" />
+                                    <Button
+                                        Margin="10"
+                                        Background="{StaticResource YellowColor}"
+                                        Content="Disable"
+                                        IsEnabled="False"
+                                        Style="{DynamicResource ButtonStyle}" />
                                 </StackPanel>
                             </TabItem>
                             <TabItem Header="Video" Style="{StaticResource TabItemCyanStyle}" />
@@ -112,4 +132,4 @@
             <TabItem attached:Icon.Geometry="{StaticResource Menu3}" Style="{StaticResource TabItemStyle}" />
         </TabControl>
     </Grid>
-</dmskin:DMSkinWindow>
+</Page>

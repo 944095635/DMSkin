@@ -34,8 +34,8 @@ namespace DMSkinDemo.ViewModel
                     case Menu.AntDesign:
                         Broadcast.PushBroadcast("Navigation", new PageAntDesign());
                         break;
-                    case Menu.AduDesign:
-                        Broadcast.PushBroadcast("Navigation", new PageAduDesign());
+                    case Menu.CyanDesign:
+                        Broadcast.PushBroadcast("Navigation", new PageCyanDesign());
                         break;
                     default:
                         break;

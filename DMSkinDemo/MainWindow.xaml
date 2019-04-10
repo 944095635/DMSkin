@@ -105,6 +105,14 @@
                             attached:Icon.Geometry="{StaticResource DMSkin}"
                             attached:Icon.Height="15"
                             attached:Icon.Width="15"
+                            Content="CyanDesign"
+                            GroupName="Menu"
+                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=CyanDesign}"
+                            Style="{StaticResource MenuRadioButtom}" />
+                        <RadioButton
+                            attached:Icon.Geometry="{StaticResource DMSkin}"
+                            attached:Icon.Height="15"
+                            attached:Icon.Width="15"
                             Content="AntDesign"
                             GroupName="Menu"
                             IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=AntDesign}"
