@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkin.AduDesign", "DesignL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkin.AntDesign", "DesignLibrary\DMSkin.AntDesign\DMSkin.AntDesign.csproj", "{2EB8188A-5C8B-491B-AFB2-6A6506B376C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkin.CyanDesign", "DMSkin.CyanDesign\DMSkin.CyanDesign.csproj", "{4B0EF37D-E012-4153-84B9-76FCE8C84301}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSkin.CyanDesign", "DesignLibrary\DMSkin.CyanDesign\DMSkin.CyanDesign.csproj", "{4B0EF37D-E012-4153-84B9-76FCE8C84301}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
