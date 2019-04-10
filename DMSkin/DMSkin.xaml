@@ -2,7 +2,6 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:attached="clr-namespace:DMSkin.Attached"
-    xmlns:controls="clr-namespace:DMSkin.Controls"
     xmlns:dmskin="clr-namespace:DMSkin">
 
     <!--  全白 透明色  -->
@@ -170,4 +169,5 @@
             </Setter.Value>
         </Setter>
     </Style>
+
 </ResourceDictionary>

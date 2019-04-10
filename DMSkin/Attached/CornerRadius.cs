@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
+﻿using System.Windows;
 
 namespace DMSkin.Attached
 {
     /// <summary>
     /// 附加属性 圆角值
     /// </summary>
-    public class CornerRadius
+    public class Corner
     {
         public static CornerRadius GetValue(DependencyObject obj)
         {
@@ -22,6 +18,6 @@ namespace DMSkin.Attached
         }
 
         public static readonly DependencyProperty ValueProperty =
-            DependencyProperty.RegisterAttached("Value", typeof(CornerRadius), typeof(CornerRadius), new PropertyMetadata(default));
+            DependencyProperty.RegisterAttached("Value", typeof(CornerRadius), typeof(Corner), new PropertyMetadata(default));
     }
 }

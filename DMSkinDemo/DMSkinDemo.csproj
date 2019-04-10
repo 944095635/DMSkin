@@ -115,6 +115,9 @@
     <Compile Include="View\WinDemo_Adu.xaml.cs">
       <DependentUpon>WinDemo_Adu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Windwo_CyanDesign.xaml.cs">
+      <DependentUpon>Windwo_CyanDesign.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -148,6 +151,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\WinDemo_Adu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windwo_CyanDesign.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -191,6 +198,10 @@
     <ProjectReference Include="..\DMSkin.Core\DMSkin.Core.csproj">
       <Project>{c11fccc3-4a44-42a1-829b-57e8c146ec89}</Project>
       <Name>DMSkin.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMSkin.CyanDesign\DMSkin.CyanDesign.csproj">
+      <Project>{4b0ef37d-e012-4153-84b9-76fce8c84301}</Project>
+      <Name>DMSkin.CyanDesign</Name>
     </ProjectReference>
     <ProjectReference Include="..\DMSkin\DMSkin.csproj">
       <Project>{84d6e067-2db0-4765-8f5c-5b5288a26f0a}</Project>
