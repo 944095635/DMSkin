@@ -26,7 +26,7 @@
                             <Border Width="40">
                                 <Path
                                     Width="{TemplateBinding attached:Icon.Width}"
-                                    Height="{TemplateBinding attached:Icon.Width}"
+                                    Height="{TemplateBinding attached:Icon.Height}"
                                     Margin="{TemplateBinding Padding}"
                                     Data="{TemplateBinding attached:Icon.Geometry}"
                                     Fill="{TemplateBinding Foreground}"

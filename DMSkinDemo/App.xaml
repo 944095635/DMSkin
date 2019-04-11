@@ -16,6 +16,8 @@
                 <ResourceDictionary Source="pack://application:,,,/DMSkinDemo;component/Styles/Style.xaml" />
 
                 <ResourceDictionary Source="pack://application:,,,/DMSkinDemo;component/Styles/SIcon.xaml" />
+
+                <ResourceDictionary Source="pack://application:,,,/DMSkin;component/Icon.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
