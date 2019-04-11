@@ -9,6 +9,7 @@ namespace DMSkinDemo
         {
             base.OnStartup(e);
 
+            //初始化UI调度器
             Execute.InitializeWithDispatcher();
 
             //初始化广播器
