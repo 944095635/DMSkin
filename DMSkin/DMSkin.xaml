@@ -39,7 +39,7 @@
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="bg" Property="Background" Value="{Binding (attached:Mouse.MouseOverBackColor), RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                            <Setter TargetName="bg" Property="Background" Value="{Binding (attached:Mouse.OverBackColor), RelativeSource={RelativeSource Mode=TemplatedParent}}" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter Property="Opacity" Value="0.8" />
@@ -94,7 +94,7 @@
                                         Height="{TemplateBinding SystemButtonSize}"
                                         attached:Icon.Geometry="{StaticResource SystemMin}"
                                         attached:Icon.Height="3"
-                                        attached:Mouse.MouseOverBackColor="{TemplateBinding SystemButtonOverColor}"
+                                        attached:Mouse.OverBackColor="{TemplateBinding SystemButtonOverColor}"
                                         Background="{TemplateBinding SystemButtonColor}"
                                         Command="SystemCommands.MinimizeWindowCommand"
                                         Foreground="{TemplateBinding SystemButtonForeground}"
@@ -105,7 +105,7 @@
                                         Width="{TemplateBinding SystemButtonSize}"
                                         Height="{TemplateBinding SystemButtonSize}"
                                         attached:Icon.Geometry="{StaticResource SystemMax}"
-                                        attached:Mouse.MouseOverBackColor="{TemplateBinding SystemButtonOverColor}"
+                                        attached:Mouse.OverBackColor="{TemplateBinding SystemButtonOverColor}"
                                         Background="{TemplateBinding SystemButtonColor}"
                                         Command="SystemCommands.MaximizeWindowCommand"
                                         Foreground="{TemplateBinding SystemButtonForeground}"
@@ -116,7 +116,7 @@
                                         Width="{TemplateBinding SystemButtonSize}"
                                         Height="{TemplateBinding SystemButtonSize}"
                                         attached:Icon.Geometry="{StaticResource SystemRestore}"
-                                        attached:Mouse.MouseOverBackColor="{TemplateBinding SystemButtonOverColor}"
+                                        attached:Mouse.OverBackColor="{TemplateBinding SystemButtonOverColor}"
                                         Background="{TemplateBinding SystemButtonColor}"
                                         Command="SystemCommands.RestoreWindowCommand"
                                         Foreground="{TemplateBinding SystemButtonForeground}"
@@ -127,7 +127,7 @@
                                         Width="{TemplateBinding SystemButtonSize}"
                                         Height="{TemplateBinding SystemButtonSize}"
                                         attached:Icon.Geometry="{StaticResource SystemClose}"
-                                        attached:Mouse.MouseOverBackColor="{TemplateBinding SystemButtonCloseOverColor}"
+                                        attached:Mouse.OverBackColor="{TemplateBinding SystemButtonCloseOverColor}"
                                         Background="{TemplateBinding SystemButtonColor}"
                                         Command="SystemCommands.CloseWindowCommand"
                                         Foreground="{TemplateBinding SystemButtonForeground}"
@@ -175,6 +175,165 @@
     <!--#endregion-->
 
     <!--#region 滚动条-->
+    <Style x:Key="RepeatButtonTransparent" TargetType="{x:Type RepeatButton}">
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="IsTabStop" Value="false" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Rectangle
+                        Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}"
+                        Fill="{TemplateBinding Background}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
+    <Style x:Key="ScrollBarThumb" TargetType="Thumb">
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="IsTabStop" Value="false" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Rectangle
+                        x:Name="rectangle"
+                        Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}"
+                        Fill="{TemplateBinding attached:Mouse.BackColor}"
+                        RadiusX="3"
+                        RadiusY="3"
+                        SnapsToDevicePixels="True" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DMScrollBar" TargetType="{x:Type ScrollBar}">
+        <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false" />
+        <Setter Property="Stylus.IsFlicksEnabled" Value="false" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+        <Setter Property="Width" Value="8" />
+        <Setter Property="MinWidth" Value="8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ScrollBar}">
+                    <Grid x:Name="Bg" SnapsToDevicePixels="true">
+                        <Track
+                            x:Name="PART_Track"
+                            IsDirectionReversed="true"
+                            IsEnabled="{TemplateBinding IsMouseOver}">
+                            <Track.DecreaseRepeatButton>
+                                <RepeatButton Command="{x:Static ScrollBar.PageUpCommand}" Style="{StaticResource RepeatButtonTransparent}" />
+                            </Track.DecreaseRepeatButton>
+                            <Track.IncreaseRepeatButton>
+                                <RepeatButton Command="{x:Static ScrollBar.PageDownCommand}" Style="{StaticResource RepeatButtonTransparent}" />
+                            </Track.IncreaseRepeatButton>
+                            <Track.Thumb>
+                                <Thumb attached:Mouse.BackColor="{TemplateBinding attached:Mouse.BackColor}" Style="{StaticResource ScrollBarThumb}" />
+                            </Track.Thumb>
+                        </Track>
+                    </Grid>
+                    <ControlTemplate.Triggers />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="Orientation" Value="Horizontal">
+                <Setter Property="Width" Value="Auto" />
+                <Setter Property="MinWidth" Value="0" />
+                <Setter Property="Height" Value="8" />
+                <Setter Property="MinHeight" Value="8" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ScrollBar}">
+                            <Grid x:Name="Bg" SnapsToDevicePixels="true">
+                                <Track
+                                    x:Name="PART_Track"
+                                    Grid.Column="1"
+                                    IsEnabled="{TemplateBinding IsMouseOver}">
+                                    <Track.DecreaseRepeatButton>
+                                        <RepeatButton Command="{x:Static ScrollBar.PageLeftCommand}" Style="{StaticResource RepeatButtonTransparent}" />
+                                    </Track.DecreaseRepeatButton>
+                                    <Track.IncreaseRepeatButton>
+                                        <RepeatButton Command="{x:Static ScrollBar.PageRightCommand}" Style="{StaticResource RepeatButtonTransparent}" />
+                                    </Track.IncreaseRepeatButton>
+                                    <Track.Thumb>
+                                        <Thumb attached:Mouse.BackColor="{TemplateBinding attached:Mouse.BackColor}" Style="{StaticResource ScrollBarThumb}" />
+                                    </Track.Thumb>
+                                </Track>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="DMScrollViewer" TargetType="ScrollViewer">
+        <Setter Property="attached:Mouse.BackColor" Value="#AAAAAA" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ScrollViewer">
+                    <Grid x:Name="Grid" Background="{TemplateBinding Background}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Rectangle
+                            x:Name="Corner"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Fill="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" />
+                        <ScrollContentPresenter
+                            x:Name="PART_ScrollContentPresenter"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="{TemplateBinding Padding}"
+                            CanContentScroll="{TemplateBinding CanContentScroll}"
+                            CanHorizontallyScroll="False"
+                            CanVerticallyScroll="False"
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}" />
+                        <ScrollBar
+                            x:Name="PART_VerticalScrollBar"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            attached:Mouse.BackColor="{TemplateBinding attached:Mouse.BackColor}"
+                            AutomationProperties.AutomationId="VerticalScrollBar"
+                            Background="{StaticResource TransparentColor}"
+                            Cursor="Arrow"
+                            Maximum="{TemplateBinding ScrollableHeight}"
+                            Minimum="0"
+                            Style="{StaticResource DMScrollBar}"
+                            ViewportSize="{TemplateBinding ViewportHeight}"
+                            Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+                            Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
+                        <ScrollBar
+                            x:Name="PART_HorizontalScrollBar"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            attached:Mouse.BackColor="{TemplateBinding attached:Mouse.BackColor}"
+                            AutomationProperties.AutomationId="HorizontalScrollBar"
+                            Background="{StaticResource TransparentColor}"
+                            Cursor="Arrow"
+                            Maximum="{TemplateBinding ScrollableWidth}"
+                            Minimum="0"
+                            Orientation="Horizontal"
+                            Style="{StaticResource DMScrollBar}"
+                            ViewportSize="{TemplateBinding ViewportWidth}"
+                            Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+                            Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
     <!--#endregion-->
 </ResourceDictionary>

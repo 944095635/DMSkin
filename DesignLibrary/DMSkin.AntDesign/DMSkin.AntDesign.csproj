@@ -55,5 +55,11 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DMSkin\DMSkin.csproj">
+      <Project>{84d6e067-2db0-4765-8f5c-5b5288a26f0a}</Project>
+      <Name>DMSkin</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

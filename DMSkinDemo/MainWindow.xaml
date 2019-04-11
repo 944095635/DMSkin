@@ -8,8 +8,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewmodel="clr-namespace:DMSkinDemo.ViewModel"
     Title="Powered by DMSkin"
-    Width="950"
-    Height="600"
+    Width="1000"
+    Height="650"
     MinWidth="380"
     MinHeight="300"
     CaptionBackground="#10000000"
@@ -28,13 +28,6 @@
     <Window.DataContext>
         <viewmodel:MainViewModel />
     </Window.DataContext>
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/DMSkinDemo;component/Styles/SIcon.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
     <!--  左侧标题区域  -->
     <DMSkin:DMSkinWindow.TitleContent>
         <Grid Background="#33FFFFFF">
@@ -43,18 +36,18 @@
                     Margin="10,0,0,0"
                     VerticalAlignment="Center"
                     FontSize="20"
-                    Foreground="White"
+                    Foreground="#666666"
                     Text="Powered by D" />
                 <Path
                     Width="15"
                     Height="15"
                     Data="{StaticResource DMSkin}"
-                    Fill="White"
+                    Fill="#666666"
                     Stretch="Fill" />
                 <TextBlock
                     VerticalAlignment="Center"
                     FontSize="20"
-                    Foreground="White"
+                    Foreground="#666666"
                     Text="Skin" />
             </StackPanel>
         </Grid>
@@ -64,7 +57,7 @@
             <ColumnDefinition Width="160" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <ScrollViewer attached:Mouse.BackColor="Blue" Style="{StaticResource DMScrollViewer}">
             <StackPanel Background="#F5F5F7">
                 <Expander
                     Header="DMSkin"
@@ -72,7 +65,7 @@
                     Style="{StaticResource NoExpander}">
                     <StackPanel>
                         <RadioButton
-                            attached:Icon.Geometry="{StaticResource DMSkin}"
+                            attached:Icon.Geometry="{StaticResource Icon_Driver}"
                             attached:Icon.Height="15"
                             attached:Icon.Width="15"
                             Content="颜色 Colors"
@@ -87,7 +80,7 @@
                     Style="{StaticResource NoExpander}">
                     <StackPanel>
                         <RadioButton
-                            attached:Icon.Geometry="{StaticResource DMSkin}"
+                            attached:Icon.Geometry="{StaticResource Icon_Controls}"
                             attached:Icon.Height="15"
                             attached:Icon.Width="15"
                             Content="广播 Broadcast"
@@ -102,7 +95,7 @@
                     Style="{StaticResource Expander}">
                     <StackPanel>
                         <RadioButton
-                            attached:Icon.Geometry="{StaticResource DMSkin}"
+                            attached:Icon.Geometry="{StaticResource Icon_Task}"
                             attached:Icon.Height="15"
                             attached:Icon.Width="15"
                             Content="CyanDesign"
@@ -110,7 +103,7 @@
                             IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=CyanDesign}"
                             Style="{StaticResource MenuRadioButtom}" />
                         <RadioButton
-                            attached:Icon.Geometry="{StaticResource DMSkin}"
+                            attached:Icon.Geometry="{StaticResource Icon_SweepCode}"
                             attached:Icon.Height="15"
                             attached:Icon.Width="15"
                             Content="AntDesign"

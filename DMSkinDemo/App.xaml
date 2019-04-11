@@ -13,9 +13,9 @@
 
                 <!--  如果你用到DMSkin无边框窗体需要导入  -->
                 <ResourceDictionary Source="pack://application:,,,/DMSkin;component/DMSkin.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/DMSkinDemo;component/Style/Style.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkinDemo;component/Styles/Style.xaml" />
 
-
+                <ResourceDictionary Source="pack://application:,,,/DMSkinDemo;component/Styles/SIcon.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

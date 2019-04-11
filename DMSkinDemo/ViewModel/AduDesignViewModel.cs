@@ -1,5 +1,4 @@
-﻿using DMSkin.Core.Common;
-using DMSkin.Core.MVVM;
+﻿using DMSkin.Core;
 using DMSkinDemo.Model;
 using DMSkinDemo.View;
 using System.Collections.ObjectModel;

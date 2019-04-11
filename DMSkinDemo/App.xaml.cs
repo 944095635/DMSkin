@@ -1,5 +1,4 @@
 ﻿using DMSkin.Core;
-using DMSkin.Core.Common;
 using System.Windows;
 
 namespace DMSkinDemo

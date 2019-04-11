@@ -1,5 +1,4 @@
-﻿using DMSkin.Core.Common;
-using DMSkin.Core.MVVM;
+﻿using DMSkin.Core;
 using System.Windows;
 using System.Windows.Input;
 

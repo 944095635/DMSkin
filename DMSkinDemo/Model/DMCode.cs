@@ -1,8 +1,4 @@
-﻿using DMSkin.Core.MVVM;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using DMSkin.Core;
 
 namespace DMSkinDemo.Model
 {
@@ -34,7 +30,5 @@ namespace DMSkinDemo.Model
                 OnPropertyChanged(nameof(CodeName));
             }
         }
-
-
     }
 }

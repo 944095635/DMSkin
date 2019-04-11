@@ -19,7 +19,7 @@
     <Grid>
         <TabControl>
             <TabItem Header="选项卡A">
-                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ScrollViewer Style="{DynamicResource DMScrollViewer}">
                     <StackPanel Margin="10">
                         <StackPanel Orientation="Horizontal">
                             <GroupBox Header="多选">

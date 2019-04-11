@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Media;
 
 namespace DMSkin.Attached
 {
+    /// <summary>
+    /// 水印
+    /// </summary>
     public class Hint
     {
+        #region 水印文字
         public static string GetHintText(DependencyObject obj)
         {
             return (string)obj.GetValue(HintTextProperty);
@@ -23,10 +22,9 @@ namespace DMSkin.Attached
         //水印文字
         public static readonly DependencyProperty HintTextProperty =
             DependencyProperty.RegisterAttached("HintText", typeof(string), typeof(Hint), new PropertyMetadata(default));
+        #endregion
 
-
-
-
+        #region 水印颜色
         public static SolidColorBrush GetHintColor(DependencyObject obj)
         {
             return (SolidColorBrush)obj.GetValue(HintColorProperty);
@@ -39,6 +37,7 @@ namespace DMSkin.Attached
 
         //水印颜色
         public static readonly DependencyProperty HintColorProperty =
-            DependencyProperty.RegisterAttached("HintColor", typeof(SolidColorBrush), typeof(Hint), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 88, 88, 88))));
+            DependencyProperty.RegisterAttached("HintColor", typeof(SolidColorBrush), typeof(Hint), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 88, 88, 88)))); 
+        #endregion
     }
 }

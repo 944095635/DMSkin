@@ -1,9 +1,7 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:attached="clr-namespace:DMSkin.Attached;assembly=DMSkin"
-    xmlns:dmskin="clr-namespace:DMSkin;assembly=DMSkin"
-    xmlns:local="clr-namespace:DMSkinDemo.Style">
+    xmlns:attached="clr-namespace:DMSkin.Attached;assembly=DMSkin">
     <!--#region 菜单按钮-->
     <Style x:Key="MenuRadioButtom" TargetType="RadioButton">
         <Setter Property="Height" Value="35" />

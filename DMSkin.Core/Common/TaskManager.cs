@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -39,8 +36,8 @@ namespace DMSkin.Core
         /// <summary>
         /// 延迟执行
         /// </summary>
-        /// <param name="action"></param>
-        /// <param name="timeOut"></param>
+        /// <param name="action">执行的函数</param>
+        /// <param name="timeOut">超时时间</param>
         public static void Delay(Action action, int time)
         {
             Task taskWait = new Task(() =>
