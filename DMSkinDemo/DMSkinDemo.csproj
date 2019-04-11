@@ -134,6 +134,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Style\Style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\PageAduDesign.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -195,6 +199,10 @@
       <Project>{2eb8188a-5c8b-491b-afb2-6a6506b376c0}</Project>
       <Name>DMSkin.AntDesign</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DesignLibrary\DMSkin.CyanDesign\DMSkin.CyanDesign.csproj">
+      <Project>{4b0ef37d-e012-4153-84b9-76fce8c84301}</Project>
+      <Name>DMSkin.CyanDesign</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DMSkin.Core\DMSkin.Core.csproj">
       <Project>{c11fccc3-4a44-42a1-829b-57e8c146ec89}</Project>
       <Name>DMSkin.Core</Name>
@@ -214,8 +222,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Style\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

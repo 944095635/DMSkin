@@ -18,6 +18,7 @@
     <Geometry x:Key="SystemRestore">F1M0,10L0,3 3,3 3,0 10,0 10,2 4,2 4,3 7,3 7,6 6,6 6,5 1,5 1,10z M1,10L7,10 7,7 10,7 10,2 9,2 9,6 6,6 6,9 1,9z</Geometry>
     <Geometry x:Key="SystemClose">M453.44 512L161.472 220.032a41.408 41.408 0 0 1 58.56-58.56L512 453.44 803.968 161.472a41.408 41.408 0 0 1 58.56 58.56L570.56 512l291.968 291.968a41.408 41.408 0 0 1-58.56 58.56L512 570.56 220.032 862.528a41.408 41.408 0 0 1-58.56-58.56L453.44 512z</Geometry>
 
+    <!--#region 系统按钮-->
     <Style x:Key="DMSkinSystemButton" TargetType="Button">
         <Setter Property="Template">
             <Setter.Value>
@@ -48,7 +49,9 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--#endregion-->
 
+    <!--#region 系统窗口-->
     <Style x:Key="DMSkinWindowStyle" TargetType="{x:Type dmskin:DMSkinWindow}">
         <Setter Property="Template">
             <Setter.Value>
@@ -169,5 +172,9 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--#endregion-->
 
+    <!--#region 滚动条-->
+
+    <!--#endregion-->
 </ResourceDictionary>
