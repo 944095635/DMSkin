@@ -64,6 +64,8 @@ Windows XP 请自行测试,
 ````
 
 #### 2.2 进阶使用说明
+<img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/Framework2.png" align="center">
+
 ````xml
 仅用DMSkin.dll 和 DMSkin.Core.dll
 非常推荐会写样式模板的开发者使用这种方式。
