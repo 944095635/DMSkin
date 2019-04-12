@@ -58,18 +58,21 @@
         </Grid.ColumnDefinitions>
         <ScrollViewer Style="{StaticResource DMScrollViewer}">
             <StackPanel Background="#F5F5F7">
-                <RadioButton
-                    Content="颜色 Colors"
-                    GroupName="Menu"
-                    IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Colors}" />
-                <RadioButton
-                    Content="广播 Broadcast"
-                    GroupName="Menu"
-                    IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Broadcast}" />
-                <RadioButton
-                    Content="图标 Icon"
-                    GroupName="Menu"
-                    IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Broadcast}" />
+                <Button
+                    Height="40"
+                    Command="{Binding NavigationCommand}"
+                    CommandParameter="Colors"
+                    Content="颜色 Colors" />
+                <Button
+                    Height="40"
+                    Command="{Binding NavigationCommand}"
+                    CommandParameter="Broadcast"
+                    Content="广播 Broadcast" />
+                <Button
+                    Height="40"
+                    Command="{Binding NavigationCommand}"
+                    CommandParameter="Null"
+                    Content="图标 Icon" />
             </StackPanel>
         </ScrollViewer>
         <Frame
