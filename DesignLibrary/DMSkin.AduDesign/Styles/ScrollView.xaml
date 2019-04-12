@@ -50,7 +50,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style x:Key="for_scrollbar" TargetType="{x:Type ScrollBar}">
+    <Style x:Key="AduScrollbar" TargetType="{x:Type ScrollBar}">
         <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false" />
         <Setter Property="Stylus.IsFlicksEnabled" Value="false" />
         <Setter Property="Background" Value="Transparent" />
@@ -111,7 +111,7 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-    <Style TargetType="{x:Type ScrollViewer}">
+    <Style x:Key="AduScrollViewer" TargetType="{x:Type ScrollViewer}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="BorderBrush" Value="LightGray" />
         <Setter Property="BorderThickness" Value="0" />
@@ -136,7 +136,7 @@
                                 HorizontalAlignment="Right"
                                 Maximum="{TemplateBinding ScrollableHeight}"
                                 Orientation="Vertical"
-                                Style="{StaticResource for_scrollbar}"
+                                Style="{StaticResource AduScrollbar}"
                                 ViewportSize="{TemplateBinding ViewportHeight}"
                                 Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
                                 Value="{TemplateBinding VerticalOffset}" />
@@ -145,7 +145,7 @@
                                 VerticalAlignment="Bottom"
                                 Maximum="{TemplateBinding ScrollableWidth}"
                                 Orientation="Horizontal"
-                                Style="{StaticResource for_scrollbar}"
+                                Style="{StaticResource AduScrollbar}"
                                 ViewportSize="{TemplateBinding ViewportWidth}"
                                 Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
                                 Value="{TemplateBinding HorizontalOffset}" />

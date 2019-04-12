@@ -1,37 +1,32 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Metro="clr-namespace:AduSkin.Controls.Metro">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/Base.xaml" />
+        <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/Base.xaml"/>
     </ResourceDictionary.MergedDictionaries>
-    <Style TargetType="GroupBox">
-        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
-        <Setter Property="SnapsToDevicePixels" Value="True" />
-        <Setter Property="Padding" Value="10" />
+
+    <Style x:Key="AduGroupBox" TargetType="{x:Type GroupBox}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="BorderThickness" Value="3"/>
+        <Setter Property="BorderBrush" Value="#60ffffff"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="GroupBox">
+                <ControlTemplate TargetType="{x:Type GroupBox}">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="16" />
-                            <RowDefinition />
+                            <RowDefinition  Height="40"/>
+                            <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <Border
-                            Grid.RowSpan="2"
-                            Margin="0,8,0,0"
-                            BorderBrush="{StaticResource ThemeColor}"
-                            BorderThickness="1"
-                            CornerRadius="0"
-                            Opacity="0.1" />
-                        <Grid Margin="15,0,0,0" HorizontalAlignment="Left">
-                            <Rectangle
-                                Height="1"
-                                Margin="-5,0"
-                                Fill="#FFF3F3F3" />
-                            <TextBlock
-                                Foreground="{StaticResource ThemeColor}"
-                                Opacity="0.65"
-                                Text="{TemplateBinding Header}" />
-                        </Grid>
-                        <ContentPresenter Grid.Row="1" Margin="{TemplateBinding Padding}" />
+                        <Border Grid.Row="0" Padding="10,4" VerticalAlignment="Center"
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <TextBlock FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}" Text="{TemplateBinding Header}" />
+                        </Border>
+                        <Border Grid.Row="1" Padding="0">
+                            <ContentPresenter Grid.Row="1" Margin="{TemplateBinding Padding}"/>
+                        </Border>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

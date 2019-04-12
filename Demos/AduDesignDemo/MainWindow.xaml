@@ -9,50 +9,138 @@
     xmlns:viewmodel="clr-namespace:AduDesignDemo.ViewModel"
     Title="MainWindow"
     Width="800"
+    SystemButtonSize="40"
+    FitSystemWindow="True"
     Height="450"
     Style="{DynamicResource AduWindowStyle}"
-    mc:Ignorable="d">
+    Background="#2B2833"
+    mc:Ignorable="d" Loaded="DMSkinWindow_Loaded">
     <Window.DataContext>
         <viewmodel:AduDesignViewModel />
     </Window.DataContext>
-    <ScrollViewer>
-        <StackPanel Margin="30" HorizontalAlignment="Left">
-            <GroupBox Header="按钮">
-                <StackPanel Orientation="Horizontal">
-                    <Button
-                        attached:Icon.Geometry="{StaticResource Icon_Home}"
-                        attached:Icon.Height="16"
-                        Background="Transparent"
-                        Command="{Binding WinDemoCommand}" />
-                    <Button
-                        attached:Icon.Geometry="{StaticResource Icon_Logo}"
-                        attached:Icon.Height="20"
-                        attached:Icon.Width="20"
-                        Background="Transparent" />
-                    <Button
-                        attached:Icon.Geometry="{StaticResource Icon_Player}"
-                        attached:Icon.Height="16"
-                        Background="Transparent" />
-                    <Button
-                        attached:Icon.Geometry="{StaticResource Icon_Delete}"
-                        attached:Icon.Height="16"
-                        Background="Transparent" />
-                </StackPanel>
-            </GroupBox>
-            <GroupBox Header="按钮">
-                <StackPanel Orientation="Horizontal">
-                    <ComboBox
-                        DisplayMemberPath="CodeName"
-                        ItemsSource="{Binding CodeList}"
-                        SelectedIndex="1"
-                        SelectedValuePath="CodeID" />
-                    <ComboBox
-                        DisplayMemberPath="CodeName"
-                        ItemsSource="{Binding CodeList}"
-                        SelectedIndex="1"
-                        SelectedValuePath="CodeID" />
-                </StackPanel>
-            </GroupBox>
-        </StackPanel>
-    </ScrollViewer>
+    <Border CornerRadius="4" Background="#302C3A" Name="mainback">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Border Grid.Column="0" Grid.Row="0" BorderBrush="#2B2833" BorderThickness="0,0,1,0">
+                <TextBlock Text="AduSkin" FontWeight="Bold" Foreground="#fff" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
+            </Border>
+            <Border Grid.Column="1" Grid.Row="0" BorderBrush="#2B2833" BorderThickness="0,0,0,1">
+                <Grid>
+                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                        <!--<Adu:MetroColorPicker
+                            x:Name="color1"
+                            Width="26"
+                            Height="26"
+                            Padding="5"
+                            Background="#302D38"
+                            DefaultColor="#302D38" />
+                        <Adu:AduButtonIcon
+                            Width="40"
+                            Height="40"
+                            Padding="0,0,0,4"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            Command="{Binding MinimizedWindow}"
+                            Foreground="#fff"
+                            Icon="{StaticResource Icon_Min}"
+                            IconHeight="2"
+                            IconWidth="14" />
+                        <Adu:AduButtonIcon
+                            Width="40"
+                            Height="40"
+                            Padding="0,0,0,4"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            Command="{Binding MaxWindow}"
+                            Foreground="#fff"
+                            Icon="{StaticResource Icon_WindowMax2}"
+                            IconHeight="15"
+                            IconWidth="15" />
+                        <Adu:AduButtonIcon
+                            Width="40"
+                            Height="40"
+                            Padding="0,0,0,4"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            Foreground="#fff"
+                            Icon="{StaticResource Icon_WeiXin_More}"
+                            IconHeight="5"
+                            IconWidth="15" />
+                        <Adu:AduButtonIcon
+                            Width="40"
+                            Height="40"
+                            Padding="0,0,0,4"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            Command="{Binding AppExit}"
+                            Foreground="#fff"
+                            Icon="{StaticResource Icon_ZhiFuBao_Close}"
+                            IconHeight="15"
+                            IconWidth="15" />-->
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <Border Grid.Column="0" Grid.Row="1" BorderBrush="#2B2833" BorderThickness="0,0,1,0" >
+                <ScrollViewer Style="{StaticResource AduScrollViewer}" Margin="0,20">
+                    <StackPanel>
+                        <Expander Style="{StaticResource AduExpander}" Header="UI Components">
+                            <StackPanel>
+                                <!--<Adu:AduRadioButtonIcon
+                                    Command="{Binding NavPageCommand}"
+                                    Content="小程序二维码"
+                                    GroupName="Menu"
+                                    Icon="{StaticResource Icon_SmallProgram}"
+                                    IconHeight="16"
+                                    IconWidth="16"
+                                    IsChecked="False" />
+                                <Adu:AduRadioButtonIcon
+                                    Command="{Binding NavPageCommand}"
+                                    Content="小程序二维码"
+                                    GroupName="Menu"
+                                    Icon="{StaticResource Icon_SmallProgram}"
+                                    IconHeight="16"
+                                    IconWidth="16"
+                                    IsChecked="False" />-->
+                            </StackPanel>
+                        </Expander>
+                        <Expander Style="{StaticResource AduExpander}" Header="Forms">
+                            <StackPanel>
+                               
+                            </StackPanel>
+                        </Expander>
+                        <Expander Style="{StaticResource AduExpander}" Header="SIcon"/>
+                        <Expander Style="{StaticResource AduExpander}" Header="DataTable"/>
+                        <Expander Style="{StaticResource AduExpander}" Header="UI Components"/>
+                        <Expander Style="{StaticResource AduExpander}" Header="Forms"/>
+                        <Expander Style="{StaticResource AduExpander}" Header="SIcon"/>
+                        <Expander Style="{StaticResource AduExpander}" Header="DataTable"/>
+                        <Expander Style="{StaticResource AduExpander}" Header="UI Components"/>
+                    </StackPanel>
+                </ScrollViewer>
+
+            </Border>
+            <Border Grid.Column="1" Grid.Row="1" Margin="10" Background="#10ffffff" CornerRadius="3">
+                <GroupBox Style="{StaticResource AduGroupBox}" Header="Contacts" FontWeight="Bold" Margin="0,10" FontSize="12" Foreground="#fff" BorderThickness="3,0,0,0" BorderBrush="#4ABDA7">
+                    <DataGrid Margin="3" Style="{StaticResource AduDataGrid}" x:Name="AduDataGrids"  GridLinesVisibility="None" BorderThickness="0">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="*" Header="Phone" Binding="{Binding Phone}"></DataGridTextColumn>
+                            <DataGridTextColumn Width="*" Header="Email" Binding="{Binding Email}" ></DataGridTextColumn>
+                            <DataGridTextColumn Width="*" Header="Info" Binding="{Binding Info}" ></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </GroupBox>
+            </Border>
+        </Grid>
+    </Border>
 </dmskin:DMSkinWindow>
