@@ -8,8 +8,6 @@
     <SolidColorBrush x:Key="TransparentColor" Color="#00FFFFFF" />
     <!--  全黑 透明色  -->
     <SolidColorBrush x:Key="TransparentBlackColor" Color="#00000000" />
-    <!--  主题色  -->
-    <SolidColorBrush x:Key="ThemeColor" Color="#2196F3" />
 
     <Geometry x:Key="DMSkin">M11.09,42.24H8.66c-.35,0-.49-.13-.46-.48,0-.12,0-.24,0-.36V6.9c0-.11,0-.21,0-.32,0-.41.13-.54.54-.54,1.87,0,3.75,0,5.62,0h5a.85.85,0,0,1,.68.27c2.05,2.15,4.12,4.28,6.18,6.42l7.14,7.42c1.15,1.2,2.31,2.4,3.45,3.61.25.27.42.28.68,0q3.24-3.53,6.51-7l3.73-4q2.83-3,5.66-6.1A1.57,1.57,0,0,1,54.7,6c3.62,0,7.23,0,10.85,0,.63,0,.63,0,.63.62V57.2c0,.62,0,.62-.63.62s-1.56,0-2.34,0c-.35,0-.48.13-.47.48,0,.7,0,1.41,0,2.11,0,.36.15.48.49.47.82,0,1.65,0,2.47,0,.34,0,.49.11.49.47q0,1.21,0,2.43c0,.34-.14.45-.46.45-.92,0-1.83,0-2.75,0-.37,0-.51.11-.49.49,0,.66,0,1.32,0,2,0,.36-.11.51-.49.51-1.54,0-3.09,0-4.63,0-.37,0-.51-.13-.5-.5,0-.74,0-1.47,0-2.21,0-.35.14-.48.48-.47.63,0,1.26,0,1.89,0,.38,0,.54-.11.53-.51q0-1,0-2c0-.43-.12-.58-.56-.57-1.53,0-3.06,0-4.59,0C54,61,54,61,54,60.33s0-1.38,0-2.07c0-.35.13-.47.48-.46.66,0,1.32,0,2,0,.3,0,.43-.1.43-.42,0-.73,0-1.47,0-2.2,0-.34-.15-.44-.47-.44-.62,0-1.26,0-1.88,0-.42,0-.55-.14-.55-.55,0-2.46,0-4.92,0-7.38V19.37c0-.2.1-.5-.09-.58s-.33.2-.46.34l-6.71,7-6.8,7.06c-1,1.06-2,2.13-3,3.2-.23.25-.37.24-.6,0-1.3-1.43-2.62-2.84-3.94-4.26l-9.27-10c-.94-1-1.88-2-2.83-3-.11-.12-.19-.28-.38-.3a1,1,0,0,0-.06.57V41.54c0,.71,0,.71-.72.71H17.35c-.28,0-.41.1-.41.39q0,2.7,0,5.4c0,.29.13.41.41.4.67,0,1.35,0,2,0,.33,0,.46.11.46.44,0,2.84,0,5.67,0,8.51,0,.33-.14.44-.46.44-.66,0-1.32,0-2,0-.42,0-.55-.15-.54-.55,0-1.69,0-3.39,0-5.08,0-.45-.12-.63-.59-.6a16.07,16.07,0,0,1-1.7,0c-.41,0-.52.15-.52.53,0,2.78,0,5.55,0,8.33,0,.36.12.51.5.5.64,0,1.29,0,1.93,0,.33,0,.47.07.47.41,0,.76,0,1.53,0,2.29,0,.36-.15.48-.48.48-.62,0-1.24,0-1.85,0-.44,0-.57.16-.56.58,0,.65,0,1.32,0,2,0,.35-.1.52-.48.51-.69,0-1.38,0-2.07,0-.31,0-.43-.12-.43-.42q0-1.17,0-2.34c0-.29.13-.41.41-.4h2c.33,0,.47-.11.46-.45q0-1.08,0-2.16c0-.32-.12-.45-.45-.45-.6,0-1.2,0-1.8,0s-.64,0-.64-.67,0-1.26,0-1.89c0-.44-.11-.62-.58-.59s-1.23,0-1.84,0c-.35,0-.48-.13-.48-.48q0-2.66,0-5.31c0-.35.15-.47.49-.46.66,0,1.32,0,2,0,.3,0,.43-.11.42-.42,0-.76,0-1.53,0-2.29,0-.29-.11-.41-.4-.4-.66,0-1.32,0-2,0-.36,0-.52-.1-.51-.49s0-1,0-1.57.16-.5.51-.49c.65,0,1.29,0,1.94,0,.33,0,.45-.12.45-.45,0-1.08,0-2.16,0-3.24.81,0,1.62,0,2.42,0,.33,0,.47-.11.46-.45,0-.73,0-1.46,0-2.2,0-.34-.11-.49-.46-.48-.63,0-1.26,0-1.89,0-.4,0-.52.15-.52.54C11.12,40.5,11.1,41.37,11.09,42.24ZM56.82,47v3.15c0,.27,0,.47.38.46.7,0,1.41,0,2.11,0,.28,0,.37-.13.37-.39q0-3.18,0-6.38c0-.29-.12-.41-.4-.4-.65,0-1.29,0-1.94,0-.43,0-.53.16-.53.56C56.83,45,56.82,46,56.82,47ZM12.89,33c0,.49,0,1,0,1.48,0,.28.11.41.4.4h2.06c.29,0,.4-.13.4-.41,0-1,0-1.91,0-2.87,0-.28-.1-.41-.39-.41H13.29c-.28,0-.4.11-.4.4C12.9,32,12.89,32.51,12.89,33ZM59.8,56.27v1.17c0,.23.09.36.34.36H62.3c.24,0,.35-.1.35-.35V55.12c0-.24-.09-.37-.34-.37H60.16c-.28,0-.37.15-.36.4Z</Geometry>
 
@@ -170,68 +168,163 @@
     <!--#endregion-->
 
     <!--#region 滚动条-->
-    <Style x:Key="RepeatButtonTransparent" TargetType="{x:Type RepeatButton}">
-        <Setter Property="OverridesDefaultStyle" Value="true" />
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="Focusable" Value="false" />
-        <Setter Property="IsTabStop" Value="false" />
+    <Style x:Key="RepeatStyle" TargetType="{x:Type RepeatButton}">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
-                    <Rectangle
-                        Width="{TemplateBinding Width}"
-                        Height="{TemplateBinding Height}"
-                        Fill="{TemplateBinding Background}" />
+                    <Rectangle Fill="#00000000" />
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-
-    <Style x:Key="ScrollBarThumb" TargetType="Thumb">
-        <Setter Property="OverridesDefaultStyle" Value="true" />
-        <Setter Property="IsTabStop" Value="false" />
+    <Style x:Key="ThumbStyle" TargetType="{x:Type Thumb}">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="Thumb">
-                    <Rectangle
-                        x:Name="rectangle"
-                        Width="{TemplateBinding Width}"
-                        Height="{TemplateBinding Height}"
-                        Fill="{TemplateBinding attached:Mouse.BackColor}"
-                        RadiusX="3"
-                        RadiusY="3"
-                        SnapsToDevicePixels="True" />
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Grid Background="{StaticResource TransparentColor}">
+                        <Rectangle
+                            x:Name="rect"
+                            Width="0"
+                            HorizontalAlignment="Right"
+                            Fill="{TemplateBinding BorderBrush}" />
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="rect"
+                                            Storyboard.TargetProperty="(Rectangle.Width)"
+                                            To="10"
+                                            Duration="0:0:0.1" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="rect"
+                                            Storyboard.TargetProperty="(Rectangle.Width)"
+                                            To="10"
+                                            Duration="0:0:0.1" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="rect"
+                                            Storyboard.TargetProperty="(Rectangle.Width)"
+                                            To="10"
+                                            Duration="0:0:0.1" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="rect"
+                                            Storyboard.TargetProperty="(UIElement.Opacity)"
+                                            To="0.5"
+                                            Duration="0:0:0.1" />
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="rect"
+                                            Storyboard.TargetProperty="(Rectangle.Width)"
+                                            To="3"
+                                            Duration="0:0:0.1" />
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-
-    <Style x:Key="DMScrollBar" TargetType="{x:Type ScrollBar}">
-        <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false" />
-        <Setter Property="Stylus.IsFlicksEnabled" Value="false" />
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
-        <Setter Property="Width" Value="8" />
-        <Setter Property="MinWidth" Value="8" />
+    <Style x:Key="ThumbStyle1" TargetType="{x:Type Thumb}">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Grid Background="{StaticResource TransparentColor}">
+                        <Rectangle
+                            x:Name="rect"
+                            Height="0"
+                            VerticalAlignment="Bottom"
+                            Fill="{TemplateBinding BorderBrush}" />
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="rect"
+                                            Storyboard.TargetProperty="(Rectangle.Height)"
+                                            To="10"
+                                            Duration="0:0:0.1" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="rect"
+                                            Storyboard.TargetProperty="(Rectangle.Height)"
+                                            To="10"
+                                            Duration="0:0:0.1" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="rect"
+                                            Storyboard.TargetProperty="(Rectangle.Height)"
+                                            To="10"
+                                            Duration="0:0:0.1" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="rect"
+                                            Storyboard.TargetProperty="(UIElement.Opacity)"
+                                            To="0.5"
+                                            Duration="0:0:0.1" />
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="rect"
+                                            Storyboard.TargetProperty="(Rectangle.Height)"
+                                            To="3"
+                                            Duration="0:0:0.1" />
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ScrollBarStyle" TargetType="{x:Type ScrollBar}">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="ContextMenu" Value="{x:Null}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ScrollBar}">
-                    <Grid x:Name="Bg" SnapsToDevicePixels="true">
+                    <Grid SnapsToDevicePixels="true">
                         <Track
                             x:Name="PART_Track"
                             IsDirectionReversed="true"
                             IsEnabled="{TemplateBinding IsMouseOver}">
                             <Track.DecreaseRepeatButton>
-                                <RepeatButton Command="{x:Static ScrollBar.PageUpCommand}" Style="{StaticResource RepeatButtonTransparent}" />
+                                <RepeatButton Command="{x:Static ScrollBar.PageUpCommand}" Style="{StaticResource RepeatStyle}" />
                             </Track.DecreaseRepeatButton>
                             <Track.IncreaseRepeatButton>
-                                <RepeatButton Command="{x:Static ScrollBar.PageDownCommand}" Style="{StaticResource RepeatButtonTransparent}" />
+                                <RepeatButton Command="{x:Static ScrollBar.PageDownCommand}" Style="{StaticResource RepeatStyle}" />
                             </Track.IncreaseRepeatButton>
                             <Track.Thumb>
-                                <Thumb attached:Mouse.BackColor="{TemplateBinding attached:Mouse.BackColor}" Style="{StaticResource ScrollBarThumb}" />
+                                <Thumb BorderBrush="{TemplateBinding BorderBrush}" Style="{StaticResource ThumbStyle}" />
                             </Track.Thumb>
                         </Track>
                     </Grid>
-                    <ControlTemplate.Triggers />
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -244,19 +337,19 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type ScrollBar}">
-                            <Grid x:Name="Bg" SnapsToDevicePixels="true">
+                            <Grid SnapsToDevicePixels="true">
                                 <Track
                                     x:Name="PART_Track"
-                                    Grid.Column="1"
+                                    IsDirectionReversed="true"
                                     IsEnabled="{TemplateBinding IsMouseOver}">
                                     <Track.DecreaseRepeatButton>
-                                        <RepeatButton Command="{x:Static ScrollBar.PageLeftCommand}" Style="{StaticResource RepeatButtonTransparent}" />
+                                        <RepeatButton Command="{x:Static ScrollBar.PageLeftCommand}" Style="{StaticResource RepeatStyle}" />
                                     </Track.DecreaseRepeatButton>
                                     <Track.IncreaseRepeatButton>
-                                        <RepeatButton Command="{x:Static ScrollBar.PageRightCommand}" Style="{StaticResource RepeatButtonTransparent}" />
+                                        <RepeatButton Command="{x:Static ScrollBar.PageRightCommand}" Style="{StaticResource RepeatStyle}" />
                                     </Track.IncreaseRepeatButton>
                                     <Track.Thumb>
-                                        <Thumb attached:Mouse.BackColor="{TemplateBinding attached:Mouse.BackColor}" Style="{StaticResource ScrollBarThumb}" />
+                                        <Thumb BorderBrush="{TemplateBinding BorderBrush}" Style="{StaticResource ThumbStyle1}" />
                                     </Track.Thumb>
                                 </Track>
                             </Grid>
@@ -266,66 +359,55 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-
     <Style x:Key="DMScrollViewer" TargetType="ScrollViewer">
-        <Setter Property="attached:Mouse.BackColor" Value="#AAAAAA" />
+        <Setter Property="Background" Value="{StaticResource TransparentColor}" />
+        <Setter Property="BorderBrush" Value="#BBBBBB" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="HorizontalScrollBarVisibility" Value="Auto" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ScrollViewer">
-                    <Grid x:Name="Grid" Background="{TemplateBinding Background}">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <Rectangle
-                            x:Name="Corner"
-                            Grid.Row="1"
-                            Grid.Column="1"
-                            Fill="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" />
-                        <ScrollContentPresenter
-                            x:Name="PART_ScrollContentPresenter"
-                            Grid.Row="0"
-                            Grid.Column="0"
-                            Margin="{TemplateBinding Padding}"
-                            CanContentScroll="{TemplateBinding CanContentScroll}"
-                            CanHorizontallyScroll="False"
-                            CanVerticallyScroll="False"
-                            Content="{TemplateBinding Content}"
-                            ContentTemplate="{TemplateBinding ContentTemplate}" />
+                    <Grid Background="{TemplateBinding Background}">
+                        <ScrollContentPresenter Margin="{TemplateBinding Padding}" Content="{TemplateBinding Content}" />
                         <ScrollBar
                             x:Name="PART_VerticalScrollBar"
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            attached:Mouse.BackColor="{TemplateBinding attached:Mouse.BackColor}"
+                            MinWidth="15"
+                            MaxWidth="15"
+                            HorizontalAlignment="Right"
                             AutomationProperties.AutomationId="VerticalScrollBar"
-                            Background="{StaticResource TransparentColor}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
                             Cursor="Arrow"
                             Maximum="{TemplateBinding ScrollableHeight}"
                             Minimum="0"
-                            Style="{StaticResource DMScrollBar}"
+                            Style="{StaticResource ScrollBarStyle}"
                             ViewportSize="{TemplateBinding ViewportHeight}"
                             Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
                             Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
                         <ScrollBar
                             x:Name="PART_HorizontalScrollBar"
-                            Grid.Row="1"
-                            Grid.Column="0"
-                            attached:Mouse.BackColor="{TemplateBinding attached:Mouse.BackColor}"
+                            MinHeight="15"
+                            MaxHeight="15"
+                            VerticalAlignment="Bottom"
                             AutomationProperties.AutomationId="HorizontalScrollBar"
-                            Background="{StaticResource TransparentColor}"
-                            Cursor="Arrow"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            FlowDirection="RightToLeft"
                             Maximum="{TemplateBinding ScrollableWidth}"
                             Minimum="0"
                             Orientation="Horizontal"
-                            Style="{StaticResource DMScrollBar}"
+                            Style="{StaticResource ScrollBarStyle}"
                             ViewportSize="{TemplateBinding ViewportWidth}"
                             Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
                             Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
                     </Grid>
+                    <!--<ControlTemplate.Triggers>
+                        <Trigger Property="ComputedVerticalScrollBarVisibility" Value="Visible">
+                            <Setter TargetName="PART_VerticalScrollBar" Property="Margin" Value="0,0,0,15" />
+                        </Trigger>
+                        <Trigger Property="ComputedHorizontalScrollBarVisibility" Value="Visible">
+                            <Setter TargetName="PART_HorizontalScrollBar" Property="Margin" Value="0,0,15,0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>-->
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

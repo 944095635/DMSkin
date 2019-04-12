@@ -7,11 +7,11 @@
     xmlns:dmskin="clr-namespace:DMSkin;assembly=DMSkin"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MainWindow"
-    Width="900"
+    Width="980"
     Height="600"
     mc:Ignorable="d">
     <Grid Background="{StaticResource GrayColor8}">
-        <TabControl Style="{DynamicResource TabControlStyle}" TabStripPlacement="Left">
+        <TabControl Style="{StaticResource TabControlStyle}" TabStripPlacement="Left">
             <TabItem
                 attached:Icon.Geometry="{StaticResource Menu}"
                 IsEnabled="False"
@@ -42,13 +42,13 @@
                         <ColumnDefinition Width="250" />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <Grid Margin="20,0,20,0">
+                    <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition />
                         </Grid.RowDefinitions>
-                        <StackPanel>
+                        <StackPanel Margin="20,0,20,0">
                             <TextBlock
                                 Margin="0,20,0,5"
                                 VerticalAlignment="Center"
@@ -64,44 +64,100 @@
                         </StackPanel>
                         <TextBox
                             Grid.Row="1"
+                            Margin="10,0,10,0"
                             attached:Hint.HintText="Search"
                             attached:Icon.Geometry="{StaticResource Search}"
                             FontSize="16"
                             Style="{StaticResource TextBoxIconStyle}"
                             WindowChrome.IsHitTestVisibleInChrome="True" />
+                        <ScrollViewer
+                            Grid.Row="2"
+                            Margin="0,10,0,0"
+                            Style="{StaticResource DMScrollViewer}">
+                            <StackPanel>
+                                <Expander
+                                    Header="Expander"
+                                    IsExpanded="True"
+                                    Style="{StaticResource NoExpander}">
+                                    <StackPanel>
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                    </StackPanel>
+                                </Expander>
+                                <Expander
+                                    Header="Expander"
+                                    IsExpanded="True"
+                                    Style="{StaticResource Expander}">
+                                    <StackPanel>
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                    </StackPanel>
+                                </Expander>
+                                <Expander
+                                    Header="Expander"
+                                    IsExpanded="True"
+                                    Style="{StaticResource Expander}">
+                                    <StackPanel>
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                        <RadioButton Content="DMSkin" Style="{StaticResource MenuRadioButtom}" />
+                                    </StackPanel>
+                                </Expander>
+                            </StackPanel>
+                        </ScrollViewer>
                     </Grid>
+
                     <Grid Grid.Column="1" Background="White">
                         <Grid.RowDefinitions>
                             <RowDefinition />
                             <RowDefinition />
                         </Grid.RowDefinitions>
+
                         <TabControl Grid.Row="1" Style="{DynamicResource TabControlStyle}">
                             <TabItem Header="Photos" Style="{StaticResource TabItemCyanStyle}">
-                                <StackPanel
-                                    HorizontalAlignment="Right"
-                                    VerticalAlignment="Bottom"
-                                    Orientation="Horizontal">
-                                    <Button
-                                        Margin="10"
-                                        Content="Send Gray"
-                                        Style="{DynamicResource ButtonStyle}" />
-                                    <Button
-                                        Margin="10"
-                                        Background="{StaticResource GreenColor}"
-                                        Content="Open Green"
-                                        Style="{DynamicResource ButtonStyle}" />
-                                    <Button
-                                        Margin="10"
-                                        Background="{StaticResource YellowColor}"
-                                        Content="Delete Yellow"
-                                        Style="{DynamicResource ButtonStyle}" />
-                                    <Button
-                                        Margin="10"
-                                        Background="{StaticResource YellowColor}"
-                                        Content="Disable"
-                                        IsEnabled="False"
-                                        Style="{DynamicResource ButtonStyle}" />
-                                </StackPanel>
+                                <ScrollViewer BorderBrush="#99FF0000" Style="{StaticResource DMScrollViewer}">
+                                    <StackPanel Width="1200" Orientation="Horizontal">
+                                        <Button
+                                            Margin="10"
+                                            Content="Send Gray"
+                                            Style="{DynamicResource ButtonStyle}" />
+                                        <Button
+                                            Margin="10"
+                                            attached:Corner.Value="15"
+                                            Content="Send Gray"
+                                            Style="{DynamicResource ButtonStyle}" />
+                                        <Button
+                                            Margin="10"
+                                            attached:Corner.Value="10"
+                                            Background="{StaticResource GreenColor}"
+                                            Content="Open Green"
+                                            Style="{DynamicResource ButtonStyle}" />
+                                        <Button
+                                            Margin="10"
+                                            attached:Corner.Value="5"
+                                            Background="{StaticResource YellowColor}"
+                                            Content="Delete Yellow"
+                                            Style="{DynamicResource ButtonStyle}" />
+                                        <Button
+                                            Margin="10"
+                                            attached:Corner.Value="20"
+                                            Background="{StaticResource YellowColor}"
+                                            Content="Disable"
+                                            IsEnabled="False"
+                                            Style="{DynamicResource ButtonStyle}" />
+                                    </StackPanel>
+                                </ScrollViewer>
                             </TabItem>
                             <TabItem Header="Video" Style="{StaticResource TabItemCyanStyle}" />
                             <TabItem Header="Music" Style="{StaticResource TabItemCyanStyle}" />
