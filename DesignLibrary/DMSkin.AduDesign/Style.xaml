@@ -1,14 +1,8 @@
-﻿<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:attached="clr-namespace:DMSkin.Attached;assembly=DMSkin"
-    xmlns:controls="clr-namespace:DMSkin.Controls;assembly=DMSkin">
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/Button.xaml" />
         <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/ComboBox.xaml" />
         <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/GroupBox.xaml" />
         <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/Scrollview.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    
 </ResourceDictionary>

@@ -39,7 +39,7 @@
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="bg" Property="Background" Value="{Binding (attached:Mouse.OverBackColor), RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                            <Setter TargetName="bg" Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=(attached:Mouse.OverBackColor)}" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter Property="Opacity" Value="0.8" />

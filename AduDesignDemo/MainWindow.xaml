@@ -5,7 +5,6 @@
     xmlns:attached="clr-namespace:DMSkin.Attached;assembly=DMSkin"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:dmskin="clr-namespace:DMSkin;assembly=DMSkin"
-    xmlns:local="clr-namespace:AduDesignDemo"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewmodel="clr-namespace:AduDesignDemo.ViewModel"
     Title="MainWindow"
