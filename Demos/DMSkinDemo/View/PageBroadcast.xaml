@@ -18,7 +18,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel>
-            <GroupBox HorizontalAlignment="Left" Header="单向通知广播(适用于单向广播通知)">
+            <GroupBox HorizontalAlignment="Left" Header="单向通知广播(适用于单向推送消息或数据)">
                 <UniformGrid HorizontalAlignment="Left" Rows="1">
                     <Button
                         Margin="10"
@@ -34,7 +34,19 @@
                         Content="推送单向广播" />
                 </UniformGrid>
             </GroupBox>
-            <GroupBox HorizontalAlignment="Left" Header="多播广播(发布广播，并发布回传通道，适用于多个数据回传)">
+            <GroupBox HorizontalAlignment="Left" Header="单向广播(发布广播，参数为Action，适用推送函数)">
+                <UniformGrid HorizontalAlignment="Left" Rows="1">
+                    <Button
+                        Margin="10"
+                        Command="{Binding RegisterBroadcast3}"
+                        Content="注册广播接收器-推送" />
+                    <Button
+                        Margin="10"
+                        Command="{Binding PushBroadcast3}"
+                        Content="推送广播并推送函数" />
+                </UniformGrid>
+            </GroupBox>
+            <GroupBox HorizontalAlignment="Left" Header="回调广播(发布广播，并发布回传通道，适用于数据回传)">
                 <UniformGrid HorizontalAlignment="Left" Rows="1">
                     <Button
                         Margin="10"
@@ -50,19 +62,6 @@
                         Content="推送广播接受回调" />
                 </UniformGrid>
             </GroupBox>
-            <GroupBox HorizontalAlignment="Left" Header="直连广播(发布广播，并接受回传信息,适用于单个数据回传)">
-                <UniformGrid HorizontalAlignment="Left" Rows="1">
-                    <Button
-                        Margin="10"
-                        Command="{Binding RegisterBroadcast3}"
-                        Content="注册广播接收器-返回值" />
-                    <Button
-                        Margin="10"
-                        Command="{Binding PushBroadcast3}"
-                        Content="推送广播接受返回值" />
-                </UniformGrid>
-            </GroupBox>
-
             <GroupBox HorizontalAlignment="Left" Header="卸载所有广播">
                 <Button
                     Margin="10"

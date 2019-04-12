@@ -1,5 +1,7 @@
 ﻿using DMSkin.Core;
+using System;
 using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Input;
 
 namespace DMSkinDemo.ViewModel
@@ -112,12 +114,11 @@ namespace DMSkinDemo.ViewModel
         /// </summary>    
         public ICommand RegisterBroadcast3 => new DelegateCommand(obj =>
         {
-            Broadcast.RegisterBroadcast<string, string>("test1", (e) =>
+            //注册广播接收器
+            Broadcast.RegisterBroadcast<Action>("test1", (action) =>
             {
-                Message.Add($"接收到来直连广播的消息:{e}");
-                return "我收到广播了.";
+                action();
             });
-            Message.Add("注册直连广播接收器成功！");
         });
 
         /// <summary>
@@ -125,7 +126,12 @@ namespace DMSkinDemo.ViewModel
         /// </summary>    
         public ICommand PushBroadcast3 => new DelegateCommand(obj =>
         {
-            Message.Add($"推送广播并接受返回消息:{Broadcast.PushBroadcast<string, string>("test1", "你好，这是一条直连通知广播。")}");
+            //推送广播
+            Broadcast.PushBroadcast<Action>("test1", () =>
+            {
+                //需要推送的函数
+                MessageBox.Show("Test");
+            });
         });
 
 

@@ -78,18 +78,6 @@ namespace DMSkin.Core
         {
             return Register(name, action);
         }
-
-        /// <summary>
-        /// 注册广播接收器-广播返回值
-        /// </summary>
-        /// <typeparam name="T">广播传递的数据类型</typeparam>
-        /// <typeparam name="T1">广播返回的数据类型</typeparam>
-        /// <param name="name">广播名称</param>
-        /// <param name="action">广播的回调函数</param>
-        public static bool RegisterBroadcast<T, T1>(string name, Func<T, T1> action)
-        {
-            return Register(name, action);
-        }
         #endregion
 
         #region 推送广播
@@ -135,30 +123,6 @@ namespace DMSkin.Core
                     }
                 }
             }
-        }
-
-        /// <summary>
-        /// 推送广播-并执行回调
-        /// </summary>
-        /// <typeparam name="T">广播传递的数据类型</typeparam>
-        /// <typeparam name="T1">广播回调消息的数据类型</typeparam>
-        /// <param name="name">广播名称</param>
-        /// <param name="parameter">广播传递的数据</param>
-        /// <param name="callBack">广播订阅者的回传信息</param>
-        public static T1 PushBroadcast<T, T1>(string name, T parameter = default)
-        {
-            var broadcast = FindBroadcast(name);
-            if (broadcast != null)
-            {
-                foreach (var item in broadcast)
-                {
-                    if (item is Func<T, T1> action)
-                    {
-                        return action.Invoke(parameter);
-                    }
-                }
-            }
-            return default;
         }
         #endregion
 
