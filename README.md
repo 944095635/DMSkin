@@ -52,8 +52,9 @@ Windows XP 请自行测试,
 | DMSkin.AduDesign  | Adu为DMSkin设计的样式库          | 1.0.0.1000     |        |
 
 #### 2.1 新手使用说明
+<img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/Framework1.png" align="center">
 ````xml
-使用用DMSkin.dll 和 DMSkin.Core.dll,窗口继承自DMSkinWindow
+使用DMSkin.dll 和 DMSkin.Core.dll,窗口继承自DMSkinWindow
 从DesignLibrary样式库中选择一个来作为软件的样式库。
 非常推荐刚接触WPF,不会自己写样式和模板的开发者使用这种方式。
 
