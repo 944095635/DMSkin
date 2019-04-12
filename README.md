@@ -53,23 +53,26 @@ Windows XP 请自行测试,
 
 #### 2.1 新手使用说明
 ````xml
-引用DMSkin.dll 和 DMSkin.Core.dll,窗口继承自DMSkinWindow
+使用用DMSkin.dll 和 DMSkin.Core.dll,窗口继承自DMSkinWindow
 从DesignLibrary样式库中选择一个来作为软件的样式库。
-所有的组件只需要设置Style Key就可以切换风格,
-通过重写样式库中的颜色Key实现整体换色。
 非常推荐刚接触WPF,不会自己写样式和模板的开发者使用这种方式。
+
+这种模式,你只需要使用原生组件,通过设置Style Key就可以切换风格。
+通过重写覆盖样式库中的颜色Key实现整体换色(如果目标库有主题色)
 ````
 
-#### 2.2 老手使用说明
+#### 2.2 进阶使用说明
 ````xml
-引用DMSkin.dll 和 DMSkin.Core.dll,
-窗口继承自DMSkinWindow
-使用Core中的MVVM模块配合自己开发的样式。
+仅用DMSkin.dll 和 DMSkin.Core.dll
 非常推荐会写样式模板的开发者使用这种方式。
+
+这种模式,只会使用到DMSkin的窗口和组件(无外观) 和 Core中的核心辅助类.
+你可以自己为内置组件设计外观。
+非常的轻,不会有多余的代码和样式。
 ````
 
 
-#### 2.1 DMSkin中的Core模块(DMSkin.Core.dll)
+#### 2.3 DMSkin.Core模块(DMSkin.Core.dll)
 > Execute(跨线程UI调度器) [[使用文档]](https://github.com/944095635/DMSkin/wiki/Execute%E8%B7%A8%E7%BA%BF%E7%A8%8BUI%E8%B0%83%E5%BA%A6%E5%99%A8)
 
 > Broadcast(广播器) [[使用文档]](https://github.com/944095635/DMSkin/wiki/Broadcast%E5%B9%BF%E6%92%AD%E5%99%A8)
@@ -80,7 +83,7 @@ Windows XP 请自行测试,
 
 > ViewModelBase(ViewModel基类)
 
-#### 2.2 DMSkin模块(DMSkin.dll)
+#### 2.4 DMSkin模块(DMSkin.dll)
 > DMSkinWindow[[使用文档]](https://github.com/944095635/DMSkin/wiki/DMSkinWindow%E7%AA%97%E5%8F%A3)
 
 > [[学习WPF的窗口跳转和内容切换]](https://github.com/944095635/DMSkin/wiki/%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD&%E7%AA%97%E5%8F%A3%E8%B7%B3%E8%BD%AC)
