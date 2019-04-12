@@ -5,7 +5,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/Base.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    <Style TargetType="Button">
+    <Style x:Key="AduButton" TargetType="Button">
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Foreground" Value="{StaticResource ThemeColor}" />

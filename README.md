@@ -48,7 +48,7 @@ Windows XP 请自行测试,
 
 | DesignLibrary样式库| Library样式库都依赖于DMSkin.dll  | 最新版本        | Nuget |
 | :----:            |   :----:                       |   :----:       |:----:  | 
-| DMSkin.AntDesign  | Ant Design https://ant.design  | 1.0.0.1000     |        |
+| DMSkin.CyanDesign | CyanDesign 青 "轻"              | 1.0.0.1000     |        |
 | DMSkin.AduDesign  | Adu为DMSkin设计的样式库          | 1.0.0.1000     |        |
 
 #### 2.1 新手使用说明
@@ -123,15 +123,3 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC#\Snippets\20
 | command   | 命令        |⭐⭐|
 | propdp    | 依赖属性    |⭐|
 | propa    | 附加属性    |⭐|
-
-
-## 5.库介绍
-
-### 5.1 DMSkin 
-
-
-### 5.2 DMSkin.Core 
-
-
-### 5.3 DMSkin.AntDesign 
-AntDesign Design https://ant.design

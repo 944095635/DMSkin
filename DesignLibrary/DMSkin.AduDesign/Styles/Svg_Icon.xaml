@@ -1,5 +1,5 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Geometry x:Key="Icon_DropDowm">M919.8 381.1L555.2 779.8a57.377 57.377 0 0 1-43.1 19.5c-16.5 0-32.2-7.1-43.1-19.5L104.4 381.1c-17.8-18.8-23.3-46.2-14.1-70.4s31.4-41.1 57.2-43.4h728.9c25.9 2.2 48.2 19 57.4 43.3 9.3 24.3 3.8 51.6-14 70.5z</Geometry>
-
+    <Geometry x:Key="Icon_DropUp">M104.2 642.9L468.8 244.2a57.377 57.377 0 0 1 43.1-19.5c16.5 0 32.2 7.1 43.1 19.5L919.6 642.9c17.8 18.8 23.3 46.2 14.1 70.4s-31.4 41.1-57.2 43.4l-728.9 0c-25.9-2.2-48.2-19-57.4-43.29999999-9.3-24.3-3.8-51.6 14-70.50000001z</Geometry>
 </ResourceDictionary>
