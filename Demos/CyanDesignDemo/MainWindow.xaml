@@ -123,7 +123,6 @@
                             <RowDefinition />
                             <RowDefinition />
                         </Grid.RowDefinitions>
-
                         <TabControl Grid.Row="1" Style="{DynamicResource TabControlStyle}">
                             <TabItem Header="Photos" Style="{StaticResource TabItemCyanStyle}">
                                 <ScrollViewer BorderBrush="#99FF0000" Style="{StaticResource DMScrollViewer}">
@@ -134,7 +133,7 @@
                                             Style="{DynamicResource ButtonStyle}" />
                                         <Button
                                             Margin="10"
-                                            attached:Corner.Value="15"
+                                            Background="#F76E52"
                                             Content="Send Gray"
                                             Style="{DynamicResource ButtonStyle}" />
                                         <Button
@@ -151,7 +150,7 @@
                                             Style="{DynamicResource ButtonStyle}" />
                                         <Button
                                             Margin="10"
-                                            attached:Corner.Value="20"
+                                            attached:Corner.Value="3"
                                             Background="{StaticResource YellowColor}"
                                             Content="Disable"
                                             IsEnabled="False"
