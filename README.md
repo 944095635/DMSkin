@@ -43,7 +43,7 @@ Windows XP 请自行测试,
 
 | 项目               |   DMSkin.dll 和 DMSkin.Core.dll 可以独立存在   | 最新版本            | Nuget  |
 | :----:            |   :----:                                     |   :----:           |:----:  | 
-| DMSkin            | DMSkin 基础控件 .Net Framework 4.5+           | 3.0.0.1000         |        |
+| DMSkin            | DMSkin 窗口&样式 基础控件 滚动条样式           | 3.0.0.1000         |        |
 | DMSkin.Core       | MVVM,Broadcast,DelegateCommand,ViewModelBase | 3.0.0.1000         |        |
 
 | DesignLibrary样式库| Library样式库都依赖于DMSkin.dll  | 最新版本        | Nuget |
