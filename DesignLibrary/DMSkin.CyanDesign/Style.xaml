@@ -4,6 +4,10 @@
     xmlns:attached="clr-namespace:DMSkin.Attached;assembly=DMSkin">
     <!--  主题色  -->
     <SolidColorBrush x:Key="ThemeColor">#5B95FF</SolidColorBrush>
+    <!--  全白 透明色  -->
+    <SolidColorBrush x:Key="TransparentColor" Color="#00FFFFFF" />
+    <!--  全黑 透明色  -->
+    <SolidColorBrush x:Key="TransparentBlackColor" Color="#00000000" />
 
     <!--  灰色1  -->
     <SolidColorBrush x:Key="GrayColor">#333333</SolidColorBrush>

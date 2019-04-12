@@ -7,8 +7,6 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <!--  如果你用到DMSkin窗体需要导入  -->
-                <ResourceDictionary Source="pack://application:,,,/DMSkin;component/DMSkin.xaml" />
                 <!--  引用目标设计库的Style  -->
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.CyanDesign;component/Style.xaml" />
                 <!--  自己库中的图标  -->
