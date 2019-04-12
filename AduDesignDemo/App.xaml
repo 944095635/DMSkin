@@ -1,0 +1,23 @@
+﻿<Application
+    x:Class="AduDesignDemo.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:AduDesignDemo"
+    StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--  如果你用到DMSkin窗体需要导入  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin;component/DMSkin.xaml" />
+
+                <!--  AduWindow  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.AduDesign;component/Styles/AduWindow.xaml" />
+
+                <!--  引用目标设计库的Style  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.AduDesign;component/Style.xaml" />
+                <!--  自己库中的图标  -->
+                <ResourceDictionary Source="pack://application:,,,/AduDesignDemo;component/Style/SIcon.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

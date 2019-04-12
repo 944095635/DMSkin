@@ -1,0 +1,59 @@
+﻿<dmskin:DMSkinWindow
+    x:Class="AduDesignDemo.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:attached="clr-namespace:DMSkin.Attached;assembly=DMSkin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dmskin="clr-namespace:DMSkin;assembly=DMSkin"
+    xmlns:local="clr-namespace:AduDesignDemo"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="clr-namespace:AduDesignDemo.ViewModel"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    Style="{DynamicResource AduWindowStyle}"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <viewmodel:AduDesignViewModel />
+    </Window.DataContext>
+    <ScrollViewer>
+        <StackPanel Margin="30" HorizontalAlignment="Left">
+            <GroupBox Header="按钮">
+                <StackPanel Orientation="Horizontal">
+                    <Button
+                        attached:Icon.Geometry="{StaticResource Icon_Home}"
+                        attached:Icon.Height="16"
+                        Background="Transparent"
+                        Command="{Binding WinDemoCommand}" />
+                    <Button
+                        attached:Icon.Geometry="{StaticResource Icon_Logo}"
+                        attached:Icon.Height="20"
+                        attached:Icon.Width="20"
+                        Background="Transparent" />
+                    <Button
+                        attached:Icon.Geometry="{StaticResource Icon_Player}"
+                        attached:Icon.Height="16"
+                        Background="Transparent" />
+                    <Button
+                        attached:Icon.Geometry="{StaticResource Icon_Delete}"
+                        attached:Icon.Height="16"
+                        Background="Transparent" />
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="按钮">
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox
+                        DisplayMemberPath="CodeName"
+                        ItemsSource="{Binding CodeList}"
+                        SelectedIndex="1"
+                        SelectedValuePath="CodeID" />
+                    <ComboBox
+                        DisplayMemberPath="CodeName"
+                        ItemsSource="{Binding CodeList}"
+                        SelectedIndex="1"
+                        SelectedValuePath="CodeID" />
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </ScrollViewer>
+</dmskin:DMSkinWindow>

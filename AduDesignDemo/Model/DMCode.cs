@@ -1,6 +1,6 @@
 ﻿using DMSkin.Core;
 
-namespace DMSkinDemo.Model
+namespace AduDesignDemo.Model
 {
     public class DMCode:ViewModelBase
     {

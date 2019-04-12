@@ -1,0 +1,118 @@
+﻿<dmskin:DMSkinWindow
+    x:Class="CyanDesignDemo.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:attached="clr-namespace:DMSkin.Attached;assembly=DMSkin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dmskin="clr-namespace:DMSkin;assembly=DMSkin"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="900"
+    Height="600"
+    mc:Ignorable="d">
+    <Grid Background="{StaticResource GrayColor8}">
+        <TabControl Style="{DynamicResource TabControlStyle}" TabStripPlacement="Left">
+            <TabItem
+                attached:Icon.Geometry="{StaticResource Menu}"
+                IsEnabled="False"
+                Style="{StaticResource TabItemNoneStyle}">
+                <TabItem.Header>
+                    <Border
+                        Width="48"
+                        Height="48"
+                        Background="{StaticResource ThemeColor}"
+                        BorderBrush="{StaticResource GrayColor5}"
+                        BorderThickness="1"
+                        CornerRadius="100">
+                        <Path
+                            Width="20"
+                            Height="20"
+                            Data="{StaticResource Search}"
+                            Fill="White"
+                            Stretch="Fill" />
+                    </Border>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem
+                attached:Icon.Geometry="{StaticResource Menux}"
+                IsSelected="True"
+                Style="{StaticResource TabItemStyle}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid Margin="20,0,20,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <StackPanel>
+                            <TextBlock
+                                Margin="0,20,0,5"
+                                VerticalAlignment="Center"
+                                FontSize="20"
+                                Foreground="{StaticResource GrayColor1}"
+                                Text="ALL User" />
+                            <TextBlock
+                                Margin="0,0,0,30"
+                                VerticalAlignment="Center"
+                                FontSize="14"
+                                Foreground="{StaticResource GrayColor3}"
+                                Text="max 1024" />
+                        </StackPanel>
+                        <TextBox
+                            Grid.Row="1"
+                            attached:Hint.HintText="Search"
+                            attached:Icon.Geometry="{StaticResource Search}"
+                            FontSize="16"
+                            Style="{StaticResource TextBoxIconStyle}"
+                            WindowChrome.IsHitTestVisibleInChrome="True" />
+                    </Grid>
+                    <Grid Grid.Column="1" Background="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TabControl Grid.Row="1" Style="{DynamicResource TabControlStyle}">
+                            <TabItem Header="Photos" Style="{StaticResource TabItemCyanStyle}">
+                                <StackPanel
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Bottom"
+                                    Orientation="Horizontal">
+                                    <Button
+                                        Margin="10"
+                                        Content="Send Gray"
+                                        Style="{DynamicResource ButtonStyle}" />
+                                    <Button
+                                        Margin="10"
+                                        Background="{StaticResource GreenColor}"
+                                        Content="Open Green"
+                                        Style="{DynamicResource ButtonStyle}" />
+                                    <Button
+                                        Margin="10"
+                                        Background="{StaticResource YellowColor}"
+                                        Content="Delete Yellow"
+                                        Style="{DynamicResource ButtonStyle}" />
+                                    <Button
+                                        Margin="10"
+                                        Background="{StaticResource YellowColor}"
+                                        Content="Disable"
+                                        IsEnabled="False"
+                                        Style="{DynamicResource ButtonStyle}" />
+                                </StackPanel>
+                            </TabItem>
+                            <TabItem Header="Video" Style="{StaticResource TabItemCyanStyle}" />
+                            <TabItem Header="Music" Style="{StaticResource TabItemCyanStyle}" />
+                        </TabControl>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem attached:Icon.Geometry="{StaticResource Menu}" Style="{StaticResource TabItemStyle}" />
+            <TabItem attached:Icon.Geometry="{StaticResource Menu1}" Style="{StaticResource TabItemStyle}" />
+            <TabItem attached:Icon.Geometry="{StaticResource Menu2}" Style="{StaticResource TabItemStyle}" />
+            <TabItem attached:Icon.Geometry="{StaticResource Menu3}" Style="{StaticResource TabItemStyle}" />
+        </TabControl>
+    </Grid>
+</dmskin:DMSkinWindow>

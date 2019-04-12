@@ -9,7 +9,7 @@ namespace DMSkinDemo.ViewModel
         #region 属性
         private Menu selectMenu;
         /// <summary>
-        /// 菜单
+        /// 菜单-包含页面跳转逻辑
         /// </summary>
         public Menu SelectMenu
         {
@@ -25,14 +25,8 @@ namespace DMSkinDemo.ViewModel
                     case Menu.Broadcast:
                         Broadcast.PushBroadcast("Navigation", new PageBroadcast());
                         break;
-                    case Menu.AntDesign:
-                        Broadcast.PushBroadcast("Navigation", new PageAntDesign());
-                        break;
-                    case Menu.AduDesign:
-                        Broadcast.PushBroadcast("Navigation", new PageAduDesign());
-                        break;
-                    case Menu.CyanDesign:
-                        Broadcast.PushBroadcast("Navigation", new PageCyanDesign());
+                    case Menu.Colors:
+                        Broadcast.PushBroadcast("Navigation", new PageColors());
                         break;
                     default:
                         break;

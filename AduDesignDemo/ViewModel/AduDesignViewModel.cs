@@ -1,11 +1,10 @@
-﻿using DMSkin.Core;
-using DMSkinDemo.Model;
-using DMSkinDemo.View;
+﻿using AduDesignDemo.Model;
+using DMSkin.Core;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
 
-namespace DMSkinDemo.ViewModel
+namespace AduDesignDemo.ViewModel
 {
     public class AduDesignViewModel:ViewModelBase
     {
@@ -54,7 +53,7 @@ namespace DMSkinDemo.ViewModel
         /// </summary>    
         public ICommand WinDemoCommand => new DelegateCommand(obj =>
         {
-            new WinDemo_Adu().Show();
+            //new WinDemo_Adu().Show();
         });
 
         #endregion

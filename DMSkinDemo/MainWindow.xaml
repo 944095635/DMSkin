@@ -57,84 +57,20 @@
             <ColumnDefinition Width="160" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <ScrollViewer attached:Mouse.BackColor="Blue" Style="{StaticResource DMScrollViewer}">
+        <ScrollViewer Style="{StaticResource DMScrollViewer}">
             <StackPanel Background="#F5F5F7">
-                <Expander
-                    Header="DMSkin"
-                    IsExpanded="True"
-                    Style="{StaticResource NoExpander}">
-                    <StackPanel>
-                        <RadioButton
-                            attached:Icon.Geometry="{StaticResource 收藏_空心}"
-                            attached:Icon.Height="15"
-                            attached:Icon.Width="15"
-                            Content="颜色 Colors"
-                            GroupName="Menu"
-                            IsChecked="True"
-                            Style="{StaticResource MenuRadioButtom}" />
-                    </StackPanel>
-                </Expander>
-                <Expander
-                    Header="DMSkin.Core"
-                    IsExpanded="True"
-                    Style="{StaticResource NoExpander}">
-                    <StackPanel>
-                        <RadioButton
-                            attached:Icon.Geometry="{StaticResource 分享}"
-                            attached:Icon.Height="13"
-                            attached:Icon.Width="15"
-                            Content="广播 Broadcast"
-                            GroupName="Menu"
-                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Broadcast}"
-                            Style="{StaticResource MenuRadioButtom}" />
-                    </StackPanel>
-                </Expander>
-                <Expander
-                    Header="图标库"
-                    IsExpanded="True"
-                    Style="{StaticResource Expander}">
-                    <StackPanel>
-                        <RadioButton
-                            attached:Icon.Geometry="{StaticResource 喜欢_实心}"
-                            attached:Icon.Height="13"
-                            attached:Icon.Width="15"
-                            Content="图标 Icon"
-                            GroupName="Menu"
-                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Broadcast}"
-                            Style="{StaticResource MenuRadioButtom}" />
-                    </StackPanel>
-                </Expander>
-                <Expander
-                    Header="样式库"
-                    IsExpanded="True"
-                    Style="{StaticResource Expander}">
-                    <StackPanel>
-                        <RadioButton
-                            attached:Icon.Geometry="{StaticResource 点赞_空心}"
-                            attached:Icon.Height="15"
-                            attached:Icon.Width="15"
-                            Content="CyanDesign"
-                            GroupName="Menu"
-                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=CyanDesign}"
-                            Style="{StaticResource MenuRadioButtom}" />
-                        <RadioButton
-                            attached:Icon.Geometry="{StaticResource Icon_SweepCode}"
-                            attached:Icon.Height="15"
-                            attached:Icon.Width="15"
-                            Content="AntDesign"
-                            GroupName="Menu"
-                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=AntDesign}"
-                            Style="{StaticResource MenuRadioButtom}" />
-                        <RadioButton
-                            attached:Icon.Geometry="{StaticResource Icon_Logo}"
-                            attached:Icon.Height="15"
-                            attached:Icon.Width="18"
-                            Content="AduDesign"
-                            GroupName="Menu"
-                            IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=AduDesign}"
-                            Style="{StaticResource MenuRadioButtom}" />
-                    </StackPanel>
-                </Expander>
+                <RadioButton
+                    Content="颜色 Colors"
+                    GroupName="Menu"
+                    IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Colors}" />
+                <RadioButton
+                    Content="广播 Broadcast"
+                    GroupName="Menu"
+                    IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Broadcast}" />
+                <RadioButton
+                    Content="图标 Icon"
+                    GroupName="Menu"
+                    IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Broadcast}" />
             </StackPanel>
         </ScrollViewer>
         <Frame
