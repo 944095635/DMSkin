@@ -94,11 +94,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DesignLibrary\DMSkin.CyanDesign\DMSkin.CyanDesign.csproj">
+    <ProjectReference Include="..\..\DesignLibrary\DMSkin.CyanDesign\DMSkin.CyanDesign.csproj">
       <Project>{4b0ef37d-e012-4153-84b9-76fce8c84301}</Project>
       <Name>DMSkin.CyanDesign</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DMSkin\DMSkin.csproj">
+    <ProjectReference Include="..\..\DMSkin\DMSkin.csproj">
       <Project>{84d6e067-2db0-4765-8f5c-5b5288a26f0a}</Project>
       <Name>DMSkin</Name>
     </ProjectReference>
