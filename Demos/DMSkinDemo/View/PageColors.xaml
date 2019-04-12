@@ -8,20 +8,12 @@
     d:DesignWidth="800"
     mc:Ignorable="d">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <TextBlock Text="ThemeColor" />
-        <Border
-            Width="100"
-            Height="40"
-            Background="{StaticResource ThemeColor}"
-            BorderBrush="{StaticResource ThemeColor}"
-            BorderThickness="1"
-            CornerRadius="3" />
         <TextBlock Text="TransparentColor" />
         <Border
             Width="100"
             Height="40"
             Background="{StaticResource TransparentColor}"
-            BorderBrush="{StaticResource ThemeColor}"
+            BorderBrush="Cyan"
             BorderThickness="1"
             CornerRadius="3" />
         <TextBlock Text="TransparentBlackColor" />
@@ -29,7 +21,7 @@
             Width="100"
             Height="40"
             Background="{StaticResource TransparentBlackColor}"
-            BorderBrush="{StaticResource ThemeColor}"
+            BorderBrush="Cyan"
             BorderThickness="1"
             CornerRadius="3" />
     </StackPanel>
