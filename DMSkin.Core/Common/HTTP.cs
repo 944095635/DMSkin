@@ -8,7 +8,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace DMSkin.Core.Common
+namespace DMSkin.Core
 {
     public class HTTP
     {

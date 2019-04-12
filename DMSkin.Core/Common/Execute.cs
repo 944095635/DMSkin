@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Threading;
-namespace DMSkin.Core.Common
+
+namespace DMSkin.Core
 {
     public static class Execute
     {

@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="DMSkinDemo.View.PageColors"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock Text="ThemeColor" />
+        <Border
+            Width="100"
+            Height="40"
+            Background="{StaticResource ThemeColor}"
+            BorderBrush="{StaticResource ThemeColor}"
+            BorderThickness="1"
+            CornerRadius="3" />
+        <TextBlock Text="TransparentColor" />
+        <Border
+            Width="100"
+            Height="40"
+            Background="{StaticResource TransparentColor}"
+            BorderBrush="{StaticResource ThemeColor}"
+            BorderThickness="1"
+            CornerRadius="3" />
+        <TextBlock Text="TransparentBlackColor" />
+        <Border
+            Width="100"
+            Height="40"
+            Background="{StaticResource TransparentBlackColor}"
+            BorderBrush="{StaticResource ThemeColor}"
+            BorderThickness="1"
+            CornerRadius="3" />
+    </StackPanel>
+</Page>

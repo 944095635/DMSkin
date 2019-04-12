@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace DMSkin.Core.MVVM
+namespace DMSkin.Core
 {
     public class ViewModelBase : INotifyPropertyChanged
     {

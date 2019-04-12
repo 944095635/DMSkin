@@ -1,0 +1,80 @@
+﻿<DMSkin:DMSkinWindow
+    x:Class="DMSkinDemo.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:DMSkin="clr-namespace:DMSkin;assembly=DMSkin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="clr-namespace:DMSkinDemo.ViewModel"
+    Title="Powered by DMSkin"
+    Width="1000"
+    Height="650"
+    MinWidth="380"
+    MinHeight="300"
+    CaptionBackground="#10000000"
+    CaptionHeight="50"
+    FitSystemWindow="False"
+    Foreground="White"
+    ResizeMode="CanResizeWithGrip"
+    Style="{StaticResource DMSkinWindowStyle}"
+    SystemButtonCloseOverColor="Red"
+    SystemButtonColor="{StaticResource TransparentColor}"
+    SystemButtonForeground="#666666"
+    SystemButtonOverColor="#10000000"
+    SystemButtonSize="50"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <viewmodel:MainViewModel />
+    </Window.DataContext>
+    <!--  左侧标题区域  -->
+    <DMSkin:DMSkinWindow.TitleContent>
+        <Grid Background="#33FFFFFF">
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock
+                    Margin="10,0,0,0"
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Foreground="#666666"
+                    Text="Powered by D" />
+                <Path
+                    Width="15"
+                    Height="15"
+                    Data="{StaticResource DMSkin}"
+                    Fill="#666666"
+                    Stretch="Fill" />
+                <TextBlock
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Foreground="#666666"
+                    Text="Skin" />
+            </StackPanel>
+        </Grid>
+    </DMSkin:DMSkinWindow.TitleContent>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Style="{StaticResource DMScrollViewer}">
+            <StackPanel Background="#F5F5F7">
+                <RadioButton
+                    Content="颜色 Colors"
+                    GroupName="Menu"
+                    IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Colors}" />
+                <RadioButton
+                    Content="广播 Broadcast"
+                    GroupName="Menu"
+                    IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Broadcast}" />
+                <RadioButton
+                    Content="图标 Icon"
+                    GroupName="Menu"
+                    IsChecked="{Binding SelectMenu, Mode=TwoWay, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Broadcast}" />
+            </StackPanel>
+        </ScrollViewer>
+        <Frame
+            x:Name="Frame"
+            Grid.Column="1"
+            NavigationUIVisibility="Hidden" />
+    </Grid>
+</DMSkin:DMSkinWindow>
