@@ -52,6 +52,12 @@
   <ItemGroup>
     <Compile Include="Common\Execute.cs" />
     <Compile Include="Common\HTTP.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\CompareToVisibilityConverter.cs" />
+    <Compile Include="Converters\EnumToBooleanConverter.cs" />
+    <Compile Include="Converters\EnumToVisibilityConverter.cs" />
+    <Compile Include="Converters\SecondToStringConverter.cs" />
+    <Compile Include="Converters\TimeSpanToStringConverter.cs" />
     <Compile Include="MVVM\DelegateCommand.cs" />
     <Compile Include="MVVM\ViewModelBase.cs" />
     <Compile Include="Common\Broadcast.cs" />
@@ -59,7 +65,6 @@
     <Compile Include="Common\TaskManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Converters\" />
     <Folder Include="WIN32\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
