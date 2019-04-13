@@ -125,7 +125,10 @@
                         </Grid.RowDefinitions>
                         <TabControl Grid.Row="1" Style="{DynamicResource TabControlStyle}">
                             <TabItem Header="Photos" Style="{StaticResource TabItemCyanStyle}">
-                                <ScrollViewer BorderBrush="#99FF0000" Style="{StaticResource DMScrollViewer}">
+                                <ScrollViewer
+                                    attached:Mouse.BackColor="#99FF0000"
+                                    HorizontalScrollBarVisibility="Auto"
+                                    Style="{StaticResource DMScrollViewer}">
                                     <StackPanel Width="1200" Orientation="Horizontal">
                                         <Button
                                             Margin="10"

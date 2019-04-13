@@ -361,14 +361,14 @@
     </Style>
     <Style x:Key="DMScrollViewer" TargetType="ScrollViewer">
         <Setter Property="Background" Value="{StaticResource TransparentColor}" />
-        <Setter Property="BorderBrush" Value="#BBBBBB" />
+        <Setter Property="attached:Mouse.BackColor" Value="#BBBBBB" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
-        <Setter Property="HorizontalScrollBarVisibility" Value="Auto" />
+        <Setter Property="HorizontalScrollBarVisibility" Value="Disabled" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ScrollViewer">
-                    <Grid Background="{TemplateBinding Background}">
+                    <Grid Background="{StaticResource TransparentColor}">
                         <ScrollContentPresenter Margin="{TemplateBinding Padding}" Content="{TemplateBinding Content}" />
                         <ScrollBar
                             x:Name="PART_VerticalScrollBar"
@@ -376,7 +376,7 @@
                             MaxWidth="15"
                             HorizontalAlignment="Right"
                             AutomationProperties.AutomationId="VerticalScrollBar"
-                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderBrush="{TemplateBinding attached:Mouse.BackColor}"
                             Cursor="Arrow"
                             Maximum="{TemplateBinding ScrollableHeight}"
                             Minimum="0"
@@ -390,7 +390,7 @@
                             MaxHeight="15"
                             VerticalAlignment="Bottom"
                             AutomationProperties.AutomationId="HorizontalScrollBar"
-                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderBrush="{TemplateBinding attached:Mouse.BackColor}"
                             FlowDirection="RightToLeft"
                             Maximum="{TemplateBinding ScrollableWidth}"
                             Minimum="0"
@@ -413,4 +413,5 @@
         </Setter>
     </Style>
     <!--#endregion-->
+
 </ResourceDictionary>
