@@ -1,4 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/Svg_Icon.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <!--  全白 透明色  -->
     <SolidColorBrush x:Key="TransparentColor" Color="#00FFFFFF" />
     <!--  全黑 透明色  -->

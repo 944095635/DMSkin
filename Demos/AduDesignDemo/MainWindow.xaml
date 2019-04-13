@@ -9,15 +9,13 @@
     xmlns:viewmodel="clr-namespace:AduDesignDemo.ViewModel"
     Title="MainWindow"
     Width="800"
+    ResizeMode="CanResizeWithGrip"
     SystemButtonSize="40"
     FitSystemWindow="True"
     Height="450"
     Style="{DynamicResource AduWindowStyle}"
     Background="#2B2833"
     mc:Ignorable="d" Loaded="DMSkinWindow_Loaded">
-    <Window.DataContext>
-        <viewmodel:AduDesignViewModel />
-    </Window.DataContext>
     <Border CornerRadius="4" Background="#302C3A" Name="mainback">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -92,31 +90,32 @@
                 </Grid>
             </Border>
             <Border Grid.Column="0" Grid.Row="1" BorderBrush="#2B2833" BorderThickness="0,0,1,0" >
-                <ScrollViewer Style="{StaticResource AduScrollViewer}" Margin="0,20">
+                <ScrollViewer Style="{StaticResource DMScrollViewer}" Margin="0,20">
                     <StackPanel>
                         <Expander Style="{StaticResource AduExpander}" Header="UI Components">
                             <StackPanel>
-                                <!--<Adu:AduRadioButtonIcon
+                                <RadioButton
+                                    Style="{StaticResource AduRadioButtonMenu}"
                                     Command="{Binding NavPageCommand}"
                                     Content="小程序二维码"
                                     GroupName="Menu"
-                                    Icon="{StaticResource Icon_SmallProgram}"
-                                    IconHeight="16"
-                                    IconWidth="16"
+                                    attached:Icon.Geometry="{StaticResource Icon_SmallProgram}"
+                                    attached:Icon.Height="16"
+                                    attached:Icon.Width="16"
                                     IsChecked="False" />
-                                <Adu:AduRadioButtonIcon
-                                    Command="{Binding NavPageCommand}"
-                                    Content="小程序二维码"
+                                <RadioButton
+                                    Style="{StaticResource AduRadioButtonMenu}"
+                                    Content="AduSkin案例"
                                     GroupName="Menu"
-                                    Icon="{StaticResource Icon_SmallProgram}"
-                                    IconHeight="16"
-                                    IconWidth="16"
-                                    IsChecked="False" />-->
+                                    attached:Icon.Geometry="{StaticResource Icon_Logo}"
+                                    attached:Icon.Height="16"
+                                    attached:Icon.Width="16"
+                                    IsChecked="False" />
                             </StackPanel>
                         </Expander>
                         <Expander Style="{StaticResource AduExpander}" Header="Forms">
                             <StackPanel>
-                               
+
                             </StackPanel>
                         </Expander>
                         <Expander Style="{StaticResource AduExpander}" Header="SIcon"/>
@@ -128,18 +127,86 @@
                         <Expander Style="{StaticResource AduExpander}" Header="UI Components"/>
                     </StackPanel>
                 </ScrollViewer>
-
             </Border>
-            <Border Grid.Column="1" Grid.Row="1" Margin="10" Background="#10ffffff" CornerRadius="3">
-                <GroupBox Style="{StaticResource AduGroupBox}" Header="Contacts" FontWeight="Bold" Margin="0,10" FontSize="12" Foreground="#fff" BorderThickness="3,0,0,0" BorderBrush="#4ABDA7">
-                    <DataGrid Margin="3" Style="{StaticResource AduDataGrid}" x:Name="AduDataGrids"  GridLinesVisibility="None" BorderThickness="0">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Width="*" Header="Phone" Binding="{Binding Phone}"></DataGridTextColumn>
-                            <DataGridTextColumn Width="*" Header="Email" Binding="{Binding Email}" ></DataGridTextColumn>
-                            <DataGridTextColumn Width="*" Header="Info" Binding="{Binding Info}" ></DataGridTextColumn>
-                        </DataGrid.Columns>
-                    </DataGrid>
-                </GroupBox>
+            <Border Grid.Column="1" Grid.Row="1" Padding="10">
+                <ScrollViewer Style="{StaticResource DMScrollViewer}" HorizontalScrollBarVisibility="Disabled">
+                <StackPanel>
+                    <TextBlock Text="Select" FontSize="24" Margin="10,20" Foreground="#fff"></TextBlock>
+                    <Border Margin="0,0,0,0">
+                        <UniformGrid Columns="4">
+                            <Border Background="#20ffffff" CornerRadius="4" Padding="10" Margin="6">
+                                <StackPanel>
+                                    <TextBlock Text="4509" FontSize="18" FontWeight="Bold" Foreground="#fff"></TextBlock>
+                                    <TextBlock Text="New Users" Margin="0,5" FontSize="12"  Foreground="#fff"></TextBlock>
+                                    <ProgressBar Style="{StaticResource AduProgressBar}"
+                                                            Margin="0,5"
+                                                            Background="#EADA43"
+                                                            Maximum="50"
+                                                            Value="20" />
+                                    <TextBlock Text="Progress" FontSize="10"  Foreground="#fff"></TextBlock>
+                                </StackPanel>
+                            </Border>
+                            <Border Background="#20ffffff" CornerRadius="4" Padding="10" Margin="6">
+                                <StackPanel>
+                                    <TextBlock Text="1380" FontSize="18" FontWeight="Bold" Foreground="#fff"></TextBlock>
+                                    <TextBlock Text="Product Sales" Margin="0,5" FontSize="12"  Foreground="#fff"></TextBlock>
+                                    <ProgressBar Style="{StaticResource AduProgressBar}"
+                                                            Margin="0,5"
+                                                            Background="#DB5D5D"
+                                                            Maximum="50"
+                                                            Value="30" />
+                                    <TextBlock Text="Progress" FontSize="10"  Foreground="#fff"></TextBlock>
+                                </StackPanel>
+                            </Border>
+                            <Border Background="#20ffffff" CornerRadius="4" Padding="10" Margin="6">
+                                <StackPanel>
+                                    <TextBlock Text="890" FontSize="18" FontWeight="Bold" Foreground="#fff"></TextBlock>
+                                    <TextBlock Text="Delivery Process" Margin="0,5" FontSize="12"  Foreground="#fff"></TextBlock>
+                                    <ProgressBar Style="{StaticResource AduProgressBar}"
+                                                            Margin="0,5"
+                                                            Background="#4DB9A7"
+                                                            Maximum="50"
+                                                            Value="40" />
+                                    <TextBlock Text="Progress" FontSize="10"  Foreground="#fff"></TextBlock>
+                                </StackPanel>
+                            </Border>
+                            <Border Background="#20ffffff" CornerRadius="4" Padding="10" Margin="6">
+                                <StackPanel>
+                                    <TextBlock Text="$35,996" FontSize="18" FontWeight="Bold" Foreground="#fff"></TextBlock>
+                                    <TextBlock Text="New Users" Margin="0,5" FontSize="12"  Foreground="#fff"></TextBlock>
+                                    <ProgressBar Style="{StaticResource AduProgressBar}"
+                                                            Margin="0,5"
+                                                            Background="#2A8FCE"
+                                                            Maximum="50"
+                                                            Value="44" />
+                                    <TextBlock Text="Progress" FontSize="10"  Foreground="#fff"></TextBlock>
+                                </StackPanel>
+                            </Border>
+                        </UniformGrid>
+                    </Border>
+                    <Border Margin="6,6,6,6" Background="#20ffffff" CornerRadius="4"   >
+                        <GroupBox Style="{StaticResource AduGroupBox}" Header="Contacts" FontWeight="Bold" Margin="0,10" FontSize="12" Foreground="#fff" BorderThickness="3,0,0,0" BorderBrush="#4ABDA7">
+                            <DataGrid Margin="3" Style="{StaticResource AduDataGrid}" Height="150" x:Name="AduDataGrids"  GridLinesVisibility="None" BorderThickness="0">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn Header="Name" Width="*">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <CheckBox Style="{StaticResource AduCheckBox}" Foreground="#fff" VerticalAlignment="Center"></CheckBox>
+                                                    <TextBlock Text="{Binding CodeName}" Foreground="#fff" VerticalAlignment="Center"></TextBlock>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Width="*" Header="Phone" Binding="{Binding Phone}"></DataGridTextColumn>
+                                    <DataGridTextColumn Width="*" Header="Email" Binding="{Binding Email}" ></DataGridTextColumn>
+                                    <DataGridTextColumn Width="*" Header="Info" Binding="{Binding Info}" ></DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </GroupBox>
+                    </Border>
+                </StackPanel>
+                </ScrollViewer>
             </Border>
         </Grid>
     </Border>

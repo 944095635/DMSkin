@@ -1,0 +1,52 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:attached="clr-namespace:DMSkin.Attached;assembly=DMSkin">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/Base.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--多选按钮-->
+    <Style x:Key="AduRadioButton" TargetType="{x:Type RadioButton}">
+        <Setter Property="Margin" Value="0"></Setter>
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"></Setter>
+        <Setter Property="Foreground" Value="#777"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="{StaticResource Brush}"/>
+        <Setter Property="IsChecked" Value="False"></Setter>
+        <Setter Property="attached:Icon.Height" Value="14"></Setter>
+        <Setter Property="attached:Icon.Width" Value="14"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border Background="#00000000">
+                    <StackPanel Orientation="Horizontal" >
+
+                            <Path  x:Name="icon"
+                                Width="{TemplateBinding attached:Icon.Width}"
+                                Height="{TemplateBinding attached:Icon.Height}"
+                                Margin="10,0,0,0"
+                                Fill="{TemplateBinding Foreground}"
+                                Stretch="Fill"
+                                Data="{StaticResource Icon_SingleNoChecked}" />
+                            <TextBlock Name="text" VerticalAlignment="Center" Margin="6,0,0,2" Text="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}" ></TextBlock>
+                    </StackPanel>
+                    </Border>
+                    <!--控件触发器-->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                             <!--画上一个勾-->
+                            <Setter Property="Opacity" Value="0.8"/>
+                            <Setter TargetName="icon" Property="Data" Value="{StaticResource Icon_SingleChecked}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <!--画上一个勾-->
+                            <Setter Property="Opacity" Value=".5"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>

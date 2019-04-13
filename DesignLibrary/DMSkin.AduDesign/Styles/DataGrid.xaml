@@ -54,8 +54,6 @@
                                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                           RecognizesAccessKey="True"
                                           SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                        <!--<TextBlock x:Name="SortArrow" Style="{StaticResource FIcon}" Text="&#xe624;" Grid.Column="1" Width="20"
-                                       Visibility="Collapsed" FontSize="16" Margin="1,1,3,1" />-->
                         <Path Data="{StaticResource Icon_DropDowm}" x:Name="SortArrow" Grid.Column="1"  Width="10" Height="10" Visibility="Collapsed" Margin="1,1,3,1" ></Path>
                         <Thumb x:Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" HorizontalContentAlignment="Left"
                                Style="{StaticResource DefaultColumnHeaderGripperStyle}" />
@@ -98,7 +96,7 @@
 
     <!--行样式-->
     <Style x:Key="DefaultDataGridRow" TargetType="{x:Type DataGridRow}">
-        <Setter Property="Foreground" Value="#fff" />
+        <Setter Property="Foreground" Value="#80ffffff" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Margin" Value="0,0,0,0" />
         <Setter Property="Height" Value="40"></Setter>
@@ -108,7 +106,7 @@
             </Trigger>
             <Trigger Property="IsSelected" Value="True">
                 <Setter  Property="Background" Value="#30000000" />
-                <Setter Property="Foreground" Value="#80ffffff" />
+                <Setter Property="Foreground" Value="#fff" />
             </Trigger>
             <MultiTrigger>
                 <MultiTrigger.Conditions>
@@ -123,7 +121,7 @@
                     <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource Self}}" Value="True" />
                 </MultiDataTrigger.Conditions>
                 <Setter  Property="Background" Value="#20ffffff" />
-                <Setter Property="Foreground" Value="#000" />
+                <Setter Property="Foreground" Value="#fff" />
             </MultiDataTrigger>
         </Style.Triggers>
     </Style>
@@ -216,8 +214,6 @@
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="BorderThickness" Value="1" />
-        <!--<Setter Property="HorizontalGridLinesBrush" Value="{StaticResource GridLinesBrush}" />
-        <Setter Property="VerticalGridLinesBrush" Value="{StaticResource GridLinesBrush}" />-->
         <Setter Property="ColumnHeaderStyle" Value="{StaticResource DefaultDataGridColumnHeader}" />
         <Setter Property="RowHeaderStyle" Value="{StaticResource DefaultDataGridRowHeader}" />
         <Setter Property="CellStyle" Value="{StaticResource DefaultDataGridCell}" />

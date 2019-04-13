@@ -29,8 +29,6 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="PathFill" Property="Opacity" Value="1" />
-                            <!--<Setter TargetName="Back" Property="Background" Value="#59CA4F"></Setter>-->
-                            <!--<Setter TargetName="Back" Property="BorderBrush" Value="#59CA4F"></Setter>-->
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

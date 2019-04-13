@@ -6,5 +6,8 @@
         <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/Scrollview.xaml" />
         <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/DataGrid.xaml" />
         <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/GroupBox.xaml" />
+        <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/CheckBox.xaml" />
+        <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/ProgressBar.xaml" />
+        <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/RadioButtonMenu.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
