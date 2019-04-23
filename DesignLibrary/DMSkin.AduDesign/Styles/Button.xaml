@@ -5,12 +5,13 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/DMSkin.AduDesign;component/Styles/Base.xaml" />
     </ResourceDictionary.MergedDictionaries>
+
     <Style x:Key="AduButton" TargetType="Button">
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Foreground" Value="{StaticResource ThemeColor}" />
         <Setter Property="MinHeight" Value="40" />
-        <Setter Property="Width" Value="75" />
+        <Setter Property="MinWidth" Value="40" />
         <Setter Property="Height" Value="26" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="Padding" Value="8,6" />
@@ -21,29 +22,14 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid Background="#00000000">
-                        <Border
-                            x:Name="border"
-                            Background="{TemplateBinding Background}"
-                            CornerRadius="0">
+                        
+                        <Border Border.Name="border" Border.Background="{TemplateBinding Control.Background}" Border.CornerRadius="0">
                             <Grid>
-                                <Border
-                                    x:Name="back"
-                                    Margin="0,0,0,2"
-                                    Background="{TemplateBinding Background}"
-                                    CornerRadius="0">
+                                <Border Border.Background="#00FFFFFF" UIElement.Opacity="0.2" />
+                                <Border Border.Name="back" Border.CornerRadius="0" Border.Background="{TemplateBinding Control.Background}" FrameworkElement.Margin="0,0,0,0">
                                     <Grid>
-                                        <Border
-                                            x:Name="move"
-                                            Background="#50000000"
-                                            CornerRadius="3"
-                                            Opacity="0" />
-                                        <Path
-                                            x:Name="icon"
-                                            Width="{TemplateBinding attached:Icon.Height}"
-                                            Height="{TemplateBinding attached:Icon.Height}"
-                                            Data="{TemplateBinding attached:Icon.Geometry}"
-                                            Fill="{TemplateBinding Foreground}"
-                                            Stretch="Fill" />
+                                        <Border Border.Name="move" Border.Background="#000" Border.CornerRadius="3" UIElement.Opacity="0" />
+                                        <ContentPresenter Margin="{TemplateBinding Padding}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                     </Grid>
                                 </Border>
                             </Grid>
@@ -94,10 +80,160 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Opacity" Value="0.7" />
-                            <Setter TargetName="border" Property="Opacity" Value="0.7" />
-                            <Setter TargetName="back" Property="Margin" Value="0" />
                         </Trigger>
                     </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="AduButtonIcon" TargetType="Button">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Foreground" Value="{StaticResource ThemeColor}" />
+        <Setter Property="MinHeight" Value="40" />
+        <Setter Property="MinWidth" Value="40" />
+        <Setter Property="Height" Value="26" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Padding" Value="8,6" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="attached:Icon.Height" Value="14" />
+        <Setter Property="attached:Icon.Width" Value="14" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid Background="#00000000">
+                        <Border Border.Name="border" Border.Background="{TemplateBinding Control.Background}" Border.CornerRadius="0">
+                            <Grid>
+                                <Border Border.Background="#00FFFFFF" UIElement.Opacity="0.2" />
+                                <Border Border.Name="back" Border.CornerRadius="0" Border.Background="{TemplateBinding Control.Background}" FrameworkElement.Margin="0,0,0,0">
+                                    <Grid>
+                                        <Border Border.Name="move" Border.Background="#000" Border.CornerRadius="3" UIElement.Opacity="0" />
+                                        <StackPanel StackPanel.Orientation="Horizontal" FrameworkElement.HorizontalAlignment="Center">
+                                            <Path FrameworkElement.Name="icon"  
+                                                  Fill="{TemplateBinding Control.Foreground}" 
+                                                  Stretch="Fill" 
+                                                  Width="{TemplateBinding attached:Icon.Height}"
+                                                   Height="{TemplateBinding attached:Icon.Height}"
+                                                  Data="{TemplateBinding attached:Icon.Geometry}" />
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </Border>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="move"
+                                            Storyboard.TargetProperty="(UIElement.Opacity)"
+                                            To="0"
+                                            Duration="0:0:0.1" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="move"
+                                            Storyboard.TargetProperty="(UIElement.Opacity)"
+                                            To="0.4"
+                                            Duration="0:0:0.1" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="move"
+                                            Storyboard.TargetProperty="(UIElement.Opacity)"
+                                            To="0.3"
+                                            Duration="0:0:0.03" />
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="back"
+                                            Storyboard.TargetProperty="(UIElement.Opacity)"
+                                            To="0.7"
+                                            Duration="0:0:0.03" />
+                                        <ThicknessAnimation
+                                            Storyboard.TargetName="back"
+                                            Storyboard.TargetProperty="(Margin)"
+                                            To="0,2,0,0"
+                                            Duration="0:0:0.03" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="AduButtonIconText" TargetType="Button" >
+        <Setter Setter.Property="FrameworkElement.FocusVisualStyle" Setter.Value="{x:Null}" />
+        <Setter Setter.Property="UIElement.SnapsToDevicePixels" Setter.Value="True" />
+        <Setter Setter.Property="Control.Foreground" Setter.Value="#FFFFFFFF" />
+        <Setter Setter.Property="FrameworkElement.Cursor" Setter.Value="Hand" />
+        <Setter Setter.Property="Control.Background" Setter.Value="#00FFFFFF" />
+        <Setter Setter.Property="FrameworkElement.MinWidth" Setter.Value="30" />
+        <Setter Setter.Property="FrameworkElement.MinHeight" Setter.Value="30" />
+        <Setter Setter.Property="FontSize" Setter.Value="14" />
+        <Setter Setter.Property="Padding" Setter.Value="8,6" />
+        <Setter Property="attached:Icon.Height" Value="14" />
+        <Setter Property="attached:Icon.Width" Value="14" />
+        <Setter Setter.Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate ControlTemplate.TargetType="{x:Type Button}">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="move" Storyboard.TargetProperty="(UIElement.Opacity)" DoubleAnimation.To="0" Timeline.Duration="0:0:0.1" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="move" Storyboard.TargetProperty="(UIElement.Opacity)" DoubleAnimation.To="0.2" Timeline.Duration="0:0:0.1" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="move" Storyboard.TargetProperty="(UIElement.Opacity)" DoubleAnimation.To="0.2" Timeline.Duration="0:0:0.03" />
+                                        <DoubleAnimation Storyboard.TargetName="back" Storyboard.TargetProperty="(UIElement.Opacity)" DoubleAnimation.To="0.7" Timeline.Duration="0:0:0.03" />
+                                        <ThicknessAnimation Storyboard.TargetName="back" Storyboard.TargetProperty="(Margin)" ThicknessAnimation.To="0,2,0,0" Timeline.Duration="0:0:0.03" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border Border.Name="border" Border.Background="{TemplateBinding Control.Background}" Border.CornerRadius="0">
+                            <Grid>
+                                <Border Border.Background="#00FFFFFF" UIElement.Opacity="0.2" />
+                                <Border Border.Name="back" Border.CornerRadius="0" Border.Background="{TemplateBinding Control.Background}" FrameworkElement.Margin="0,0,0,0">
+                                    <Grid>
+                                        <Border Border.Name="move" Border.Background="#000" Border.CornerRadius="3" UIElement.Opacity="0" />
+                                        <StackPanel StackPanel.Orientation="Horizontal" FrameworkElement.HorizontalAlignment="Center">
+                                            <Path FrameworkElement.Name="icon"  
+                                                  FrameworkElement.Margin="10,0,0,0" 
+                                                  Fill="{TemplateBinding Control.Foreground}" 
+                                                  Stretch="Fill" 
+                                                  Width="{TemplateBinding attached:Icon.Height}"
+                                                   Height="{TemplateBinding attached:Icon.Height}"
+                                                  Data="{TemplateBinding attached:Icon.Geometry}" />
+                                            <TextBlock TextBlock.Name="contentPresenter" Grid.Column="1" TextBlock.FontSize="{TemplateBinding Control.FontSize}" TextBlock.Foreground="{TemplateBinding Control.Foreground}" FrameworkElement.Margin="4,0,6,0" TextBlock.TextTrimming="CharacterEllipsis" FrameworkElement.HorizontalAlignment="Left" FrameworkElement.VerticalAlignment="Center" TextBlock.Text="{TemplateBinding ContentControl.Content}" UIElement.Focusable="False" UIElement.SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers />
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

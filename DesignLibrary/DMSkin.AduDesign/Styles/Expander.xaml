@@ -68,6 +68,26 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Expander}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="Storyboard_Collapsed">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ExpandSite" Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0" />
+                            </DoubleAnimationUsingKeyFrames>
+                            <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetName="ExpandSite" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0" />
+                            </DoubleAnimationUsingKeyFrames>-->
+                        </Storyboard>
+                        <Storyboard x:Key="Storyboard_Expanded">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ExpandSite" Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1" />
+                            </DoubleAnimationUsingKeyFrames>
+                            <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetName="ExpandSite" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1" />
+                            </DoubleAnimationUsingKeyFrames>-->
+                        </Storyboard>
+                    </ControlTemplate.Resources>
                     <Border SnapsToDevicePixels="True">
                         <DockPanel>
                             <ToggleButton
@@ -100,13 +120,54 @@
                                 ContentTemplate="{TemplateBinding ContentTemplate}"
                                 DockPanel.Dock="Bottom"
                                 Focusable="False"
-                                Visibility="Collapsed" />
+                                Visibility="Visible" >
+                                <ContentPresenter.LayoutTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleY="0" />
+                                        <SkewTransform />
+                                        <RotateTransform />
+                                        <TranslateTransform />
+                                    </TransformGroup>
+                                </ContentPresenter.LayoutTransform>
+                            </ContentPresenter>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="ExpansionStates">
+                                    <VisualState x:Name="Collapsed">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ExpandSite" Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0" />
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ExpandSite" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1" />
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Expanded">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ExpandSite" Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1" />
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ExpandSite" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1" />
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
                         </DockPanel>
                     </Border>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsExpanded" Value="True">
-                            <Setter TargetName="ExpandSite" Property="Visibility" Value="Visible" />
-                        </Trigger>
+                        <!--收起效果-->
+                        <EventTrigger RoutedEvent="Expander.Collapsed">
+                            <BeginStoryboard Storyboard="{StaticResource Storyboard_Collapsed}" />
+                        </EventTrigger>
+                        <!--展开效果-->
+                        <EventTrigger RoutedEvent="Expander.Expanded">
+                            <BeginStoryboard x:Name="STShow_BeginStoryboard"
+                                             Storyboard="{StaticResource Storyboard_Expanded}" />
+                        </EventTrigger>
                         <Trigger Property="ExpandDirection" Value="Right">
                             <Setter TargetName="ExpandSite" Property="DockPanel.Dock" Value="Right" />
                             <Setter TargetName="HeaderSite" Property="DockPanel.Dock" Value="Left" />

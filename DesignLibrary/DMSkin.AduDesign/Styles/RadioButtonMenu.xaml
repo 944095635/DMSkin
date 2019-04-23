@@ -4,7 +4,6 @@
     xmlns:attached="clr-namespace:DMSkin.Attached;assembly=DMSkin">
     <Style x:Key="AduRadioButtonMenu" TargetType="{x:Type RadioButton}">
         <Setter Property="MinHeight" Value="30" />
-        <Setter Property="Margin" Value="0,2"></Setter>
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="attached:Icon.Geometry" Value="{x:Null}" />
