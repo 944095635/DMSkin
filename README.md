@@ -83,6 +83,8 @@ Windows XP 请自行测试,
 
 > TaskManager(Task管理器)
 
+> Storage(内容存储器)
+
 > DelegateCommand(ICommand实现)
 
 > ViewModelBase(ViewModel基类)
