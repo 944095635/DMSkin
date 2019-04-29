@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace YWK.OSA.Common
+namespace DMSkin.Core.Common
 {
     /// <summary>
     /// 内存数据存储
