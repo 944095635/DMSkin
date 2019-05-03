@@ -4,6 +4,26 @@ namespace DMSkin.Core
 {
     public class ViewModelBase : INotifyPropertyChanged
     {
+        #region 是否选中
+        private bool isChecked;
+        /// <summary>
+        /// 是否选中
+        /// </summary>
+        public bool IsChecked
+        {
+            get
+            {
+                return isChecked;
+            }
+            set
+            {
+                isChecked = value;
+                OnPropertyChanged(nameof(IsChecked));
+            }
+        }
+
+        #endregion
+
         #region UI更新接口
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName = null)
