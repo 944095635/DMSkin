@@ -8,6 +8,7 @@
 #### 开发PC客户端 一套搞定
 
 <img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/Demo1.png" align="center">
+<img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/Demo2.png" align="center">
 
 ## 1.开发&编译&环境&问题
 
