@@ -97,11 +97,15 @@
     <Compile Include="Model\Menu.cs" />
     <Compile Include="ViewModel\BroadcastViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\StorageViewModel.cs" />
     <Compile Include="View\PageBroadcast.xaml.cs">
       <DependentUpon>PageBroadcast.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\PageColors.xaml.cs">
       <DependentUpon>PageColors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PageStorage.xaml.cs">
+      <DependentUpon>PageStorage.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -120,6 +124,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\PageColors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PageStorage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

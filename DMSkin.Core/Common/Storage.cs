@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DMSkin.Core.Common
+namespace DMSkin.Core
 {
     /// <summary>
     /// 内存数据存储

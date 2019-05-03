@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Common\Execute.cs" />
     <Compile Include="Common\HTTP.cs" />
+    <Compile Include="Common\Storage.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Converters\CompareToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumToBooleanConverter.cs" />

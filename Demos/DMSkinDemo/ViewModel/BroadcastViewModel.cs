@@ -37,6 +37,37 @@ namespace DMSkinDemo.ViewModel
         #endregion
 
         #region 命令
+        /// <summary>
+        /// 注册单向广播接收器
+        /// </summary>    
+        public ICommand RegisterBroadcastA => new DelegateCommand(obj =>
+        {
+            bool state = Broadcast.RegisterBroadcast("test1", () =>
+            {
+                Message.Add($"收到事件触发");
+            });
+            Message.Add($"注册单向广播接收器1:{state}");
+        });
+
+        /// <summary>
+        /// 推送单向广播接收器
+        /// </summary>    
+        public ICommand PushBroadcastA => new DelegateCommand(obj =>
+        {
+            Broadcast.PushBroadcast("test1");
+        });
+
+
+
+
+
+
+
+
+
+
+
+
 
         /// <summary>
         /// 注册单向广播接收器

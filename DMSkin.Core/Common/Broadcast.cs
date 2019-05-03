@@ -57,6 +57,16 @@ namespace DMSkin.Core
 
         #region 注册广播
         /// <summary>
+        /// 注册广播接收器-单向广播-无参
+        /// </summary>
+        /// <param name="name">广播名称</param>
+        /// <param name="action">广播回调函数</param>
+        public static bool RegisterBroadcast(string name, Action action)
+        {
+            return Register(name, action);
+        }
+
+        /// <summary>
         /// 注册广播接收器-单向广播
         /// </summary>
         /// <typeparam name="T">广播传递的数据类型</typeparam>
@@ -81,6 +91,25 @@ namespace DMSkin.Core
         #endregion
 
         #region 推送广播
+        /// <summary>
+        /// 推送广播
+        /// </summary>
+        /// <param name="name">广播名称</param>
+        public static void PushBroadcast(string name)
+        {
+            var broadcast = FindBroadcast(name);
+            if (broadcast != null)
+            {
+                foreach (var item in broadcast)
+                {
+                    if (item is Action action)
+                    {
+                        action.Invoke();
+                    }
+                }
+            }
+        }
+
         /// <summary>
         /// 推送广播
         /// </summary>

@@ -12,22 +12,22 @@ namespace DMSkinDemo.ViewModel
     {
         public MainViewModel()
         {
-            CancellationTokenSource tokenSource = new CancellationTokenSource();
+            //CancellationTokenSource tokenSource = new CancellationTokenSource();
 
-            Task task = Task.Run(async () =>
-            {
-                while (tokenSource.IsCancellationRequested)
-                {
-                    await Task.Delay(1000);
-                    System.Console.WriteLine("");
-                }
-            });
+            //Task task = Task.Run(async () =>
+            //{
+            //    while (tokenSource.IsCancellationRequested)
+            //    {
+            //        await Task.Delay(1000);
+            //        System.Console.WriteLine("");
+            //    }
+            //});
 
-            //立即取消
-            tokenSource.Cancel();
+            ////立即取消
+            //tokenSource.Cancel();
 
-            //3秒之后取消
-            tokenSource.CancelAfter(3000);
+            ////3秒之后取消
+            //tokenSource.CancelAfter(3000);
         }
 
         #region 命令
@@ -47,7 +47,8 @@ namespace DMSkinDemo.ViewModel
                 case Menu.Broadcast:
                     Broadcast.PushBroadcast("Navigation", new PageBroadcast());
                     break;
-                default:
+                case Menu.Storage:
+                    Broadcast.PushBroadcast("Navigation", new PageStorage());
                     break;
             }
         });

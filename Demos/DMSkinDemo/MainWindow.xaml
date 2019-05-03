@@ -71,8 +71,14 @@
                 <Button
                     Height="40"
                     Command="{Binding NavigationCommand}"
+                    CommandParameter="Storage"
+                    Content="存储 Storage" />
+                <Button
+                    Height="40"
+                    Command="{Binding NavigationCommand}"
                     CommandParameter="Null"
                     Content="图标 Icon" />
+
             </StackPanel>
         </ScrollViewer>
         <Frame

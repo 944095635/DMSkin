@@ -18,7 +18,19 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel>
-            <GroupBox HorizontalAlignment="Left" Header="单向通知广播(适用于单向推送消息或数据)">
+            <GroupBox HorizontalAlignment="Left" Header="单向通知广播(仅作为单向通知)">
+                <UniformGrid HorizontalAlignment="Left" Rows="1">
+                    <Button
+                        Margin="10"
+                        Command="{Binding RegisterBroadcastA}"
+                        Content="注册单向广播接收器" />
+                    <Button
+                        Margin="10"
+                        Command="{Binding PushBroadcastA}"
+                        Content="推送单向广播" />
+                </UniformGrid>
+            </GroupBox>
+            <GroupBox HorizontalAlignment="Left" Header="单向传递广播(适用于单向推送消息或数据)">
                 <UniformGrid HorizontalAlignment="Left" Rows="1">
                     <Button
                         Margin="10"

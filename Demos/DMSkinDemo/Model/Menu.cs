@@ -5,5 +5,6 @@
         Null,
         Colors,
         Broadcast,
+        Storage
     }
 }

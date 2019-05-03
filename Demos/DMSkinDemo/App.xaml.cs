@@ -14,6 +14,9 @@ namespace DMSkinDemo
 
             //初始化广播器
             Broadcast.Initialize();
+
+            //数据存储器
+            Storage.Initialize();
         }
     }
 }

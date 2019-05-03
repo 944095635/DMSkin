@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="DMSkinDemo.View.PageStorage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DMSkinDemo.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="clr-namespace:DMSkinDemo.ViewModel"
+    Title="PageStorage"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <viewmodel:StorageViewModel />
+    </Page.DataContext>
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="需要存储的数据(可以是任何类型,在任意位置存储的数据在任意位置都可以取出来,用于多页面数据传递或全局数据缓存。)" />
+            <TextBox Text="{Binding SaveText}" />
+            <Button Command="{Binding SaveCommand}" Content="保存" />
+            <Button Command="{Binding ClearCommand}" Content="清空输入框" />
+            <Button Command="{Binding ReadCommand}" Content="读取" />
+        </StackPanel>
+    </Grid>
+</Page>
