@@ -8,13 +8,13 @@ namespace DMSkin.Core
     public class Storage
     {
         #region 初始化
-        private static Dictionary<string,object> StorageData;
+        private static Dictionary<object, object> StorageData;
         /// <summary>
         /// 初始化
         /// </summary>
         public static void Initialize()
         {
-            StorageData = new Dictionary<string, object>();
+            StorageData = new Dictionary<object, object>();
         }
         #endregion
 
@@ -22,7 +22,7 @@ namespace DMSkin.Core
         /// <summary>
         /// 保存数据
         /// </summary>
-        public static bool SaveData<T>(string key, T data)
+        public static bool SaveData<T>(object key, T data)
         {
             if (StorageData.ContainsKey(key))
             {
@@ -35,13 +35,14 @@ namespace DMSkin.Core
             }
             return true;
         }
+
         #endregion
 
         #region 查找数据
         /// <summary>
         /// 查找数据
         /// </summary>
-        public static T GetData<T>(string name)
+        public static T GetData<T>(object name)
         {
             if (StorageData.ContainsKey(name))
             {
@@ -58,7 +59,7 @@ namespace DMSkin.Core
         /// <summary>
         /// 删除数据
         /// </summary>
-        public static bool DelData<T>(string name)
+        public static bool DelData<T>(object name)
         {
             return StorageData.Remove(name);
         }
