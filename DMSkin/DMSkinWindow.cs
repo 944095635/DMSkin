@@ -3,7 +3,6 @@ using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shell;
-
 namespace DMSkin
 {
     public class DMSkinWindow : Window
