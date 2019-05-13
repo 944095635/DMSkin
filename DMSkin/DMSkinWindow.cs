@@ -45,8 +45,6 @@ namespace DMSkin
         }
         #endregion
 
-        #region 属性
-
         #region 系统按钮
         
         /// <summary>
@@ -152,8 +150,6 @@ namespace DMSkin
         public static readonly DependencyProperty FitSystemWindowProperty =
             DependencyProperty.Register("FitSystemWindow", typeof(bool), typeof(DMSkinWindow), new PropertyMetadata(default));
 
-
-        #endregion
 
         #endregion
     }
