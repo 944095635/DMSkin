@@ -3,7 +3,6 @@ using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shell;
-
 namespace DMSkin
 {
     public class DMSkinWindow : Window
@@ -45,8 +44,6 @@ namespace DMSkin
             #endregion
         }
         #endregion
-
-        #region 属性
 
         #region 系统按钮
         
@@ -153,8 +150,6 @@ namespace DMSkin
         public static readonly DependencyProperty FitSystemWindowProperty =
             DependencyProperty.Register("FitSystemWindow", typeof(bool), typeof(DMSkinWindow), new PropertyMetadata(default));
 
-
-        #endregion
 
         #endregion
     }

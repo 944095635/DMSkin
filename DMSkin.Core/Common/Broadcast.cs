@@ -155,6 +155,44 @@ namespace DMSkin.Core
         }
         #endregion
 
+        /// <summary>
+        /// 注册一个广播接收器，你可以在多个地方注册，并且对方可以呼叫你
+        /// </summary>
+        /// <typeparam name="T">广播传递的数据类型</typeparam>
+        /// <typeparam name="T1">回调传播的数据类型</typeparam>
+        /// <param name="name">广播名称</param>
+        /// <param name="action">收到广播之后执行的函数</param>
+        public static bool RegisterBroadcast<T, T1>(string name, Func<T, T1> action)
+        {
+            return Register(name, action);
+        }
+
+        #region 推送广播-并执行返回值
+        /// <summary>
+        /// 推送广播-并执行回调
+        /// </summary>
+        /// <typeparam name="T">广播传递的数据类型</typeparam>
+        /// <typeparam name="T1">广播回调消息的数据类型</typeparam>
+        /// <param name="name">广播名称</param>
+        /// <param name="parameter">广播传递的数据</param>
+        /// <param name="callBack">广播订阅者的回传信息</param>
+        public static T1 PushBroadcast<T, T1>(string name, T parameter = default)
+        {
+            var broadcast = FindBroadcast(name);
+            if (broadcast != null)
+            {
+                foreach (var item in broadcast)
+                {
+                    if (item is Func<T, T1> action)
+                    {
+                        return action.Invoke(parameter);
+                    }
+                }
+            }
+            return default;
+        }
+        #endregion
+
         #region 卸载广播
         /// <summary>
         /// 卸载广播

@@ -59,6 +59,8 @@
     <Compile Include="Converters\EnumToVisibilityConverter.cs" />
     <Compile Include="Converters\SecondToStringConverter.cs" />
     <Compile Include="Converters\TimeSpanToStringConverter.cs" />
+    <Compile Include="Helper\INIHelper.cs" />
+    <Compile Include="Helper\ProcessHelper.cs" />
     <Compile Include="MVVM\DelegateCommand.cs" />
     <Compile Include="MVVM\ViewModelBase.cs" />
     <Compile Include="Common\Broadcast.cs" />
