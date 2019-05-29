@@ -9,7 +9,7 @@
 
 ## 基于DMSkin开发的PC项目，现在运营中你可以前往Steam下载体验。
 [Wallpaper Maker](https://store.steampowered.com/app/1010800)
-<img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/wall.png" align="center">
+<img src="https://raw.githubusercontent.com/944095635/DMSkin/master/Docs/Image/wall.jpg" align="center">
 
 
 ## 目前可以使用,但是内容较少,持续更新中
