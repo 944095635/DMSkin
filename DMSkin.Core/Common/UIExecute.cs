@@ -21,7 +21,7 @@ namespace DMSkin.Core
         /// UI线程中异步执行方法
         /// </summary>
         /// <param name="action">执行的方法</param>
-        public static  void RunAsync(this Action action)
+        public static void RunAsync(this Action action)
         {
             executor(action, true);
         }
