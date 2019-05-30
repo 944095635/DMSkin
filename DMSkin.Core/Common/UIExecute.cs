@@ -3,13 +3,34 @@ using System.Windows.Threading;
 
 namespace DMSkin.Core
 {
-    public static class Execute
+    /// <summary>
+    /// UI执行器
+    /// </summary>
+    public static class UIExecute
     {
+        /// <summary>
+        /// UI线程中执行方法
+        /// </summary>
+        /// <param name="action">执行的方法</param>
+        public static void Run(this Action action)
+        {
+            executor(action , false);
+        }
+
+        /// <summary>
+        /// UI线程中异步执行方法
+        /// </summary>
+        /// <param name="action">执行的方法</param>
+        public static  void RunAsync(this Action action)
+        {
+            executor(action, true);
+        }
+
         private static Action<Action, bool> executor = (action, async) => action();
         /// <summary>
         /// 初始化UI调度器
         /// </summary>
-        public static void InitializeWithDispatcher()
+        public static void Initialize()
         {
             var dispatcher = Dispatcher.CurrentDispatcher;
             executor = (action, async) =>
@@ -32,15 +53,6 @@ namespace DMSkin.Core
                     }
                 }
             };
-        }
-        /// <summary>
-        /// UI线程中执行方法
-        /// </summary>
-        /// <param name="action">执行的方法</param>
-        /// <param name="async">是否异步执行</param>
-        public static void OnUIThread(this Action action, bool async = false)
-        {
-            executor(action, async);
         }
     }
 }
