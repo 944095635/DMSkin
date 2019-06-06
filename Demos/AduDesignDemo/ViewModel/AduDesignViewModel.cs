@@ -11,13 +11,13 @@ namespace AduDesignDemo.ViewModel
         #region 初始化
         public AduDesignViewModel()
         {
-            Execute.OnUIThread(() =>
+            UIExecute.Run(() =>
             {
                 CodeList = new ObservableCollection<DMCode> {
                     new DMCode() {  CodeID=1,CodeName="DMSkin"}
                     ,new DMCode() {  CodeID=1,CodeName="AduSkin"}
                 };
-            }, false);
+            });
         }
         #endregion
 
